@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { FiLogOut } from 'react-icons/fi'
-import { FcManager } from 'react-icons/fc'
+import { IoLanguage } from 'react-icons/io5'
 import { FaBars } from 'react-icons/fa'
 import './styles.css';
 import { convertFirstToUpperCase } from '../../utils'
@@ -11,9 +11,17 @@ export default function Header() {
 
   return (
     <nav className="navigation">
-      <a href="/" className="brand-name">
-        Modelo header
-      </a>
+      <div className='grid grid-cols-3 justify-center'>
+        <div className='flex'>
+          <img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\brazil.png" />
+          <img className='w-auto h-10 m-1' src="src\assets\languages\france.png" />
+          <img className='w-auto h-10 m-1' src="src\assets\languages\spain.png" />
+          <img className='w-auto h-10 m-1' src="src\assets\languages\usa.png" />
+        </div>
+        <div className='flex justify-center'>
+          <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+        </div>
+      </div>
       <button
         className="hamburger"
         onClick={() => {
