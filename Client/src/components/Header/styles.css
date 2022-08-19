@@ -2,7 +2,7 @@
     width: 100%;
     align-items: center;
     position: relative;
-    padding: 0.5rem 0rem;
+    padding: 0.05rem 0rem;
     background-color: #fff;
     color: black;
     box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
@@ -21,7 +21,9 @@
 
 .navigation-menu ul {
     display: flex;
+    justify-content: space-evenly;
     padding: 0;
+    border-radius: 5px;
 }
 
 .navigation-menu li {
@@ -33,6 +35,19 @@
     text-decoration: none;
     display: block;
     width: 100%;
+    padding: 10px;
+}
+
+.navigation-menu li a:hover {
+    color: white;
+    background-color: #3e8e41;
+    transition: 0.3s;
+    border-radius: 3px;
+    box-shadow: 0 0 0.2em #6c6c6c;
+}
+
+.navigation-menu-ul {
+    box-shadow: 0 0 0.5em #283729;
 }
 
 .hamburger {
