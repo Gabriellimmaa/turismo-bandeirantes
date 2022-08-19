@@ -31,7 +31,9 @@ export function Footer() {
                     </h3>
                     <div className="notices">
                         <div className="notice">
-                            <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                            <a href="">
+                                <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                            </a>
                             <div className="notice-text">
                                 <a href="">Brasão</a>
                                 <p>
@@ -40,7 +42,9 @@ export function Footer() {
                             </div>
                         </div>
                         <div className="notice">
-                            <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                            <a href="">
+                                <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                            </a>
                             <div className="notice-text">
                                 <a href="">Brasão</a>
                                 <p>
@@ -49,7 +53,9 @@ export function Footer() {
                             </div>
                         </div>
                         <div className="notice">
-                            <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                            <a href="">
+                                <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                            </a>
                             <div className="notice-text">
                                 <a href="">Brasão</a>
                                 <p>
