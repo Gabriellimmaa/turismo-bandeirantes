@@ -26,7 +26,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="column">
-                    <h3>
+                    <h3 className="titleHidden">
                         Notícias
                     </h3>
                     <div className="notices">
