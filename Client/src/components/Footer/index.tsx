@@ -6,7 +6,7 @@ export function Footer() {
         <footer>
             <div className="footer">
                 <div>
-                    <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+                    <img className='w-auto h-20' src="src\assets\logoFooter.png" />
                 </div>
                 <div className="column">
                     <h3>Páginas</h3>
@@ -69,13 +69,13 @@ export function Footer() {
                     <h3>Contato</h3>
                     <div className="contacts">
                         <strong>
-                            Rua dos Bobos, 0
+                        Rua Frei Raphael Proner, 1457
                         </strong>
                         <strong>
-                            (19) 99999-9999
+                        Telefone: (43) 3542-4525
                         </strong>
                         <strong>
-                            seila@gmail.com
+                        E-mail: comunicacao@bandeirantes.pr.gov.br
                         </strong>
                         <img className="w-auto max-h-20 bg-contain" src="src\assets\logo-banner.png" />
                     </div>
