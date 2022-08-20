@@ -140,6 +140,10 @@ a:hover {
         margin: 20px 0px 20px 0px;
     }
 
+    .notice, .pages {
+        display: none;
+    }
+
     .contacts img {
         margin-top: 2rem;
     }
@@ -152,6 +156,10 @@ a:hover {
     }
 
     .copyright p:last-child {
+        display: none;
+    }
+
+    .titleHidden {
         display: none;
     }
 }
