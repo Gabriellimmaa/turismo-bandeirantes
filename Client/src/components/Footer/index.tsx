@@ -1,5 +1,4 @@
-
-import { FacebookLogo, YoutubeLogo } from 'phosphor-react'
+import { FaFacebook, FaYoutube } from 'react-icons/fa'
 import './styles.css'
 
 export function Footer() {
@@ -12,10 +11,10 @@ export function Footer() {
                     </div>
                     <div className="redesIcon">
                         <a href="">
-                            <FacebookLogo size={32} />
+                            <FaFacebook size={28}/>
                         </a>
                         <a href="">
-                            <YoutubeLogo size={32} />
+                            <FaYoutube size={28}/>
                         </a>
                     </div>
                 </div>
