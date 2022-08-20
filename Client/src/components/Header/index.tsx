@@ -13,10 +13,17 @@ export default function Header() {
     <nav className="navigation">
       <div className='grid grid-cols-3 justify-center'>
         <div className='flex'>
-          <img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\brazil.png" />
-          <img className='w-auto h-10 m-1' src="src\assets\languages\france.png" />
-          <img className='w-auto h-10 m-1' src="src\assets\languages\spain.png" />
-          <img className='w-auto h-10 m-1' src="src\assets\languages\usa.png" />
+          <div className=" menu-language-dropdown">
+            <span>Language</span>
+            <div className="language-dropdown-content">
+            <ul>
+              <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\brazil.png" /></a></li>
+              <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\france.png" /></a></li>
+              <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\spain.png" /></a></li>
+              <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\usa.png" /></a></li>
+            </ul>
+            </div>
+          </div>
         </div>
         <div className='flex justify-center'>
           <img className='w-auto h-20' src="src\assets\logo-banner.png" />
