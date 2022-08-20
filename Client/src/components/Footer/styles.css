@@ -154,4 +154,8 @@ a:hover {
     .copyright p:last-child {
         display: none;
     }
+
+    .titleHidden {
+        display: none;
+    }
 }

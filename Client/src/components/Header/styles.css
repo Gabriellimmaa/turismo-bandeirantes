@@ -15,6 +15,37 @@
     margin-left: 1rem;
 }
 
+.menu-language-dropdown {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.language-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35%;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-language-dropdown span {
+    position: absolute;
+    top: 35%;
+    padding-left: 30px;
+}
+
+.menu-language-dropdown li:hover {
+    background-color: rgb(195, 195, 195);
+    transition: 0.3s;
+}
+
+.menu-language-dropdown:hover .language-dropdown-content {
+    display: block;    
+}
+
 .navigation-menu {
     margin-left: auto;
 }
@@ -28,7 +59,7 @@
 
 .navigation-menu li {
     list-style-type: none;
-    margin: 0 1rem;
+    margin: 0 0rem;
 }
 
 .navigation-menu li a {
@@ -48,6 +79,7 @@
 
 .navigation-menu-ul {
     box-shadow: 0 0 0.5em #283729;
+    z-index: 1;
 }
 
 .hamburger {
@@ -56,7 +88,7 @@
     width: 40px;
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: #283b8b;
+    background-color: #fff;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     position: absolute;
@@ -67,10 +99,10 @@
 }
 
 .hamburger:hover {
-    background-color: #2642af;
+    background-color: #3e8e41;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .hamburger {
         display: block;
     }
@@ -82,7 +114,7 @@
 
     .navigation-menu ul {
         position: absolute;
-        top: 60px;
+        top: 78px;
         left: 0;
         flex-direction: column;
         width: 100%;
@@ -99,7 +131,7 @@
     .navigation-menu li a {
         color: black;
         width: 100%;
-        padding: 1.5rem 0;
+        padding: 1.2rem 0;
     }
 
     .navigation-menu li:hover {

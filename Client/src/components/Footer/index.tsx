@@ -18,7 +18,7 @@ export function Footer() {
                         </a>
                     </div>
                 </div>
-                <div className="column">
+                <div className="column titleHidden">
                     <h3>Páginas</h3>
                     <div className="pages">
                         <a href="">
@@ -35,8 +35,8 @@ export function Footer() {
                         </a>
                     </div>
                 </div>
-                <div className="column">
-                    <h3 className="titleHidden">
+                <div className="column titleHidden">
+                    <h3>
                         Notícias
                     </h3>
                     <div className="notices">
