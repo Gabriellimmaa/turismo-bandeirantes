@@ -87,6 +87,14 @@ a:hover {
     color: red;
 }
 
+.copyright {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .8rem 0px;
+    background: #fff;
+    color: black;
+    border-top: 1px solid #e0e0e0;
+}
 
 @media screen and (max-width: 768px) {
     .footer {
@@ -107,5 +115,16 @@ a:hover {
 
     .contacts img {
         margin-top: 2rem;
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .copyright p:last-child {
+        display: none;
     }
 }

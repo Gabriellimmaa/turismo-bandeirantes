@@ -81,6 +81,14 @@ export function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="copyright">
+                <p>
+                    © 2021 - Prefeitura Municipal de Bandeirantes - Todos os direitos reservados
+                </p>
+                <p>
+                    Website desenvolvido pela equipe FrontCode
+                </p>
+            </div>
         </footer>
     )
 }
