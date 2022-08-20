@@ -97,6 +97,32 @@ a:hover {
     filter: brightness(.95);
 }
 
+.redes {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.redesIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 1rem 0px 0px 0px;
+}
+
+.redesIcon a:first-child {
+    margin: 0px 1.5rem 0px 0px;
+}
+
+.redesIcon a:first-child:hover {
+    color: #0004ff;
+}
+
+
 @media screen and (max-width: 768px) {
     .footer {
         display: flex;

@@ -1,12 +1,23 @@
 
+import { FacebookLogo, YoutubeLogo } from 'phosphor-react'
 import './styles.css'
 
 export function Footer() {
     return(
         <footer>
             <div className="footer">
-                <div>
-                    <img className='w-auto h-20' src="src\assets\logoFooter.png" />
+                <div className="redes">
+                    <div className="logo">
+                        <img className='w-auto mt-6 mb-6 object-contain' src="src\assets\logoFooter.png" />
+                    </div>
+                    <div className="redesIcon">
+                        <a href="">
+                            <FacebookLogo size={32} />
+                        </a>
+                        <a href="">
+                            <YoutubeLogo size={32} />
+                        </a>
+                    </div>
                 </div>
                 <div className="column">
                     <h3>Páginas</h3>
