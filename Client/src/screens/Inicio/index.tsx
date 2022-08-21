@@ -9,8 +9,11 @@ export default function Inicio() {
       {/* Renderizando componente Header */}
       <Header />
 
-      <h1>Inicio</h1>
-      <p>src\screens\Inicio\index.tsx</p>
+      <div className="h-96">
+        <h1>Inicio</h1>
+        <p>src\screens\Inicio\index.tsx</p>
+      </div>
+      
       <Footer />
     </>
   )

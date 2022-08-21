@@ -1,10 +1,15 @@
+footer {
+    bottom: 0;
+}
+
 .footer {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     width: 100%;
-    padding: 0px 4rem 0px 4rem;
+    gap: 2rem;
     background: #fff;
     align-items: center;
+    padding: 0px 2rem;
 }
 
 h3 {
@@ -33,6 +38,20 @@ h3::after {
 
     background-color: red;
 }
+.containerHero {
+    height: 100%;
+    width: 100%;
+    padding: 2rem 0px 2rem 0px;
+}
+
+.containerInfos {
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    background: #ececec;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(78, 78, 78, 0.75);
+}
 
 h3::after {
     width: 20%;
@@ -59,16 +78,20 @@ h3::after {
     padding: 20px 0px 20px 0px;
 }
 
+.pages a, .notices a {
+    width: max-content;
+}
 
-a:hover {
-    color: red;
+.pages a:hover, .notices a:hover {
+    border-bottom: 1px solid red;
     transition: ease .8s;
 }
 
 .notice {
     display: flex;
     flex-direction: row;
-    padding: 1rem 2rem 1rem .5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .notice img {
@@ -88,8 +111,10 @@ a:hover {
 }
 
 .copyright {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     padding: .8rem 0px;
     background: #fff;
     color: black;
@@ -114,6 +139,10 @@ a:hover {
     margin: 1rem 0px 0px 0px;
 }
 
+.redesIcon a:last-child:hover {
+    color: red;
+}
+
 .redesIcon a:first-child {
     margin: 0px 1.5rem 0px 0px;
 }
@@ -121,7 +150,6 @@ a:hover {
 .redesIcon a:first-child:hover {
     color: #0004ff;
 }
-
 
 @media screen and (max-width: 768px) {
     .footer {
@@ -138,10 +166,6 @@ a:hover {
         align-items: center;
         width: 100%;
         margin: 20px 0px 20px 0px;
-    }
-
-    .notice, .pages {
-        display: none;
     }
 
     .contacts img {
@@ -163,3 +187,4 @@ a:hover {
         display: none;
     }
 }
+
