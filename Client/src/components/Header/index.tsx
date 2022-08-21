@@ -15,7 +15,8 @@ export default function Header() {
       <div className='grid grid-cols-3 justify-center'>
         <div className='flex'>
           <div className=" menu-language-dropdown">
-              <span>Language</span> 
+              <span> <IoLanguage size={25}/> Language </span>
+              <span></span> 
               <div className="language-dropdown-content">
               <ul>
                 <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\brazil.png" /></a></li>

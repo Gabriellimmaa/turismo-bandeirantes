@@ -33,6 +33,7 @@
 }
 
 .menu-language-dropdown span {
+    display: inline-flex;
     position: absolute;
     top: 35%;
     left: 20px;
@@ -75,7 +76,7 @@
     width: 110%;
     color: white;
     background-color: #3e8e41;
-    transition: 0.8s;
+    transition: 0.4s;
     border-radius: 3px;
     box-shadow: 0 0 1em #283729;
 }
