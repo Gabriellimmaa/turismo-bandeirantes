@@ -3,59 +3,50 @@ import React from 'react'
 export default function Historia() {
   return (
     <div className='px-32 py-16'>
-      <h1 className=''>Historia</h1>
-      <p>Uma série de atrações aguarda turistas e brasilienses para descobrirem o que a capital do país tem de melhor. A concepção da cidade, sítio moderno considerado Patrimônio Cultural da Humanidade pela Unesco, convida a um passeio surpreendente.</p>
+      <h1 className="font-size: 1px">
+        Como começou?
+      </h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Até o Ano de 1920, a região era um sertão bruto, habitado apenas pelos índios da tribo Caingangues. O primeiro a explorar este território foi o Engenheiro Carlos Borromei, onde ergue seu acampamento em uma clareira aberta no meio das matas à margens do Ribeirão das Antas. Em 24 de dezembro de 1926, D. Josefina Alves de Lima, proprietária de grande gleba de terras na Fazenda Laranjinha, ao proceder a divisão desse imóvel, vendeu a João Manoel dos Santos dez alqueires de terra, destinados a fundação de um povoado, que deveria ser denominado Invernada.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A 12 de abril de 1929, foi criado o Distrito de Invernada, como parte integrante do Município de Jacarezinho, sendo instalado no dia 8 de dezembro do mesmo ano. Em julho de 1930, a Empresa Ferroviária São Paulo - Paraná, inaugurou uma estação ferroviária, a 3 quilômetros do patrimônio de Invernada, que passou a denominar-se Bandeirantes, surgindo, então, um povoado nas proximidades da estação, em terreno de propriedade de Juvenal Mesquita. Em 27 de setembro de 1931, um pugilo de homens de boa vontade, iniciou um trabalho de coligação em favor do progresso da estação e, consequentemente, sobreveio a queda de Invernada, onde se achavam o cartório, a Coletoria Estadual, casas, hotéis, casas de comércio, farmácias, correios, etc.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Em 1932, o então Interventor Federal no Paraná, visitou Bandeirantes, notando que o povo desejava a criação do município. Houve a unificação dos dois povoados: Bandeirantes e Invernada. Dando inicio a história de Bandeirantes</p>
 
-      <p>Prédios homogêneos, ruas largas e arborizadas, parques e setores pensados no bem-estar da população e do visitante levam a assinatura dos mestres do urbanismo Lucio Costa e da arquitetura Oscar Niemeyer.</p>
-      <h1>Roteiro Cultural
+      <h1>BANDEIRANTES: “UM LUGAR DE FÉ, NATUREZA E TRADIÇÕES”.</h1>
+      <p>Localizada no Norte Pioneiro do Paraná, Bandeirantes se distingue pela terra fértil e pelo povo oriundo de diversas partes do Brasil e do mundo. O município tem forte influência dos paulistas, mineiros, italianos, japoneses e portugueses, origem primordial das vocações econômicas e turísticas do município. </p>
+<h1>Bandeirantes em números.
 
       </h1>
-      <p>Os monumentos de Brasília são únicos e dispostos de maneira a formar um museu a céu aberto. No interior dos prédios, obras de artistas renomados podem ser visitadas, em horários específicos, sem nenhum custo.</p>
-      <p>No Palácio do Itamaraty, Sérgio Camargo, Rubem Valentim, Alfredo Volpi e Bruno Giorgi assinam telas e esculturas famosas. A poucos metros, no Palácio do Planalto (sede da Presidência da República), algumas peças foram criadas exclusivamente para o local, como a tapeçaria Músicos, de Di Cavalcanti, que recebeu a incumbência do arquiteto Oscar Niemeyer, autor do projeto do prédio. O Planalto possui, também, um rico mobiliário, porcelanas da Companhia das Índias e prataria portuguesa do século XVIII.</p>
-      <p>Assim como o Executivo, as sedes do Legislativo e do Judiciário também abrem as portas para o cidadão. No Congresso Nacional, há o projeto Visite o Senado. A versão do Supremo Tribunal Federal se chama Portas Abertas do STF e recebe cerca de 400 visitantes por dia. A oportunidade é para conhecer de perto como funcionam os prédios onde são tomadas as mais importantes decisões do país. Do lado de fora, a Praça dos Três Poderes proporciona uma visão privilegiada das instalações da República.</p>
-      <p>Acima da Esplanada dos Ministérios, a Catedral Metropolitana de Brasília, a Torre de TV, o Memorial JK e o Complexo Cultural da República completam a arquitetura histórica e cultural da região central de Brasília.</p>
-      <h1>Embaixador de Brasília</h1>
-      <p>Oscar Niemeyer projetou, ao longo de seus 104 anos, inúmeras obras em 18 países. Cerca de 80 edificações no Distrito Federal trazem sua assinatura – a primeira delas antes mesmo da inauguração de Brasília: o Catetinho, erguido em apenas 10 dias, em 1955. A mais recente foi a Torre de TV Digital, entregue ao público no dia 21 de abril, na comemoração dos 52 anos de fundação da cidade.</p>
-      <p>Entre as obras da capital destacam-se os palácios da Alvorada, do Planalto, do Itamaraty e da Justiça; os edifícios-sede do Congresso Nacional, Supremo Tribunal Federal, Superior Tribunal de Justiça e tribunais superiores Eleitoral e do Trabalho. O arquiteto projetou a Catedral e os prédios do Conjunto Cultural da República, da Esplanada dos Ministérios, do Ministério Público da União, da Ordem dos Advogados do Brasil e do Instituto de Arquitetos do Brasil.</p>
-      <p>Além das sedes dos três Poderes federais, são de sua autoria os projetos arquitetônicos do Teatro Nacional de Brasília, do Cine Brasília e da Casa do Cantador. O arquiteto ainda assina o Panteão da Liberdade e da Democracia, o Centro Cultural de Taguatinga, a Ponte Costa e Silva, alguns prédios da Universidade de Brasília, o Memorial JK e o Aeroporto Internacional de Brasília.</p>
-      <h1>Brasília em números
+      <p><b>Inauguração:</b> 14 de novembro de 1934 <br></br>
 
-      </h1>
-      <p>Inauguração: 21 de abril de 1960
+        <b>Gentílico:</b> Bandeirantense<br></br>
 
-        Gentílico: Brasiliense
+        <b>População:</b> 31.061 (Estimativa IBGE[2021])<br></br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32.184 (Censo IBGE [2010])<br></br>
 
-        População [2010]: 2.570.160 – 53,72% nascida no DF.Entre os migrantes, 51,4% são da região nordeste do país
+        <b>Área da unidade territorial [2022]:</b> 445,192 km²<br></br>
 
-        Área da unidade territorial [2016]: 5.779,997 km²
+        <b>Área:</b> 5.780 km² – 96,6% urbana e 3,4% rural<br></br>
 
-        Área: 5.780 km² – 96,6% urbana e 3,4% rural
+        <b>Densidade demográfica:</b> 72,29 hab/km² <br></br>
 
-        Densidade demográfica: 354,3 hab/km²
+        <b>Bioma:</b> Mata Atlântica<br></br>
 
-        Bioma: Cerrado
+        <b>Altitude:</b> 420 m<br></br>
 
-        Altitude: 1.172 m
+        <b>Clima:</b> Tropical, continental de altitude, com duas estações bem marcadas: uma chuvosa (de novembro a março); e outra sem chuvas – nesta, a umidade relativa do ar costuma ser muito baixa.<br></br>
 
-        Clima: Tropical, continental de altitude, com duas estações bem marcadas: uma chuvosa (de novembro a março); e outra sem chuvas – nesta, a umidade relativa do ar costuma ser muito baixa.
+        <b>Temperatura média:</b> 18°C a 25°C.<br></br>
 
-        Temperatura média: 18°C a 25°C.
+        <b>Umidade média relativa do ar:</b> 40 a 70%<br></br>
 
-        Umidade média relativa do ar: 40 a 70%
+        <b>Renda per capita (média mensal):</b> R$ 2.654,00 (IBGE/PNAD 2012)<br></br>
 
-        Salário médio mensal dos trabalhadores formais [2015]: 5,7 salários mínimos
+        <b>Índice de Desenvolvimento Humano (IDH):</b> 0,792 (segundo melhor índice do país)<br></br>
 
-        Percentual da população com rendimento nominal mensal per capita de até ½ salário mínimo [2010]: 30,9 %
+        <b>Produto Interno Bruto (PIB):</b> R$ 99,9 bilhões<br></br>
 
-        Renda per capita (média mensal): R$ 2.654,00 (IBGE/PNAD 2012)
+        <b>PIB per capita [2015]:</b> 73.971,05 R$<br></br>
 
-        Índice de Desenvolvimento Humano (IDH): 0,792 (segundo melhor índice do país)
-
-        Produto Interno Bruto (PIB): R$ 99,9 bilhões
-
-        PIB per capita [2015] 73.971,05 R$
-
-        Cidade mais populosa: Ceilândia, com 398.374 habitantes</p>
+        Cidade mais populosa: Ceilândia, com 398.374 habitantes</p><br></br>
     </div >
   )
 }
