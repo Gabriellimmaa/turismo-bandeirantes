@@ -127,13 +127,10 @@ export default function Header() {
             <a href="/restaurantes">Restaurantes</a>
           </li>
           <li>
-            <a href="/historia">Notícias</a>
-          </li>
-          <li>
             <a href="/album">Álbum</a>
           </li>
           <li>
-            <a href="/historia">Contato</a>
+            <a href="/contato">Contato</a>
           </li>
         </ul>
       </div>
