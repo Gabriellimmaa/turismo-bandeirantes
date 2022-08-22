@@ -3,7 +3,7 @@ import './styles.css'
 
 export function Footer() {
     return(
-        <footer>
+        <footer className='border-t-2'>
             <div className="footer">
                 <div className="redes">
                     <div className="logo">
