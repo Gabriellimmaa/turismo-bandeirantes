@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-//Import Swiper styles
+// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -20,11 +20,7 @@ export function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img
-            className="bg-no-repeat object-center"
-            src=""
-            alt="pc"
-          />
+          <img className="bg-no-repeat object-center" src="" alt="pc" />
         </SwiperSlide>
         <SwiperSlide>
           <img
