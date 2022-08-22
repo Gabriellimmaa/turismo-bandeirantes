@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-// Import Swiper styles
+//Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -22,7 +22,7 @@ export function Carousel() {
         <SwiperSlide>
           <img
             className="bg-no-repeat object-center"
-            src="https://xvideos-hd.com/wp-content/uploads/2022/04/vadia-novinha-peituda-fodendo-gostoso-e-ganhando-gozada-na-xoxota-500x300.jpg"
+            src=""
             alt="pc"
           />
         </SwiperSlide>
