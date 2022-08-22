@@ -106,34 +106,34 @@ export default function Header() {
       >
         <ul className="navigation-menu-ul">
           <li>
-            <a href="/">Início </a>
+            <a href="/">Início</a>
           </li>
           <li>
             <a href="/historia">História</a>
           </li>
           <li>
-            <a href="/contato">Contato</a>
-          </li>
-          <li>
-            <a href="/noticias">Notícias</a>
-          </li>
-          <li>
-            <a href="/turismo">Turismo</a>
-          </li>
-          <li>
-            <a href="/historia">História</a>
-          </li>
-          <li>
-            <a href="/lazer-esporte">Lazer & Esporte</a>
+            <a href="/contato">Agenda</a>
           </li>
           <li>
             <a href="/hoteis">Hotéis</a>
           </li>
           <li>
+            <a href="/turismo">Turismo</a>
+          </li>
+          <li>
+            <a href="/lazer-esporte">Lazer & Esporte</a>
+          </li>
+          <li>
             <a href="/restaurantes">Restaurantes</a>
           </li>
           <li>
+            <a href="/historia">Notícias</a>
+          </li>
+          <li>
             <a href="/album">Álbum</a>
+          </li>
+          <li>
+            <a href="/historia">Contato</a>
           </li>
         </ul>
       </div>
