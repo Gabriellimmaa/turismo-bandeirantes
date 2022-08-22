@@ -6,10 +6,9 @@ import { Footer } from './components/Footer'
 function App() {
   return (
     <BrowserRouter>
-      {/* Renderizando componente Header */}
       <Header />
       <Router />
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
