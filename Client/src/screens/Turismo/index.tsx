@@ -17,7 +17,7 @@ export function Turismo() {
                     <li>Cultural</li>
                 </ul>
             </div>
-            <div className='grid grid-cols-3 gap-2'>
+            <div className='grid grid-cols-3 gap-10'>
                 <div className='card'>
                     <div className='card-img'>
                         <img src="src\assets\img\turismo\01_512x342.jpg" alt="Santuário São Miguel" />
@@ -27,7 +27,7 @@ export function Turismo() {
                         <p> <BiTime/> Horário de visitação: 7:00 - 22:00</p>
                         <p>Breve descrição</p>
                         <p> <BiMap/> Localização</p>
-                        <h4>Saiba mais</h4>
+                        <button>Saiba Mais</button>
                     </div>
                 </div>
                 
@@ -40,7 +40,7 @@ export function Turismo() {
                         <p> <BiTime/> Horário de visitação: 7:00 - 22:00</p>
                         <p>Breve descrição</p>
                         <p> <BiMap/> Localização</p>
-                        <h4>Saiba mais</h4>
+                        <button>Saiba Mais</button>
                     </div>
                 </div>
 
@@ -51,9 +51,9 @@ export function Turismo() {
                     <div className='card-text'>
                         <label>Título</label>
                         <p> <BiTime/> Horário de visitação: 7:00 - 22:00</p>
-                        <p>Breve descrição</p>
                         <p> <BiMap/> Localização</p>
-                        <h4>Saiba mais</h4>
+                        <p>Breve descrição</p>
+                        <button>Saiba Mais</button>
                     </div>
                 </div>
             </div>

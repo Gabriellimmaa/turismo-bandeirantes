@@ -8,10 +8,17 @@
     
 }
 
+.turismo h1 {
+    justify-content: center;
+    display: flex;
+}
+
 .turismo .main-options ul {
     display: flex;
     border-radius: 10px;
     padding: 2px;
+    justify-content: center;
+    background-color: #ffffff;
 }
 
 .turismo .main-options ul li {
@@ -25,11 +32,10 @@
     max-width: fit-content;
     height: auto;
     margin-top: 12px;
-    margin-right: 40px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     background-color: #ffffff;
-    box-shadow: 0 1px 5px #b0aaff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
     position: relative;
     vertical-align: top;
 }
@@ -37,6 +43,11 @@
 .turismo .card .card-text {
     padding: 10px;
     position: relative;
+}
+
+.turismo .card .card-text p{
+    display: flex;
+    align-items: center;
 }
 
 .turismo .card .card-text label {
@@ -47,5 +58,17 @@
     font-size: 20px;
 }
 
+.turismo .card .card-text button {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
 
-
+.turismo .card .card-text button:hover {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #273e98;
+    color: #ffffff;
+    transition: 0.3s;
+}
