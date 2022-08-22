@@ -1,1 +1,48 @@
-/* CSS Historia */
+.historia {
+    columns: 1;
+    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 200%;
+    align-items:initial;
+    
+}
+
+.texto{
+    column-count: 2;
+}
+
+h1{
+    font-variant: small-caps;
+    font-size: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+h2{
+    font-variant: small-caps;
+    font-size: 10px;
+    position:relative;
+    display:inline;
+}
+
+.imagens{
+    columns: 1;
+    column-gap: 4px;
+    width: 21%;
+    margin-top: 1cm;
+    margin-left: 1cm;
+}
+
+.imagens .bandeira{
+    columns: 2;
+    margin-top: 1cm;
+    margin-left: 1cm;
+
+}
+
+.imagens .brasao{
+    columns: 2;
+    margin-top: 1cm;
+    margin-left: 1cm;
+}
