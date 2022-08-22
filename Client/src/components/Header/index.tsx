@@ -109,7 +109,7 @@ export default function Header() {
             <a href="/">Início </a>
           </li>
           <li>
-            <a href="/sobre">Sobre</a>
+            <a href="/historia">História</a>
           </li>
           <li>
             <a href="/contato">Contato</a>
