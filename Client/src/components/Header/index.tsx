@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { FiLogOut } from 'react-icons/fi'
 import { IoLanguage } from 'react-icons/io5'
+import { IoIosArrowDown } from 'react-icons/io'
 import { AiOutlineHome } from 'react-icons/ai'
 import { FaBars } from 'react-icons/fa'
 import './styles.css';
@@ -12,23 +13,34 @@ export default function Header() {
 
   return (
     <nav className="navigation">
-      <div className='grid grid-cols-3 justify-center'>
+      <div className='grid grid-cols-3 justify-center border-b-2 py-2'>
         <div className='flex'>
-          <div className=" menu-language-dropdown">
-              <span> <IoLanguage size={25}/> Language </span>
-              <span></span> 
-              <div className="language-dropdown-content">
+          <div id="optionLanguageDesktop">
+            <a><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\brazil.png" /></a>
+            <a><img className='w-auto h-10 m-1' src="src\assets\languages\france.png" /></a>
+            <a><img className='w-auto h-10 m-1' src="src\assets\languages\spain.png" /></a>
+            <a><img className='w-auto h-10 m-1' src="src\assets\languages\usa.png" /></a>
+          </div>
+
+          <div id="optionLanguageMobile">
+            <div className='items-center'>
+              <IoLanguage size={18} />
+              <span> Tradução </span>
+              <IoIosArrowDown className='m-auto' />
+            </div>
+            <span></span>
+            <div className="language-dropdown-content">
               <ul>
                 <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\brazil.png" /></a></li>
                 <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\france.png" /></a></li>
                 <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\spain.png" /></a></li>
                 <li><a href="#"><img className='w-auto h-10 m-1 ml-10' src="src\assets\languages\usa.png" /></a></li>
               </ul>
-              </div>
             </div>
           </div>
+        </div>
         <div className='flex justify-center'>
-          <img className='w-auto h-20' src="src\assets\logo-banner.png" />
+          <img className='w-80 h-auto' src="src\assets\logo-banner.png" />
         </div>
       </div>
       <button
@@ -46,7 +58,7 @@ export default function Header() {
       >
         <ul className='navigation-menu-ul'>
           <li>
-            <a href="/"> <AiOutlineHome size={20}/>Início </a>
+            <a href="/">Início </a>
           </li>
           <li>
             <a href="/sobre">Sobre</a>
