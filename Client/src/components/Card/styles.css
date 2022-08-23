@@ -2,7 +2,7 @@
     width: 100%;
     height: auto;
     background: #fafafa;
-
+    max-width: none !important;
     margin: 12px 10px 12px 10px;
     cursor: pointer;
     filter: brightness(1);
@@ -11,19 +11,22 @@
     box-shadow: 0 1px 5px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
     vertical-align: top;
     position: relative;
+    display: table !important;
 }
 
-.card .card-text {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom: 0;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-    padding: 0 13px 0 13px;
-    position: relative;
+.card:hover {
+    filter: brightness(0.8);
 }
 
-.card .card-text label {
+.card div:hover {
+    cursor: default;
+}
+
+.card .margin {
+    margin: 0 13px 0 13px !important;
+}
+
+.card .title {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -33,19 +36,28 @@
     @apply border-b border-gray-200;
 }
 
-.card .card-text .redirect {
+.card .redirect {
+    display: table-row;
+}
+.card .redirect a {
     align-items: center;
     @apply border-t border-gray-200;
     display: flex;
     padding: 10px 0;
+    transition: .3s;
 }
 
-.card .card-text .description {
+
+.card .redirect:hover {
+    color: #3e8e41;
+}
+
+.card .description {
     word-wrap: break-word;
     margin: 8px 0;
 }
 
-.card .card-text .info div {
+.card .info div {
     align-items: center;
     display: flex;
     font-size: 12px;
@@ -53,7 +65,7 @@
     margin: 0 !important;
 }
 
-.card .card-text .info p {
+.card .info p {
     margin: 0;
     white-space: nowrap;
 }
@@ -88,4 +100,15 @@
 
 .card .card-img img:hover {
     transform: scale(1.06, 1.06);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .card .description {
+        font-size: 12px;
+    }
+
+    .card .info {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
