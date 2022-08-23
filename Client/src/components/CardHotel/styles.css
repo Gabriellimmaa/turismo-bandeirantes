@@ -114,3 +114,17 @@ hr {
         font-size: 12px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .buttonsHotel a:last-child {
+        font-size: 12px;
+    }
+
+    .buttonsHotel a:first-child {
+        font-size: 14px;
+    }
+
+    .iconsHotel strong {
+        font-size: 14px;
+    }
+}

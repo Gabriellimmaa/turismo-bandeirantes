@@ -6,7 +6,7 @@
 }
 
 .containerHotel h1 {
-    font-size: 4rem;
+    font-size: 64px;
     margin: 4rem 0 1rem 0;
     color: #283729;
     display: inline-block;
@@ -46,3 +46,28 @@
     justify-items: center;
     gap: 2rem;
 }
+
+@media screen and (max-width: 1024px) {
+    .containerCards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containerCards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerHotel h1 {
+        font-size: 32px;
+    }
+
+    .containerHotel h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
