@@ -4,6 +4,7 @@ import { FaHotel } from 'react-icons/fa'
 import { MdFastfood } from 'react-icons/md'
 import { BiPhotoAlbum } from 'react-icons/bi'
 import { GrSchedule } from 'react-icons/gr'
+import { CardHome } from '../../components/CardHome'
 
 export default function Inicio() {
   return (
@@ -18,88 +19,52 @@ export default function Inicio() {
           </h1>
 
           <div className="flex flex-wrap sm:justify-center md:justify-center xl:justify-center 2xl:justify-start gap-10 max-w-7xl mx-auto my-0">
-            <a href="/lazer-esporte">
-              <div className="w-[23.999rem] min-h-[14.621rem] rounded overflow-hidden shadow-lg">
-                <h2 className="flex py-2 justify-center">
-                  <GiSoccerBall size={28} />
-                </h2>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">Lazer e esporte</div>
-                  <p className="text-gray-700 text-base">
-                    Nossa cidade é o seu destino perfeito Cultura, esporte,
-                    lazer, muito ar puro e belos momentos natureza
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="/hoteis">
-              <div className="w-[23.999rem] min-h-[14.621rem] rounded overflow-hidden shadow-lg">
-                <h2 className="flex py-2 justify-center">
-                  <FaHotel size={28} />
-                </h2>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">Hotéis</div>
-                  <p className="text-gray-700 text-base">
-                    Encontre Hotéis, Pousadas e Fazendas para se hospedar
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="/turismo">
-              <div className="min-h-[14.621rem] w-[23.999rem] rounded overflow-hidden shadow-lg">
-                <h2 className="flex py-2 justify-center">
-                  <GiCommercialAirplane size={28} />
-                </h2>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">Turismo </div>
-                  <p className="text-gray-700 text-base">
-                    Conheça nossos principais pontos turisticos
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="/restaurantes">
-              <div className="min-h-[14.621rem] w-[23.999rem] rounded overflow-hidden shadow-lg">
-                <h2 className="flex py-2 justify-center">
-                  <MdFastfood size={28} />
-                </h2>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">Restaurantes </div>
-                  <p className="text-gray-700 text-base">
-                    Quando a fome bater, nossa comida vai te surpreender! Pratos
-                    e sabores inesquecíveis
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="/album">
-              <div className="min-h-[14.621rem] w-[23.999rem] rounded overflow-hidden shadow-lg">
-                <h2 className="flex py-2 justify-center">
-                  <BiPhotoAlbum size={28} />
-                </h2>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">Álbum </div>
-                  <p className="text-gray-700 text-base">
-                    Ainda tem dúvidas se dever conhecer a cidade? Então acesse
-                    nossas fotos e se encante com a beleza da cidade
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="/agenda">
-              <div className="min-h-[14.621rem] w-[23.999rem] rounded overflow-hidden shadow-lg">
-                <h2 className="flex py-2 justify-center">
-                  <GrSchedule size={28} />
-                </h2>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">Agenda </div>
-                  <p className="text-gray-700 text-base">
-                    Conheça nosso calendário de eventos para não perder nenhuma
-                    atração.
-                  </p>
-                </div>
-              </div>
-            </a>
+            <CardHome
+              key="lazer-esporte"
+              link="/lazer-esporte"
+              icon={<GiSoccerBall size={28} />}
+              titulo="Lazer e esporte"
+              corpo="Nossa cidade é o seu destino perfeito Cultura, esporte,
+              lazer, muito ar puro e belos momentos natureza"
+            />
+            <CardHome
+              key="hoteis"
+              link="/hoteis"
+              icon={<FaHotel size={28} />}
+              titulo="Hotéis"
+              corpo="Encontre Hotéis, Pousadas e Fazendas para se hospedar"
+            />
+            <CardHome
+              key="turismo"
+              link="/turismo"
+              icon={<GiCommercialAirplane size={28} />}
+              titulo="Turismo"
+              corpo="Conheça nossos principais pontos turisticos"
+            />
+            <CardHome
+              key="restaurantes"
+              link="/restaurantes"
+              icon={<MdFastfood size={28} />}
+              titulo="Restaurantes"
+              corpo="Quando a fome bater, nossa comida vai te surpreender! Pratos
+              e sabores inesquecíveis"
+            />
+            <CardHome
+              key="album"
+              link="/album"
+              icon={<BiPhotoAlbum size={28} />}
+              titulo="Álbum"
+              corpo="Ainda tem dúvidas se dever conhecer a cidade? Então acesse
+              nossas fotos e se encante com a beleza da cidade"
+            />
+            <CardHome
+              key="agenda"
+              link="/agenda"
+              icon={<GrSchedule size={28} />}
+              titulo="Agenda"
+              corpo="Conheça nosso calendário de eventos para não perder nenhuma
+              atração."
+            />
           </div>
         </div>
       </div>
