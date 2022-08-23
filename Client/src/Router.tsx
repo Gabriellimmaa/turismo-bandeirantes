@@ -4,6 +4,7 @@ import { Hoteis } from './screens/Hoteis'
 import Inicio from './screens/Inicio'
 import Restaurantes from './screens/Restaurantes'
 import { Turismo } from './screens/Turismo'
+import { Agenda } from './screens/Agenda'
 
 export function Router() {
   return (
@@ -13,6 +14,7 @@ export function Router() {
       <Route path="/turismo" element={<Turismo />} />
       <Route path="/restaurantes" element={<Restaurantes />} />
       <Route path="/hospedagem" element={<Hoteis />} />
+      <Route path="/agenda" element={<Agenda />} />
     </Routes>
   )
 }

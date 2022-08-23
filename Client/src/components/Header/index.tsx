@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { FiLogOut } from 'react-icons/fi'
+import { useState } from 'react'
 import { IoLanguage } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
-import { AiOutlineHome } from 'react-icons/ai'
 import { FaBars } from 'react-icons/fa'
 import './styles.css'
-import { convertFirstToUpperCase } from '../../utils'
 
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -112,7 +108,7 @@ export default function Header() {
             <a href="/historia">História</a>
           </li>
           <li>
-            <a href="/contato">Agenda</a>
+            <a href="/agenda">Agenda</a>
           </li>
           <li>
             <a href="/hoteis">Hotéis</a>
