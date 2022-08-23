@@ -11,7 +11,7 @@ export default function Inicio() {
       <div className="w-full h-[65%]">
         <Carousel />
       </div>
-      <div className="w-full px-10 h-full mb-10">
+      <div className="w-full px-10">
         <div className="w-full mt-10 ">
           <h1 className="flex justify-center my-16 text-4xl font-extrabold uppercase">
             Acesso rápido
@@ -102,6 +102,11 @@ export default function Inicio() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-full mt-20">
+        <h1 className="flex justify-center my-16 text-4xl font-extrabold uppercase">
+          Calendário de eventos
+        </h1>
       </div>
     </>
   )
