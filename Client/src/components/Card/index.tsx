@@ -9,13 +9,14 @@ interface CardProps {
     date: string;
     redirectMap: string;
     redirectDetail: string;
+    path: string;
 }
 
-export default function Card({ title, description, date, redirectMap, redirectDetail }: CardProps) {
+export default function Card({ title, description, date, redirectMap, redirectDetail, path }: CardProps) {
     return (
         <div className="card">
             <div className="card-img">
-                <img src="src\assets\img\restaurante\01.jpg" />
+                <img src={path} />
             </div>
             <label className='title margin'>{title}</label>
             <div className='description margin'>
