@@ -1,13 +1,17 @@
+#restaurante {
+    padding: 2rem 6rem 4rem 6rem;
+}
+
 #restaurante .option ul {
     display: flex;
     border-radius: 10px;
     padding: 1px;
+    margin: 0 5%;
 }
 
 #restaurante .option ul li {
     width: 100%;
     list-style: none;
-    padding: 0 20px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
@@ -18,5 +22,37 @@
     transition: .3s;
     cursor: pointer;
     background-color: #fff;
-    @apply border-2 border-gray-100;
+    @apply border-2 border-green-brasao;
+}
+
+@media screen and (max-width: 1024px) {
+    #restaurante {
+        padding: 1rem 2rem;
+    }
+
+    #restaurante .option ul li {
+        font-size: 12px;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #restaurante {
+        padding: 1rem 0.5rem;
+    }
+
+    #restaurante h1 {
+        font-size: 2rem;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    .gap-5 {
+        gap: 0 !important;
+    }
 }
