@@ -1,0 +1,116 @@
+.cardHotel {
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    max-width: none !important;
+    margin: 12px 10px 12px 10px;
+    transition: all .9s;
+    box-shadow: 0 1px 5px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
+    position: relative;
+    border-radius: 4px;
+}
+
+.cardHotel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1px 5px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
+}
+
+.cardHotel .titleHotel {
+    margin-left: 1rem;
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+hr {
+    @apply border-gray-200;
+}
+
+.cardHotel .descriptionHotel {
+    word-wrap: break-word;
+    margin: 8px 0;
+    margin-left: 1rem;
+}
+
+.cardHotel .cardImgHotel {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: auto;
+    position: relative;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+    border-top: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.cardHotel .cardImgHotel img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-style: none;
+    object-position: 50% 50%;
+    transition: .5s;
+}
+
+/*.cardHotel .cardImgHotel img:hover {
+    transform: scale(1.06, 1.06);
+    cursor: pointer;
+}*/
+
+.iconsHotel {
+    display: flex;
+    flex-direction: row-reverse;
+    background: #fff;
+    color: black;
+    padding: 0px .8rem .8rem 0px;
+}
+
+.iconsHotel svg{
+    margin-left: 1rem;
+}
+
+.buttonsHotel {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: .5rem;
+}
+
+.buttonsHotel a:first-child {
+    display: flex;
+    align-items: center;
+    transition: .3s ease;
+}
+
+.buttonsHotel a:last-child {
+    background: #283729;
+    padding: .5rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: .3s ease;
+}
+
+.buttonsHotel a:first-child:hover {
+    color: #326335;
+}
+
+.buttonsHotel a:last-child:hover {
+    background: #326335;
+}
+
+@media screen and (max-width: 1024px) {
+    .cardHotel .descriptionHotel {
+        font-size: 12px;
+    }
+}
