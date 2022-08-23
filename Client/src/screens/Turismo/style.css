@@ -48,6 +48,7 @@
 .turismo .card .card-text p{
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .turismo .card .card-text label {
@@ -55,7 +56,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 5px;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .turismo .card .card-text button {
@@ -68,7 +69,7 @@
     font-size: 20px;
     padding: 5px;
     border-radius: 5px;
-    background-color: #273e98;
+    background-color: #5368b9;
     color: #ffffff;
     transition: 0.3s;
 }
