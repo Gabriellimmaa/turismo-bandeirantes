@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../../components/Card'
 import './styles.css'
 
 export default function Restaurantes() {
@@ -16,37 +17,14 @@ export default function Restaurantes() {
           <li>Padaria</li>
         </ul>
       </div>
-      <div className="grid grid-cols-3 gap-2">
-        <div className="card">
-          <div className="card-img">
-            <img src="src\assets\img\restaurante\01.jpg" />
-          </div>
-          <div className="card-text">
-            <label>Texto 1</label>
-            <p>texto 2</p>
-            <p>Localização</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-img">
-            <img src="src\assets\img\restaurante\01.jpg" />
-          </div>
-          <div className="card-text">
-            <label>Texto 1</label>
-            <p>texto 2</p>
-            <p>Localização</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-img">
-            <img src="src\assets\img\restaurante\01.jpg" />
-          </div>
-          <div className="card-text">
-            <label>Texto 1</label>
-            <p>texto 2</p>
-            <p>Localização</p>
-          </div>
-        </div>
+      <div className="grid grid-cols-3 gap-2 justify-items-center">
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
       </div>
     </div>
   )
