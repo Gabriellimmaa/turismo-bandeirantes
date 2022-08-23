@@ -1,7 +1,8 @@
-import React from 'react'
 import { BiMap } from 'react-icons/bi'
 import { BiTime } from 'react-icons/bi'
+import Card from '../../components/Card'
 import './style.css'
+
 
 
 export function Turismo() {
@@ -19,7 +20,7 @@ export function Turismo() {
                 </ul>
             </div>
             <div className='grid grid-cols-3 gap-10'>
-                <div className='card'>
+                <div className='card'>  
                     <div className='card-img'>
                         <img src="src\assets\img\turismo\02_512x342.jpg" alt=">Santuário de Santa Terezinha do Menino Jesus" />
                     </div>
