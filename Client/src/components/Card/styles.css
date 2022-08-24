@@ -108,7 +108,9 @@
     .card .description {
         font-size: 12px;
     }
+}
 
+@media screen and (max-width: 1370px) {
     .card .info {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
