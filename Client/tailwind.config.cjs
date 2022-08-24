@@ -1,19 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Roboto, sans-serif'
+        sans: 'Roboto, sans-serif',
+      },
+      transitionDuration: {
+        900: '900ms',
       },
       colors: {
         green: {
           300: '#00B37E',
           500: '#00875F',
           700: '#015F43',
-          'brasao': '#3e8e41',
+          brasao: '#3e8e41',
         },
         blue: {
           500: '#81D8F7',
@@ -31,8 +32,9 @@ module.exports = {
           500: '#323238',
           600: '#29292E',
           700: '#121214',
-          900: '#09090A'
-        }
+          900: '#09090A',
+        },
+        grayHover: '#CCCCCC',
       },
     },
   },
