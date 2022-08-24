@@ -1,23 +1,25 @@
 import './styles.css'
 
-interface NavbarProps {
-  item1: string
-  item2: string
-  item3: string
-}   
+interface ObjectItem {
+  id: string
+  nome: string
+}
 
-export default function Navbar({
-  item1,  
-  item2,
-  item3,
-}: NavbarProps) {
+interface NavbarProps {
+  objectList: ObjectItem[]
+}
+
+export default function Navbar({ objectList }: NavbarProps) {
   return (
     <div className='navbar'>
       <ul>
-        <li>{item1}</li>
-        <li>{item2}</li>
-        <li>{item3}</li>
-      </ul>  
+        {objectList.map((data: ObjectItem) => (
+          <li>
+            <button>{data.nome}</button>
+          </li>
+        )
+        )}
+      </ul>
     </div>
-  )    
+  )
 }
