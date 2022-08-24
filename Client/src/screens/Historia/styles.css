@@ -1,60 +1,55 @@
-body {margin:25px;}
-
 .historia {
-    columns: 2;
-    text-align: justify;
-    margin-left: 1cm;
-    margin-top: 2cm;
-    margin-right: 1cm;
-    grid-template-columns: 4fr 1fr;
-    display: grid;
+  columns: 2;
+  text-align: justify;
+  grid-template-columns: 4fr 1fr;
+  display: grid;
 }
 
-h1 {
-    font-variant: small-caps;
-    position: relative;
-    display: inline-block;
+.historia h1 {
+  font-variant: small-caps;
+  position: relative;
+  display: inline-block;
 }
 
-.container {
-    margin-left: 1cm;
-    margin-top: 1cm;
-    position: relative;
-    width: 50%;
-  }
-  
-  img {
-    border-radius: 50px;
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .overlay {
-    border-radius: 40px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-  }
-  
-  .container:hover .overlay {
-    height: 100%;
-  }
-  
-  .text {
-    white-space: nowrap; 
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
+.historia .container {
+  margin-left: 1cm;
+  margin-top: 1cm;
+  position: relative;
+  width: 50%;
+}
+
+.historia img {
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.historia .overlay {
+  border-radius: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.historia .container:hover .overlay {
+  height: 100%;
+}
+
+.historia .text {
+  white-space: nowrap;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

@@ -7,7 +7,7 @@ import './style.css'
 
 export function Turismo() {
     return(
-        <div className='turismo'>
+        <section className='turismo'>
             <h1>
                 Turismo
             </h1>
@@ -64,6 +64,6 @@ export function Turismo() {
                 entre bandeirantenses e seus visitantes. A Feira Livre do Agricultor acontece aos domingos pela manhã, no entorno da “Praça Brasil-Japão” e é uma opção de lazer e 
                 conhecimento da culinária e tradições locais, além de fazer contato e possibilitar compras dos produtos que constituem boa parte do carro-chefe da economia local.' date='Horário de visitação: quinta-feria 17:00 - 21:00' path='src\assets\img\turismo\07_512x341.jpg' redirectDetail='' redirectMap=''/>
             </div>
-        </div>
+        </section>
     )
 }
