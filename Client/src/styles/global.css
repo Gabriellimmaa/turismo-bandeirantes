@@ -79,6 +79,31 @@ section {
   padding: 2rem 6rem 4rem 6rem;
 }
 
+@media screen and (max-width: 1440px) {
+  section {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 1rem 2rem;
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  .gap-5 {
+    gap: 0 !important;
+  }
+}
+
 @media screen and (max-width: 390px) {
   section {
     padding: 1rem 0.5rem;
