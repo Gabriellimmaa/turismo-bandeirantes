@@ -51,6 +51,7 @@ hr {
     background: white;
     display: flex;
     justify-content: center;
+    height: 200px;
 }
 
 .cardHotel .cardImgHotel img {
@@ -67,16 +68,16 @@ hr {
     cursor: pointer;
 }*/
 
-.iconsHotel {
+.prieceHotel {
+    margin-left: 1rem;
     display: flex;
-    flex-direction: row-reverse;
     background: #fff;
     color: black;
     padding: 0px .8rem .8rem 0px;
 }
 
-.iconsHotel svg{
-    margin-left: 1rem;
+.prieceHotel p{
+    margin-left: 2px;
 }
 
 .buttonsHotel {
@@ -124,7 +125,7 @@ hr {
         font-size: 14px;
     }
 
-    .iconsHotel strong {
+    .prieceHotel strong {
         font-size: 14px;
     }
 }

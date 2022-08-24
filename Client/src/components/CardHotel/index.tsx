@@ -1,4 +1,3 @@
-import { FaHamburger, FaShower, FaWind } from 'react-icons/fa'
 import { limitDescription } from '../../utils'
 import './styles.css'
 
@@ -6,9 +5,15 @@ interface CardProps {
   title: string
   description: string
   path: string
+  preco: number
 }
 
-export default function CardHotel({ title, description, path }: CardProps) {
+export default function CardHotel({
+  title,
+  description,
+  path,
+  preco,
+}: CardProps) {
   return (
     <div className="cardHotel">
       <div className="cardImgHotel">
@@ -23,11 +28,9 @@ export default function CardHotel({ title, description, path }: CardProps) {
             : description}
         </p>
       </div>
-      <div className="iconsHotel">
-        <FaShower size={24} color="#283729" />
-        <FaWind size={24} color="#283729" />
-        <FaHamburger size={24} color="#283729" />
-        <strong>Oferece: </strong>
+      <div className="prieceHotel">
+        <strong>Preço: </strong>
+        <p>R$ {preco}</p>
       </div>
       <hr />
       <div className="buttonsHotel">
