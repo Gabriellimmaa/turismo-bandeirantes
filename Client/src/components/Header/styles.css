@@ -107,7 +107,7 @@
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     position: absolute;
-    top: 50%;
+    top: 25%;
     right: 25px;
     transform: translateY(-50%);
     display: none;
