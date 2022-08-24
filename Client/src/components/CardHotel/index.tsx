@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 interface CardProps {
@@ -7,6 +8,7 @@ interface CardProps {
   preco: number
   telefone: string
   site: string
+  id: number
 }
 
 export default function CardHotel({
@@ -16,6 +18,7 @@ export default function CardHotel({
   preco,
   telefone,
   site,
+  id,
 }: CardProps) {
   return (
     <div className="cardHotel">
@@ -39,7 +42,7 @@ export default function CardHotel({
       </div>
       <hr />
       <div className="buttonsHotel">
-        <a href="">Ver mais</a>
+        <Link to={`/hotel/${id}`}>Ver mais</Link>
         <a href="">Abrir no Google Maps</a>
       </div>
     </div>
