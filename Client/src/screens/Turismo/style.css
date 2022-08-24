@@ -41,6 +41,7 @@
   display: inline-block;
   position: relative;
   padding: 1rem;
+  padding-left: 2rem;
 }
 
 .turismo .main-options ul {
@@ -100,7 +101,7 @@
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 430px){
   .turismo h1 {
     font-size: 40px;
   }

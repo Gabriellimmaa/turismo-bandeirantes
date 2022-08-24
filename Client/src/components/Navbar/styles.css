@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 440px) {
   .navbar {
     mask: linear-gradient(
       90deg,
@@ -69,9 +69,12 @@
     );
   }
 
+  .navbar ul {
+    display: flex;
+  }
+
   .navbar ul li {
     display: inline-flex;
-    padding: 10px;
     font-size: 10px;
   }
 }
