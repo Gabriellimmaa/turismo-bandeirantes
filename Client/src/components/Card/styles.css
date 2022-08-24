@@ -3,6 +3,7 @@
     height: auto;
     background: #fafafa;
     max-width: none !important;
+    min-width: 292px !important;
     margin: 12px 10px 12px 10px;
     cursor: pointer;
     filter: brightness(1);
