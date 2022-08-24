@@ -53,6 +53,8 @@ export function Hoteis() {
                     description={hotel.email}
                     path={hotel.logo}
                     preco={hotel.preco}
+                    telefone={hotel.telefone}
+                    site={hotel.site}
                   />
                 )
               })

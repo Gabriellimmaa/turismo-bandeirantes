@@ -1,4 +1,3 @@
-import { limitDescription } from '../../utils'
 import './styles.css'
 
 interface CardProps {
@@ -6,6 +5,8 @@ interface CardProps {
   description: string
   path: string
   preco: number
+  telefone: string
+  site: string
 }
 
 export default function CardHotel({
@@ -13,6 +14,8 @@ export default function CardHotel({
   description,
   path,
   preco,
+  telefone,
+  site,
 }: CardProps) {
   return (
     <div className="cardHotel">
@@ -23,9 +26,11 @@ export default function CardHotel({
       <hr />
       <div className="descriptionHotel">
         <p>
-          {description.length >= 100
-            ? limitDescription(description)
-            : description}
+          {description}
+          <br />
+          {telefone}
+          <br />
+          <a href={site}>{site}</a>
         </p>
       </div>
       <div className="prieceHotel">
