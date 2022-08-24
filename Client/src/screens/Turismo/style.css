@@ -1,41 +1,32 @@
-.turismo {
-    width: 100%;
+.turismo{
+  width: 100%;
     height: auto;
     padding-bottom: 40px;
     padding-top: 10px;
     padding-left: 80px;
     padding-right: 80px;
+    padding-top: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #grid {
     padding: 10px;
+    padding-top: 10px;
 }
 
 .turismo h1 {
     justify-content: center;
     display: flex;
+    font-size: 50px;
 }
 
 .turismo .main-options ul {
-    display: flex;
-    border-radius: 10px;
-    padding: 2px;
-    justify-content: center;
-    background-color: #ffffff;
-}
-
-.turismo .main-options ul li {
-    padding-left: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    width: 100%;
     max-width: fit-content;
     height: 100%;
     max-height: fit-content;
     margin-top: 12px;
+    margin-top: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     background-color: #ffffff;
