@@ -2,15 +2,28 @@ import Navbar from '../../components/Navbar'
 import Card from '../../components/Card'
 import './style.css'
 
-
-
 export function Turismo() {
+  const objectList = [
+    {
+      "id": "01",
+      "nome": "Turismo religioso",
+    },
+    {
+      "id": "02",
+      "nome": "Turismo Cultural",
+    },
+    {
+      "id": "03",
+      "nome": "Turismo Rural",
+    }
+    
+  ]
   return (
     <section className='turismo'>
       <h1>
         Um lugar de fé, natureza e tradições
       </h1>
-      <Navbar item1='Turismo Religioso' item2='Turismo Cultural' item3='Turismo Rural' />
+      <Navbar objectList={objectList} />
       <div id="grid" className='grid grid-cols-3 gap-5 justify-items-center'>
         <Card
           title='Santuário de Santa Terezinha do Menino Jesus'
