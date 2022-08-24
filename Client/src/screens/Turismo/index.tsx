@@ -7,8 +7,9 @@ export function Turismo() {
   return (
     <section className='turismo'>
       <h1>
-        Um lugar de fé, natureza e tradições
+        O que fazer?
       </h1>
+      <h2>Um lugar de fé, natureza e tradições</h2>
       <Navbar objectList={optionTurismo} />
       <div id="grid" className='grid grid-cols-3 gap-5 justify-items-center'>
         <Card

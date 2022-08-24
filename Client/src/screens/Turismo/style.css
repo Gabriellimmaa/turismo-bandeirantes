@@ -1,6 +1,10 @@
 .turismo {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
 }
 
 #grid {
@@ -9,9 +13,34 @@
 }
 
 .turismo h1 {
-  justify-content: center;
-  display: flex;
-  font-size: 50px;
+  text-transform: uppercase;
+  font-size: 64px;
+  margin: 1rem 0 0.2rem 0;
+  color: #283729;
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+}
+
+.turismo h1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 6px;
+  transform: translate(8%, 50%);
+  background-color: #283729;
+  width: 45%;
+}
+
+.turismo h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #326335;
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
 }
 
 .turismo .main-options ul {
@@ -64,3 +93,16 @@
   color: #ffffff;
   transition: 0.3s;
 }
+
+@media screen and (max-width: 520px){
+  .turismo h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .turismo h1 {
+    font-size: 40px;
+  }
+}
+
