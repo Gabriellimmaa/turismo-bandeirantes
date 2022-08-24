@@ -221,7 +221,13 @@ h3::after {
 }
 
 @media screen and (max-width: 320px) {
-    .contacts {
-        word-break: break-all;
+    .footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    footer {
+        font-size: 14px;
     }
 }
