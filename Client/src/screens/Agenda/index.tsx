@@ -1,27 +1,13 @@
 import Card from '../../components/Card'
+import Navbar from '../../components/Navbar'
+import { optionAgenda } from './optionData'
 import './styles.css'
 
 export function Agenda() {
   return (
     <section id="agenda">
       <h1 className="text-center w-full text-5xl">AGENDA</h1>
-      <div className="option">
-        <ul className="bg-gray-200">
-          <li>Todos</li>
-          <li>Janeiro</li>
-          <li>Fevereiro</li>
-          <li>Março</li>
-          <li>Abril</li>
-          <li>Maio</li>
-          <li>Junho</li>
-          <li>Julho</li>
-          <li>Agosto</li>
-          <li>Setembro</li>
-          <li>Outubro</li>
-          <li>Novembro</li>
-          <li>Dezembro</li>
-        </ul>
-      </div>
+      <Navbar objectList={optionAgenda} />
       <div className="grid grid-cols-3 gap-5 justify-items-center mt-6">
         <div className="w-[23.999rem] min-h-[14.621rem] rounded overflow-hidden shadow-lg">
           <h2 className="flex py-2 justify-center">Texte</h2>
