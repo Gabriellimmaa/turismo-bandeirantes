@@ -1,4 +1,16 @@
 import React from 'react'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { Autoplay, FreeMode, Pagination } from "swiper";
 import './styles.css'
 
 export default function Historia() {
@@ -66,6 +78,47 @@ export default function Historia() {
           </div>
         </div>
       </div>
-    </section>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        centeredSlides={true}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, FreeMode, Pagination]}
+        className="mySwiper"
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+
+      >
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="src\assets\img\restaurante\01.jpg" />
+      </SwiperSlide>
+    </Swiper>
+    </section >
   )
 }
