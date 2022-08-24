@@ -3,7 +3,7 @@ import './styles.css'
 
 export function Agenda() {
   return (
-    <div id="agenda">
+    <section id="agenda">
       <h1 className="text-center w-full text-5xl">AGENDA</h1>
       <div className="option">
         <ul className="bg-gray-200">
@@ -34,6 +34,6 @@ export function Agenda() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

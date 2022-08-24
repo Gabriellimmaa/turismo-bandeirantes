@@ -3,7 +3,7 @@ import './styles.css'
 
 export default function Historia() {
   return (
-    <div className='historia'>
+    <section className='historia'>
       <div className='texto'>
         <h1>
           Como começou?
@@ -66,6 +66,6 @@ export default function Historia() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -5,7 +5,7 @@ import './styles.css'
 
 export default function Restaurantes() {
   return (
-    <div id="restaurante" >
+    <section id="restaurante" >
       <h1 className='text-center w-full text-5xl'>
         RESTAURANTES
       </h1>
@@ -19,14 +19,15 @@ export default function Restaurantes() {
         </ul>
       </div>
       <div className="grid grid-cols-3 gap-5 justify-items-center">
-        <Card title='Bom de garfo' description='asdasd' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
-        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
-        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
-        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
-        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
-        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
-        <Card title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='asdasd' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
+        <Card path='src\assets\img\restaurante\01.jpg' title='Bom de garfo' description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic qui tenetur similique perferendis dolores enim corrupti, inventore commodi a, consequatur accusamus iusto rerum iure delectus, alias sit maiores itaque odit.' date='07:00 às 19:00' redirectDetail='https://xvideos.com' redirectMap='https://xvideos.com' />
       </div>
-    </div>
+    </section>
   )
 }

@@ -38,7 +38,7 @@ export function Hoteis() {
 
   return (
     <>
-      <div className="containerHotel">
+      <section className="containerHotel">
         <h1 className="uppercase">Onde ficar?</h1>
         <h2 className="uppercase">
           Encontre hotéis, pousadas e muito outros lugares para se hospedar!
@@ -46,21 +46,21 @@ export function Hoteis() {
         <div className="containerCards">
           {Array.isArray(hoteis)
             ? hoteis?.map((hotel) => {
-                return (
-                  <CardHotel
-                    key={hotel.id}
-                    title={hotel.nome}
-                    description={hotel.email}
-                    path={hotel.logo}
-                    preco={hotel.preco}
-                    telefone={hotel.telefone}
-                    site={hotel.site}
-                  />
-                )
-              })
+              return (
+                <CardHotel
+                  key={hotel.id}
+                  title={hotel.nome}
+                  description={hotel.email}
+                  path={hotel.logo}
+                  preco={hotel.preco}
+                  telefone={hotel.telefone}
+                  site={hotel.site}
+                />
+              )
+            })
             : null}
         </div>
-      </div>
+      </section>
     </>
   )
 }

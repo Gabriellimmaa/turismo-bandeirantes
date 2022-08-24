@@ -1,73 +1,66 @@
-.turismo{
+.turismo {
   width: 100%;
-    height: auto;
-    padding-bottom: 40px;
-    padding-top: 10px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
+  height: auto;
 }
 
 #grid {
-    padding: 10px;
-    padding-top: 10px;
+  padding: 10px;
+  padding-top: 10px;
 }
 
 .turismo h1 {
-    justify-content: center;
-    display: flex;
-    font-size: 50px;
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
 }
 
 .turismo .main-options ul {
-    max-width: fit-content;
-    height: 100%;
-    max-height: fit-content;
-    margin-top: 12px;
-    margin-top: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-    position: relative;
-    vertical-align: top;
+  max-width: fit-content;
+  height: 100%;
+  max-height: fit-content;
+  margin-top: 12px;
+  margin-top: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  vertical-align: top;
 }
 
 .turismo .card .card-text {
-    padding: 10px;
-    position: relative;
+  padding: 10px;
+  position: relative;
 }
 
-.turismo .card .card-text p{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.turismo .card .card-text p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .turismo .card .card-text label {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-    font-size: 19px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  font-size: 19px;
 }
 
 .turismo .card .card-text button {
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    bottom: 0;
-    position: fixed;
-    margin-bottom: 5px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 5px;
 }
 
 .turismo .card .card-text button:hover {
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #5368b9;
-    color: #ffffff;
-    transition: 0.3s;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #5368b9;
+  color: #ffffff;
+  transition: 0.3s;
 }
