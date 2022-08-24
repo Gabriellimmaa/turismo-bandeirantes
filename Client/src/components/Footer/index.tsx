@@ -1,4 +1,4 @@
-import { FaFacebook, FaYoutube } from 'react-icons/fa'
+import { FaEnvelope, FaFacebook, FaPhone, FaYoutube } from 'react-icons/fa'
 import './styles.css'
 
 export function Footer() {
@@ -77,8 +77,14 @@ export function Footer() {
               <h3>Contato</h3>
               <div className="contacts">
                 <strong>Rua Frei Raphael Proner, 1457</strong>
-                <strong>Telefone: (43) 3542-4525</strong>
-                <strong>comunicacao@bandeirantes.pr.gov.br</strong>
+                <strong>
+                  <FaPhone color="red" />
+                  (43) 3542-4525
+                </strong>
+                <strong>
+                  <FaEnvelope color="red" />
+                  comunicacao@bandeirantes.pr.gov.br
+                </strong>
               </div>
             </div>
           </div>

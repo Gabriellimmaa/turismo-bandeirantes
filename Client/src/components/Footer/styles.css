@@ -68,6 +68,13 @@ h3::after {
     margin: 20px 0px 20px 0px;
 }
 
+.contacts strong {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .column {
     display: flex;
     flex-direction: column;
