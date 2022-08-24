@@ -78,11 +78,11 @@ export function Footer() {
               <div className="contacts">
                 <strong>Rua Frei Raphael Proner, 1457</strong>
                 <strong>
-                  <FaPhone color="red" />
+                  <FaPhone color="#727272" />
                   (43) 3542-4525
                 </strong>
                 <strong>
-                  <FaEnvelope color="red" />
+                  <FaEnvelope color="#727272" />
                   comunicacao@bandeirantes.pr.gov.br
                 </strong>
               </div>
