@@ -101,7 +101,7 @@ export function Turismo() {
         <Card title='Estância Santa Maria'
           description='Localizada a aproximadamente 7 Km da cidade, a estância oferece opções de turismo ecológico e lazer rural, com áreas preservadas de mata, quiosques, piscinas, pousada, bar e lanchonete,
                 além de realizar anualmente diversos eventos de natureza musical e temática. Um ponto de lazer e passeios que pode ser frequentado com ou sem agendamento.'
-          date='Horário de visitação: 08:00 - 17:00'
+          date='Horário de visitação:08:00 - 17:00'
           path='src\assets\img\turismo\12_512x288.jpg'
           redirectDetail=''
           redirectMap=''
@@ -112,7 +112,7 @@ export function Turismo() {
           description='Toda quinta-feira acontece no Parque do Povo um encontro gastronômico com diversas barracas de comidas e bebidas acompanhado sempre de música ao vivo. A feira promove a culinária e a cultura locais, além da integração 
                 entre bandeirantenses e seus visitantes. A Feira Livre do Agricultor acontece aos domingos pela manhã, no entorno da “Praça Brasil-Japão” e é uma opção de lazer e 
                 conhecimento da culinária e tradições locais, além de fazer contato e possibilitar compras dos produtos que constituem boa parte do carro-chefe da economia local.'
-          date='Horário de visitação: quinta-feria 17:00 - 21:00'
+          date='Horário de visitação:17:00 - 21:00'
           path='src\assets\img\turismo\07_512x341.jpg'
           redirectDetail=''
           redirectMap=''
