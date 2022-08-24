@@ -54,16 +54,16 @@ export default function Historia() {
 
       <div className="imagens">
         <div className="container">
-          <img src="\src\assets\img\historia\Bandeirantes.png"/>
-            <div className="overlay">
-              <div className="text">Bandeira do Município</div>
-            </div>
+          <img src="\src\assets\img\historia\Bandeirantes.png" />
+          <div className="overlay">
+            <div className="text">Bandeira do Município</div>
+          </div>
         </div>
         <div className="container">
-          <img src="\src\assets\img\historia\brasao.png"/>
-            <div className="overlay">
-              <div className="text">Brasão do Município</div>
-            </div>
+          <img src="\src\assets\img\historia\brasao.png" />
+          <div className="overlay">
+            <div className="text">Brasão do Município</div>
+          </div>
         </div>
       </div>
     </div>
