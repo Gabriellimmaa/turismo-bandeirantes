@@ -14,7 +14,6 @@ export function Router() {
       <Route path="/" element={<Inicio />} />
       <Route path="/historia" element={<Historia />} />
       <Route path="/turismo" element={<Turismo />} />
-      <Route path='/turismo/:id' element={<Turismo />} />
       <Route path="/restaurantes" element={<Restaurantes />} />
       <Route path="/agenda" element={<Agenda />} />
       <Route path="/contato" element={<Contato />} />
