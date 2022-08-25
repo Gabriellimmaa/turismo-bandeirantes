@@ -25,7 +25,7 @@
 }
 
 .navbar ul li {
-  display: inline-flex;
+  display: inline-block;
 }
 
 .navbar ul li button {
@@ -52,29 +52,30 @@
   }
 
   .navbar ul li {
-    display: inline-flex;
-    padding: 10px;
+    display: block;
     font-size: 10px;
   }
 }
 
 @media screen and (max-width: 440px) {
-  .navbar {
-    mask: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      #ffffff 0%,
-      #ffffff 100%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-
   .navbar ul {
-    display: flex;
+    display: inline-block;
   }
 
   .navbar ul li {
-    display: inline-flex;
+    display: block;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .navbar ul {
+    display: inline-block;
+  }
+
+  .navbar ul li {
+    display: block;
     font-size: 10px;
   }
 }

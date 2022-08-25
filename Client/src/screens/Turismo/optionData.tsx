@@ -11,5 +11,4 @@ export const optionTurismo = [
     "id": "03",
     "nome": "Turismo Rural",
   }
-
 ]
