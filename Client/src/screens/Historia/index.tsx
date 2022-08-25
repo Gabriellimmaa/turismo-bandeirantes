@@ -33,54 +33,57 @@ export default function Historia() {
 
         <p>Localizada no Norte Pioneiro do Paraná, Bandeirantes se distingue pela terra fértil e pelo povo oriundo de diversas partes do Brasil e do mundo. O município tem forte influência dos paulistas, mineiros, italianos, japoneses e portugueses, origem primordial das vocações econômicas e turísticas do município. </p>
         <p>A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local.</p>
-        <h2>
-          Bandeirantes em números.
-        </h2>
 
-        <p><b>Inauguração:</b> 14 de novembro de 1934 <br />
+        <div className='dados'>
 
-          <b>Gentílico:</b> Bandeirantense<br />
+          <p><h2>
+            Bandeirantes em números.
+          </h2><br/>
+            <b>Inauguração:</b> 14 de novembro de 1934 <br />
 
-          <b>População:</b> 32.184 (Censo IBGE [2010])<br />
+            <b>Gentílico:</b> Bandeirantense<br />
 
-          <b>Área da unidade territorial [2022]:</b> 445,192 km²<br />
+            <b>População:</b> 32.184 (Censo IBGE [2010])<br />
 
-          <b>Densidade demográfica:</b> 72,29 hab/km² <br />
+            <b>Área da unidade territorial [2022]:</b> 445,192 km²<br />
 
-          <b>Bioma:</b> Mata Atlântica<br />
+            <b>Densidade demográfica:</b> 72,29 hab/km² <br />
 
-          <b>Altitude:</b> 420 m<br />
+            <b>Bioma:</b> Mata Atlântica<br />
 
-          <b>Clima:</b> Tropical. Verão é longo, quente, abafado e de céu quase encoberto; o inverno é curto, agradável e de céu quase sem nuvens.<br />
+            <b>Altitude:</b> 420 m<br />
 
-          <b>Temperatura média:</b> 15°C a 31°C.<br />
+            <b>Clima:</b> Tropical. Verão é longo, quente, abafado e de céu quase encoberto; o inverno é curto, agradável e de céu quase sem nuvens.<br />
 
-          <b>Umidade média relativa do ar:</b> 3 a 91%.<br />
+            <b>Temperatura média:</b> 15°C a 31°C.<br />
 
-          <b>Renda per capita (média mensal):</b> 1,9 salários mínimos (IBGE 2020).<br />
+            <b>Umidade média relativa do ar:</b> 3 a 91%.<br />
 
-          <b>Índice de Desenvolvimento Humano (IDH):</b> 0,727 (IBGE 2010)<br />
+            <b>Renda per capita (média mensal):</b> 1,9 salários mínimos (IBGE 2020).<br />
 
-          <b>PIB per capita [2019]:</b> 25.807,42 R$ <br />
+            <b>Índice de Desenvolvimento Humano (IDH):</b> 0,727 (IBGE 2010)<br />
 
-        </p>
-      </div>
+            <b>PIB per capita [2019]:</b> 25.807,42 R$ <br />
+          </p>
+          <div className="imagens">
 
-      <div className="imagens">
+            <div className="container">
+              <img className='bandeira' src="\src\assets\img\historia\Bandeirantes.png" />
+              <div className="overlay1">
+                <div className="text">Bandeira do Município</div>
+              </div>
+            </div>
+            <div className="container">
+              <img className='brasao' src="\src\assets\img\historia\brasao.png" />
+              <div className="overlay2">
+                <div className="text">Brasão do Município</div>
+              </div>
+            </div>
 
-        <div className="container">
-          <img className='brasao' src="\src\assets\img\historia\brasao.png" />
-          <div className="overlay2">
-            <div className="text">Brasão do Município</div>
           </div>
         </div>
-        <div className="container">
-          <img className='bandeira' src="\src\assets\img\historia\Bandeirantes.png" />
-          <div className="overlay1">
-            <div className="text">Bandeira do Município</div>
-          </div>
-        </div>
       </div>
+
 
 
       <Swiper
