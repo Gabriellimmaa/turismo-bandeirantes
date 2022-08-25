@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom'
 import './styles.css'
 
 interface ObjectImg{
