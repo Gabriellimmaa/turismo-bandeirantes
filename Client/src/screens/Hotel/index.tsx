@@ -34,19 +34,28 @@ export function Hotel() {
     })
   }, [])
 
-  if (!loading) {
-    ;<div></div>
+  if (loading) {
+    return <div>Loading...</div>
   }
 
   return (
-    <>
+    <div>
       <div className="heroHotel">
         <img src={hotel?.logo} alt="" />
       </div>
 
       <div className="containerHotel">
         <h1>{hotel?.nome}</h1>
+        <div className="containerHotelInfo">
+          <strong className="uppercase">seja bem vindo</strong>
+          <div className="infosContainer">
+            <p>{hotel?.endereco}</p>
+            <p></p>
+            <p>{hotel?.email}</p>
+            <p>{hotel?.preco}</p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
