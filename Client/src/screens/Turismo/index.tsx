@@ -20,6 +20,7 @@ export function Turismo() {
           redirectMap=''
           redirectDetail=''
           path='src\assets\img\turismo\02_512x342.jpg'
+          id={1}
         />
 
         <Card
@@ -30,20 +31,30 @@ export function Turismo() {
           path="src\assets\img\turismo\01_512x342.jpg"
           redirectDetail=''
           redirectMap=''
+          id={2}
         />
 
         <Card
           title='Capela São Domingos'
           description='A Capela São Domingos, atualmente administrada pela Mitra Diocesana de Jacarezinho, foi construída em 1954 pelo
                         fundador do complexo Hotel e Termas Yara, hoje desativados. De estilo arquitetônico italiano, atualmente desativada
-                        para realização de missas e celebrações, é local de visitação e de peregrinação de fiéis que aproveitam o passeio pela Fazenda Yara.' path='src\assets\img\turismo\03_512x342.jpg' date='Horário de visitação: 24h' redirectDetail='' redirectMap='' />
+                        para realização de missas e celebrações, é local de visitação e de peregrinação de fiéis que aproveitam o passeio pela Fazenda Yara.' 
+                        path='src\assets\img\turismo\03_512x342.jpg' 
+                        date='Horário de visitação: 24h' 
+                        redirectDetail='' 
+                        redirectMap='' 
+                        id={3}
+                        />
+        
         <Card title='Parque do Povo'
           description='O Santuário de Santa Terezinha do Menino Jesus e da Sagrada Face, Padroeira do município, foi inaugurado em 1926, 
                         tem como destaque a realização da “Missa das Rosas”, no dia 1º de outubro, dia da padroeira.'
           date='Horário de visitação: 24h'
           path='src\assets\img\turismo\04_512x293.jpg'
           redirectDetail=''
-          redirectMap='' />
+          redirectMap='' 
+          id={4}
+          />
 
         <Card
           title='Fazenda Yara'
@@ -53,6 +64,7 @@ export function Turismo() {
           path='src\assets\img\turismo\5_512x342.jpg'
           redirectDetail=''
           redirectMap=''
+          id={5}
         />
         <Card
           title='Castelo Vinícola La Dorni'
@@ -62,6 +74,7 @@ export function Turismo() {
           path='src\assets\img\turismo\6_512x342.jpg'
           redirectDetail=''
           redirectMap=''
+          id={6}
         />
         <Card
           title='Encontro das águas'
@@ -71,6 +84,7 @@ export function Turismo() {
           path='src\assets\img\turismo\09_512x342.jpg'
           redirectDetail=''
           redirectMap=''
+          id={7}
         />
 
         <Card
@@ -80,7 +94,9 @@ export function Turismo() {
           date='Horário de visitação: 08:00 - 20:00'
           path='src\assets\img\turismo\10_512x342.jpg'
           redirectDetail=''
-          redirectMap='' />
+          redirectMap='' 
+          id={8}
+          />
         <Card
           title='Museu Municipal'
           description='O Museu Municipal Professora Maria Calil Zambon está instalado no prédio da antiga estação ferroviária, um dos marcos iniciais da história do município. 
@@ -90,6 +106,7 @@ export function Turismo() {
           path='src\assets\img\turismo\11_512x342.jpg'
           redirectDetail=''
           redirectMap=''
+          id={9}
         />
         <Card title='Resort Morro dos Anjos'
           description='O Morro dos Anjos será um dos hotéis resort mais completos do Sul do País. Um lugar que une paz e lazer diferenciado com um belíssimo complexo aquático de águas quentes termais.'
@@ -97,6 +114,7 @@ export function Turismo() {
           path='src\assets\img\turismo\13_512x269.jpg'
           redirectDetail=''
           redirectMap=''
+          id={10}
         />
 
         <Card title='Estância Santa Maria'
@@ -106,6 +124,7 @@ export function Turismo() {
           path='src\assets\img\turismo\12_512x288.jpg'
           redirectDetail=''
           redirectMap=''
+          id={11}
         />
 
         <Card
@@ -117,7 +136,9 @@ export function Turismo() {
           path='src\assets\img\turismo\07_512x341.jpg'
           redirectDetail=''
           redirectMap=''
+          id={12}
         />
+        
       </div>
     </section>
   )

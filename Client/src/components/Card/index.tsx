@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BiMap, BiTime } from 'react-icons/bi'
 import { limitDescription } from '../../utils'
 import './styles.css'
@@ -9,6 +10,7 @@ interface CardProps {
   redirectMap: string
   redirectDetail: string
   path: string
+  id: number
 }
 
 export default function Card({
@@ -18,6 +20,7 @@ export default function Card({
   redirectMap,
   redirectDetail,
   path,
+  id,
 }: CardProps) {
   return (
     <div className="card">
@@ -42,7 +45,7 @@ export default function Card({
       </div>
       <div className="redirect">
         <a className="margin" href={redirectDetail}>
-          Ver mais
+          <Link to={`/turismo/${id}`}> Ver mais</Link>
         </a>
       </div>
     </div>
