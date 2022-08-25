@@ -4,6 +4,14 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import './styles.css'
 
+import logo from '../../assets/logo-banner.png'
+import brasil from '../../assets/languages/brazil.png'
+import english from '../../assets/languages/usa.png'
+import spain from '../../assets/languages/spain.png'
+import france from '../../assets/languages/france.png'
+
+
+
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
 
@@ -15,29 +23,28 @@ export default function Header() {
             <a>
               <img
                 className="w-auto h-10 m-1 ml-10"
-                src="src\assets\languages\brazil.png"
+                src={brasil}
               />
             </a>
             <a>
               <img
                 className="w-auto h-10 m-1"
-                src="src\assets\languages\france.png"
+                src={english}
               />
             </a>
             <a>
               <img
                 className="w-auto h-10 m-1"
-                src="src\assets\languages\spain.png"
+                src={spain}
               />
             </a>
             <a>
               <img
                 className="w-auto h-10 m-1"
-                src="src\assets\languages\usa.png"
+                src={france}
               />
             </a>
           </div>
-
           <div id="optionLanguageMobile">
             <div className="items-center">
               <IoLanguage size={18} />
@@ -51,7 +58,7 @@ export default function Header() {
                   <a href="#">
                     <img
                       className="w-auto h-10 m-1 ml-10"
-                      src="src\assets\languages\brazil.png"
+                      src={brasil}
                     />
                   </a>
                 </li>
@@ -59,7 +66,7 @@ export default function Header() {
                   <a href="#">
                     <img
                       className="w-auto h-10 m-1 ml-10"
-                      src="src\assets\languages\france.png"
+                      src={france}
                     />
                   </a>
                 </li>
@@ -67,7 +74,7 @@ export default function Header() {
                   <a href="#">
                     <img
                       className="w-auto h-10 m-1 ml-10"
-                      src="src\assets\languages\spain.png"
+                      src={spain}
                     />
                   </a>
                 </li>
@@ -75,7 +82,7 @@ export default function Header() {
                   <a href="#">
                     <img
                       className="w-auto h-10 m-1 ml-10"
-                      src="src\assets\languages\usa.png"
+                      src={english}
                     />
                   </a>
                 </li>
@@ -84,7 +91,7 @@ export default function Header() {
           </div>
         </div>
         <div className="flex justify-center">
-          <img className="w-80 h-auto" src="src\assets\logo-banner.png" />
+          <img className="w-80 h-auto" src={logo} />
         </div>
       </div>
       <button
