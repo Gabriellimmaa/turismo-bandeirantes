@@ -1,3 +1,4 @@
+import { limitDescription } from '../../utils'
 import './styles.css'
 
 interface CardProps {
@@ -22,7 +23,7 @@ export default function CardAgenda({
       </div>
       <strong className="titleAgenda">{title}</strong>
       <div className="descriptionAgenda">
-        <p>{description}</p>
+        <p>{limitDescription(description)}</p>
       </div>
       <footer className="flex text-sm justify-between px-4 py-1">
         <p>{address}</p>

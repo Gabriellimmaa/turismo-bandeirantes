@@ -11,14 +11,13 @@ interface NavbarProps {
 
 export default function Navbar({ objectList }: NavbarProps) {
   return (
-    <div className='navbar'>
+    <div className="navbar">
       <ul>
         {objectList.map((data: ObjectItem) => (
-          <li>
+          <li key={data.id}>
             <button>{data.nome}</button>
           </li>
-        )
-        )}
+        ))}
       </ul>
     </div>
   )
