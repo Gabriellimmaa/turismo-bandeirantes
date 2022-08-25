@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import Historia from './screens/Historia'
 import { Hoteis } from './screens/ListHoteis'
+import { Hotel } from './screens/Hotel'
 import Inicio from './screens/Inicio'
 import Restaurantes from './screens/Restaurantes'
 import Contato from './screens/Contato'
 import { Agenda } from './screens/Agenda'
-import { Hotel } from './screens/Hotel'
 import { Turismo } from './screens/Turismo'
 import {TurismoDetail} from './screens/TurismoDetail'
 

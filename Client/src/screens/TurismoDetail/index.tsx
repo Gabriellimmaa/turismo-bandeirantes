@@ -5,9 +5,17 @@ import './styles.css'
 
 interface TurismoDetailProps {
   id: number
-  title: string
-  description: string
-  banner: string
+  nome: string
+  descricao: string
+  email: string
+  endreco: string
+  telefone: string
+  site: string
+  logo: string
+  whats: string
+  face: string
+  insta: string
+  ativo: number
 }
 
 export function TurismoDetail() {
@@ -17,9 +25,9 @@ export function TurismoDetail() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    api.get(`/turismo/${id}`).then((response) => {
+    api.get(`/atracoes/${id}`).then((response) => {
       console.log(response.data)
-      setTurismo(response.data.turismo[0])
+      setTurismo(response.data.atracoes[0])
       setLoading(false)
     })
   }, [])
@@ -31,12 +39,12 @@ export function TurismoDetail() {
   return (
     <div className="turismo-detail">
       <div className="turismo-detail-img">
-        <img src={turismo?.banner} />
+        <img src={turismo?.logo} />
       </div>
       <div className="turismo-detail-description">
-        <label className="title">{turismo?.title}</label>
+        <label className="title">{turismo?.nome}</label>
         <p>
-          {turismo?.description}
+          {turismo?.descricao}
         </p>
       </div>
     </div>
