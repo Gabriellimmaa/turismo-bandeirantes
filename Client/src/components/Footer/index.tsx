@@ -13,7 +13,7 @@ export function Footer() {
             <img
               className="w-auto mt-6 mb-6 object-contain"
               src={logo}
-              alt="Logo"
+              alt="Logo Bandeirantes Turismo"
             />
           </div>
           <div className="redesIcon">
@@ -37,7 +37,7 @@ export function Footer() {
               </div>
             </div>
             <div className="column titleHidden">
-              <h3>Notícias</h3>
+              <h3>Eventos</h3>
               <div className="notices">
                 <a href="">
                   <div className="notice">
@@ -96,7 +96,11 @@ export function Footer() {
           © 2022 - Prefeitura Municipal de Bandeirantes - Todos os direitos
           reservados
         </p>
-        <img className="w-auto max-h-20 bg-contain" src={logoBanner} />
+        <img
+          className="w-auto max-h-20 bg-contain"
+          src={logoBanner}
+          alt="Logo Bandeirantes"
+        />
         <p>Website desenvolvido pela equipe FrontCode</p>
       </div>
     </footer>
