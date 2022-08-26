@@ -1,6 +1,4 @@
-import React from 'react'
 import Card from '../../components/Card'
-import { MdFastfood } from 'react-icons/md'
 import './styles.css'
 import Navbar from '../../components/Navbar'
 import { optionRestaurante } from './optionData'
