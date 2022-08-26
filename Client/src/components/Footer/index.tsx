@@ -1,6 +1,9 @@
 import { FaEnvelope, FaFacebook, FaPhone, FaYoutube } from 'react-icons/fa'
 import './styles.css'
 
+import logo from '../../assets/logoTurismo.png'
+import logoBanner from '../../assets/logo-banner.png'
+
 export function Footer() {
   return (
     <footer className="border-t-2">
@@ -9,7 +12,8 @@ export function Footer() {
           <div className="logo">
             <img
               className="w-auto mt-6 mb-6 object-contain"
-              src="src\assets\logoFooter.png"
+              src={logo}
+              alt="Logo"
             />
           </div>
           <div className="redesIcon">
@@ -37,10 +41,7 @@ export function Footer() {
               <div className="notices">
                 <a href="">
                   <div className="notice">
-                    <img
-                      className="w-auto h-20"
-                      src="src\assets\logo-banner.png"
-                    />
+                    <img className="w-auto h-20" src={logoBanner} />
                     <div className="notice-text">
                       Brasão
                       <p>20/15/2022</p>
@@ -95,10 +96,7 @@ export function Footer() {
           © 2022 - Prefeitura Municipal de Bandeirantes - Todos os direitos
           reservados
         </p>
-        <img
-          className="w-auto max-h-20 bg-contain"
-          src="src\assets\logo-banner.png"
-        />
+        <img className="w-auto max-h-20 bg-contain" src={logoBanner} />
         <p>Website desenvolvido pela equipe FrontCode</p>
       </div>
     </footer>
