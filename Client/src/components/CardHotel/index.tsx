@@ -3,22 +3,26 @@ import './styles.css'
 
 interface CardProps {
   title: string
-  description: string
+  email: string
   path: string
   preco: number
   telefone: string
   site: string
   id: number
+  latitude: string
+  longitude: string
 }
 
 export default function CardHotel({
+  id,
   title,
-  description,
+  email,
   path,
   preco,
   telefone,
   site,
-  id,
+  latitude,
+  longitude,
 }: CardProps) {
   return (
     <div className="cardHotel">
@@ -29,7 +33,7 @@ export default function CardHotel({
       <hr />
       <div className="descriptionHotel">
         <p>
-          {description}
+          {email}
           <br />
           {telefone}
           <br />
@@ -43,7 +47,11 @@ export default function CardHotel({
       <hr />
       <div className="buttonsHotel">
         <Link to={`/hotel/${id}`}>Ver mais</Link>
-        <a href="">Abrir no Google Maps</a>
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
+        >
+          Abrir no Google Maps
+        </a>
       </div>
     </div>
   )

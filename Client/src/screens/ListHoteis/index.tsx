@@ -11,14 +11,8 @@ interface HoteisProps {
   email: string
   site: string
   telefone: string
-  endereco: string
-  maps: string
-  whats: string
-  insta: string
-  face: string
-  aitvo: number
-  created_at: string
-  updated_at: string
+  latitude: string
+  longitude: string
 }
 
 export function Hoteis() {
@@ -50,12 +44,14 @@ export function Hoteis() {
                   <CardHotel
                     key={hotel.id}
                     title={hotel.nome}
-                    description={hotel.email}
+                    email={hotel.email}
                     path={hotel.logo}
                     preco={hotel.preco}
                     telefone={hotel.telefone}
                     site={hotel.site}
                     id={hotel.id}
+                    latitude={hotel.latitude}
+                    longitude={hotel.longitude}
                   />
                 )
               })
