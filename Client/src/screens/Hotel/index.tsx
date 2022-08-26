@@ -43,6 +43,9 @@ export function Hotel() {
       <div className="heroHotel">
         <img src={hotel?.logo} alt="" />
       </div>
+      <div className="heroBackgroundHotel">
+        <img src={hotel?.logo} alt="" />
+      </div>
 
       <div className="containerHotel">
         <h1>{hotel?.nome}</h1>
