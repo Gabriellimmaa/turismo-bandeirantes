@@ -19,7 +19,6 @@ interface TurismoDetailProps {
 }
 
 export function TurismoDetail() {
-
   const { id } = useParams()
   const [turismo, setTurismo] = useState<TurismoDetailProps>()
   const [loading, setLoading] = useState(true)
@@ -43,9 +42,7 @@ export function TurismoDetail() {
       </div>
       <div className="turismo-detail-description">
         <label className="title">{turismo?.nome}</label>
-        <p>
-          {turismo?.descricao}
-        </p>
+        <p>{turismo?.descricao}</p>
       </div>
     </div>
   )

@@ -8,8 +8,6 @@ import { CardHome } from '../../components/CardHome'
 import Navbar from '../../components/Navbar'
 import CardAgenda from '../../components/CardAgenda'
 import { optionAgenda } from '../Agenda/optionData'
-import Card from '../../components/Card'
-import { optionTurismo } from '../Turismo/optionData'
 import { TurismoHome } from './TurismoHome'
 
 export default function Inicio() {
