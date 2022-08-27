@@ -94,4 +94,18 @@
     .heroBackgroundHotel img {
         width: 100%;
     }
+
+    .infosContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .containerHotelInfo strong {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .infosContainer {
+        grid-template-columns: 1fr;
+    }
 }
