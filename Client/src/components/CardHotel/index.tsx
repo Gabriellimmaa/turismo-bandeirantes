@@ -48,7 +48,9 @@ export default function CardHotel({
       <div className="buttonsHotel">
         <Link to={`/hotel/${id}`}>Ver mais</Link>
         <a
+          target="_blank"
           href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
+          rel="noreferrer"
         >
           Abrir no Google Maps
         </a>
