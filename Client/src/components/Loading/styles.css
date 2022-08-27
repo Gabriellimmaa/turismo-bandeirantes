@@ -1,0 +1,20 @@
+.loading {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading img {
+    animation: load 1.5s ease infinite alternate;
+}
+
+@keyframes load {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
