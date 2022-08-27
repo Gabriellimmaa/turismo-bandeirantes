@@ -9,8 +9,7 @@ import brasil from '../../assets/languages/brazil.png'
 import english from '../../assets/languages/usa.png'
 import spain from '../../assets/languages/spain.png'
 import france from '../../assets/languages/france.png'
-
-
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -21,28 +20,16 @@ export default function Header() {
         <div className="flex">
           <div id="optionLanguageDesktop">
             <a>
-              <img
-                className="w-auto h-10 m-1 ml-10"
-                src={brasil}
-              />
+              <img className="w-auto h-10 m-1 ml-10" src={brasil} />
             </a>
             <a>
-              <img
-                className="w-auto h-10 m-1"
-                src={english}
-              />
+              <img className="w-auto h-10 m-1" src={english} />
             </a>
             <a>
-              <img
-                className="w-auto h-10 m-1"
-                src={spain}
-              />
+              <img className="w-auto h-10 m-1" src={spain} />
             </a>
             <a>
-              <img
-                className="w-auto h-10 m-1"
-                src={france}
-              />
+              <img className="w-auto h-10 m-1" src={france} />
             </a>
           </div>
           <div id="optionLanguageMobile">
@@ -56,34 +43,22 @@ export default function Header() {
               <ul>
                 <li>
                   <a href="#">
-                    <img
-                      className="w-auto h-10 m-1 ml-10"
-                      src={brasil}
-                    />
+                    <img className="w-auto h-10 m-1 ml-10" src={brasil} />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      className="w-auto h-10 m-1 ml-10"
-                      src={france}
-                    />
+                    <img className="w-auto h-10 m-1 ml-10" src={france} />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      className="w-auto h-10 m-1 ml-10"
-                      src={spain}
-                    />
+                    <img className="w-auto h-10 m-1 ml-10" src={spain} />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      className="w-auto h-10 m-1 ml-10"
-                      src={english}
-                    />
+                    <img className="w-auto h-10 m-1 ml-10" src={english} />
                   </a>
                 </li>
               </ul>
@@ -91,7 +66,9 @@ export default function Header() {
           </div>
         </div>
         <div className="flex justify-center">
-          <img className="w-80 h-auto" src={logo} />
+          <Link to="/">
+            <img className="w-80 h-auto" src={logo} />
+          </Link>
         </div>
       </div>
       <button
