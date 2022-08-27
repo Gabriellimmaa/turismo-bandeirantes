@@ -5,7 +5,9 @@ export function Home() {
   return (
     <VStack flex={1} px={6}>
         <HStack w="full" mt={8} justifyContent="space-between" alignItems="center">
-            <Text fontSize="4xl" fontWeight="bold">Hello World</Text>
+            <Text>
+                Hello
+            </Text>
         </HStack>
     </VStack>
   );
