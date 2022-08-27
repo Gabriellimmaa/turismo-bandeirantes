@@ -49,10 +49,11 @@
     justify-content: center;
     line-height: 2rem;
     width: 90%;
-    background: #d1d1d1;
+    background: #ebeaea;
     border-radius: 8px;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .infosContainer p {
