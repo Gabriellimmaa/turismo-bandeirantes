@@ -74,7 +74,7 @@ export default function Inicio() {
           </div>
         </div>
       </section>
-      <section className="turismo flex-1 w-full h-full">
+      <section className="turismo w-full">
         <TurismoHome />
       </section>
       <section className="agenda">

@@ -1,0 +1,9 @@
+.cardTurismoHome  {
+  height: 450px;
+  transition: all .9s;
+}
+
+.cardTurismoHome:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
