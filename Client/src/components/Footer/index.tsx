@@ -17,7 +17,7 @@ export function Footer() {
             />
           </div>
           <div className="redesIcon">
-            <a href="">
+            <a href="google.com">
               <FaFacebook size={28} />
             </a>
             <a href="">

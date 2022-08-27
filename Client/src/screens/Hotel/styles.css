@@ -42,12 +42,12 @@
 }
 
 .infosContainer {
+    gap: 3rem;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
-    line-height: 3rem;
+    line-height: 2rem;
     width: 90%;
     background: #d1d1d1;
     border-radius: 8px;
@@ -55,8 +55,35 @@
     margin-bottom: 2rem;
 }
 
-.infosContainer p:first-child {
+.infosContainer p {
+    font-size: 1rem;
+}
+
+.contatosContainer strong{
+    color: #283729;
     font-size: 2rem;
+}
+
+.redesIconHotel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1rem 0px 0px 0px;
+}
+
+.face:hover {
+    color: blue;
+    transition: .5s;
+}
+
+.insta:hover {
+    color: red;
+    transition: .5s;
+}
+
+.whats:hover {
+    color: green;
+    transition: .5s;
 }
 
 @media screen and (max-width: 500px) {
