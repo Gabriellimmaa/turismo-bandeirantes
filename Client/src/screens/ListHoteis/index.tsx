@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CardHotel from '../../components/CardHotel'
+import { Loading } from '../../components/Loading'
 import api from '../../services/api'
 import './styles.css'
 
@@ -27,7 +28,7 @@ export function Hoteis() {
   }, [])
 
   if (!loading) {
-    return <div>Loading...</div>
+    return <Loading />
   }
 
   return (

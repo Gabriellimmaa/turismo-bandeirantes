@@ -35,7 +35,7 @@ export function Hotel() {
     })
   }, [])
 
-  if (!loading) {
+  if (loading) {
     return <Loading />
   }
 
