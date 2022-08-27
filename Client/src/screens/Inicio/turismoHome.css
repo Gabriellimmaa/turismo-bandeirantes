@@ -1,3 +1,11 @@
+.turismoHome h1{
+ font-size: 3rem !important;
+}
+
+.turismoHome button{
+  font-size: 1rem !important;
+}
+
 .turismoHome .swiper {
   width: 100%;
   height: 100%;
@@ -31,4 +39,11 @@
 
 .turismoHome .titleSobrebor{
   background: rgba(0, 0, 0, 0.6);
+}
+
+.turismoHome .swiper-button-next,
+.turismoHome .swiper-button-prev{
+  border: 2px solid #007AFF;
+  border-radius: 50%;
+  padding: 28px;
 }

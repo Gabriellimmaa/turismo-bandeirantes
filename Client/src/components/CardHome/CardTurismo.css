@@ -1,6 +1,7 @@
 .cardTurismoHome  {
   height: 450px;
   transition: all .9s;
+  
 }
 
 .cardTurismoHome:hover {
