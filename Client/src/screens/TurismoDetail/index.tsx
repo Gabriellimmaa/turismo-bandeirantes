@@ -36,13 +36,19 @@ export function TurismoDetail() {
   }
 
   return (
-    <div className="turismo-detail">
-      <div className="turismo-detail-img">
-        <img src={turismo?.logo} />
+    <div>
+      <div className='turismo-logo'>
+        <img src={turismo?.logo} alt='' />
       </div>
-      <div className="turismo-detail-description">
-        <label className="title">{turismo?.nome}</label>
-        <p>{turismo?.descricao}</p>
+      <div className='turismo-background'>
+        <img src={turismo?.logo} alt='' />
+      </div>
+      <div className="turismo-detail">
+        <h1>{turismo?.nome}</h1>
+        <div className="turismo-detail-description">
+          <h2>Descrição</h2>
+          <p>{turismo?.descricao}</p>
+        </div>
       </div>
     </div>
   )
