@@ -24,13 +24,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
-    mask: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    #ffffff 10%,
-    #ffffff 98%,
-    rgba(255, 255, 255, 0) 100%
-  );
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .containerHotelInfo {
