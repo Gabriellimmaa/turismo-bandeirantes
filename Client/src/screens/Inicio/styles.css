@@ -9,3 +9,9 @@
     opacity: 1;
   }
 }
+
+.parallax {
+ height: 500px;
+
+ filter: brightness(0.8);
+}

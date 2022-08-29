@@ -10,6 +10,8 @@ import CardAgenda from '../../components/CardAgenda'
 import { optionAgenda } from '../Agenda/optionData'
 import { TurismoHome } from './TurismoHome'
 
+import './styles.css'
+
 export default function Inicio() {
   return (
     <>
@@ -130,6 +132,7 @@ export default function Inicio() {
           </div>
         </div>
       </section>
+      <div className="parallax flex items-center justify-center bg-fixed w-full bg-[url('https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/265276800_2981423038775488_615807068815183275_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=973b4a&_nc_ohc=l-OqmBDR9A4AX-QRmsw&_nc_ht=scontent-gru1-2.xx&oh=00_AT_K50tepTcMyW7RroWn2tgZ-41ohCRz-dAOQwTzU1TO5Q&oe=6311BF81')] bg-cover bg-no-repeat bg-center"></div>
     </>
   )
 }
