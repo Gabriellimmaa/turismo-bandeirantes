@@ -157,3 +157,26 @@
   height: 100%;
   object-fit: cover;
 }
+
+/*faça uma tela com responsividade para 768px*/
+@media screen and (max-width: 768px) {
+    .historia {
+        display: list-item;
+    }
+
+    .historia h1 {
+        padding: 10px;
+    }
+
+    .historia .dados {
+        display: block;
+    }
+
+    .historia h2 {
+        white-space: normal;
+    }
+    
+    .texto {
+        font-size: 20px;
+    }
+}
