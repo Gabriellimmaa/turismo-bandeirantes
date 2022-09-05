@@ -6,8 +6,9 @@ interface CardProps {
   title: string
   description: string
   date: string
-  redirectMap: string
   redirectDetail: string
+  latitude: string
+  longitude: string
   path: string
   id: number
 }
@@ -16,7 +17,8 @@ export default function Card({
   title,
   description,
   date,
-  redirectMap,
+  latitude,
+  longitude,
   redirectDetail,
   path,
   id,
@@ -37,7 +39,7 @@ export default function Card({
         </div>
         <div>
           <BiMap size={16} className="mr-1" />
-          <a href={redirectMap} target="_blank" rel="noreferrer">
+          <a href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`} target="_blank" rel="noreferrer">
             Abrir com google maps
           </a>
         </div>

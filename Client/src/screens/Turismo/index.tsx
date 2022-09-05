@@ -45,7 +45,8 @@ export function Turismo() {
               title={atracao.nome}
               description={atracao.descricao}
               date={atracao.telefone}
-              redirectMap=""
+              latitude={atracao.latitude}
+              longitude={atracao.longitude}
               path={atracao.logo}
               id={atracao.id}
               redirectDetail={`/turismo/${atracao.id}`}
