@@ -16,17 +16,22 @@ import english from '../../assets/languages/usa.png'
 import spain from '../../assets/languages/spain.png'
 import france from '../../assets/languages/france.png'
 import { Link } from 'react-router-dom'
+import { MdOutlineHearingDisabled } from 'react-icons/md'
 
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
 
-	const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-	const handleChangeLng = (lng: string) => {
-		i18n.changeLanguage(lng);
-		localStorage.setItem("lng", lng);
-	};
+  const handleChangeLng = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem("lng", lng);
+  };
 
+  function teste(){
+    const t1 = document.getElementById("t1").classList.remove("active");
+    const t2 = document.getElementById("t2").classList.add("active");
+  }
 
   return (
     <nav className="navigation">
@@ -83,6 +88,19 @@ export default function Header() {
           <Link to="/">
             <img className="w-80 h-auto" src={logo} />
           </Link>
+        </div>
+        <div className="flex">
+          {/* @ts-ignore */} 
+          <div vw="true" className="enabled">
+            {/* @ts-ignore */} 
+            <div id="t1" vw-access-button="true" className="active">
+            </div>
+            {/* @ts-ignore */} 
+            <div id="t2" vw-plugin-wrapper="true">
+              {/* @ts-ignore */} 
+              <div className="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
         </div>
       </div>
       <button
