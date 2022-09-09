@@ -9,6 +9,7 @@ import { createRoot } from 'react-dom/client';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
+import { BsZoomIn, BsZoomOut } from 'react-icons/bs'
 
 import logo from '../../assets/logo-banner.png'
 import brasil from '../../assets/languages/brazil.png'
@@ -28,18 +29,13 @@ export default function Header() {
     localStorage.setItem("lng", lng);
   };
 
-  function teste(){
-    const t1 = document.getElementById("t1").classList.remove("active");
-    const t2 = document.getElementById("t2").classList.add("active");
-  }
-
   return (
     <nav className="navigation">
       <div className="grid grid-cols-3 justify-center border-b-2 py-2">
-        <div className="flex">
+        <div className="flex justify-start ml-10">
           <div id="optionLanguageDesktop">
             <button onClick={() => handleChangeLng("br")}>
-              <img className="w-auto h-10 m-1 ml-10" src={brasil} />
+              <img className="w-auto h-10 m-1" src={brasil} />
             </button>
             <button onClick={() => handleChangeLng("en")}>
               <img className="w-auto h-10 m-1" src={english} />
@@ -89,16 +85,27 @@ export default function Header() {
             <img className="w-80 h-auto" src={logo} />
           </Link>
         </div>
-        <div className="flex">
-          {/* @ts-ignore */} 
-          <div vw="true" className="enabled">
-            {/* @ts-ignore */} 
-            <div id="t1" vw-access-button="true" className="active">
-            </div>
-            {/* @ts-ignore */} 
-            <div id="t2" vw-plugin-wrapper="true">
-              {/* @ts-ignore */} 
-              <div className="vw-plugin-top-wrapper"></div>
+        <div className="flex items-center justify-end mr-10">
+          <button className='font-zoom-mais'>
+            <span className='text-4xl'>A</span>
+            <BsZoomIn style={{ marginTop: -14, marginLeft: 42 }} size={14} />
+          </button>
+          <button className='font-zoom-menos'>
+            <span className='text-4xl'>A</span>
+            <BsZoomOut style={{ marginTop: -14, marginLeft: 42 }} size={14} />
+          </button>
+          <div className='mx-3'>
+            {/* @ts-ignore */}
+            <div vw="true" className="enabled">
+              {/* @ts-ignore */}
+              <div id="t1" vw-access-button="true" className="active">
+
+              </div>
+              {/* @ts-ignore */}
+              <div id="t2" vw-plugin-wrapper="true">
+                {/* @ts-ignore */}
+                <div className="vw-plugin-top-wrapper"></div>
+              </div>
             </div>
           </div>
         </div>
