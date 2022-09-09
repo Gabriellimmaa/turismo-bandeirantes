@@ -1,54 +1,113 @@
-import { BiMap, BiTime } from 'react-icons/bi'
+import { BiCalendar, BiMailSend, BiMap, BiMoney, BiPhoneCall, BiPlanet, BiTime } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 import { limitDescription } from '../../utils'
 import './styles.css'
 
 interface CardProps {
   title: string
-  description: string
-  date: string
-  redirectDetail: string
-  latitude: string
-  longitude: string
-  path: string
+  type: "hotel" | "restaurante" | "turismo" | "lazer&esporte" | "agenda"
+  img: string
   id: number
+  description?: string
+  date?: string
+  locale?: string
+  hour?: string
+  price?: number
+  cell?: string
+  email?: string
+  website?: string
+  latitude?: string
+  longitude?: string
 }
 
 export default function Card({
   title,
+  type,
   description,
   date,
+  locale,
+  hour,
+  price,
+  cell,
+  email,
+  website,
   latitude,
   longitude,
-  redirectDetail,
-  path,
+  img,
   id,
 }: CardProps) {
   return (
-    <div className="card">
-      <div className="card-img">
-        <img src={path} />
-      </div>
-      <label className="title margin">{title}</label>
-      <div className="description margin">
-        <p>{limitDescription(description)}</p>
-      </div>
-      <div className="info margin grid grid-cols-2">
-        <div>
-          <BiTime size={16} className="mr-1" />
-          <p>{date}</p>
+    <div className='card'>
+      <div className="card-container">
+        <div className="card-img">
+          <img src={img} />
         </div>
-        <div>
-          <BiMap size={16} className="mr-1" />
-          <a href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`} target="_blank" rel="noreferrer">
-            Abrir com google maps
-          </a>
+        <label className="title margin">{title}</label>
+        <div className="description margin">
+          {description ? <p>{limitDescription(description)}</p> : null}
+          {email ?
+            <div className='flex items-center'>
+              {/* <BiMailSend size={16} className="mr-1" /> */}
+              <p className='m-0'>{email}</p>
+            </div>
+            : null}
+          {locale ?
+            <div>
+              <div className='flex items-center'>
+                <BiMap size={16} className="mr-1" />
+                <b>Local do evento:</b>
+              </div>
+              <p>{locale}</p>
+            </div>
+            : null}
+        </div>
+        <div className="info margin grid grid-cols-2">
+          {website ?
+            <div className='website'>
+              <BiPlanet size={16} className="mr-1" />
+              <a href={website}>Visite nosso site</a>
+            </div>
+            : null}
+          {price ?
+            <div>
+              <BiMoney size={16} className="mr-1" />
+              <p><b>R$ {price}</b></p>
+            </div>
+            : null}
+          {date ?
+            <div>
+              <BiCalendar size={16} className="mr-1" />
+              <p><b>{date}</b></p>
+            </div>
+            : null}
+          {hour ?
+            <div>
+              <BiTime size={16} className="mr-1" />
+              <p><b>{hour}</b></p>
+            </div>
+            : null}
+          {cell ?
+            <div>
+              <BiPhoneCall size={16} className="mr-1" />
+              <p><b>{cell}</b></p>
+            </div>
+            : null}
         </div>
       </div>
       <div className="redirect">
-        <a className="margin" href={redirectDetail}>
-          Ver Mais
-        </a>
+        <Link id="cardMore" className="margin" to={`/${type}/${id}`}>Ver mais</Link>
+        {latitude && longitude && (
+          <a
+            id="cardMap"
+            target="_blank"
+            href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
+            rel="noreferrer"
+          >
+            Abrir no Google Maps
+          </a>
+        )}
       </div>
     </div>
+
   )
 }

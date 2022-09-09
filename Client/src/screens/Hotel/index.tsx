@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import { useParams } from 'react-router-dom'
+import Card from '../../components/Card'
+import CardHotel from '../../components/CardHotel'
 import { Loading } from '../../components/Loading'
 import api from '../../services/api'
-
 import './styles.css'
 
 interface HoteisProps {
@@ -11,83 +10,55 @@ interface HoteisProps {
   nome: string
   preco: number
   logo: string
-  descricao: string
   email: string
   site: string
   telefone: string
-  endereco: string
-  maps: string
-  whats: string
-  insta: string
-  face: string
-  aitvo: number
-  created_at: string
-  updated_at: string
+  latitude: string
+  longitude: string
 }
 
-export function Hotel() {
-  const { id } = useParams()
-  const [hotel, setHotel] = useState<HoteisProps>()
-  const [loading, setLoading] = useState(true)
+export function Hoteis() {
+  const [hoteis, setHoteis] = useState<HoteisProps[]>()
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    api.get(`/hoteis/${id}`).then((response) => {
-      setHotel(response.data.hoteis[0])
-      setLoading(false)
+    api.get('/hoteis').then((response) => {
+      setHoteis(response.data.hoteis)
+      setLoading(true)
     })
   }, [])
 
-  if (loading) {
+  if (!loading) {
     return <Loading />
   }
 
   return (
-    <div>
-      <div className="heroHotel">
-        <img src={hotel?.logo} alt="" />
+    <section id="hotel">
+      <div className='title-style-1'>
+        <h1>Onde ficar?</h1>
+        <h2>Encontre hotéis, pousadas e muito outros lugares para se hospedar!</h2>
       </div>
-      <div className="heroBackgroundHotel">
-        <img src={hotel?.logo} alt="" />
+      <div className="grid grid-cols-3 gap-5 justify-items-center">
+        {Array.isArray(hoteis)
+          ? hoteis?.map((hotel) => {
+            return (
+              <Card
+                key={hotel.id}
+                id={hotel.id}
+                img={hotel.logo}
+                title={hotel.nome}
+                price={hotel.preco}
+                type="hotel"
+                cell={hotel.telefone}
+                email={hotel.email}
+                website={hotel.site}
+                latitude={hotel.latitude}
+                longitude={hotel.longitude}
+              />
+            )
+          })
+          : null}
       </div>
-
-      <div className="containerHotel">
-        <h1>{hotel?.nome}</h1>
-        <div className="containerHotelInfo">
-          <strong className="uppercase">seja bem vindo</strong>
-          <div className="infosContainer">
-            <p>{hotel?.descricao}</p>
-            <div className="contatosContainer">
-              <strong>Contatos</strong>
-              <div className="flex-col leading-3 mt-5">
-                <p>{hotel?.endereco}</p>
-                <p>{hotel?.email}</p>
-                <p>{hotel?.telefone}</p>
-                <p>{hotel?.whats}</p>
-                <div className="redesIconHotel gap-5">
-                  {hotel?.face && (
-                    <a href={hotel?.face} className="face">
-                      <FaFacebook size={28} />
-                    </a>
-                  )}
-                  {hotel?.insta && (
-                    <a href={hotel?.insta} className="insta">
-                      <FaInstagram size={28} />
-                    </a>
-                  )}
-                  {hotel?.whats && (
-                    <a
-                      href={`https://api.whatsapp.com/send?phone=${hotel?.whats}&text='Olá queria saber mais sobre o ${hotel?.nome}'`}
-                      className="whats"
-                    >
-                      <FaWhatsapp size={28} />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   )
 }

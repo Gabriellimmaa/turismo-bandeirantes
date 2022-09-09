@@ -34,8 +34,10 @@ export function Turismo() {
 
   return (
     <section className="turismo">
-      <h1>O que fazer?</h1>
-      <h2>Um lugar de fé, natureza e tradições</h2>
+      <div className='title-style-1'>
+        <h1>O que fazer?</h1>
+        <h2>Um lugar de fé, natureza e tradições</h2>
+      </div>
       <Navbar objectList={optionTurismo} />
       <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
         {turismo.map((atracao) => {
@@ -44,12 +46,12 @@ export function Turismo() {
               key={atracao.id}
               title={atracao.nome}
               description={atracao.descricao}
-              date={atracao.telefone}
+              cell={atracao.telefone}
               latitude={atracao.latitude}
               longitude={atracao.longitude}
-              path={atracao.logo}
+              img={atracao.logo}
               id={atracao.id}
-              redirectDetail={`/turismo/${atracao.id}`}
+              type="turismo"
             />
           )
         })}
