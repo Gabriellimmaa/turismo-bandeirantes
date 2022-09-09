@@ -12,58 +12,49 @@ import "./styles.css";
 // import required modules
 import { Autoplay, FreeMode, Pagination } from "swiper";
 import './styles.css'
+import { useTranslation } from 'react-i18next';
 
 export default function Historia() {
+  const { t, i18n } = useTranslation();
+
   return (
     <section className='historia'>
 
-      <h1>História</h1>
+      <h1>{t("paginas.historia.header")}</h1>
       <div className='texto'>
         <h2>
-          Como começou?
+          {t("paginas.historia.topico1.titulo")}
         </h2>
 
-        <p>Até o Ano de 1920, a região era um sertão bruto, habitado apenas pelos índios da tribo Caingangues. O primeiro a explorar este território foi o Engenheiro Carlos Borromei, onde ergue seu acampamento em uma clareira aberta no meio das matas à margens do Ribeirão das Antas. Em 24 de dezembro de 1926, D. Josefina Alves de Lima, proprietária de grande gleba de terras na Fazenda Laranjinha, ao proceder a divisão desse imóvel, vendeu a João Manoel dos Santos dez alqueires de terra, destinados a fundação de um povoado, que deveria ser denominado Invernada.</p>
-        <p>A 12 de abril de 1929, foi criado o Distrito de Invernada, como parte integrante do Município de Jacarezinho, sendo instalado no dia 8 de dezembro do mesmo ano. Em julho de 1930, a Empresa Ferroviária São Paulo - Paraná, inaugurou uma estação ferroviária, a 3 quilômetros do patrimônio de Invernada, que passou a denominar-se Bandeirantes, surgindo, então, um povoado nas proximidades da estação, em terreno de propriedade de Juvenal Mesquita. Em 27 de setembro de 1931, um pugilo de homens de boa vontade, iniciou um trabalho de coligação em favor do progresso da estação e, consequentemente, sobreveio a queda de Invernada, onde se achavam o cartório, a Coletoria Estadual, casas, hotéis, casas de comércio, farmácias, correios, etc.</p>
-        <p>Em 1932, o então Interventor Federal no Paraná, visitou Bandeirantes, notando que o povo desejava a criação do município. Houve a unificação dos dois povoados: Bandeirantes e Invernada. Dando inicio a história de Bandeirantes</p>
+        <p>{t("paginas.historia.topico1.paragrafo1")}</p>
+        <p>{t("paginas.historia.topico1.paragrafo2")}</p>
+        <p>{t("paginas.historia.topico1.paragrafo3")}</p>
 
         <h2>
-          Bandeirantes: “Um lugar de fé, natureza e tradições”.
+          {t("paginas.historia.topico2.titulo")}
+
         </h2>
 
-        <p>Localizada no Norte Pioneiro do Paraná, Bandeirantes se distingue pela terra fértil e pelo povo oriundo de diversas partes do Brasil e do mundo. O município tem forte influência dos paulistas, mineiros, italianos, japoneses e portugueses, origem primordial das vocações econômicas e turísticas do município. </p>
-        <p>A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local.</p>
+        <p>{t("paginas.historia.topico2.paragrafo1")}</p>
+        <p>{t("paginas.historia.topico2.paragrafo2")}</p>
 
         <div className='dados'>
 
           <p><h2>
-            Bandeirantes em números.
-          </h2><br/>
-            <b>Inauguração:</b> 14 de novembro de 1934 <br />
-
-            <b>Gentílico:</b> Bandeirantense<br />
-
-            <b>População:</b> 32.184 (Censo IBGE [2010])<br />
-
-            <b>Área da unidade territorial [2022]:</b> 445,192 km²<br />
-
-            <b>Densidade demográfica:</b> 72,29 hab/km² <br />
-
-            <b>Bioma:</b> Mata Atlântica<br />
-
-            <b>Altitude:</b> 420 m<br />
-
-            <b>Clima:</b> Tropical. Verão é longo, quente, abafado e de céu quase encoberto; o inverno é curto, agradável e de céu quase sem nuvens.<br />
-
-            <b>Temperatura média:</b> 15°C a 31°C.<br />
-
-            <b>Umidade média relativa do ar:</b> 3 a 91%.<br />
-
-            <b>Renda per capita (média mensal):</b> 1,9 salários mínimos (IBGE 2020).<br />
-
-            <b>Índice de Desenvolvimento Humano (IDH):</b> 0,727 (IBGE 2010)<br />
-
-            <b>PIB per capita [2019]:</b> 25.807,42 R$ <br />
+            {t("paginas.historia.topico3.titulo")}
+          </h2><br />
+            <b>{t("paginas.historia.topico3.inauguracao.titulo")}:</b> {t("paginas.historia.topico3.inauguracao.descricao")}<br />
+            <b>{t("paginas.historia.topico3.gentilico.titulo")}:</b> {t("paginas.historia.topico3.gentilico.descricao")}<br />
+            <b>{t("paginas.historia.topico3.populacao.titulo")}:</b> {t("paginas.historia.topico3.populacao.descricao")}<br />
+            <b>{t("paginas.historia.topico3.territorio.titulo")}:</b> {t("paginas.historia.topico3.territorio.descricao")}<br />
+            <b>{t("paginas.historia.topico3.densidade.titulo")}:</b> {t("paginas.historia.topico3.densidade.descricao")}<br />
+            <b>{t("paginas.historia.topico3.bioma.titulo")}:</b> {t("paginas.historia.topico3.bioma.descricao")}<br />
+            <b>{t("paginas.historia.topico3.altitude.titulo")}:</b> {t("paginas.historia.topico3.altitude.descricao")}<br />
+            <b>{t("paginas.historia.topico3.clima.titulo")}:</b> {t("paginas.historia.topico3.clima.descricao")}<br />
+            <b>{t("paginas.historia.topico3.temperatura.titulo")}:</b> {t("paginas.historia.topico3.temperatura.descricao")}<br />
+            <b>{t("paginas.historia.topico3.renda.titulo")}:</b> {t("paginas.historia.topico3.renda.descricao")}<br />
+            <b>{t("paginas.historia.topico3.idh.titulo")}:</b> {t("paginas.historia.topico3.idh.descricao")}<br />
+            <b>{t("paginas.historia.topico3.pib.titulo")}:</b> {t("paginas.historia.topico3.pib.descricao")}<br />
           </p>
           <div className="imagens">
 

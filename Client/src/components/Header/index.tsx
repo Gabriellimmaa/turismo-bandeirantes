@@ -4,6 +4,12 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import './styles.css'
 
+import React from "react";
+import { createRoot } from 'react-dom/client';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+
 import logo from '../../assets/logo-banner.png'
 import brasil from '../../assets/languages/brazil.png'
 import english from '../../assets/languages/usa.png'
@@ -14,23 +20,31 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
 
+	const { t, i18n } = useTranslation();
+
+	const handleChangeLng = (lng: string) => {
+		i18n.changeLanguage(lng);
+		localStorage.setItem("lng", lng);
+	};
+
+
   return (
     <nav className="navigation">
       <div className="grid grid-cols-3 justify-center border-b-2 py-2">
         <div className="flex">
           <div id="optionLanguageDesktop">
-            <a>
+            <button onClick={() => handleChangeLng("br")}>
               <img className="w-auto h-10 m-1 ml-10" src={brasil} />
-            </a>
-            <a>
+            </button>
+            <button onClick={() => handleChangeLng("en")}>
               <img className="w-auto h-10 m-1" src={english} />
-            </a>
-            <a>
+            </button>
+            <button onClick={() => handleChangeLng("es")}>
               <img className="w-auto h-10 m-1" src={spain} />
-            </a>
-            <a>
+            </button>
+            <button onClick={() => handleChangeLng("fr")}>
               <img className="w-auto h-10 m-1" src={france} />
-            </a>
+            </button>
           </div>
           <div id="optionLanguageMobile">
             <div className="items-center">
@@ -42,24 +56,24 @@ export default function Header() {
             <div className="language-dropdown-content">
               <ul>
                 <li>
-                  <a href="#">
+                  <button onClick={() => handleChangeLng("br")}>
                     <img className="w-auto h-10 m-1 ml-10" src={brasil} />
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img className="w-auto h-10 m-1 ml-10" src={france} />
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button>
                     <img className="w-auto h-10 m-1 ml-10" src={spain} />
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#">
+                  <button onClick={() => handleChangeLng("en")}>
                     <img className="w-auto h-10 m-1 ml-10" src={english} />
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -86,31 +100,31 @@ export default function Header() {
       >
         <ul className="navigation-menu-ul">
           <li>
-            <Link to="/">Início</Link>
+            <Link to="/">{t("navbar.inicio")}</Link>
           </li>
           <li>
-            <Link to="/historia">História</Link>
+            <Link to="/historia">{t("navbar.historia")}</Link>
           </li>
           <li>
-            <Link to="/agenda">Agenda</Link>
+            <Link to="/agenda">{t("navbar.agenda")}</Link>
           </li>
           <li>
-            <Link to="/hoteis">Hotéis</Link>
+            <Link to="/hoteis">{t("navbar.hoteis")}</Link>
           </li>
           <li>
-            <Link to="/turismo">Turismo</Link>
+            <Link to="/turismo">{t("navbar.turismo")}</Link>
           </li>
           <li>
-            <Link to="/lazer-esporte">Lazer & Esporte</Link>
+            <Link to="/lazer-esporte">{t("navbar.lazer&esporte")}</Link>
           </li>
           <li>
-            <Link to="/restaurantes">Restaurantes</Link>
+            <Link to="/restaurantes">{t("navbar.restaurantes")}</Link>
           </li>
           <li>
-            <Link to="/album">Álbum</Link>
+            <Link to="/album">{t("navbar.album")}</Link>
           </li>
           <li>
-            <Link to="/contato">Contato</Link>
+            <Link to="/contato">{t("navbar.contato")}</Link>
           </li>
         </ul>
       </div>

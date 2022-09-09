@@ -3,8 +3,10 @@ import './styles.css'
 
 import logo from '../../assets/logoTurismo.png'
 import logoBanner from '../../assets/logo-banner.png'
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t, i18n } = useTranslation();
   return (
     <footer className="border-t-2">
       <div className="footer">
@@ -28,12 +30,12 @@ export function Footer() {
         <div className="containerHero">
           <div className="containerInfos">
             <div className="column titleHidden">
-              <h3>Páginas</h3>
+              <h3>{t("footer.paginas.titulo")}</h3>
               <div className="pages">
-                <a href="">Sobre</a>
-                <a href="">Onde Dormir</a>
-                <a href="">O que fazer</a>
-                <a href="">Serviços</a>
+                <a href="">{t("footer.paginas.sobre")}</a>
+                <a href="">{t("footer.paginas.onde-dormir")}</a>
+                <a href="">{t("footer.paginas.oque-fazer")}</a>
+                <a href="">{t("footer.paginas.servicos")}</a>
               </div>
             </div>
             <div className="column titleHidden">
@@ -75,7 +77,7 @@ export function Footer() {
               </div>
             </div>
             <div className="column">
-              <h3>Contato</h3>
+              <h3>{t("footer.contato")}</h3>
               <div className="contacts">
                 <strong>Rua Frei Raphael Proner, 1457</strong>
                 <strong>
@@ -93,15 +95,14 @@ export function Footer() {
       </div>
       <div className="copyright">
         <p>
-          © 2022 - Prefeitura Municipal de Bandeirantes - Todos os direitos
-          reservados
+        {t("footer.copy")}
         </p>
         <img
           className="w-auto max-h-20 bg-contain"
           src={logoBanner}
           alt="Logo Bandeirantes"
         />
-        <p>Website desenvolvido pela equipe FrontCode</p>
+        <p>{t("footer.creditos")}</p>
       </div>
     </footer>
   )
