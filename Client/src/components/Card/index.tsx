@@ -43,7 +43,7 @@ export default function Card({
           <img src={img} />
         </div>
         <label className="title margin">{title}</label>
-        <div className="description margin">
+        <div className="description">
           {description ? <p>{limitDescription(description)}</p> : null}
           {email ?
             <div className='flex items-center'>
