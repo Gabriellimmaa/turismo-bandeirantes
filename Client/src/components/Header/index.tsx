@@ -4,12 +4,10 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import './styles.css'
 
-import React from "react";
-import { createRoot } from 'react-dom/client';
-import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import { BsZoomIn, BsZoomOut } from 'react-icons/bs'
+import { GrPowerReset } from 'react-icons/gr'
 
 import logo from '../../assets/logo-banner.png'
 import brasil from '../../assets/languages/brazil.png'
@@ -17,7 +15,6 @@ import english from '../../assets/languages/usa.png'
 import spain from '../../assets/languages/spain.png'
 import france from '../../assets/languages/france.png'
 import { Link } from 'react-router-dom'
-import { MdOutlineHearingDisabled } from 'react-icons/md'
 
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -28,6 +25,24 @@ export default function Header() {
     i18n.changeLanguage(lng);
     localStorage.setItem("lng", lng);
   };
+
+  function changefontsize(type: "increase" | "decrease" | "reset") {
+    const elements = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "strong", "div", "button", "a", "label"]
+    elements.forEach(element => {
+      let p_elements = Array.from(document.getElementsByTagName(element) as HTMLCollectionOf<HTMLElement>);
+      p_elements.map(p_element => {
+        let font_size = parseInt(window.getComputedStyle(p_element).fontSize);
+        if (type === "increase") {
+          p_element.style.fontSize = (font_size + 1) + 'px';
+        }
+        else if (type === "decrease") {
+          p_element.style.fontSize = (font_size - 1) + 'px';
+        } else {
+          p_element.removeAttribute("style");
+        }
+      })
+    })
+  }
 
   return (
     <nav className="navigation">
@@ -86,11 +101,15 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex items-center justify-end mr-10">
-          <button className='font-zoom-mais'>
+          <button className='font-zoom-mais' onClick={() => changefontsize("reset")}>
+            <span className='text-4xl'>A</span>
+            <GrPowerReset style={{ marginTop: -14, marginLeft: 42 }} size={14}  />
+          </button>
+          <button className='font-zoom-mais' onClick={() => changefontsize("increase")}>
             <span className='text-4xl'>A</span>
             <BsZoomIn style={{ marginTop: -14, marginLeft: 42 }} size={14} />
           </button>
-          <button className='font-zoom-menos'>
+          <button className='font-zoom-menos' onClick={() => changefontsize("decrease")}>
             <span className='text-4xl'>A</span>
             <BsZoomOut style={{ marginTop: -14, marginLeft: 42 }} size={14} />
           </button>
