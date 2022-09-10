@@ -111,16 +111,15 @@
 
 
 .historia .text {
-  white-space: nowrap;
   background-color: #fff;
+  white-space: nowrap;
   color: rgb(0, 0, 0);
   font-size: 20px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   top: 91%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
 }
 
 
@@ -130,12 +129,10 @@
   margin-top: 1cm;
   margin-bottom: 1cm;
 }
-
 .historia .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,7 +147,6 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
 .historia .swiper-slide img {
   display: block;
   width: 100%;
@@ -158,7 +154,20 @@
   object-fit: cover;
 }
 
-/*faça uma tela com responsividade para 768px*/
+@media screen and (max-width: 1024px) {
+  .historia .text {
+    white-space: nowrap;
+    font-size: 16px;
+  }
+
+  .historia .brasao {
+    display: block;
+    width: 150px;
+    
+  }
+}
+
+
 @media screen and (max-width: 768px) {
     .historia {
         display: list-item;
@@ -179,4 +188,84 @@
     .texto {
         font-size: 20px;
     }
+    
+    .historia .text {
+      top: 94%;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+  .historia {
+      display: list-item;
+  }
+
+  .historia h1 {
+      padding: 10px;
+  }
+
+  .historia .dados {
+      display: block;
+  }
+
+  .historia h2 {
+      white-space: normal;
+  }
+  
+  .texto {
+      font-size: 20px;
+  }
+
+  .historia .brasao {
+    display: block;
+    width: 150px;
+    
+  }
+
+  .historia .text {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .historia .brasao {
+    display: block;
+    width: 100px;
+    
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .historia {
+      display: list-item;
+  }
+
+  .historia h1 {
+      padding: 10px;
+  }
+
+  .historia .dados {
+      display: block;
+  }
+
+  .historia h2 {
+      white-space: normal;
+  }
+  
+  .historia.texto {
+      font-size: 20px;
+  }
+
+  .historia .brasao {
+    display: block;
+    width: 100px;
+    
+  }
+
+  .historia .text {
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
 }

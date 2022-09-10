@@ -88,34 +88,28 @@ export default function Historia() {
         modules={[Autoplay, FreeMode, Pagination]}
         className="mySwiper"
         autoplay={{
-          delay: 2500,
+          delay: 10000,
           disableOnInteraction: false,
         }}
 
       >
         <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
+          <img src="src\assets\img\historia\Band1.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
+          <img src="src\assets\img\historia\Band2.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
+          <img src="src\assets\img\historia\Band3.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
+          <img src="src\assets\img\historia\Band4.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
+          <img src="src\assets\img\historia\Band5.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="src\assets\img\restaurante\01.jpg" />
+          <img src="src\assets\img\historia\Band6.jpg" />
         </SwiperSlide>
       </Swiper>
     </section >
