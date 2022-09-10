@@ -39,9 +39,9 @@ export default function Card({
   return (
     <div className='card'>
       <div className="card-container">
-        <div className="card-img">
+        <Link className="card-img" to={`/${type}/${id}`}>
           <img src={img} />
-        </div>
+        </Link>
         <label className="title margin">{title}</label>
         <div className="description">
           {description ? <p>{limitDescription(description)}</p> : null}
