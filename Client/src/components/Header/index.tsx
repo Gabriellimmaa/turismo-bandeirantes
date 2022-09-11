@@ -27,7 +27,7 @@ export default function Header() {
   };
 
   function changefontsize(type: "increase" | "decrease" | "reset") {
-    const elements = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "strong", "div", "button", "a", "label"]
+    const elements = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "strong", "button", "a", "label"]
     elements.forEach(element => {
       let p_elements = Array.from(document.getElementsByTagName(element) as HTMLCollectionOf<HTMLElement>);
       p_elements.map(p_element => {
@@ -103,7 +103,7 @@ export default function Header() {
         <div className="flex items-center justify-end mr-10">
           <button className='font-zoom-mais' onClick={() => changefontsize("reset")}>
             <span className='text-4xl'>A</span>
-            <GrPowerReset style={{ marginTop: -14, marginLeft: 42 }} size={14}  />
+            <GrPowerReset style={{ marginTop: -14, marginLeft: 42 }} size={14} />
           </button>
           <button className='font-zoom-mais' onClick={() => changefontsize("increase")}>
             <span className='text-4xl'>A</span>
