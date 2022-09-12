@@ -14,7 +14,7 @@ import './styles.css'
 import { useTranslation } from 'react-i18next'
 
 export default function Inicio() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation()
   return (
     <>
       <div className="w-full h-[65%]">
@@ -24,7 +24,7 @@ export default function Inicio() {
         <div className="w-full px-10">
           <div className="w-full mt-10 ">
             <h1 className="flex justify-center items-center text-center my-16 text-4xl font-extrabold uppercase">
-              {t("paginas.inicio.header")}
+              {t('paginas.inicio.header')}
             </h1>
 
             <div className="flex flex-wrap sm:justify-center md:justify-center xl:justify-center 2xl:justify-start gap-10 max-w-7xl mx-auto my-0">
@@ -32,43 +32,45 @@ export default function Inicio() {
                 key="lazer-esporte"
                 link="/lazer-esporte"
                 icon={<GiSoccerBall size={28} />}
-                titulo={t("paginas.inicio.acesso-rapido.lazer-esporte.titulo")}
-                corpo={t("paginas.inicio.acesso-rapido.lazer-esporte.descricao")}
+                titulo={t('paginas.inicio.acesso-rapido.lazer-esporte.titulo')}
+                corpo={t(
+                  'paginas.inicio.acesso-rapido.lazer-esporte.descricao',
+                )}
               />
               <CardHome
                 key="hoteis"
                 link="/hoteis"
                 icon={<FaHotel size={28} />}
-                titulo={t("paginas.inicio.acesso-rapido.hoteis.titulo")}
-                corpo={t("paginas.inicio.acesso-rapido.hoteis.descricao")}
+                titulo={t('paginas.inicio.acesso-rapido.hoteis.titulo')}
+                corpo={t('paginas.inicio.acesso-rapido.hoteis.descricao')}
               />
               <CardHome
                 key="turismo"
                 link="/turismo"
                 icon={<GiCommercialAirplane size={28} />}
-                titulo={t("paginas.inicio.acesso-rapido.turismo.titulo")}
-                corpo={t("paginas.inicio.acesso-rapido.turismo.descricao")}
+                titulo={t('paginas.inicio.acesso-rapido.turismo.titulo')}
+                corpo={t('paginas.inicio.acesso-rapido.turismo.descricao')}
               />
               <CardHome
                 key="restaurantes"
                 link="/restaurantes"
                 icon={<MdFastfood size={28} />}
-                titulo={t("paginas.inicio.acesso-rapido.restaurantes.titulo")}
-                corpo={t("paginas.inicio.acesso-rapido.restaurantes.descricao")}
+                titulo={t('paginas.inicio.acesso-rapido.restaurantes.titulo')}
+                corpo={t('paginas.inicio.acesso-rapido.restaurantes.descricao')}
               />
               <CardHome
                 key="album"
                 link="/album"
                 icon={<BiPhotoAlbum size={28} />}
-                titulo={t("paginas.inicio.acesso-rapido.album.titulo")}
-                corpo={t("paginas.inicio.acesso-rapido.album.descricao")}
+                titulo={t('paginas.inicio.acesso-rapido.album.titulo')}
+                corpo={t('paginas.inicio.acesso-rapido.album.descricao')}
               />
               <CardHome
                 key="agenda"
                 link="/agenda"
                 icon={<GrSchedule size={28} />}
-                titulo={t("paginas.inicio.acesso-rapido.agenda.titulo")}
-                corpo={t("paginas.inicio.acesso-rapido.agenda.descricao")}
+                titulo={t('paginas.inicio.acesso-rapido.agenda.titulo')}
+                corpo={t('paginas.inicio.acesso-rapido.agenda.descricao')}
               />
             </div>
           </div>

@@ -34,7 +34,7 @@ export function Turismo() {
 
   return (
     <section className="turismo">
-      <div className='title-style-1'>
+      <div className="title-style-1">
         <h1>O que fazer?</h1>
         <h2>Um lugar de fé, natureza e tradições</h2>
       </div>

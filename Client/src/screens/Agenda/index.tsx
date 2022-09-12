@@ -1,5 +1,4 @@
 import Card from '../../components/Card'
-import CardAgenda from '../../components/CardAgenda'
 import Navbar from '../../components/Navbar'
 import { optionAgenda } from './optionData'
 import './styles.css'
@@ -7,7 +6,7 @@ import './styles.css'
 export function Agenda() {
   return (
     <section id="agenda">
-      <div className='title-style-1'>
+      <div className="title-style-1">
         <h1>Agenda</h1>
         <h2>Aqui pode ver todas as datas que vou comer sua mãe</h2>
       </div>
