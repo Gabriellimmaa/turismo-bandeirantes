@@ -113,69 +113,83 @@ export function Hotel() {
           ) : null}
 
           <div className="mb-10">
-            <h3>Endereço:</h3>
-            {data?.endereco && (
-              <p className="flex items-center">
-                <BiMap size={32} className="mx-2" /> {data?.endereco}
-              </p>
-            )}
-          </div>
-          <div className="contatos">
-            <strong className="text-center">Contatos</strong>
-            <div
-              className={`grid ${
-                qtdContato.length / 2 === 0
-                  ? 'md:grid-cols-2'
-                  : 'md:grid-cols-3'
-              } sm:grid-cols-1 gap-5 justify-items-center`}
-            >
-              {data?.email && (
-                <p className="flex items-center">
-                  <BiMailSend size={32} className="mx-2" /> {data?.email}
-                </p>
-              )}
-              {data?.telefone && (
-                <p className="flex items-center">
-                  <BiPhoneCall size={32} className="mx-2" /> {data?.telefone}
-                </p>
-              )}
-              {data?.whats && (
-                <p className="flex items-center">
-                  <AiOutlineWhatsApp size={32} className="mx-2" />
-                  <a
-                    target="_blank"
-                    href={`https://api.whatsapp.com/send?phone=${data?.whats}&text='Olá queria saber mais sobre o ${data?.nome}'`}
-                    className="whats"
-                    rel="noreferrer"
-                  >
-                    Entrar em contato via whatsapp
-                  </a>
-                </p>
-              )}
-              {data?.face && (
-                <p className="flex items-center">
-                  <RiFacebookCircleLine size={32} className="mx-2" />{' '}
-                  <a target="_blank" href={data?.face} rel="noreferrer">
-                    Visitar facebook
-                  </a>
-                </p>
-              )}
-              {data?.insta && (
-                <p className="flex items-center">
-                  <FaInstagram size={32} className="mx-2" />{' '}
-                  <a target="_blank" href={data?.insta} rel="noreferrer">
-                    Visitar instagram
-                  </a>
-                </p>
-              )}
-              {data?.site && (
-                <p className="flex items-center">
-                  <BiPlanet size={32} className="mx-2" />{' '}
-                  <a target="_blank" href={data?.site} rel="noreferrer">
-                    Visitar nosso site
-                  </a>
-                </p>
-              )}
+            <div id="grid" className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5">
+              <div className="mb-10">
+                <h3>Endereço:</h3>
+                {data?.endereco && (
+                  <p className="flex items-center">
+                    <BiMap size={32} className="mx-2" /> {data?.endereco}
+                  </p>
+                )}
+                <iframe
+                  className="mapa"
+                  loading="lazy"
+                  style={{ width: '100%', height: '200px', border: 0 }}
+                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=${data?.latitude}, ${data?.longitude}`}
+                ></iframe>
+              </div>
+              <div className='contatos'>
+                <h3>Contatos:</h3>
+                <div
+                  className={`my-3 grid ${qtdContato.length / 2 === 0
+                    ? 'md:grid-cols-2'
+                    : 'md:grid-cols-3'
+                    } sm:grid-cols-1 gap-3 justify-items-center`}
+                >
+                  {data?.telefone && (
+                    <p className="flex items-center">
+                      <BiPhoneCall size={32} className="mx-2" /> {data?.telefone}
+                    </p>
+                  )}
+                  {data?.whats && (
+                    <p className="flex items-center">
+                      <AiOutlineWhatsApp size={32} className="mx-2" />
+                      <a
+                        target="_blank"
+                        href={`https://api.whatsapp.com/send?phone=${data?.whats}&text='Olá queria saber mais sobre o ${data?.nome}'`}
+                        className="whats"
+                        rel="noreferrer"
+                      >
+                        Whatsapp
+                      </a>
+                    </p>
+                  )}
+                  {data?.face && (
+                    <p className="flex items-center">
+                      <RiFacebookCircleLine size={32} className="mx-2" />{' '}
+                      <a target="_blank" href={data?.face} rel="noreferrer">
+                        Visitar facebook
+                      </a>
+                    </p>
+                  )}
+                  {data?.insta && (
+                    <p className="flex items-center">
+                      <FaInstagram size={32} className="mx-2" />{' '}
+                      <a target="_blank" href={data?.insta} rel="noreferrer">
+                        Visitar instagram
+                      </a>
+                    </p>
+                  )}
+                  {data?.site && (
+                    <p className="flex items-center">
+                      <BiPlanet size={32} className="mx-2" />{' '}
+                      <a target="_blank" href={data?.site} rel="noreferrer">
+                        Visitar nosso site
+                      </a>
+                    </p>
+                  )}
+                </div>
+                {data?.email && (
+                  <div className='grid grid-cols-1 justify-items-center'>
+                    <div className="flex items-center">
+                      <BiMailSend size={32} className="mx-2" /> <p id="icon-email">{data?.email}</p>
+                      <a id="text-email" target="_blank" href={data?.site} rel="noreferrer">
+                        Entrar em contato por email
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </section>
