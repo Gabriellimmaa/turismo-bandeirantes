@@ -18,10 +18,10 @@ export function Router() {
       <Route path="/restaurantes" element={<Restaurantes />} />
       <Route path="/agenda" element={<Agenda />} />
       <Route path="/turismo" element={<Turismo />} />
-      <Route path="/turismo/:id" element={<TurismoDetail />} />
+      <Route path="/turismo/detalhe/:id" element={<TurismoDetail />} />
       <Route path="/contato" element={<Contato />} />
       <Route path="/hoteis" element={<Hoteis />} />
-      <Route path="/hotel/:id" element={<Hotel />} />
+      <Route path="/hotel/detalhe/:id" element={<Hotel />} />
       <Route path="/lazer-esporte" element={<LazerEsporte />} />
     </Routes>
   )
