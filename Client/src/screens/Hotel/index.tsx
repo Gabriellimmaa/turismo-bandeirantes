@@ -49,7 +49,7 @@ export function Hoteis() {
                   img={hotel.logo}
                   title={hotel.nome}
                   price={hotel.preco}
-                  type="hoteis"
+                  type="hotel"
                   cell={hotel.telefone}
                   email={hotel.email}
                   website={hotel.site}
