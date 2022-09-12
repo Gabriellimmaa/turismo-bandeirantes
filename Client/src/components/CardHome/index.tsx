@@ -10,13 +10,11 @@ interface CardHomeProps {
 
 export function CardHome({ link, icon, titulo, corpo }: CardHomeProps) {
   return (
-    <Link to={link}>
-      <div className="max-w-[23.999rem] min-h-[14.621rem] rounded  shadow-lg hover:bg-grayHover transition-all duration-900 ">
-        <h2 className="flex py-4 justify-center">{icon}</h2>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{titulo}</div>
-          <p className="text-gray-700 text-base">{corpo}</p>
-        </div>
+    <Link to={link} className="max-w-[23.999rem] min-w-[23.999rem] min-h-[14.621rem] rounded shadow-lg shadow-gray-200 hover:bg-grayHover transition-all duration-900 px-4 py-5 justify-center grid border-1 border-b-gray-200 bg-gray-150">
+      <h2 className="flex my-3 justify-center">{icon}</h2>
+      <div className="my-3 flex flex-col justify-center">
+        <div className="font-bold text-xl mb-2">{titulo}</div>
+        <p className="text-gray-700 text-base m-0">{corpo}</p>
       </div>
     </Link>
   )
