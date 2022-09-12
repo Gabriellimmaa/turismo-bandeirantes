@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 
 import './styles.css'
-import { Pagination, Navigation } from 'swiper'
+import { Pagination, Navigation, Autoplay } from 'swiper'
 
 export function Carousel() {
   return (
@@ -14,8 +15,9 @@ export function Carousel() {
         pagination={{
           type: 'fraction',
         }}
+        autoplay={true}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>

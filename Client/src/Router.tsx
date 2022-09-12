@@ -7,7 +7,7 @@ import Restaurantes from './screens/Restaurantes'
 import Contato from './screens/Contato'
 import { Agenda } from './screens/Agenda'
 import { Turismo } from './screens/Turismo'
-import {TurismoDetail} from './screens/TurismoDetail'
+import { TurismoDetail } from './screens/TurismoDetail'
 
 export function Router() {
   return (

@@ -28,8 +28,8 @@
 .turismoHome .append-buttons button {
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
+  border: 1px solid #69ff64;
+  color: #69ff64;
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 4px;
@@ -43,7 +43,11 @@
 
 .turismoHome .swiper-button-next,
 .turismoHome .swiper-button-prev{
-  border: 2px solid #007AFF;
+  border: 2px solid #69ff64;
   border-radius: 50%;
   padding: 28px;
+}
+
+.turismoHome .swiper-button-next, .turismoHome .swiper-button-prev {
+  color: #69ff64;
 }

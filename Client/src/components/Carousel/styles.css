@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.swiper-button-next, .swiper-button-prev {
+  color: #458e42;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
