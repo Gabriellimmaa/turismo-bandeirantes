@@ -25,6 +25,7 @@ interface CardProps {
   website?: string
   latitude?: string
   longitude?: string
+  categoria?: string
 }
 
 export default function Card({

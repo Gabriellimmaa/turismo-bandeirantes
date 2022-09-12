@@ -1,8 +1,11 @@
 import './styles.css'
+import { Link } from 'react-router-dom'
 
 interface ObjectItem {
   id: string
   nome: string
+  categoria: string
+  type: string
 }
 
 interface NavbarProps {
@@ -15,7 +18,7 @@ export default function Navbar({ objectList }: NavbarProps) {
       <ul>
         {objectList.map((data: ObjectItem) => (
           <li key={data.id}>
-            <button>{data.nome}</button>
+            <Link to={`/${data.type}/${data.categoria}`}><button>{data.nome}</button></Link>
           </li>
         ))}
       </ul>

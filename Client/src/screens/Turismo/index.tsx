@@ -5,6 +5,7 @@ import { optionTurismo } from './optionData'
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Loading } from '../../components/Loading'
+import { data } from 'dom7'
 
 interface turismoProps {
   id: number
@@ -38,7 +39,8 @@ export function Turismo() {
         <h1>O que fazer?</h1>
         <h2>Um lugar de fé, natureza e tradições</h2>
       </div>
-      <Navbar objectList={optionTurismo} />
+      <Navbar objectList={optionTurismo} /> 
+    
       <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
         {turismo.map((atracao) => {
           return (
