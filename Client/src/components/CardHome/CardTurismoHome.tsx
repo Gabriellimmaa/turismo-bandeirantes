@@ -13,7 +13,7 @@ export function CardTurismoHome({ title, path, id }: CardTurismoHomeProps) {
         <p className="text-white text-center text-2xl">{title}</p>
         <Link
           to={`/turismo/${id}`}
-          className="bg-transparent rounded-2xl border px-5 py-1 text-white border-white"
+          className="bg-transparent rounded-2xl border px-5 py-1 text-white border-white hover:bg-green-brasao hover:text-white hover:border-transparent animate-ease-in-out transition duration-200"
         >
           Saiba Mais
         </Link>
