@@ -32,7 +32,9 @@ export default function Inicio() {
                   key="lazer-esporte"
                   link="/lazer-esporte"
                   icon={<GiSoccerBall size={28} />}
-                  titulo={t('paginas.inicio.acesso-rapido.lazer-esporte.titulo')}
+                  titulo={t(
+                    'paginas.inicio.acesso-rapido.lazer-esporte.titulo',
+                  )}
                   corpo={t(
                     'paginas.inicio.acesso-rapido.lazer-esporte.descricao',
                   )}
@@ -56,7 +58,9 @@ export default function Inicio() {
                   link="/restaurantes"
                   icon={<MdFastfood size={28} />}
                   titulo={t('paginas.inicio.acesso-rapido.restaurantes.titulo')}
-                  corpo={t('paginas.inicio.acesso-rapido.restaurantes.descricao')}
+                  corpo={t(
+                    'paginas.inicio.acesso-rapido.restaurantes.descricao',
+                  )}
                 />
                 <CardHome
                   key="album"
