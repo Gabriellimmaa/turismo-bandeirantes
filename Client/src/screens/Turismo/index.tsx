@@ -5,7 +5,6 @@ import { optionTurismo } from './optionData'
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Loading } from '../../components/Loading'
-import { data } from 'dom7'
 
 interface turismoProps {
   id: number

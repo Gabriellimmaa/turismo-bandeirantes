@@ -8,6 +8,7 @@ import Contato from './screens/Contato'
 import { Agenda } from './screens/Agenda'
 import { Turismo } from './screens/Turismo'
 import { TurismoDetail } from './screens/TurismoDetail'
+import  LazerEsporte  from './screens/LazerEsporte'
 
 export function Router() {
   return (
@@ -21,6 +22,7 @@ export function Router() {
       <Route path="/contato" element={<Contato />} />
       <Route path="/hoteis" element={<Hoteis />} />
       <Route path="/hotel/:id" element={<Hotel />} />
+      <Route path="/lazer-esporte" element={<LazerEsporte />} />
     </Routes>
   )
 }
