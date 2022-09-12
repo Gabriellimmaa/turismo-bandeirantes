@@ -93,6 +93,7 @@ section {
   display: inline-block;
   position: relative;
   padding: 1rem;
+  line-height: 3rem;
   @apply text-center
 }
 
@@ -128,7 +129,7 @@ section {
 
 @media screen and (max-width: 1024px) {
   section {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
   }
   .grid-cols-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -136,6 +137,9 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    padding: 1rem 3rem;
+  }
   .grid-cols-3 {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
   }
@@ -145,8 +149,14 @@ section {
   }
 }
 
+@media screen and (max-width: 425px) {
+  section {
+    padding: 1rem 1.5rem;
+  }
+}
+
 @media screen and (max-width: 390px) {
   section {
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
   }
 }
