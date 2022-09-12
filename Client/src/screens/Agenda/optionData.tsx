@@ -1,54 +1,67 @@
 export const optionAgenda = [
   {
     id: '01',
-    nome: 'Todos',
+    nome: 'todos',
+    type: 'agenda',
   },
   {
     id: '02',
-    nome: 'Janeiro',
+    nome: 'janeiro',
+    type: 'agenda',
   },
   {
     id: '03',
-    nome: 'Fevereiro',
+    nome: 'fevereiro',
+    type: 'agenda',
   },
   {
     id: '04',
-    nome: 'Março',
+    nome: 'março',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Abril',
+    nome: 'abril',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Maio',
+    nome: 'maio',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Junho',
+    nome: 'junho',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Julho',
+    nome: 'julho',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Agosto',
+    nome: 'agosto',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Setembro',
+    nome: 'setembro',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Outubro',
+    nome: 'outubro',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Novembro',
+    nome: 'novembro',
+    type: 'agenda',
   },
   {
     id: '05',
-    nome: 'Dezembro',
+    nome: 'dezembro',
+    type: 'agenda',
   },
 ]

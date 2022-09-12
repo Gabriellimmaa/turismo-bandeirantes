@@ -23,7 +23,7 @@ export default function Navbar({ objectList }: NavbarProps) {
             </li>
           ) : (
             <li key={data.id}>
-              <Link to={`/${data.nome}`}><button>{data.nome}</button></Link>
+              <Link to={`/${data.type}/${data.nome}`}><button>{data.nome}</button></Link>
             </li>
         )))}
       </ul>

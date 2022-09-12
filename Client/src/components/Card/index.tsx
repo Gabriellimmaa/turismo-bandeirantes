@@ -47,7 +47,7 @@ export default function Card({
   return (
     <div className="card">
       <div className="card-container">
-        <Link className="card-img" to={`/${type}/${id}`}>
+        <Link className="card-img" to={`/${type}/detalhe/${id}`}>
           <img src={img} />
         </Link>
         <label className="title margin">{title}</label>
@@ -111,7 +111,7 @@ export default function Card({
         </div>
       </div>
       <div className="redirect">
-        <Link id="cardMore" className="margin" to={`/${type}/${id}`}>
+        <Link id="cardMore" className="margin" to={`/${type}/detalhe/${id}`}>
           Ver mais
         </Link>
         {latitude && longitude && (
