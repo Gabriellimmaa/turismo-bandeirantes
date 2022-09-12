@@ -82,13 +82,21 @@ export function TurismoHome() {
       >
         {turismo.map((atracao) => (
           <SwiperSlide key={atracao.id}>
-            <CardTurismoHome title={atracao.nome} path={atracao.logo} />
+            <CardTurismoHome
+              title={atracao.nome}
+              path={atracao.logo}
+              id={atracao.id}
+            />
           </SwiperSlide>
         ))}
         {/* Esse segundo é só para teste */}
         {turismo.map((atracao) => (
           <SwiperSlide key={atracao.id}>
-            <CardTurismoHome title={atracao.nome} path={atracao.logo} />
+            <CardTurismoHome
+              title={atracao.nome}
+              path={atracao.logo}
+              id={atracao.id}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
