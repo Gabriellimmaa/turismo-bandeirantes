@@ -5,13 +5,14 @@ export const usePosition = () => {
   const [position, setPosition] = useState({})
   const [error, setError] = useState(null)
 
-  const onChange = (coords: any) => {
+  const onChange = (position: any) => {
     setPosition({
-      latitude: coords.latitude,
-      longitude: coords.longitude,
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
     })
   }
   const onError = (error: any) => {
+    setError(error.message)
     toast.error(
       'Geolocalização desativada, por favor ative para melhorar sua experiência',
     )
@@ -25,5 +26,6 @@ export const usePosition = () => {
     const watcher = geo.watchPosition(onChange, onError)
     return () => geo.clearWatch(watcher)
   }, [])
+
   return { ...position, error }
 }
