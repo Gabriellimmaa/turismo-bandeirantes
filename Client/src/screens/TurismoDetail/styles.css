@@ -32,8 +32,8 @@
 }
 
 .turismo-detail .container-detail .info p {
-    font-size: 1.2rem;
-  }
+  font-size: 1.2rem;
+}
 
 .turismo-detail .container-detail .info strong {
   text-align: center;
@@ -46,19 +46,6 @@
   padding: 0.5rem;
   border-radius: 4px;
   color: #fff;
-}
-
-.turismo-detail .container-detail .info .contatos {
-  gap: 3rem;
-  padding: 2rem;
-  display: grid;
-  justify-content: center;
-  line-height: 2rem;
-  background: #ebeaea;
-  border-radius: 8px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .turismo-detail .container-detail .info .contatos p {
@@ -77,9 +64,13 @@
   font-weight: 700;
   text-decoration: underline;
 }
-.turismo-detail .contatos strong {
-  color: #283729;
-  font-size: 2rem;
+
+.turismo-detail .container-detail .info .contatos #icon-email {
+  display: block;
+}
+
+.turismo-detail .container-detail .info .contatos #text-email {
+  display: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -90,8 +81,17 @@
   .turismo-detail .logo-img img {
     width: 100%;
   }
+}
 
-  .turismo-detail .container-detail .info strong {
-    font-size: 1.5rem;
+@media screen and (max-width: 768px) {
+  .turismo-detail .container-detail .info .contatos #text-email {
+    display: block;
   }
+
+  .turismo-detail .container-detail .info .contatos #icon-email {
+    display: none;
+  }
+  .turismo-detail .container-detail .info #grid {
+    @apply grid-cols-1
+  } 
 }
