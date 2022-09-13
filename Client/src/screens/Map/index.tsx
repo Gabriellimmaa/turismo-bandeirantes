@@ -4,7 +4,6 @@ import { Loading } from '../../components/Loading'
 import 'leaflet/dist/leaflet.css'
 
 export default function Map() {
-  //  const position = [-23.112742, -50.3821639]
   const [loading, setLoading] = useState(true)
 
   setTimeout(() => {
@@ -18,7 +17,7 @@ export default function Map() {
       <MapContainer
         id="map"
         zoom={15}
-        center={[-23.112742, -50.3821639]}
+        center={[-23.1115914, -50.3749315]}
         scrollWheelZoom={false}
         className="map"
         style={{ height: '100vh', width: '100%', zIndex: 0 }}
