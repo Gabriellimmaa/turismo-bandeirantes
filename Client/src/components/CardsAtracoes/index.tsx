@@ -43,19 +43,6 @@ export function CardsAtracoes() {
   // Create array with 500 slides
   return (
     <div className="turismoHome w-full">
-      <div className="flex justify-center  items-center  text-center mb-5">
-        <div>
-          <h1 className=" font-extrabold uppercase">O QUE FAZER?</h1>
-        </div>
-        <div className="absolute right-80 mt-3">
-          <Link
-            to="/turismo"
-            className="text-lg rounded-3xl border-2 border-grayHover  hover:text-gray-800 py-2 px-9 font-extrabold hover:bg-grayHover transition-all duration-500"
-          >
-            Ver Todas
-          </Link>
-        </div>
-      </div>
       <Swiper
         style={{ padding: '20px 0' }}
         slidesPerView={3}

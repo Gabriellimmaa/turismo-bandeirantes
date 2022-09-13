@@ -11,6 +11,7 @@ import { CardsAtracoes } from '../../components/CardsAtracoes'
 
 import './styles.css'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 export default function Inicio() {
   const { t } = useTranslation()
@@ -80,9 +81,28 @@ export default function Inicio() {
             </div>
           </div>
         </div>
+      </section>
+      <section className='turismoWrapper'>
         <div className="turismo w-full">
+          <div className="w-full px-10">
+            <div className="w-full mt-10 flex justify-center">
+              <div className='flex flex-wrap sm:flex-nowrap sm:flex-col  md:flex-col lg:flex-row w-11/12 items-center justify-center'>
+                <h1 className="flex text-center md:pl-0 lg:pl-40 flex-1 justify-center mb-16 text-4xl font-extrabold uppercase">
+                  O QUE FAZER?
+                </h1>
+                <Link
+                  to="/turismo"
+                  className="text-lg rounded-3xl border-2 md:mt-4 md:mb-16 lg:mb-16  border-grayHover  hover:text-gray-800 py-2 px-9 font-extrabold hover:bg-grayHover transition-all duration-500"
+                >
+                  Ver Todas
+                </Link>
+              </div>
+                
+            </div>
+          </div>
           <CardsAtracoes />
         </div>
+      </section>
         <div className="agenda">
           <div className="w-full mt-20 px-10">
             <h1 className="flex justify-center text-center my-16 text-4xl font-extrabold uppercase">
@@ -92,7 +112,6 @@ export default function Inicio() {
           </div>
         </div>
         <div className="parallax flex items-center justify-center bg-fixed w-full bg-[url('https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/265276800_2981423038775488_615807068815183275_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=973b4a&_nc_ohc=l-OqmBDR9A4AX-QRmsw&_nc_ht=scontent-gru1-2.xx&oh=00_AT_K50tepTcMyW7RroWn2tgZ-41ohCRz-dAOQwTzU1TO5Q&oe=6311BF81')] bg-cover bg-no-repeat bg-center"></div>
-      </section>
     </>
   )
 }
