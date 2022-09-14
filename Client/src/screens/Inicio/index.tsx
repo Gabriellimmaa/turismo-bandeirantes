@@ -5,7 +5,7 @@ import { MdFastfood } from 'react-icons/md'
 import { BiPhotoAlbum } from 'react-icons/bi'
 import { GrSchedule } from 'react-icons/gr'
 import { CardHome } from '../../components/CardHome'
-import Navbar from '../../components/Navbar'
+import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from '../Agenda/optionData'
 import { CardsAtracoes } from '../../components/CardsAtracoes'
 
@@ -108,7 +108,7 @@ export default function Inicio() {
             <h1 className="flex justify-center text-center my-16 text-4xl font-extrabold uppercase">
               Calendário de eventos
             </h1>
-            <Navbar objectList={optionAgenda} />
+            <Toolbar objectList={optionAgenda} />
           </div>
         </div>
         <div className="parallax flex items-center justify-center bg-fixed w-full bg-[url('https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/265276800_2981423038775488_615807068815183275_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=973b4a&_nc_ohc=l-OqmBDR9A4AX-QRmsw&_nc_ht=scontent-gru1-2.xx&oh=00_AT_K50tepTcMyW7RroWn2tgZ-41ohCRz-dAOQwTzU1TO5Q&oe=6311BF81')] bg-cover bg-no-repeat bg-center"></div>

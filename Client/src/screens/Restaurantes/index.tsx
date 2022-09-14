@@ -1,6 +1,6 @@
 import Card from '../../components/Card'
 import './styles.css'
-import Navbar from '../../components/Navbar'
+import  Toolbar  from '../../components/Toolbar'
 import { optionRestaurante } from './optionData'
 
 export default function Restaurantes() {
@@ -11,7 +11,7 @@ export default function Restaurantes() {
         <h2>ado a ado quem leu é viado</h2>
       </div>
 
-      <Navbar objectList={optionRestaurante} />
+      <Toolbar objectList={optionRestaurante} />
       <div className="grid grid-cols-3 gap-5 justify-items-center">
         <Card
           id={1}

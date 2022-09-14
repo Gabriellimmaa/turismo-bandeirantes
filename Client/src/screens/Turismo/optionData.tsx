@@ -2,19 +2,19 @@ export const optionTurismo = [
   {
     id: "01",
     nome: "Turismo religioso",
-    categoria: "religioso",
+    categoria: "Religioso",
     type: "turismo"
 },
   {
     id: "02",
     nome: "Turismo Cultural",
-    categoria: "cultural",
+    categoria: "Cultural",
     type: "turismo"
   },
   {
     id: "03",
     nome: "Turismo Rural",
-    categoria: "rural",
+    categoria: "Rural",
     type: "turismo"
   }
 ]

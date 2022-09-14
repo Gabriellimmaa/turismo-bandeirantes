@@ -8,13 +8,13 @@ interface ObjectItem {
   type?: string
 }
 
-interface NavbarProps {
+interface ToolbarProps {
   objectList: ObjectItem[]
 }
 
-export default function Navbar({ objectList }: NavbarProps) {
+export default function Toolbar({ objectList }: ToolbarProps) {
   return (
-    <div className="navbar">
+    <div className="Toolbar">
       <ul>
         {objectList.map((data: ObjectItem) => (
           data.categoria ? (

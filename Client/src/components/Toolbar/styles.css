@@ -1,4 +1,4 @@
-.navbar {
+.Toolbar {
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   margin: 0 auto;
 }
 
-.navbar ul {
+.Toolbar ul {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
@@ -24,16 +24,16 @@
   );
 }
 
-.navbar ul li {
+.Toolbar ul li {
   display: inline-block;
 }
 
-.navbar ul li button {
+.Toolbar ul li button {
   padding: 10px;
   font-size: 15px;
 }
 
-.navbar ul li button:hover {
+.Toolbar ul li button:hover {
   background-color: #3e8e41;
   color: #fff;
   border-radius: 3px;
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 350px) {
-  .navbar {
+  .Toolbar {
     mask: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0) 0%,
@@ -51,18 +51,18 @@
     );
   }
 
-  .navbar ul li {
+  .Toolbar ul li {
     display: block;
     font-size: 10px;
   }
 }
 
 @media screen and (max-width: 440px) {
-  .navbar ul {
+  .Toolbar ul {
     display: inline-block;
   }
 
-  .navbar ul li {
+  .Toolbar ul li {
     display: block;
     font-size: 10px;
   }
@@ -70,11 +70,11 @@
 
 @media screen and (max-width: 768px) {
   
-  .navbar ul {
+  .Toolbar ul {
     display: inline-block;
   }
 
-  .navbar ul li {
+  .Toolbar ul li {
     display: block;
     font-size: 10px;
   }

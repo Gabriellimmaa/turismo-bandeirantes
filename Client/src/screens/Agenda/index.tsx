@@ -1,5 +1,5 @@
 import Card from '../../components/Card'
-import Navbar from '../../components/Navbar'
+import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from './optionData'
 import './styles.css'
 
@@ -10,7 +10,7 @@ export function Agenda() {
         <h1>Agenda</h1>
         <h2>Aqui pode ver todas as datas que vou comer sua mãe</h2>
       </div>
-      <Navbar objectList={optionAgenda} />
+      <Toolbar objectList={optionAgenda} />
       <div className="grid grid-cols-3 gap-5 justify-items-center mt-6">
         <Card
           id={1}
