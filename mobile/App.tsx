@@ -1,8 +1,10 @@
-import React from "react";
-import { NativeBaseProvider, Box, StatusBar } from "native-base";
+import Reactr from "react";
+import { NativeBaseProvider, Box, StatusBar, VStack } from "native-base";
 import { THEME } from "./src/styles/theme";
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { Routes } from "./src/routes";
+import 'react-native-gesture-handler';
+import { Header } from "./src/components/Header";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -14,7 +16,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Routes />
+      <VStack flex={1} bg="gray.100">
+        <Routes />
+      </VStack>
     </NativeBaseProvider>
   );
 }
