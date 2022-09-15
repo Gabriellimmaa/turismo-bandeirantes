@@ -1,14 +1,12 @@
-import React from 'react';
-import { HStack, Text, VStack } from 'native-base';
+import { Center, Text } from "native-base";
 
 export function Home() {
   return (
-    <VStack flex={1} px={6}>
-        <HStack w="full" mt={8} justifyContent="space-between" alignItems="center">
-            <Text>
-                Hello
-            </Text>
-        </HStack>
-    </VStack>
-  );
+    <Center
+      h="full"
+      w="full"
+    >
+      <Text>Home</Text>
+    </Center>
+  )
 }

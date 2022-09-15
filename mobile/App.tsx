@@ -1,16 +1,20 @@
-import { NativeBaseProvider, StatusBar } from 'native-base';
-import React from 'react';
-import { Home } from './src/screens/Home';
+import React from "react";
+import { NativeBaseProvider, Box, StatusBar } from "native-base";
+import { THEME } from "./src/styles/theme";
+import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { Routes } from "./src/routes";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={THEME}>
       <StatusBar 
-        barStyle='light-content'
+        barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      <Home />
+      <Routes />
     </NativeBaseProvider>
   );
 }
