@@ -66,6 +66,7 @@
 }
 
 .turismo-detail .container-detail .info .contatos #icon-email {
+  margin: 0;
   display: block;
 }
 
