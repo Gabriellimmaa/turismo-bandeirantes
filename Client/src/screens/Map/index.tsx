@@ -10,6 +10,8 @@ import './styles.css'
 import { FaArrowRight } from 'react-icons/fa'
 
 import marcadorHotel from '../../assets/marcadores/verde.png'
+import marcadorTurismo from '../../assets/marcadores/vermelho.png'
+import marcadorRestaurantes from '../../assets/marcadores/azul ciano.png'
 
 interface Props {
   id: number
@@ -26,6 +28,16 @@ export default function Map() {
 
   const hotelIcon = Leaflet.icon({
     iconUrl: marcadorHotel,
+    iconSize: [38, 38],
+  })
+
+  const turismoIcon = Leaflet.icon({
+    iconUrl: marcadorTurismo,
+    iconSize: [38, 38],
+  })
+
+  const restauranteIcon = Leaflet.icon({
+    iconUrl: marcadorRestaurantes,
     iconSize: [38, 38],
   })
 
@@ -96,7 +108,7 @@ export default function Map() {
             <Marker
               position={[restaurante.latitude, restaurante.longitude]}
               key={restaurante.id}
-              icon={hotelIcon}
+              icon={restauranteIcon}
             >
               <Popup
                 closeButton={false}
@@ -118,7 +130,7 @@ export default function Map() {
             <Marker
               position={[atracao.latitude, atracao.longitude]}
               key={atracao.id}
-              icon={hotelIcon}
+              icon={turismoIcon}
             >
               <Popup
                 closeButton={false}
