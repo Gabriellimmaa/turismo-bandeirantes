@@ -158,9 +158,9 @@ export default function Header() {
           <li>
             <Link to="/turismo">{t("navbar.turismo")}</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/lazer-esporte">{t("navbar.lazer&esporte")}</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/restaurantes">{t("navbar.restaurantes")}</Link>
           </li>
