@@ -12,20 +12,15 @@ export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
   return (
-    <NativeBaseProvider theme={THEME}>
-      <StatusBar 
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      <NavigationContainer >
-        <SafeAreaView>
-          <Header />
-        </SafeAreaView>
-        <VStack flex={1} bg="gray.100">
-          <Routes />
-        </VStack>
-      </NavigationContainer>
-    </NativeBaseProvider>
+    <NavigationContainer >
+      <NativeBaseProvider theme={THEME}>
+        <StatusBar 
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        <Routes />
+      </NativeBaseProvider>
+    </NavigationContainer>
   );
 }

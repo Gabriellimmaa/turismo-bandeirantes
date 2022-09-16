@@ -1,6 +1,7 @@
 import { ScrollView, VStack } from "native-base";
 import { useEffect, useState } from "react";
 import { CardTurismo } from "../components/Card/Turismo";
+import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import api from "../services/api";
 
@@ -37,7 +38,8 @@ export function Turismo() {
   }
 
   return (
-    <VStack flex={1}  mb={10} bg="gray.100">
+    <VStack>
+      <Header />
       <ScrollView pt={4} >
         { turismo.map((item) => (
           <CardTurismo

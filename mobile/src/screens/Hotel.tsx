@@ -1,6 +1,7 @@
 import { ScrollView, VStack } from "native-base";
 import { useEffect, useState } from "react";
 import { CardHotel } from "../components/Card/Hotel";
+import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import api from "../services/api";
 
@@ -32,7 +33,8 @@ export function Hotel() {
   }
 
   return (
-    <VStack flex={1} bg="gray.100" >
+    <VStack flex={1} mb={10} bg="gray.100" >
+      <Header />
       <ScrollView pt={4} >
         { hoteis!.map((item) => (
           <CardHotel

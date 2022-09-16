@@ -67,6 +67,7 @@ export function CardHotel({
         <HStack  space={2}  justifyContent="space-between">
           <HStack 
             pt={3}
+            space={1}
           >
             <MaterialCommunityIcons name="phone" color={colors.gray['400']} size={20} />
             <Text>{telefone}</Text>

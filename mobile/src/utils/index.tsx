@@ -7,3 +7,9 @@ export function convertFirstToUpperCase(text: string) {
 export function limitDescription(description: string) {
   return description.substring(0, 100)
 }
+
+export function apenasNumeros(string: string) 
+{
+    var numsStr = string.replace(/[^0-9]/g,'');
+    return parseInt(numsStr);
+}
