@@ -19,19 +19,21 @@ interface Props {
 }
 
 export default function Map() {
+  const [turismo, setTurismo] = useState<Props[]>([])
   const [restaurantes, setRestaurantes] = useState<Props[]>([])
   const [hoteis, setHoteis] = useState<Props[]>()
   const [loading, setLoading] = useState(false)
 
   const hotelIcon = Leaflet.icon({
     iconUrl: marcadorHotel,
-    iconSize: [58, 58],
+    iconSize: [38, 38],
   })
 
   useEffect(() => {
     api.get('/hoteis').then((response) => {
       setHoteis(response.data.hoteis)
       loadRestaurantes()
+      loadTurismo()
       setLoading(true)
     })
   }, [])
@@ -43,6 +45,12 @@ export default function Map() {
   async function loadRestaurantes() {
     api.get('/restaurantes').then((response) => {
       setRestaurantes(response.data.restaurantes)
+    })
+  }
+
+  async function loadTurismo() {
+    api.get('/atracoes').then((response) => {
+      setTurismo(response.data.atracoes)
     })
   }
 
@@ -99,6 +107,28 @@ export default function Map() {
                 Restaurante {restaurante.nome}
                 <br />
                 <Link to={`/restaurante/detalhe/${restaurante.id}`}>
+                  <FaArrowRight color="#FFF" />
+                </Link>
+              </Popup>
+            </Marker>
+          )
+        })}
+        {turismo?.map((atracao) => {
+          return (
+            <Marker
+              position={[atracao.latitude, atracao.longitude]}
+              key={atracao.id}
+              icon={hotelIcon}
+            >
+              <Popup
+                closeButton={false}
+                minWidth={240}
+                maxHeight={240}
+                className="mapPopup"
+              >
+                {atracao.nome}
+                <br />
+                <Link to={`/atracao/detalhe/${atracao.id}`}>
                   <FaArrowRight color="#FFF" />
                 </Link>
               </Popup>
