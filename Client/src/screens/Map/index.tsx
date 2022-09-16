@@ -4,6 +4,12 @@ import { Loading } from '../../components/Loading'
 import 'leaflet/dist/leaflet.css'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
+import Leaflet from 'leaflet'
+
+import './styles.css'
+import { FaArrowRight } from 'react-icons/fa'
+
+import marcadorHotel from '../../assets/marcadores/verde.png'
 
 interface HoteisProps {
   id: number
@@ -20,6 +26,11 @@ interface HoteisProps {
 export default function Map() {
   const [hoteis, setHoteis] = useState<HoteisProps[]>()
   const [loading, setLoading] = useState(false)
+
+  const hotelIcon = Leaflet.icon({
+    iconUrl: marcadorHotel,
+    iconSize: [58, 58],
+  })
 
   useEffect(() => {
     api.get('/hoteis').then((response) => {
@@ -49,11 +60,22 @@ export default function Map() {
         />
         {hoteis?.map((hotel) => {
           return (
-            <Marker position={[hotel.latitude, hotel.longitude]} key={hotel.id}>
-              <Popup>
-                {hotel.nome}
+            <Marker
+              position={[hotel.latitude, hotel.longitude]}
+              key={hotel.id}
+              icon={hotelIcon}
+            >
+              <Popup
+                closeButton={false}
+                minWidth={240}
+                maxHeight={240}
+                className="mapPopup"
+              >
+                Hotel {hotel.nome}
                 <br />
-                <Link to={`/hotel/detalhe/${hotel.id}`}>Ver mais</Link>
+                <Link to={`/hotel/detalhe/${hotel.id}`}>
+                  <FaArrowRight color="#FFF" />
+                </Link>
               </Popup>
             </Marker>
           )
