@@ -29,21 +29,21 @@ export default function Map() {
   })
 
   useEffect(() => {
-    api.get('/restaurantes').then((response) => {
-      setRestaurantes(response.data.restaurantes)
-      setLoading(false)
-    })
-  }, [])
-
-  useEffect(() => {
     api.get('/hoteis').then((response) => {
       setHoteis(response.data.hoteis)
-      setLoading(false)
+      loadRestaurantes()
+      setLoading(true)
     })
   }, [])
 
   if (!loading) {
     return <Loading />
+  }
+
+  async function loadRestaurantes() {
+    api.get('/restaurantes').then((response) => {
+      setRestaurantes(response.data.restaurantes)
+    })
   }
 
   return (
