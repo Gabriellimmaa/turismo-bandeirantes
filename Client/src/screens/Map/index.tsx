@@ -30,10 +30,10 @@ export default function Map() {
   })
 
   useEffect(() => {
-    api.get('/hoteis').then((response) => {
-      setHoteis(response.data.hoteis)
+    api.get('/atracoes').then((response) => {
+      setTurismo(response.data.atracoes)
       loadRestaurantes()
-      loadTurismo()
+      loadHotel()
       setLoading(true)
     })
   }, [])
@@ -48,9 +48,9 @@ export default function Map() {
     })
   }
 
-  async function loadTurismo() {
-    api.get('/atracoes').then((response) => {
-      setTurismo(response.data.atracoes)
+  async function loadHotel() {
+    api.get('/hoteis').then((response) => {
+      setHoteis(response.data.hoteis)
     })
   }
 
