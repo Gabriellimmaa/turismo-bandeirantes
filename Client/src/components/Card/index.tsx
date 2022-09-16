@@ -11,8 +11,7 @@ import { MdMenuBook } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { limitDescription } from '../../utils'
 import './styles.css'
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify'
 
 interface CardProps {
@@ -24,7 +23,7 @@ interface CardProps {
   date?: string
   locale?: string
   hour?: string
-  price?: string
+  price?: number
   kitchen?: string
   menu?: string
   cell?: string
@@ -53,36 +52,35 @@ export default function Card({
   img,
   id,
 }: CardProps) {
-
   const StarRating = () => {
-    const [rating, setRating] = useState(0);
-    const [hover, setHover] = useState(0);
+    const [rating, setRating] = useState(0)
+    const [hover, setHover] = useState(0)
 
     function handleRating(rating: number) {
-      setRating(rating);
-      toast.success("Obrigado por avaliar!");
+      setRating(rating)
+      toast.success('Obrigado por avaliar!')
     }
 
     return (
       <div className="margin star-rating flex justify-end">
         {[...Array(5)].map((star, index) => {
-          index += 1;
+          index += 1
           return (
             <button
               type="button"
               key={index}
-              className={index <= (hover || rating) ? "on" : "off"}
+              className={index <= (hover || rating) ? 'on' : 'off'}
               onClick={() => handleRating(index)}
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
             >
               <span className="star">&#9733;</span>
             </button>
-          );
+          )
         })}
       </div>
-    );
-  };
+    )
+  }
   return (
     <div className="card">
       <div className="card-container">
