@@ -4,7 +4,7 @@ import { limitDescription } from "../../utils";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { HoteisProps } from "../../screens/Hotel";
 
-export function CardHotel({
+export function CardResaurante({
   id,
   nome,
   preco,

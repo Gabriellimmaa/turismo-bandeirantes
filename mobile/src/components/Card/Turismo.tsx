@@ -16,7 +16,7 @@ export function CardTurismo({
   const { colors } = useTheme();
 
   return (
-    <Box alignItems="center" px={5} pt={4}>
+    <Box alignItems="center" px={5} pb={12}>
       <Box
         rounded="lg"
         overflow="hidden"
