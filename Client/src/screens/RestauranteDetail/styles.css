@@ -1,0 +1,98 @@
+.restaurante-detail .background-img {
+  position: relative;
+}
+
+.restaurante-detail .background-img img {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  filter: brightness(0.9) blur(5px);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.restaurante-detail .logo-img {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurante-detail .logo-img img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.restaurante-detail .container-detail .info h3 {
+  font-size: 2rem;
+}
+
+.restaurante-detail .container-detail .info p {
+  font-size: 1.2rem;
+}
+
+.restaurante-detail .container-detail .info strong {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.restaurante-detail .container-detail .info .google-maps {
+  background: #326335;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.restaurante-detail .container-detail .info .contatos p {
+  font-size: 1rem;
+}
+
+.restaurante-detail .container-detail .info .contatos a {
+  color: #326335;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.restaurante-detail .container-detail .info .contatos a:hover {
+  color: #5db863;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.restaurante-detail .container-detail .info .contatos #icon-email {
+  margin: 0;
+  display: block;
+}
+
+.restaurante-detail .container-detail .info .contatos #text-email {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .restaurante-detail .background-img {
+    display: none;
+  }
+
+  .restaurante-detail .logo-img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .restaurante-detail .container-detail .info .contatos #text-email {
+    display: block;
+  }
+
+  .restaurante-detail .container-detail .info .contatos #icon-email {
+    display: none;
+  }
+  .restaurante-detail .container-detail .info #grid {
+    @apply grid-cols-1;
+  }
+}
