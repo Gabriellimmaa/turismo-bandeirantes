@@ -11,20 +11,16 @@ import { FaArrowRight } from 'react-icons/fa'
 
 import marcadorHotel from '../../assets/marcadores/verde.png'
 
-interface HoteisProps {
+interface Props {
   id: number
   nome: string
-  preco: number
-  logo: string
-  email: string
-  site: string
-  telefone: string
   latitude: number
   longitude: number
 }
 
 export default function Map() {
-  const [hoteis, setHoteis] = useState<HoteisProps[]>()
+  const [restaurantes, setRestaurantes] = useState<Props[]>([])
+  const [hoteis, setHoteis] = useState<Props[]>()
   const [loading, setLoading] = useState(false)
 
   const hotelIcon = Leaflet.icon({
@@ -33,9 +29,16 @@ export default function Map() {
   })
 
   useEffect(() => {
+    api.get('/restaurantes').then((response) => {
+      setRestaurantes(response.data.restaurantes)
+      setLoading(false)
+    })
+  }, [])
+
+  useEffect(() => {
     api.get('/hoteis').then((response) => {
       setHoteis(response.data.hoteis)
-      setLoading(true)
+      setLoading(false)
     })
   }, [])
 
@@ -74,6 +77,28 @@ export default function Map() {
                 Hotel {hotel.nome}
                 <br />
                 <Link to={`/hotel/detalhe/${hotel.id}`}>
+                  <FaArrowRight color="#FFF" />
+                </Link>
+              </Popup>
+            </Marker>
+          )
+        })}
+        {restaurantes?.map((restaurante) => {
+          return (
+            <Marker
+              position={[restaurante.latitude, restaurante.longitude]}
+              key={restaurante.id}
+              icon={hotelIcon}
+            >
+              <Popup
+                closeButton={false}
+                minWidth={240}
+                maxHeight={240}
+                className="mapPopup"
+              >
+                Restaurante {restaurante.nome}
+                <br />
+                <Link to={`/restaurante/detalhe/${restaurante.id}`}>
                   <FaArrowRight color="#FFF" />
                 </Link>
               </Popup>
