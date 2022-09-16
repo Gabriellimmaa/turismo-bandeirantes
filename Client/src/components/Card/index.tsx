@@ -23,7 +23,7 @@ interface CardProps {
   date?: string
   locale?: string
   hour?: string
-  price?: number
+  price?: number | string
   kitchen?: string
   menu?: string
   cell?: string
