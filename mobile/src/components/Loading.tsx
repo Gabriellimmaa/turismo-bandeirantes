@@ -1,10 +1,10 @@
-import { Box, Image } from 'native-base'
-import logo from '../assets/logo-banner.png'
+import { Box, Center, Image, View, VStack } from 'native-base'
+import logo from '../assets/logoTurismo.png'
 
 export function Loading() {
   return (
-    <Box >
-      <Image source={logo} />
-    </Box>
+    <VStack justifyContent="center" mt={-20} alignItems="center" px={6}  flex={1}>
+      <Image resizeMode="contain"  source={logo} alt="image" />
+    </VStack>
   )
 }

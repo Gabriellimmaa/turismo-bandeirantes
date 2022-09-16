@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Center, Heading, HStack, Image, Link, Text, useTheme, View, VStack } from "native-base";
+import { AspectRatio, Box, Button, Center, Heading, HStack, Image, Link, Text, useTheme, View, VStack } from "native-base";
 import { turismoProps } from "../../screens/Turismo";
 import { limitDescription } from "../../utils";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -66,24 +66,26 @@ export function CardHotel({
         </HStack>
         <HStack  space={2}  justifyContent="space-between">
           <HStack 
-            py={1}
+            pt={3}
           >
             <MaterialCommunityIcons name="phone" color={colors.gray['400']} size={20} />
             <Text>{telefone}</Text>
           </HStack>
           <HStack space={2}>
-            <Link
-              px={3}
-              py={1}
-              borderRadius="md"
+            <Button
               bg="green.700"
-              href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
+              _pressed={{bg: "green.400"}}
+              borderRadius="md"
             >
-              <HStack space={2}>
-                <MaterialCommunityIcons name="google-maps" color={colors.gray['100']} size={20} />
-                <Text color="white">Abrir no Maps</Text>
-              </HStack>
-            </Link>
+              <Link
+                href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
+              >
+                <HStack space={2}>
+                  <MaterialCommunityIcons name="google-maps" color={colors.gray['100']} size={20} />
+                  <Text color="white">Abrir no Maps</Text>
+                </HStack>
+              </Link>
+            </Button>
           </HStack>
         </HStack>
         

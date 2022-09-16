@@ -3,8 +3,8 @@ import { CardResaurante } from "../components/Card/Restaurante";
 
 export function Restaurantes() {
   return (
-    <VStack flex={1} mt={10} mb={10} bg="gray.100" pt="2">
-      <ScrollView  >
+    <VStack flex={1} bg="gray.100" >
+      <ScrollView pt={4} >
         { turismo.map((item) => (
           <CardResaurante
             key={item.id}

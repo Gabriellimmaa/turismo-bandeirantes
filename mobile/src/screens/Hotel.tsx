@@ -32,8 +32,8 @@ export function Hotel() {
   }
 
   return (
-    <VStack flex={1} mt={10} mb={10} bg="gray.100" pt="2">
-      <ScrollView  >
+    <VStack flex={1} bg="gray.100" >
+      <ScrollView pt={4} >
         { hoteis!.map((item) => (
           <CardHotel
             key={item.id}

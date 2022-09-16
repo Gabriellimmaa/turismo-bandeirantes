@@ -37,8 +37,8 @@ export function Turismo() {
   }
 
   return (
-    <VStack flex={1} mt={10} mb={10} bg="gray.100" pt="2">
-      <ScrollView  >
+    <VStack flex={1}  mb={10} bg="gray.100">
+      <ScrollView pt={4} >
         { turismo.map((item) => (
           <CardTurismo
             key={item.id}
