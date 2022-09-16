@@ -1,8 +1,8 @@
-.turismo-detail .background-img {
+.restaurante-detail .background-img {
   position: relative;
 }
 
-.turismo-detail .background-img img {
+.restaurante-detail .background-img img {
   position: absolute;
   width: 100%;
   height: 50vh;
@@ -11,7 +11,7 @@
   z-index: -1;
 }
 
-.turismo-detail .logo-img {
+.restaurante-detail .logo-img {
   width: 100%;
   height: 50vh;
   display: flex;
@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.turismo-detail .logo-img img {
+.restaurante-detail .logo-img img {
   width: 50%;
   height: 100%;
   object-fit: cover;
@@ -27,72 +27,72 @@
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 }
 
-.turismo-detail .container-detail .info h3 {
+.restaurante-detail .container-detail .info h3 {
   font-size: 2rem;
 }
 
-.turismo-detail .container-detail .info p {
+.restaurante-detail .container-detail .info p {
   font-size: 1.2rem;
 }
 
-.turismo-detail .container-detail .info strong {
+.restaurante-detail .container-detail .info strong {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
 }
 
-.turismo-detail .container-detail .info .google-maps {
+.restaurante-detail .container-detail .info .google-maps {
   background: #326335;
   padding: 0.5rem;
   border-radius: 4px;
   color: #fff;
 }
 
-.turismo-detail .container-detail .info .contatos p {
+.restaurante-detail .container-detail .info .contatos p {
   font-size: 1rem;
 }
 
-.turismo-detail .container-detail .info .contatos a {
+.restaurante-detail .container-detail .info .contatos a {
   color: #326335;
   font-weight: 700;
   text-decoration: underline;
   transition: 0.3s;
 }
 
-.turismo-detail .container-detail .info .contatos a:hover {
+.restaurante-detail .container-detail .info .contatos a:hover {
   color: #5db863;
   font-weight: 700;
   text-decoration: underline;
 }
 
-.turismo-detail .container-detail .info .contatos #icon-email {
+.restaurante-detail .container-detail .info .contatos #icon-email {
   margin: 0;
   display: block;
 }
 
-.turismo-detail .container-detail .info .contatos #text-email {
+.restaurante-detail .container-detail .info .contatos #text-email {
   display: none;
 }
 
 @media screen and (max-width: 500px) {
-  .turismo-detail .background-img {
+  .restaurante-detail .background-img {
     display: none;
   }
 
-  .turismo-detail .logo-img img {
+  .restaurante-detail .logo-img img {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .turismo-detail .container-detail .info .contatos #text-email {
+  .restaurante-detail .container-detail .info .contatos #text-email {
     display: block;
   }
 
-  .turismo-detail .container-detail .info .contatos #icon-email {
+  .restaurante-detail .container-detail .info .contatos #icon-email {
     display: none;
   }
-  .turismo-detail .container-detail .info #grid {
-    @apply grid-cols-1
-  } 
+  .restaurante-detail .container-detail .info #grid {
+    @apply grid-cols-1;
+  }
 }

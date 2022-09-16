@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import api from '../../services/api'
+import './styles.css'
+
+import { Loading } from '../../components/Loading'
 
 import { FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
+import { TbToolsKitchen } from 'react-icons/tb'
+import { MdMenuBook } from 'react-icons/md'
 import {
   BiMailSend,
   BiMap,
@@ -10,21 +17,15 @@ import {
 } from 'react-icons/bi'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { RiFacebookCircleLine } from 'react-icons/ri'
-
-import { useParams } from 'react-router-dom'
-import { Loading } from '../../components/Loading'
-import api from '../../services/api'
-
-import './styles.css'
 import { toast } from 'react-toastify'
 import { CommentsList } from '../../components/Comments/CommentsList'
 
-interface HoteisProps {
+interface RestauranteDetailProps {
   [key: string]: string | number | undefined
   id: number
   nome: string
   descricao: string
-  preco: number
+  preco?: number
   logo: string
   maps: string
   ativo: number
@@ -32,6 +33,8 @@ interface HoteisProps {
   latitude: number
   created_at: string
   updated_at: string
+  cardapio?: string
+  cozinhas?: string
   email?: string
   endereco?: string
   whats?: string
@@ -41,37 +44,34 @@ interface HoteisProps {
   telefone?: string
 }
 
-export function Hotel() {
+export function RestauranteDetail() {
   const { id } = useParams()
-  const [data, setData] = useState<HoteisProps>()
-  const contatosOption = [
-    'whats',
-    'insta',
-    'face',
-    'site',
-    'telefone',
-    'email',
-    'endereco',
-  ]
+  const [data, setData] = useState<RestauranteDetailProps>()
+  const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
+  const [rating, setRating] = useState(0)
+  const [hover, setHover] = useState(0)
   const exampleComments = [
     {
-      "username": "Gabriel Lima",
-      "text": "Hotel lindo, com uma vista incrível!"
-    }
+      username: 'Gabriel Lima',
+      text: 'Ótimo atendimento!',
+    },
+    {
+      username: 'Rodrigo Tavares',
+      text: 'Cardápio muito bom, porém o preço é um pouco salgado.',
+    },
   ]
 
   function handleRating(rating: number) {
-    setRating(rating);
-    toast.success("Obrigado por avaliar!");
+    setRating(rating)
+    toast.success('Obrigado por avaliar!')
   }
+
   useEffect(() => {
     setQtdContatos([])
-    api.get(`/hoteis/${id}`).then((response) => {
-      setData(response.data.hoteis[0])
+    api.get(`/restaurantes/${id}`).then((response) => {
+      setData(response.data.restaurantes[0])
       setLoading(false)
     })
     for (const x in data) {
@@ -86,7 +86,7 @@ export function Hotel() {
   }
 
   return (
-    <div className="hotel-detail">
+    <div className="restaurante-detail">
       <div className="background-img">
         <img src={data?.logo} alt="" />
       </div>
@@ -99,28 +99,24 @@ export function Hotel() {
           <h1>{data?.nome}</h1>
         </div>
         <section className="info">
-          <div className='flex items-center'>
-            <div>
-              0 avaliações
-            </div>
-            <div className='ml-5'>
-              0 comentários
-            </div>
+          <div className="flex items-center">
+            <div>0 avaliações</div>
+            <div className="ml-5">0 comentários</div>
             <div className="star-rating ml-auto">
               {[...Array(5)].map((star, index) => {
-                index += 1;
+                index += 1
                 return (
                   <button
                     type="button"
                     key={index}
-                    className={index <= (hover || rating) ? "on" : "off"}
+                    className={index <= (hover || rating) ? 'on' : 'off'}
                     onClick={() => handleRating(index)}
                     onMouseEnter={() => setHover(index)}
                     onMouseLeave={() => setHover(rating)}
                   >
                     <span className="star">&#9733;</span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -142,17 +138,41 @@ export function Hotel() {
               </div>
             )}
           </div>
-          {data?.preco ? (
-            <div className="mb-10">
-              <h3>Preço:</h3>
-              <p className="flex items-center">
-                <BiMoney className="mx-2" size={32} /> R$ {data?.preco}
-              </p>
-            </div>
-          ) : null}
+
+          <div className="mb-10 grid grid-flow-col">
+            {data?.preco && (
+              <div>
+                <h3>Preço:</h3>
+                <p className="flex items-center">
+                  <BiMoney className="mx-2" size={32} /> R$ {data?.preco}
+                </p>
+              </div>
+            )}
+            {data?.cozinhas && (
+              <div className="block">
+                <h3>Cozinhas:</h3>
+                <p className="flex items-center">
+                  <TbToolsKitchen className="mx-2" size={32} />
+                  {data?.cozinhas}
+                </p>
+              </div>
+            )}
+            {data?.cardapio && (
+              <div className="block">
+                <h3>Cardápio:</h3>
+                <p className="flex items-center">
+                  <MdMenuBook className="mx-2" size={32} />
+                  {data?.cardapio}
+                </p>
+              </div>
+            )}
+          </div>
 
           <div className="mb-10">
-            <div id="grid" className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5">
+            <div
+              id="grid"
+              className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
+            >
               <div className="mb-10">
                 <h3>Endereço:</h3>
                 {data?.endereco && (
@@ -167,17 +187,19 @@ export function Hotel() {
                   src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=${data?.latitude}, ${data?.longitude}`}
                 ></iframe>
               </div>
-              <div className='contatos'>
+              <div className="contatos">
                 <h3>Contatos:</h3>
                 <div
-                  className={`my-3 grid ${qtdContato.length / 2 === 0
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-                    } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${
+                    qtdContato.length / 2 === 0
+                      ? 'md:grid-cols-2'
+                      : 'md:grid-cols-3'
+                  } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
-                      <BiPhoneCall size={32} className="mx-2" /> {data?.telefone}
+                      <BiPhoneCall size={32} className="mx-2" />{' '}
+                      {data?.telefone}
                     </p>
                   )}
                   {data?.whats && (
@@ -219,10 +241,16 @@ export function Hotel() {
                   )}
                 </div>
                 {data?.email && (
-                  <div className='grid grid-cols-1 justify-items-center'>
+                  <div className="grid grid-cols-1 justify-items-center">
                     <div className="flex items-center">
-                      <BiMailSend size={32} className="mx-2" /> <p id="icon-email">{data?.email}</p>
-                      <a id="text-email" target="_blank" href={data?.site} rel="noreferrer">
+                      <BiMailSend size={32} className="mx-2" />{' '}
+                      <p id="icon-email">{data?.email}</p>
+                      <a
+                        id="text-email"
+                        target="_blank"
+                        href={data?.site}
+                        rel="noreferrer"
+                      >
                         Entrar em contato por email
                       </a>
                     </div>

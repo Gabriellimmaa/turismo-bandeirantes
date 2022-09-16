@@ -18,18 +18,15 @@ interface HoteisProps {
 
 export function Hoteis() {
   const [hoteis, setHoteis] = useState<HoteisProps[]>()
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     api.get('/hoteis').then((response) => {
       setHoteis(response.data.hoteis)
-      setLoading(true)
+      setLoading(false)
     })
   }, [])
 
-  if (!loading) {
-    return <Loading />
-  }
 
   return (
     <section id="hotel">
@@ -39,6 +36,9 @@ export function Hoteis() {
           Encontre hotéis, pousadas e muito outros lugares para se hospedar!
         </h2>
       </div>
+      {
+        loading ? <Loading /> : null
+      }
       <div className="grid grid-cols-3 gap-5 justify-items-center">
         {Array.isArray(hoteis)
           ? hoteis?.map((hotel) => {

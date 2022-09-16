@@ -38,10 +38,6 @@ export function Turismo() {
     })
   }, [])
 
-  if (loading) {
-    return <Loading />
-  }
-
   const atracoesReligioso = turismo.filter(
     (turismo) => turismo.categoria === 'Religioso',
   )
@@ -54,7 +50,9 @@ export function Turismo() {
           <h2>Um lugar de fé, natureza e tradições</h2>
         </div>
         <Toolbar objectList={optionTurismo} />
-
+        {
+          loading ? <Loading /> : null
+        }
         <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
           {atracoesReligioso.map((atracao) => {
             return (
@@ -88,7 +86,9 @@ export function Turismo() {
           <h2>Um lugar de fé, natureza e tradições</h2>
         </div>
         <Toolbar objectList={optionTurismo} />
-
+        {
+          loading ? <Loading /> : null
+        }
         <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
           {atracoesCultural.map((atracao) => {
             return (
@@ -122,7 +122,9 @@ export function Turismo() {
           <h2>Um lugar de fé, natureza e tradições</h2>
         </div>
         <Toolbar objectList={optionTurismo} />
-
+        {
+          loading ? <Loading /> : null
+        }
         <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
           {atracoesEcologico.map((atracao) => {
             return (
@@ -151,7 +153,9 @@ export function Turismo() {
         <h2>Um lugar de fé, natureza e tradições</h2>
       </div>
       <Toolbar objectList={optionTurismo} />
-
+      {
+        loading ? <Loading /> : null
+      }
       <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
         {turismo.map((atracao) => {
           return (

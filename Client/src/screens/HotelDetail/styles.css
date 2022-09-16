@@ -66,6 +66,7 @@
 }
 
 .hotel-detail .container-detail .info .contatos #icon-email {
+  margin: 0;
   display: block;
 }
 
@@ -92,6 +93,6 @@
     display: none;
   }
   .hotel-detail .container-detail .info #grid {
-    @apply grid-cols-1
-  } 
+    @apply grid-cols-1;
+  }
 }

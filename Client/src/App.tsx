@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css'
 // import 'react-toastify/dist/ReactToastify.min.css';
 
 import { usePosition } from './hooks/usePosition'
+import ScrollToTop from './hooks/scrollToTop'
 
 function App() {
   usePosition()
@@ -21,6 +22,7 @@ function App() {
 */
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <ToastContainer />
       <Header />
       <Router />
