@@ -4,15 +4,19 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Restaurantes } from '../screens/Restaurantes';
 import { Hotel } from '../screens/Hotel';
+import { useTheme } from 'native-base';
 const Tab = createMaterialBottomTabNavigator();
 
 export function Routes() {
+  const { colors } = useTheme();
+
+
   return (
     <NavigationContainer >
       <Tab.Navigator
       initialRouteName="Feed"
-      activeColor="#e91e63"
-      barStyle={{ backgroundColor: "tomato" }}
+      activeColor={colors.green[900]}
+      barStyle={{ backgroundColor: colors.gray['100'] }}
       >
       <Tab.Screen
         name="Home"

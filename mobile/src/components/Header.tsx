@@ -1,25 +1,23 @@
-import { Center, HStack, StyledProps, Text } from "native-base";
+import { AspectRatio, Center, HStack, Image, StyledProps, Text, VStack } from "native-base";
 
 interface HeaderProps extends StyledProps {
   title?: string;
 }
 
+import logo from '../assets/logo-banner.png'
+
 export function Header({title, ...rest }: HeaderProps) {
   return (
-    <HStack 
+    <VStack 
       w="full"
       justifyContent="space-between"
       alignItems="center"
-      bg="gray.200"
-      pb={6}
-      pt={12}
       {...rest}
+      pt={8}
     >
-      { title ? (
-        <Text>{title}</Text>
-      ): (
-        <Text>Header</Text>
-      )}
-      </HStack>
+      <Center  h="10" w="200">
+        <Image resizeMode="contain"  source={logo} alt="image" />
+      </Center>
+    </VStack>
   )
 }
