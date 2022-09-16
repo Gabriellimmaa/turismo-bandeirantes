@@ -14,6 +14,7 @@ export interface turismoProps {
   latitude: string
   longitude: string
   categoria: string
+  endereco: string
 }
 
 export function Turismo() {
@@ -38,7 +39,7 @@ export function Turismo() {
   }
 
   return (
-    <VStack>
+    <VStack flex={1} mb={10} bg="gray.100" >
       <Header />
       <ScrollView pt={4} >
         { turismo.map((item) => (
@@ -52,6 +53,7 @@ export function Turismo() {
             latitude={item.latitude}
             longitude={item.longitude}
             categoria={item.categoria}
+            endereco={item.endereco}
           />
         )) }
       </ScrollView>

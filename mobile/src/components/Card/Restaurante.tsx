@@ -61,7 +61,7 @@ export function CardResaurante({
           <Heading fontWeight="bold" size="sm" >{nome} </Heading>
           <HStack space={2}>
             <MaterialCommunityIcons name="cash" color={colors.green['700']} size={20} />
-            <Text color="green.700">R$ {preco}</Text>
+            <Text color="green.700">R$ { preco}</Text>
           </HStack>
         </HStack>
         <Text >{email}</Text>

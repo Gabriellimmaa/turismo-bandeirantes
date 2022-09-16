@@ -1,7 +1,9 @@
-import { AspectRatio, Box, Button, Center, Heading, HStack, Image, Link, Text, useTheme, View, VStack } from "native-base";
+import { AspectRatio, Box, Button, Center, Heading, HStack, Image, Link, Pressable, Text, useTheme, View, VStack } from "native-base";
 import { turismoProps } from "../../screens/Turismo";
 import { limitDescription } from "../../utils";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import { useNavigation, CommonActions  } from '@react-navigation/native'
 
 export function CardTurismo({
   id,
@@ -12,8 +14,11 @@ export function CardTurismo({
   logo,
   longitude,
   telefone,
+  endereco,
 }: turismoProps) {
   const { colors } = useTheme();
+
+  const navigation = useNavigation();
 
   return (
     <Box alignItems="center" px={5} pb={12}>
@@ -34,7 +39,15 @@ export function CardTurismo({
           backgroundColor: "gray.50",
         }}
       >
-        <Box rounded="lg">
+        <Button variant="ghost" padding="0" onPress={() => navigation.dispatch(
+          CommonActions.navigate({
+            name: 'Detalhe',
+            params: {
+              id,
+              "rota": "turismo"
+            },
+          })
+        )}>
           <AspectRatio w="100%" ratio={16 / 13}>
             <Image
               source={{
@@ -43,7 +56,7 @@ export function CardTurismo({
               alt="image"
             />
           </AspectRatio>
-        </Box>
+        </Button>
       </Box>
       <VStack px={2} space={2} w="full" pt={3}>
         <Heading fontWeight="bold" size="sm" >{nome} </Heading>

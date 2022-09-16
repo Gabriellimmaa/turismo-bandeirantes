@@ -6,6 +6,7 @@ import { Restaurantes } from "../screens/Restaurantes";
 import { Turismo } from "../screens/Turismo";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { Header } from "../components/Header";
+import { StackRoutes } from "./StackRoutes";
 
 const Drawer = createDrawerNavigator();
 
@@ -26,7 +27,7 @@ export function Routes() {
     >
       <Drawer.Screen
         name="Turismo"
-        component={Turismo}
+        component={StackRoutes}
         options={{
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons name="airplane" size={size} color={color} />

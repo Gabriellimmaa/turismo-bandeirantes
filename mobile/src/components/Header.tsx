@@ -23,12 +23,12 @@ export function Header({title, ...rest }: HeaderProps) {
       >
         <HStack w="full" justifyContent="space-between"  alignItems="center">
           <Button ml="5" variant="ghost" _pressed={{bg: "green.200"}}  onPress={() => navigation.dispatch(DrawerActions.toggleDrawer()) } >
-              <MaterialCommunityIcons name="menu" color={colors.green['700']} size={30} />
+              <MaterialCommunityIcons name="menu" color={colors.green['700']} size={28} />
           </Button>
           <Center h="20" w="200">
             <Image resizeMode="contain"  source={logo} alt="image" />
           </Center>
-          <View w={33} />
+          <View w={75} />
         </HStack>
       </VStack>
     </SafeAreaView>
