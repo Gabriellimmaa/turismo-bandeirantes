@@ -27,6 +27,22 @@
     margin-left: 10px;
 }
 
+.restaurante .leaflet-popup-content {
+    color: #529499;
+}
+
+.restaurante .leaflet-popup-content a{
+    background: #529499;
+}
+
+.turismo .leaflet-popup-content {
+    color: red;
+}
+
+.turismo .leaflet-popup-content a{
+    background: red;
+}
+
 .mapPopup .leaflet-popup-content a:hover {
     cursor: pointer;
     filter: brightness(.8);

@@ -114,7 +114,7 @@ export default function Map() {
                 closeButton={false}
                 minWidth={240}
                 maxHeight={240}
-                className="mapPopup"
+                className="mapPopup restaurante"
               >
                 Restaurante {restaurante.nome}
                 <br />
@@ -136,7 +136,7 @@ export default function Map() {
                 closeButton={false}
                 minWidth={240}
                 maxHeight={240}
-                className="mapPopup"
+                className="mapPopup turismo"
               >
                 {atracao.nome}
                 <br />
