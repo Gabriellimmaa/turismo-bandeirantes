@@ -46,22 +46,22 @@ export function TurismoDetail() {
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
+  const [rating, setRating] = useState(0)
+  const [hover, setHover] = useState(0)
   const exampleComments = [
     {
-      "username": "Lorenzo",
-      "text": "Achei esse lugar incrível, recomendo muito!"
+      username: 'Lorenzo',
+      text: 'Achei esse lugar incrível, recomendo muito!',
     },
     {
-      "username": "Felipe Ferreira",
-      "text": "Visitei com minha família e foi incrível!"
-    }
+      username: 'Felipe Ferreira',
+      text: 'Visitei com minha família e foi incrível!',
+    },
   ]
 
   function handleRating(rating: number) {
-    setRating(rating);
-    toast.success("Obrigado por avaliar!");
+    setRating(rating)
+    toast.success('Obrigado por avaliar!')
   }
   useEffect(() => {
     setQtdContatos([])
@@ -94,28 +94,24 @@ export function TurismoDetail() {
           <h1>{data?.nome}</h1>
         </div>
         <section className="info">
-          <div className='flex items-center'>
-            <div>
-              0 avaliações
-            </div>
-            <div className='ml-5'>
-              0 comentários
-            </div>
+          <div className="flex items-center">
+            <div>0 avaliações</div>
+            <div className="ml-5">0 comentários</div>
             <div className="star-rating ml-auto">
               {[...Array(5)].map((star, index) => {
-                index += 1;
+                index += 1
                 return (
                   <button
                     type="button"
                     key={index}
-                    className={index <= (hover || rating) ? "on" : "off"}
+                    className={index <= (hover || rating) ? 'on' : 'off'}
                     onClick={() => handleRating(index)}
                     onMouseEnter={() => setHover(index)}
                     onMouseLeave={() => setHover(rating)}
                   >
                     <span className="star">&#9733;</span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -147,7 +143,10 @@ export function TurismoDetail() {
           ) : null}
 
           <div className="mb-10">
-            <div id="grid" className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5">
+            <div
+              id="grid"
+              className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
+            >
               <div className="mb-10">
                 <h3>Endereço:</h3>
                 {data?.endereco && (
@@ -162,17 +161,19 @@ export function TurismoDetail() {
                   src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=${data?.latitude}, ${data?.longitude}`}
                 ></iframe>
               </div>
-              <div className='contatos'>
+              <div className="contatos">
                 <h3>Contatos:</h3>
                 <div
-                  className={`my-3 grid ${qtdContato.length / 2 === 0
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-                    } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${
+                    qtdContato.length / 2 === 0
+                      ? 'md:grid-cols-2'
+                      : 'md:grid-cols-3'
+                  } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
-                      <BiPhoneCall size={32} className="mx-2" /> {data?.telefone}
+                      <BiPhoneCall size={32} className="mx-2" />{' '}
+                      {data?.telefone}
                     </p>
                   )}
                   {data?.whats && (
@@ -214,10 +215,16 @@ export function TurismoDetail() {
                   )}
                 </div>
                 {data?.email && (
-                  <div className='grid grid-cols-1 justify-items-center'>
+                  <div className="grid grid-cols-1 justify-items-center">
                     <div className="flex items-center">
-                      <BiMailSend size={32} className="mx-2" /> <p id="icon-email">{data?.email}</p>
-                      <a id="text-email" target="_blank" href={data?.site} rel="noreferrer">
+                      <BiMailSend size={32} className="mx-2" />{' '}
+                      <p id="icon-email">{data?.email}</p>
+                      <a
+                        id="text-email"
+                        target="_blank"
+                        href={data?.site}
+                        rel="noreferrer"
+                      >
                         Entrar em contato por email
                       </a>
                     </div>

@@ -13,8 +13,6 @@ import { RestauranteDetail } from './screens/RestauranteDetail'
 import { Album } from './screens/Album'
 
 export function Router() {
-
-
   return (
     <Routes>
       <Route path="/" element={<Inicio />} />

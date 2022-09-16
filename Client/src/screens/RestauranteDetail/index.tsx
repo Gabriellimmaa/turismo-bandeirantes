@@ -50,22 +50,22 @@ export function RestauranteDetail() {
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
+  const [rating, setRating] = useState(0)
+  const [hover, setHover] = useState(0)
   const exampleComments = [
     {
-      "username": "Gabriel Lima",
-      "text": "Ótimo atendimento!"
+      username: 'Gabriel Lima',
+      text: 'Ótimo atendimento!',
     },
     {
-      "username": "Rodrigo Tavares",
-      "text": "Cardápio muito bom, porém o preço é um pouco salgado."
-    }
+      username: 'Rodrigo Tavares',
+      text: 'Cardápio muito bom, porém o preço é um pouco salgado.',
+    },
   ]
 
   function handleRating(rating: number) {
-    setRating(rating);
-    toast.success("Obrigado por avaliar!");
+    setRating(rating)
+    toast.success('Obrigado por avaliar!')
   }
 
   useEffect(() => {
@@ -99,28 +99,24 @@ export function RestauranteDetail() {
           <h1>{data?.nome}</h1>
         </div>
         <section className="info">
-          <div className='flex items-center'>
-            <div>
-              0 avaliações
-            </div>
-            <div className='ml-5'>
-              0 comentários
-            </div>
+          <div className="flex items-center">
+            <div>0 avaliações</div>
+            <div className="ml-5">0 comentários</div>
             <div className="star-rating ml-auto">
               {[...Array(5)].map((star, index) => {
-                index += 1;
+                index += 1
                 return (
                   <button
                     type="button"
                     key={index}
-                    className={index <= (hover || rating) ? "on" : "off"}
+                    className={index <= (hover || rating) ? 'on' : 'off'}
                     onClick={() => handleRating(index)}
                     onMouseEnter={() => setHover(index)}
                     onMouseLeave={() => setHover(rating)}
                   >
                     <span className="star">&#9733;</span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -153,26 +149,30 @@ export function RestauranteDetail() {
               </div>
             )}
             {data?.cozinhas && (
-              <div className='block'>
+              <div className="block">
                 <h3>Cozinhas:</h3>
                 <p className="flex items-center">
-                  <TbToolsKitchen className="mx-2" size={32} />{data?.cozinhas}
+                  <TbToolsKitchen className="mx-2" size={32} />
+                  {data?.cozinhas}
                 </p>
               </div>
             )}
             {data?.cardapio && (
-              <div className='block'>
+              <div className="block">
                 <h3>Cardápio:</h3>
                 <p className="flex items-center">
-                  <MdMenuBook className="mx-2" size={32} />{data?.cardapio}
+                  <MdMenuBook className="mx-2" size={32} />
+                  {data?.cardapio}
                 </p>
               </div>
             )}
           </div>
 
-
           <div className="mb-10">
-            <div id="grid" className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5">
+            <div
+              id="grid"
+              className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
+            >
               <div className="mb-10">
                 <h3>Endereço:</h3>
                 {data?.endereco && (
@@ -187,17 +187,19 @@ export function RestauranteDetail() {
                   src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=${data?.latitude}, ${data?.longitude}`}
                 ></iframe>
               </div>
-              <div className='contatos'>
+              <div className="contatos">
                 <h3>Contatos:</h3>
                 <div
-                  className={`my-3 grid ${qtdContato.length / 2 === 0
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-                    } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${
+                    qtdContato.length / 2 === 0
+                      ? 'md:grid-cols-2'
+                      : 'md:grid-cols-3'
+                  } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
-                      <BiPhoneCall size={32} className="mx-2" /> {data?.telefone}
+                      <BiPhoneCall size={32} className="mx-2" />{' '}
+                      {data?.telefone}
                     </p>
                   )}
                   {data?.whats && (
@@ -239,10 +241,16 @@ export function RestauranteDetail() {
                   )}
                 </div>
                 {data?.email && (
-                  <div className='grid grid-cols-1 justify-items-center'>
+                  <div className="grid grid-cols-1 justify-items-center">
                     <div className="flex items-center">
-                      <BiMailSend size={32} className="mx-2" /> <p id="icon-email">{data?.email}</p>
-                      <a id="text-email" target="_blank" href={data?.site} rel="noreferrer">
+                      <BiMailSend size={32} className="mx-2" />{' '}
+                      <p id="icon-email">{data?.email}</p>
+                      <a
+                        id="text-email"
+                        target="_blank"
+                        href={data?.site}
+                        rel="noreferrer"
+                      >
                         Entrar em contato por email
                       </a>
                     </div>

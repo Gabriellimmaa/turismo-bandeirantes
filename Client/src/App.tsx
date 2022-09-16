@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import './i18next'
 import { ToastContainer } from 'react-toastify'
-import { useEffect } from 'react'
 
 import 'react-toastify/dist/ReactToastify.css'
 // minified version is also included
