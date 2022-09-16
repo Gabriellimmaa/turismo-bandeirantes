@@ -43,6 +43,10 @@
   @apply border-b border-gray-200;
 }
 
+.card .card-footer {
+  display: grid;
+}
+
 .card .redirect {
   display: flex;
   justify-content: space-between;
@@ -86,7 +90,7 @@
   margin: 13px;
 }
 
-.card-container .info div {
+.card .info div {
   align-items: center;
   display: flex;
   font-size: 12px;
@@ -94,13 +98,13 @@
   margin: 0 !important;
 }
 
-.card-container .info .website a {
+.card .info .website a {
   color: #326335;
   font-weight: 700;
   text-decoration: underline;
 }
 
-.card-container .info p {
+.card .info p {
   margin: 0;
   white-space: nowrap;
 }
@@ -146,7 +150,7 @@
 }
 
 @media screen and (max-width: 1370px) {
-  .card-container .info {
+  .card .info {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }

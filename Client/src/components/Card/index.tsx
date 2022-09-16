@@ -6,9 +6,14 @@ import {
   BiPlanet,
   BiTime,
 } from 'react-icons/bi'
+import { TbToolsKitchen } from 'react-icons/tb'
+import { MdMenuBook } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { limitDescription } from '../../utils'
 import './styles.css'
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
 
 interface CardProps {
   title: string
@@ -19,7 +24,9 @@ interface CardProps {
   date?: string
   locale?: string
   hour?: string
-  price?: number
+  price?: string
+  kitchen?: string
+  menu?: string
   cell?: string
   email?: string
   website?: string
@@ -36,6 +43,8 @@ export default function Card({
   locale,
   hour,
   price,
+  kitchen,
+  menu,
   cell,
   email,
   website,
@@ -44,6 +53,36 @@ export default function Card({
   img,
   id,
 }: CardProps) {
+
+  const StarRating = () => {
+    const [rating, setRating] = useState(0);
+    const [hover, setHover] = useState(0);
+
+    function handleRating(rating: number) {
+      setRating(rating);
+      toast.success("Obrigado por avaliar!");
+    }
+
+    return (
+      <div className="margin star-rating flex justify-end">
+        {[...Array(5)].map((star, index) => {
+          index += 1;
+          return (
+            <button
+              type="button"
+              key={index}
+              className={index <= (hover || rating) ? "on" : "off"}
+              onClick={() => handleRating(index)}
+              onMouseEnter={() => setHover(index)}
+              onMouseLeave={() => setHover(rating)}
+            >
+              <span className="star">&#9733;</span>
+            </button>
+          );
+        })}
+      </div>
+    );
+  };
   return (
     <div className="card">
       <div className="card-container">
@@ -69,11 +108,29 @@ export default function Card({
             </div>
           ) : null}
         </div>
+      </div>
+      <div className="card-footer">
         <div className="info margin grid grid-cols-2">
           {website ? (
             <div className="website">
               <BiPlanet size={16} className="mr-1" />
               <a href={website}>Visite nosso site</a>
+            </div>
+          ) : null}
+          {kitchen ? (
+            <div>
+              <TbToolsKitchen size={16} className="mr-1" />
+              <p>
+                <b>{kitchen}</b>
+              </p>
+            </div>
+          ) : null}
+          {menu ? (
+            <div>
+              <MdMenuBook size={16} className="mr-1" />
+              <p>
+                <b>{menu}</b>
+              </p>
             </div>
           ) : null}
           {price ? (
@@ -109,21 +166,22 @@ export default function Card({
             </div>
           ) : null}
         </div>
-      </div>
-      <div className="redirect">
-        <Link id="cardMore" className="margin" to={`/${type}/detalhe/${id}`}>
-          Ver mais
-        </Link>
-        {latitude && longitude && (
-          <a
-            id="cardMap"
-            target="_blank"
-            href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
-            rel="noreferrer"
-          >
-            Abrir no Google Maps
-          </a>
-        )}
+        <StarRating />
+        <div className="redirect">
+          <Link id="cardMore" className="margin" to={`/${type}/detalhe/${id}`}>
+            Ver mais
+          </Link>
+          {latitude && longitude && (
+            <a
+              id="cardMap"
+              target="_blank"
+              href={`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`}
+              rel="noreferrer"
+            >
+              Abrir no Google Maps
+            </a>
+          )}
+        </div>
       </div>
     </div>
   )
