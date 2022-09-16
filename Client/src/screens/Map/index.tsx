@@ -1,16 +1,36 @@
-import { useState } from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { useEffect, useState } from 'react'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Loading } from '../../components/Loading'
 import 'leaflet/dist/leaflet.css'
+import api from '../../services/api'
+import { Link } from 'react-router-dom'
+
+interface HoteisProps {
+  id: number
+  nome: string
+  preco: number
+  logo: string
+  email: string
+  site: string
+  telefone: string
+  latitude: number
+  longitude: number
+}
 
 export default function Map() {
-  const [loading, setLoading] = useState(true)
+  const [hoteis, setHoteis] = useState<HoteisProps[]>()
+  const [loading, setLoading] = useState(false)
 
-  setTimeout(() => {
-    setLoading(false)
-  }, 2000)
+  useEffect(() => {
+    api.get('/hoteis').then((response) => {
+      setHoteis(response.data.hoteis)
+      setLoading(true)
+    })
+  }, [])
 
-  if (loading) return <Loading />
+  if (!loading) {
+    return <Loading />
+  }
 
   return (
     <>
@@ -27,6 +47,17 @@ export default function Map() {
             import.meta.env.VITE_MAPBOX_TOKEN
           }`}
         />
+        {hoteis?.map((hotel) => {
+          return (
+            <Marker position={[hotel.latitude, hotel.longitude]} key={hotel.id}>
+              <Popup>
+                {hotel.nome}
+                <br />
+                <Link to={`/hotel/detalhe/${hotel.id}`}>Ver mais</Link>
+              </Popup>
+            </Marker>
+          )
+        })}
       </MapContainer>
     </>
   )
