@@ -16,6 +16,8 @@ import { Loading } from '../../components/Loading'
 import api from '../../services/api'
 
 import './styles.css'
+import { toast } from 'react-toastify'
+import { CommentsList } from '../../components/Comments/CommentsList'
 
 interface HoteisProps {
   [key: string]: string | number | undefined
@@ -53,7 +55,19 @@ export function Hotel() {
   ]
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
+  const exampleComments = [
+    {
+      "username": "Gabriel Lima",
+      "text": "Hotel lindo, com uma vista incrível!"
+    }
+  ]
 
+  function handleRating(rating: number) {
+    setRating(rating);
+    toast.success("Obrigado por avaliar!");
+  }
   useEffect(() => {
     setQtdContatos([])
     api.get(`/hoteis/${id}`).then((response) => {
@@ -85,6 +99,31 @@ export function Hotel() {
           <h1>{data?.nome}</h1>
         </div>
         <section className="info">
+          <div className='flex items-center'>
+            <div>
+              0 avaliações
+            </div>
+            <div className='ml-5'>
+              0 comentários
+            </div>
+            <div className="star-rating ml-auto">
+              {[...Array(5)].map((star, index) => {
+                index += 1;
+                return (
+                  <button
+                    type="button"
+                    key={index}
+                    className={index <= (hover || rating) ? "on" : "off"}
+                    onClick={() => handleRating(index)}
+                    onMouseEnter={() => setHover(index)}
+                    onMouseLeave={() => setHover(rating)}
+                  >
+                    <span className="star">&#9733;</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
           <div className="mb-10">
             <h3>Descrição:</h3>
             <p className="my-3">{data?.descricao}</p>
@@ -191,6 +230,7 @@ export function Hotel() {
                 )}
               </div>
             </div>
+            <CommentsList comments={exampleComments} />
           </div>
         </section>
       </div>
