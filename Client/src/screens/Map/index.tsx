@@ -128,7 +128,7 @@ export default function Map() {
               >
                 {atracao.nome}
                 <br />
-                <Link to={`/atracao/detalhe/${atracao.id}`}>
+                <Link to={`/turismo/detalhe/${atracao.id}`}>
                   <FaArrowRight color="#FFF" />
                 </Link>
               </Popup>
