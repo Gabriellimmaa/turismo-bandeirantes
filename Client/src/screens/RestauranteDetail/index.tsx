@@ -19,6 +19,7 @@ import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { RiFacebookCircleLine } from 'react-icons/ri'
 import { toast } from 'react-toastify'
 import { CommentsList } from '../../components/Comments/CommentsList'
+import { CommentsAdd } from '../../components/Comments/CommentsAdd'
 
 interface RestauranteDetailProps {
   [key: string]: string | number | undefined
@@ -44,26 +45,31 @@ interface RestauranteDetailProps {
   telefone?: string
 }
 
+interface DataLocalProps {
+  estrelas: number[],
+  comentarios: object[]
+}
+
 export function RestauranteDetail() {
   const { id } = useParams()
   const [data, setData] = useState<RestauranteDetailProps>()
+  const [dataLocal, setDataLocal] = useState<DataLocalProps>({ estrelas: [], comentarios: [] });
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
   const [rating, setRating] = useState(0)
   const [hover, setHover] = useState(0)
-  const exampleComments = [
-    {
-      username: 'Gabriel Lima',
-      text: 'Ótimo atendimento!',
-    },
-    {
-      username: 'Rodrigo Tavares',
-      text: 'Cardápio muito bom, porém o preço é um pouco salgado.',
-    },
-  ]
 
-  function handleRating(rating: number) {
+  async function handleRating(rating: number) {
+    const result = await fetch(`http://localhost:8000/api/restaurante/${id}/feedback/${rating}`, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    const lista: number[] = [dataLocal.estrelas[0], dataLocal.estrelas[1], dataLocal.estrelas[2], dataLocal.estrelas[3], dataLocal.estrelas[4]]
+    lista[rating - 1] += 1
+    setDataLocal({ ...dataLocal, estrelas: lista });
     setRating(rating)
     toast.success('Obrigado por avaliar!')
   }
@@ -74,6 +80,18 @@ export function RestauranteDetail() {
       setData(response.data.restaurantes[0])
       setLoading(false)
     })
+    const fetchData = async () => {
+      const result = await fetch(`http://localhost:8000/api/restaurante/${id}`, {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      const body = await result.json();
+      
+      setDataLocal(body);
+    }
+    fetchData();
     for (const x in data) {
       if (data[x] == null && contatosOption.includes(x)) {
         qtdContato.push(x)
@@ -100,8 +118,12 @@ export function RestauranteDetail() {
         </div>
         <section className="info">
           <div className="flex items-center">
-            <div>0 avaliações</div>
-            <div className="ml-5">0 comentários</div>
+            <div>{dataLocal.estrelas[0] +
+              dataLocal.estrelas[1] +
+              dataLocal.estrelas[2] +
+              dataLocal.estrelas[3] +
+              dataLocal.estrelas[4]} avaliações</div>
+            <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
             <div className="star-rating ml-auto">
               {[...Array(5)].map((star, index) => {
                 index += 1
@@ -190,11 +212,10 @@ export function RestauranteDetail() {
               <div className="contatos">
                 <h3>Contatos:</h3>
                 <div
-                  className={`my-3 grid ${
-                    qtdContato.length / 2 === 0
-                      ? 'md:grid-cols-2'
-                      : 'md:grid-cols-3'
-                  } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${qtdContato.length / 2 === 0
+                    ? 'md:grid-cols-2'
+                    : 'md:grid-cols-3'
+                    } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
@@ -258,7 +279,8 @@ export function RestauranteDetail() {
                 )}
               </div>
             </div>
-            <CommentsList comments={exampleComments} />
+            <CommentsList comments={dataLocal.comentarios} />
+            <CommentsAdd type='restaurante' id={data?.id} setInfo={setDataLocal} />
           </div>
         </section>
       </div>

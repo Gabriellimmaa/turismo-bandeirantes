@@ -11,15 +11,11 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import { usePosition } from './hooks/usePosition'
 import ScrollToTop from './hooks/scrollToTop'
+import { useState } from 'react'
 
 function App() {
-  usePosition()
-  //  const position = usePosition()
+ usePosition()
 
-  /*  setInterval(() => {
-    console.log(position)
-  }, 3000)
-*/
   return (
     <BrowserRouter>
       <ScrollToTop />

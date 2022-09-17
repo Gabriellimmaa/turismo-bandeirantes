@@ -12,7 +12,7 @@ export function CommentsList({ comments }: any) {
                     <p>{comment.text}</p>
                 </div>
             ))}
-            <CommentsAdd />
+
         </>
     )
 }
