@@ -44,7 +44,7 @@ export function Footer() {
               <div className="notices">
                 <a href="">
                   <div className="notice">
-                    <img className="w-auto h-20" src={logoBanner} />
+                    <img className="w-auto h-20" src={logoBanner} alt="Logo" />
                     <div className="notice-text">
                       Brasão
                       <p>20/15/2022</p>
