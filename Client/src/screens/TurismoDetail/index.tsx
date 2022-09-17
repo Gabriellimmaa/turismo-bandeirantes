@@ -17,6 +17,9 @@ import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { RiFacebookCircleLine } from 'react-icons/ri'
 import { toast } from 'react-toastify'
 import { CommentsList } from '../../components/Comments/CommentsList'
+import apiLocal from '../../services/apiLocal'
+import { StarRating } from '../../components/StarRating'
+import { CommentsAdd } from '../../components/Comments/CommentsAdd'
 
 interface TurismoDetailProps {
   [key: string]: string | number | undefined
@@ -42,33 +45,29 @@ interface TurismoDetailProps {
 
 export function TurismoDetail() {
   const { id } = useParams()
+
   const [data, setData] = useState<TurismoDetailProps>()
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [rating, setRating] = useState(0)
-  const [hover, setHover] = useState(0)
-  const exampleComments = [
-    {
-      username: 'Lorenzo',
-      text: 'Achei esse lugar incrível, recomendo muito!',
-    },
-    {
-      username: 'Felipe Ferreira',
-      text: 'Visitei com minha família e foi incrível!',
-    },
-  ]
 
-  function handleRating(rating: number) {
-    setRating(rating)
-    toast.success('Obrigado por avaliar!')
-  }
+  const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
+  const [hover, setHover] = useState(0)
+
   useEffect(() => {
     setQtdContatos([])
     api.get(`/atracoes/${id}`).then((response) => {
       setData(response.data.atracoes[0])
       setLoading(false)
     })
+
+    apiLocal.get(`turismo/${id}`).then((response) => {
+      const maiorValor = Math.max.apply(null, response.data.estrelas);
+      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
+      setHover(indexMaiorValor + 1)
+      setDataLocal(response.data)
+    })
+
     for (const x in data) {
       if (data[x] == null && contatosOption.includes(x)) {
         qtdContato.push(x)
@@ -95,25 +94,13 @@ export function TurismoDetail() {
         </div>
         <section className="info">
           <div className="flex items-center">
-            <div>0 avaliações</div>
-            <div className="ml-5">0 comentários</div>
-            <div className="star-rating ml-auto">
-              {[...Array(5)].map((star, index) => {
-                index += 1
-                return (
-                  <button
-                    type="button"
-                    key={index}
-                    className={index <= (hover || rating) ? 'on' : 'off'}
-                    onClick={() => handleRating(index)}
-                    onMouseEnter={() => setHover(index)}
-                    onMouseLeave={() => setHover(rating)}
-                  >
-                    <span className="star">&#9733;</span>
-                  </button>
-                )
-              })}
-            </div>
+            <div>{dataLocal.estrelas[0] +
+              dataLocal.estrelas[1] +
+              dataLocal.estrelas[2] +
+              dataLocal.estrelas[3] +
+              dataLocal.estrelas[4]} avaliações</div>
+            <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
+            <StarRating id={id} type="turismo" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
           </div>
           <div className="mb-10">
             <h3>Descrição:</h3>
@@ -164,11 +151,10 @@ export function TurismoDetail() {
               <div className="contatos">
                 <h3>Contatos:</h3>
                 <div
-                  className={`my-3 grid ${
-                    qtdContato.length / 2 === 0
-                      ? 'md:grid-cols-2'
-                      : 'md:grid-cols-3'
-                  } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${qtdContato.length / 2 === 0
+                    ? 'md:grid-cols-2'
+                    : 'md:grid-cols-3'
+                    } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
@@ -232,7 +218,8 @@ export function TurismoDetail() {
                 )}
               </div>
             </div>
-            <CommentsList comments={exampleComments} />
+            <CommentsList comments={dataLocal.comentarios} />
+            <CommentsAdd type='turismo' id={data?.id} setInfo={setDataLocal} />
           </div>
         </section>
       </div>

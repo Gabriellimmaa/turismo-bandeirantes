@@ -20,6 +20,8 @@ import { RiFacebookCircleLine } from 'react-icons/ri'
 import { toast } from 'react-toastify'
 import { CommentsList } from '../../components/Comments/CommentsList'
 import { CommentsAdd } from '../../components/Comments/CommentsAdd'
+import apiLocal from '../../services/apiLocal'
+import { StarRating } from '../../components/StarRating'
 
 interface RestauranteDetailProps {
   [key: string]: string | number | undefined
@@ -45,34 +47,16 @@ interface RestauranteDetailProps {
   telefone?: string
 }
 
-interface DataLocalProps {
-  estrelas: number[],
-  comentarios: object[]
-}
-
 export function RestauranteDetail() {
   const { id } = useParams()
+
   const [data, setData] = useState<RestauranteDetailProps>()
-  const [dataLocal, setDataLocal] = useState<DataLocalProps>({ estrelas: [], comentarios: [] });
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [rating, setRating] = useState(0)
-  const [hover, setHover] = useState(0)
 
-  async function handleRating(rating: number) {
-    const result = await fetch(`http://localhost:8000/api/restaurante/${id}/feedback/${rating}`, {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    });
-    const lista: number[] = [dataLocal.estrelas[0], dataLocal.estrelas[1], dataLocal.estrelas[2], dataLocal.estrelas[3], dataLocal.estrelas[4]]
-    lista[rating - 1] += 1
-    setDataLocal({ ...dataLocal, estrelas: lista });
-    setRating(rating)
-    toast.success('Obrigado por avaliar!')
-  }
+  const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
+  const [hover, setHover] = useState(0)
 
   useEffect(() => {
     setQtdContatos([])
@@ -80,20 +64,14 @@ export function RestauranteDetail() {
       setData(response.data.restaurantes[0])
       setLoading(false)
     })
-    const fetchData = async () => {
-      const result = await fetch(`http://localhost:8000/api/restaurante/${id}`, {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      });
-      const body = await result.json();
-      const maiorValor = Math.max.apply(null, body.estrelas);
-      const indexMaiorValor = body.estrelas.indexOf(maiorValor);
+
+    apiLocal.get(`restaurante/${id}`).then((response) => {
+      const maiorValor = Math.max.apply(null, response.data.estrelas);
+      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
       setHover(indexMaiorValor + 1)
-      setDataLocal(body);
-    }
-    fetchData();
+      setDataLocal(response.data)
+    })
+
     for (const x in data) {
       if (data[x] == null && contatosOption.includes(x)) {
         qtdContato.push(x)
@@ -126,23 +104,7 @@ export function RestauranteDetail() {
               dataLocal.estrelas[3] +
               dataLocal.estrelas[4]} avaliações</div>
             <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
-            <div className="star-rating ml-auto">
-              {[...Array(5)].map((star, index) => {
-                index += 1
-                return (
-                  <button
-                    type="button"
-                    key={index}
-                    className={index <= (hover || rating) ? 'on' : 'off'}
-                    onClick={() => handleRating(index)}
-                    onMouseEnter={() => setHover(index)}
-                    onMouseLeave={() => setHover(rating)}
-                  >
-                    <span className="star">&#9733;</span>
-                  </button>
-                )
-              })}
-            </div>
+            <StarRating id={id} type="restaurante" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
           </div>
           <div className="mb-10">
             <h3>Descrição:</h3>

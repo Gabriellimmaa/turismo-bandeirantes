@@ -46,6 +46,11 @@
   padding: 0.5rem;
   border-radius: 4px;
   color: #fff;
+  transition: .3s;
+}
+
+.hotel-detail .container-detail .info .google-maps:hover {
+  background: #274d29;
 }
 
 .hotel-detail .container-detail .info .contatos p {

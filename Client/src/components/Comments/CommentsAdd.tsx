@@ -14,20 +14,21 @@ interface CommentsAddProps {
 export function CommentsAdd({ type, id, setInfo }: CommentsAddProps) {
     const [username, setUsername] = useState('');
     const [commentText, setCommentText] = useState('');
-    const [body, setBody] = useState({});
 
-    const addComment = async () => {        
-        const result = await fetch(`http://localhost:8000/api/${type}/${id}/add-comment`, {
-            method: 'post',
-            body: JSON.stringify({ username, text: commentText }),
+    function addComment() {
+        apiLocal.post(`/${type}/${id}/add-comment`, {
+            username,
+            text: commentText,
             headers: {
                 'Content-Type': 'application/json',
             }
-        });
-        const body = await result.json();
-        setInfo(body);
-        setUsername('');
-        setCommentText('');
+        }).then(response => {
+            setInfo(response.data);
+            setUsername('');
+            setCommentText('');
+        }).catch(error => {
+            console.log(error);
+        })
     }
 
     return (

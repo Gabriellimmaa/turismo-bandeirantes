@@ -18,6 +18,9 @@ import api from '../../services/api'
 import './styles.css'
 import { toast } from 'react-toastify'
 import { CommentsList } from '../../components/Comments/CommentsList'
+import { StarRating } from '../../components/StarRating'
+import apiLocal from '../../services/apiLocal'
+import { CommentsAdd } from '../../components/Comments/CommentsAdd'
 
 interface HoteisProps {
   [key: string]: string | number | undefined
@@ -55,25 +58,25 @@ export function Hotel() {
   ]
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
-  const exampleComments = [
-    {
-      "username": "Gabriel Lima",
-      "text": "Hotel lindo, com uma vista incrível!"
-    }
-  ]
 
-  function handleRating(rating: number) {
-    setRating(rating);
-    toast.success("Obrigado por avaliar!");
-  }
+  const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
+  const [hover, setHover] = useState(0)
+
+
   useEffect(() => {
     setQtdContatos([])
     api.get(`/hoteis/${id}`).then((response) => {
       setData(response.data.hoteis[0])
       setLoading(false)
     })
+
+    apiLocal.get(`hotel/${id}`).then((response) => {
+      const maiorValor = Math.max.apply(null, response.data.estrelas);
+      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
+      setHover(indexMaiorValor + 1)
+      setDataLocal(response.data)
+    })
+
     for (const x in data) {
       if (data[x] == null && contatosOption.includes(x)) {
         qtdContato.push(x)
@@ -100,29 +103,13 @@ export function Hotel() {
         </div>
         <section className="info">
           <div className='flex items-center'>
-            <div>
-              0 avaliações
-            </div>
-            <div className='ml-5'>
-              0 comentários
-            </div>
-            <div className="star-rating ml-auto">
-              {[...Array(5)].map((star, index) => {
-                index += 1;
-                return (
-                  <button
-                    type="button"
-                    key={index}
-                    className={index <= (hover || rating) ? "on" : "off"}
-                    onClick={() => handleRating(index)}
-                    onMouseEnter={() => setHover(index)}
-                    onMouseLeave={() => setHover(rating)}
-                  >
-                    <span className="star">&#9733;</span>
-                  </button>
-                );
-              })}
-            </div>
+            <div>{dataLocal.estrelas[0] +
+              dataLocal.estrelas[1] +
+              dataLocal.estrelas[2] +
+              dataLocal.estrelas[3] +
+              dataLocal.estrelas[4]} avaliações</div>
+            <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
+            <StarRating id={id} type="hotel" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
           </div>
           <div className="mb-10">
             <h3>Descrição:</h3>
@@ -230,7 +217,8 @@ export function Hotel() {
                 )}
               </div>
             </div>
-            <CommentsList comments={exampleComments} />
+            <CommentsList comments={dataLocal.comentarios} />
+            <CommentsAdd type='hotel' id={data?.id} setInfo={setDataLocal} />
           </div>
         </section>
       </div>
