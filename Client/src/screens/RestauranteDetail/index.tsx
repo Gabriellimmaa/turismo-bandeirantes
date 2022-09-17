@@ -88,7 +88,9 @@ export function RestauranteDetail() {
         }
       });
       const body = await result.json();
-      
+      const maiorValor = Math.max.apply(null, body.estrelas);
+      const indexMaiorValor = body.estrelas.indexOf(maiorValor);
+      setHover(indexMaiorValor + 1)
       setDataLocal(body);
     }
     fetchData();
