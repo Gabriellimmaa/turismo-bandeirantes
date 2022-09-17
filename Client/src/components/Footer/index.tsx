@@ -3,10 +3,11 @@ import './styles.css'
 
 import logo from '../../assets/logoTurismo.png'
 import logoBanner from '../../assets/logo-banner.png'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation()
   return (
     <footer className="border-t-2">
       <div className="footer">
@@ -30,12 +31,12 @@ export function Footer() {
         <div className="containerHero">
           <div className="containerInfos">
             <div className="column titleHidden">
-              <h3>{t("footer.paginas.titulo")}</h3>
+              <h3>{t('footer.paginas.titulo')}</h3>
               <div className="pages">
-                <a href="">{t("footer.paginas.sobre")}</a>
-                <a href="">{t("footer.paginas.onde-dormir")}</a>
-                <a href="">{t("footer.paginas.oque-fazer")}</a>
-                <a href="">{t("footer.paginas.servicos")}</a>
+                <Link to="/historia">{t('footer.paginas.sobre')}</Link>
+                <Link to="/hoteis">{t('footer.paginas.onde-dormir')}</Link>
+                <Link to="/turismo">{t('footer.paginas.oque-fazer')}</Link>
+                <Link to="/map">{t('footer.paginas.mapa')}</Link>
               </div>
             </div>
             <div className="column titleHidden">
@@ -77,7 +78,7 @@ export function Footer() {
               </div>
             </div>
             <div className="column">
-              <h3>{t("footer.contato")}</h3>
+              <h3>{t('footer.contato')}</h3>
               <div className="contacts">
                 <strong>Rua Frei Raphael Proner, 1457</strong>
                 <strong>
@@ -94,15 +95,13 @@ export function Footer() {
         </div>
       </div>
       <div className="copyright">
-        <p>
-        {t("footer.copy")}
-        </p>
+        <p>{t('footer.copy')}</p>
         <img
           className="w-auto max-h-20 bg-contain"
           src={logoBanner}
           alt="Logo Bandeirantes"
         />
-        <p>{t("footer.creditos")}</p>
+        <p>{t('footer.creditos')}</p>
       </div>
     </footer>
   )
