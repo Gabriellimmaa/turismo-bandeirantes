@@ -22,19 +22,16 @@ export function Turismo() {
 
   const [loading, setLoading] = useState(true)
 
-  const [religioso, setReligioso] = useState(true)
+  const [religioso, setReligioso] = useState("Religioso")
 
-  const [cultural, setCultural] = useState(true)
+  const [cultural, setCultural] = useState("Cultural")
 
-  const [ecologico, setEcologico] = useState(true)
+  const [ecologico, setEcologico] = useState("Ecologico")
 
   useEffect(() => {
     api.get('/atracoes').then((response) => {
       setTurismo(response.data.atracoes)
       setLoading(false)
-      setReligioso(false)
-      setCultural(false)
-      setEcologico(false)
     })
   }, [])
 
@@ -42,7 +39,7 @@ export function Turismo() {
     (turismo) => turismo.categoria === 'Religioso',
   )
 
-  if (religioso) {
+  if ("Religioso") {
     return (
       <section className="turismo">
         <div className="title-style-1">
@@ -78,7 +75,7 @@ export function Turismo() {
     (turismo) => turismo.categoria === 'Cultural',
   )
 
-  if (cultural) {
+  if ("Cultural") {
     return (
       <section className="turismo">
         <div className="title-style-1">
@@ -114,7 +111,7 @@ export function Turismo() {
     (turismo) => turismo.categoria === 'Ecologico',
   )
 
-  if (ecologico) {
+  if ("Ecologico") {
     return (
       <section className="turismo">
         <div className="title-style-1">

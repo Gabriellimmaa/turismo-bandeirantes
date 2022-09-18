@@ -1,10 +1,9 @@
 import './styles.css'
-import { Link } from 'react-router-dom'
 
 interface ObjectItem {
   id: string
   nome: string
-  categoria?: string
+  categoria: string
   type?: string
 }
 
@@ -19,11 +18,12 @@ export default function Toolbar({ objectList }: ToolbarProps) {
         {objectList.map((data: ObjectItem) => (
           data.categoria ? (
             <li key={data.id}>
-              <Link to={`/${data.type}/${data.categoria}`}><button>{data.nome}</button></Link>
+                {/* passar a categoria e mostrar os cards de acordo com a categoria */}
+              {/* <button onClick={data.categoria}>{data.nome}</button> */}
             </li>
           ) : (
             <li key={data.id}>
-              <Link to={`/${data.type}/${data.nome}`}><button>{data.nome}</button></Link>
+             <button>{data.nome}</button>
             </li>
         )))}
       </ul>
