@@ -18,8 +18,8 @@ export default function Toolbar({ objectList }: ToolbarProps) {
         {objectList.map((data: ObjectItem) => (
           data.categoria ? (
             <li key={data.id}>
-                {/* passar a categoria e mostrar os cards de acordo com a categoria */}
-              {/* <button onClick={data.categoria}>{data.nome}</button> */}
+            {/* passar a categoria e mostrar os cards de acordo com a categoria */}
+            <button type="button" >{data.nome}</button>
             </li>
           ) : (
             <li key={data.id}>

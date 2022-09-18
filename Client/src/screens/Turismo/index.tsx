@@ -22,11 +22,11 @@ export function Turismo() {
 
   const [loading, setLoading] = useState(true)
 
-  const [religioso, setReligioso] = useState("Religioso")
+  const [religioso, setReligioso] = useState(false)
 
-  const [cultural, setCultural] = useState("Cultural")
+  const [cultural, setCultural] = useState(false)
 
-  const [ecologico, setEcologico] = useState("Ecologico")
+  const [ecologico, setEcologico] = useState(false)
 
   useEffect(() => {
     api.get('/atracoes').then((response) => {
@@ -35,12 +35,25 @@ export function Turismo() {
     })
   }, [])
 
-  const atracoesReligioso = turismo.filter(
-    (turismo) => turismo.categoria === 'Religioso',
-  )
+  function Cultural() {
+    setCultural(true)
+  }
 
-  if ("Religioso") {
+  function Religioso() {
+    setReligioso(true)
+  }
+
+  function Ecologico() {
+    setEcologico(true)
+  }
+
+  if (religioso) {
+    const atracoesReligioso = turismo.filter(
+        (turismo) => turismo.categoria === 'R5ligioso',
+      )
     return (
+
+        
       <section className="turismo">
         <div className="title-style-1">
           <h1>O que fazer?</h1>
@@ -71,11 +84,10 @@ export function Turismo() {
     )
   }
 
-  const atracoesCultural = turismo.filter(
-    (turismo) => turismo.categoria === 'Cultural',
-  )
-
-  if ("Cultural") {
+  if (cultural) {
+    const atracoesCultural = turismo.filter(
+        (turismo) => turismo.categoria === 'Cultural',
+      )
     return (
       <section className="turismo">
         <div className="title-style-1">
@@ -107,11 +119,11 @@ export function Turismo() {
     )
   }
 
-  const atracoesEcologico = turismo.filter(
-    (turismo) => turismo.categoria === 'Ecologico',
-  )
 
-  if ("Ecologico") {
+  if (ecologico) {
+    const atracoesEcologico = turismo.filter(
+        (turismo) => turismo.categoria === 'Ecologico',
+      )
     return (
       <section className="turismo">
         <div className="title-style-1">
