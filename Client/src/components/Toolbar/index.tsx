@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './styles.css'
 
 interface ObjectItem {
@@ -13,13 +14,22 @@ interface ToolbarProps {
 }
 
 export default function Toolbar({ objectList, filtro }: ToolbarProps) {
+  const [selected, setSelected] = useState('')
+
   return (
     <div className="Toolbar">
       <ul>
         {objectList.map((data: ObjectItem) =>
           data.categoria ? (
             <li key={data.id}>
-              <button type="button" onClick={() => filtro(data.categoria)}>
+              <button
+                type="button"
+                onClick={() => {
+                  filtro(data.categoria)
+                  setSelected(data.id)
+                }}
+                className={selected === data.id ? 'selected' : ''}
+              >
                 {data.nome}
               </button>
             </li>

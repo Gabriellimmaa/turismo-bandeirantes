@@ -40,6 +40,13 @@
   transition: 0.5s;
 }
 
+.Toolbar ul li button.selected {
+  background-color: #3e8e41;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 350px) {
   .Toolbar {
     mask: linear-gradient(
