@@ -65,44 +65,105 @@ export default function Restaurantes() {
       {loading ? <Loading /> : null}
       <div className="grid grid-cols-3 gap-5 justify-items-center">
         {restaurantes.map((data) => {
-          return (
-            <Card
-              key={data.id}
-              title={data.nome}
-              description={data.descricao}
-              cell={data.telefone}
-              price={data?.preco ? data.preco : ''}
-              kitchen={data?.cozinhas ? data.cozinhas : ''}
-              menu={data?.cardapio ? data.cardapio : ''}
-              latitude={data.latitude}
-              longitude={data.longitude}
-              img={data.logo}
-              id={data.id}
-              type="restaurante"
-            />
-          )
+          if (filter === 'all' || filter === '') {
+            return (
+              <Card
+                key={data.id}
+                title={data.nome}
+                description={data.descricao}
+                cell={data.telefone}
+                price={data?.preco ? data.preco : ''}
+                kitchen={data?.cozinhas ? data.cozinhas : ''}
+                menu={data?.cardapio ? data.cardapio : ''}
+                latitude={data.latitude}
+                longitude={data.longitude}
+                img={data.logo}
+                id={data.id}
+                type="restaurante"
+              />
+            )
+          } else if (filter === 'restaurante') {
+            return (
+              <Card
+                key={data.id}
+                title={data.nome}
+                description={data.descricao}
+                cell={data.telefone}
+                price={data?.preco ? data.preco : ''}
+                kitchen={data?.cozinhas ? data.cozinhas : ''}
+                menu={data?.cardapio ? data.cardapio : ''}
+                latitude={data.latitude}
+                longitude={data.longitude}
+                img={data.logo}
+                id={data.id}
+                type="restaurante"
+              />
+            )
+          }
+          return null
         })}
-      </div>
-      <div className="grid grid-cols-3 gap-5 justify-items-center">
+
+        {/** Bares */}
         {bares.map((data) => {
-          return (
-            <Card
-              key={data.id}
-              title={data.nome}
-              description={data.descricao}
-              cell={data.telefone}
-              price={data?.preco ? data.preco : ''}
-              kitchen={data?.cozinhas ? data.cozinhas : ''}
-              menu={data?.cardapio ? data.cardapio : ''}
-              latitude={data.latitude}
-              longitude={data.longitude}
-              img={data.logo}
-              id={data.id}
-              type="restaurante"
-            />
-          )
+          if (filter === 'all' || filter === '') {
+            return (
+              <Card
+                key={data.id}
+                title={data.nome}
+                description={data.descricao}
+                cell={data.telefone}
+                price={data?.preco ? data.preco : ''}
+                kitchen={data?.cozinhas ? data.cozinhas : ''}
+                menu={data?.cardapio ? data.cardapio : ''}
+                latitude={data.latitude}
+                longitude={data.longitude}
+                img={data.logo}
+                id={data.id}
+                type="restaurante"
+              />
+            )
+          } else if (filter === 'bar') {
+            return (
+              <Card
+                key={data.id}
+                title={data.nome}
+                description={data.descricao}
+                cell={data.telefone}
+                price={data?.preco ? data.preco : ''}
+                kitchen={data?.cozinhas ? data.cozinhas : ''}
+                menu={data?.cardapio ? data.cardapio : ''}
+                latitude={data.latitude}
+                longitude={data.longitude}
+                img={data.logo}
+                id={data.id}
+                type="restaurante"
+              />
+            )
+          }
+          return null
         })}
       </div>
     </section>
   )
 }
+
+/**
+ * {bares.map((data) => {
+          return (
+            <Card
+              key={data.id}
+              title={data.nome}
+              description={data.descricao}
+              cell={data.telefone}
+              price={data?.preco ? data.preco : ''}
+              kitchen={data?.cozinhas ? data.cozinhas : ''}
+              menu={data?.cardapio ? data.cardapio : ''}
+              latitude={data.latitude}
+              longitude={data.longitude}
+              img={data.logo}
+              id={data.id}
+              type="restaurante"
+            />
+          )
+        })}
+ */

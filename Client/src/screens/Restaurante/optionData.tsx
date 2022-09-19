@@ -12,21 +12,21 @@ export const optionRestaurante = [
   {
     id: '02',
     nome: 'Lanchonete',
-    categoria: 'restaurante',
+    categoria: 'lanchonete',
   },
   {
     id: '03',
     nome: 'Bar',
-    categoria: 'restaurante',
+    categoria: 'bar',
   },
   {
     id: '04',
     nome: 'Pizzaria',
-    categoria: 'restaurante',
+    categoria: 'pizzaria',
   },
   {
     id: '05',
     nome: 'Padaria',
-    categoria: 'restaurante',
+    categoria: 'padaria',
   },
 ]
