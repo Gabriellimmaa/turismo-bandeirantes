@@ -23,4 +23,16 @@ export const optionTurismo = [
     categoria: 'Rural',
     type: 'turismo',
   },
+  {
+    id: '05',
+    nome: 'Turismo Esportivo',
+    categoria: 'Esportivo',
+    type: 'turismo',
+  },
+  {
+    id: '06',
+    nome: 'Turismo Ecológico',
+    categoria: 'Ecológico',
+    type: 'turismo',
+  }
 ]
