@@ -72,7 +72,6 @@ export default function Restaurantes() {
                 title={data.nome}
                 description={data.descricao}
                 cell={data.telefone}
-                price={data?.preco ? data.preco : ''}
                 kitchen={data?.cozinhas ? data.cozinhas : ''}
                 menu={data?.cardapio ? data.cardapio : ''}
                 latitude={data.latitude}
@@ -89,7 +88,6 @@ export default function Restaurantes() {
                 title={data.nome}
                 description={data.descricao}
                 cell={data.telefone}
-                price={data?.preco ? data.preco : ''}
                 kitchen={data?.cozinhas ? data.cozinhas : ''}
                 menu={data?.cardapio ? data.cardapio : ''}
                 latitude={data.latitude}
@@ -112,7 +110,6 @@ export default function Restaurantes() {
                 title={data.nome}
                 description={data.descricao}
                 cell={data.telefone}
-                price={data?.preco ? data.preco : ''}
                 kitchen={data?.cozinhas ? data.cozinhas : ''}
                 menu={data?.cardapio ? data.cardapio : ''}
                 latitude={data.latitude}
@@ -129,7 +126,6 @@ export default function Restaurantes() {
                 title={data.nome}
                 description={data.descricao}
                 cell={data.telefone}
-                price={data?.preco ? data.preco : ''}
                 kitchen={data?.cozinhas ? data.cozinhas : ''}
                 menu={data?.cardapio ? data.cardapio : ''}
                 latitude={data.latitude}
