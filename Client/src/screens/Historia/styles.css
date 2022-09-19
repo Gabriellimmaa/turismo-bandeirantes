@@ -146,11 +146,12 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  
 }
 .historia .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 250px;
   object-fit: cover;
 }
 
