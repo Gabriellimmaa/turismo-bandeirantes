@@ -2,7 +2,6 @@ import './styles.css'
 import { AiFillPhone, AiFillMessage } from 'react-icons/ai'
 import { BsFillPinMapFill } from 'react-icons/bs'
 
-
 export default function Contato() {
   return (
     <section className="contato">
@@ -25,11 +24,15 @@ export default function Contato() {
         </div>
         <div className="rigth">
           <div className="entreemcontato">
-            <h2>Envie-nos uma Mensagem  {<AiFillMessage size={30} />}</h2>
-            <p>Nome:</p><textarea className="caixatexto"></textarea>
-            <p>E-mail:</p><textarea className="caixatexto"></textarea>
-            <p>Contato:</p><textarea className="caixatexto"></textarea>
-            <p>Sugestão:</p><textarea className="caixatexto1"></textarea>
+            <h2>Envie-nos uma Mensagem {<AiFillMessage size={30} />}</h2>
+            <p>Nome:</p>
+            <textarea className="caixatexto"></textarea>
+            <p>E-mail:</p>
+            <textarea className="caixatexto"></textarea>
+            <p>Contato:</p>
+            <textarea className="caixatexto"></textarea>
+            <p>Sugestão:</p>
+            <textarea className="caixatexto1"></textarea>
           </div>
         </div>
       </div>

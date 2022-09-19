@@ -16,7 +16,6 @@ import { Loading } from '../../components/Loading'
 import api from '../../services/api'
 
 import './styles.css'
-import { toast } from 'react-toastify'
 import { CommentsList } from '../../components/Comments/CommentsList'
 import { StarRating } from '../../components/StarRating'
 import apiLocal from '../../services/apiLocal'
@@ -59,9 +58,11 @@ export function Hotel() {
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
 
-  const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
+  const [dataLocal, setDataLocal] = useState<{
+    estrelas: number[]
+    comentarios: object[]
+  }>({ estrelas: [], comentarios: [] })
   const [hover, setHover] = useState(0)
-
 
   useEffect(() => {
     setQtdContatos([])
@@ -71,8 +72,8 @@ export function Hotel() {
     })
 
     apiLocal.get(`hotel/${id}`).then((response) => {
-      const maiorValor = Math.max.apply(null, response.data.estrelas);
-      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
+      const maiorValor = Math.max.apply(null, response.data.estrelas)
+      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
     })
@@ -102,14 +103,26 @@ export function Hotel() {
           <h1>{data?.nome}</h1>
         </div>
         <section className="info">
-          <div className='flex items-center'>
-            <div>{dataLocal.estrelas[0] +
-              dataLocal.estrelas[1] +
-              dataLocal.estrelas[2] +
-              dataLocal.estrelas[3] +
-              dataLocal.estrelas[4]} avaliações</div>
-            <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
-            <StarRating id={id} type="hotel" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
+          <div className="flex items-center">
+            <div>
+              {dataLocal.estrelas[0] +
+                dataLocal.estrelas[1] +
+                dataLocal.estrelas[2] +
+                dataLocal.estrelas[3] +
+                dataLocal.estrelas[4]}{' '}
+              avaliações
+            </div>
+            <div className="ml-5">
+              {dataLocal.comentarios.length} comentários
+            </div>
+            <StarRating
+              id={id}
+              type="hotel"
+              dataLocal={dataLocal}
+              hover={hover}
+              setHover={setHover}
+              setDataLocal={setDataLocal}
+            />
           </div>
           <div className="mb-10">
             <h3>Descrição:</h3>
@@ -139,7 +152,10 @@ export function Hotel() {
           ) : null}
 
           <div className="mb-10">
-            <div id="grid" className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5">
+            <div
+              id="grid"
+              className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
+            >
               <div className="mb-10">
                 <h3>Endereço:</h3>
                 {data?.endereco && (
@@ -154,17 +170,19 @@ export function Hotel() {
                   src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=${data?.latitude}, ${data?.longitude}`}
                 ></iframe>
               </div>
-              <div className='contatos'>
+              <div className="contatos">
                 <h3>Contatos:</h3>
                 <div
-                  className={`my-3 grid ${qtdContato.length / 2 === 0
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-                    } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${
+                    qtdContato.length / 2 === 0
+                      ? 'md:grid-cols-2'
+                      : 'md:grid-cols-3'
+                  } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
-                      <BiPhoneCall size={32} className="mx-2" /> {data?.telefone}
+                      <BiPhoneCall size={32} className="mx-2" />{' '}
+                      {data?.telefone}
                     </p>
                   )}
                   {data?.whats && (
@@ -206,10 +224,16 @@ export function Hotel() {
                   )}
                 </div>
                 {data?.email && (
-                  <div className='grid grid-cols-1 justify-items-center'>
+                  <div className="grid grid-cols-1 justify-items-center">
                     <div className="flex items-center">
-                      <BiMailSend size={32} className="mx-2" /> <p id="icon-email">{data?.email}</p>
-                      <a id="text-email" target="_blank" href={data?.site} rel="noreferrer">
+                      <BiMailSend size={32} className="mx-2" />{' '}
+                      <p id="icon-email">{data?.email}</p>
+                      <a
+                        id="text-email"
+                        target="_blank"
+                        href={data?.site}
+                        rel="noreferrer"
+                      >
                         Entrar em contato por email
                       </a>
                     </div>
@@ -218,7 +242,7 @@ export function Hotel() {
               </div>
             </div>
             <CommentsList comments={dataLocal.comentarios} />
-            <CommentsAdd type='hotel' id={data?.id} setInfo={setDataLocal} />
+            <CommentsAdd type="hotel" id={data?.id} setInfo={setDataLocal} />
           </div>
         </section>
       </div>
