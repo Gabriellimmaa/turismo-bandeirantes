@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Loading } from '../../components/Loading'
 import ContentLoader, { Facebook } from 'react-content-loader'
+import { MdSettingsBackupRestore } from 'react-icons/md'
 const MyLoader = () => (
   <ContentLoader viewBox="0 0 380 70">
     {/* Only SVG shapes */}    
@@ -32,7 +33,9 @@ interface turismoProps {
 
 export default function Restaurantes() {
   const [restaurantes, setRestaurantes] = useState<turismoProps[]>([])
+  const [bares, setBares] = useState<turismoProps[]>([])
   const [loading, setLoading] = useState(true)
+  const [filter, setFilter] = useState<string>('')
 
   useEffect(() => {
     api.get('/restaurantes').then((response) => {
@@ -41,13 +44,25 @@ export default function Restaurantes() {
     })
   }, [])
 
+  useEffect(() => {
+    api.get('/bares').then((response) => {
+        setBares(response.data.bares)
+        setLoading(false)
+    })
+    }, [])
+
+  const filtro = (childdata: string) => {
+    setFilter(childdata)
+  }
+
+
   return (
     <section id="restaurante">
       <div className="title-style-1">
         <h1>RESTAURANTES</h1>
-        <h2>ado a ado quem leu é viado</h2>
+        <h2>Onde comer?</h2>
       </div>
-      <Toolbar objectList={optionRestaurante} />
+      <Toolbar objectList={optionRestaurante} filtro={filtro}/>
       {
         loading ? <Loading /> : null
       }
@@ -71,6 +86,27 @@ export default function Restaurantes() {
           )
         })}
       </div>
+      <div className="grid grid-cols-3 gap-5 justify-items-center">
+        {bares.map((data) => {
+          return (
+            <Card
+              key={data.id}
+              title={data.nome}
+              description={data.descricao}
+              cell={data.telefone}
+              price={data?.preco ? data.preco : ''}
+              kitchen={data?.cozinhas ? data.cozinhas : ''}
+              menu={data?.cardapio ? data.cardapio : ''}
+              latitude={data.latitude}
+              longitude={data.longitude}
+              img={data.logo}
+              id={data.id}
+              type="restaurante"
+            />
+          )
+        })}
+      </div>
+
     </section>
   )
 }
