@@ -30,7 +30,7 @@ export function Turismo() {
     })
   }, [])
 
-  const childToParent = (childdata: string) => {
+  const filtro = (childdata: string) => {
     setFilter(childdata)
   }
 
@@ -40,7 +40,7 @@ export function Turismo() {
         <h1>O que fazer?</h1>
         <h2>Um lugar de fé, natureza e tradições</h2>
       </div>
-      <Toolbar objectList={optionTurismo} childToParent={childToParent} />
+      <Toolbar objectList={optionTurismo} filtro={filtro} />
       {loading ? <Loading /> : null}
       <div id="grid" className="grid grid-cols-3 gap-5 justify-items-center">
         {turismo.map((atracao) => {

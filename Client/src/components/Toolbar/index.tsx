@@ -9,20 +9,17 @@ interface ObjectItem {
 
 interface ToolbarProps {
   objectList: ObjectItem[]
-  childToParent: (data: string) => void
+  filtro: (data: string) => void
 }
 
-export default function Toolbar({ objectList, childToParent }: ToolbarProps) {
+export default function Toolbar({ objectList, filtro }: ToolbarProps) {
   return (
     <div className="Toolbar">
       <ul>
         {objectList.map((data: ObjectItem) =>
           data.categoria ? (
             <li key={data.id}>
-              <button
-                type="button"
-                onClick={() => childToParent(data.categoria)}
-              >
+              <button type="button" onClick={() => filtro(data.categoria)}>
                 {data.nome}
               </button>
             </li>
