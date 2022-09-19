@@ -27,7 +27,6 @@ export function Hoteis() {
     })
   }, [])
 
-
   return (
     <section id="hotel">
       <div className="title-style-1">
@@ -36,9 +35,7 @@ export function Hoteis() {
           Encontre hotéis, pousadas e muito outros lugares para se hospedar!
         </h2>
       </div>
-      {
-        loading ? <Loading /> : null
-      }
+      {loading ? <Loading /> : null}
       <div className="grid grid-cols-3 gap-5 justify-items-center">
         {Array.isArray(hoteis)
           ? hoteis?.map((hotel) => {
