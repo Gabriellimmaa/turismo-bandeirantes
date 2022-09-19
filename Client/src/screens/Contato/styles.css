@@ -1,22 +1,26 @@
+.contato {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
 .contato .pagina {
     display: inline-flex;
     line-height: 2;
     align-items: center;
 }
 
-.contato .left{
-    margin-left: 1cm;
+.contato .left {
+    align-items: baseline;
+    align-self: baseline;
 }
 
-.contato .left .telefone{
-    margin-top: 2cm;
-}
-
-.contato .rigth{
+.contato .rigth {
     margin-left: 3cm;
 }
-
-
 
 .contato h1 {
     text-transform: uppercase;
@@ -24,20 +28,21 @@
     margin: 1rem 0 0.2rem;
     color: #283729;
     display: inline-block;
-    position: relative;
+    position: center;
     padding: 1rem;
+
 }
 
 .contato h2 {
+    margin-top: 50px;
     display: flex;
     white-space: nowrap;
-    margin-left: 1cm;
 }
 
 .contato h1::after {
     content: '';
     display: block;
-    position: absolute;
+    position: center;
     top: 100%;
     left: 0;
     height: 6px;
@@ -47,33 +52,201 @@
 }
 
 .contato .caixatexto {
-    resize:unset;
-    height: 33px;
+    resize: unset;
+    height: 54px;
     width: 500px;
     margin-top: 1px;
 }
 
 .contato .caixatexto1 {
-    resize:unset;
+    resize: unset;
     height: 350px;
     width: 500px;
     margin-top: 1px;
     margin-left: 1px;
 }
 
-.contato .pagina .left p{
-    font-weight:bold ;
+.contato .pagina .left p {
+    font-weight: bold;
     text-align: center;
 }
 
-.contato .pagina .rigth p{
-    font-weight:bold ;
+.contato .pagina .rigth p {
+    font-weight: bold;
     margin-bottom: 0cm;
 }
 
 .contato .mapa {
-    margin-top: 1cm;
-    margin-bottom: cm;
+    margin: 1cm 1cm 1cm 1cm;
     width: 500px;
+    border-radius: 4px;
     height: 300px;
+}
+
+.contato label {
+    font-weight: bold;
+}
+
+.contato .cartao {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.contato .title {
+    color: grey;
+    font-size: 18px;
+}
+
+.contato button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.contato a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.contato button:hover,a:hover {
+    opacity: 0.7;
+}
+
+.contato input[type=text],select,textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+.contato input[type=enviar] {
+    background-color: #04AA6D;
+    margin-top: 10px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+}
+
+.contato input[type=enviar]:hover {
+    background-color: #45a049;
+}
+
+.contato .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .contato .text {
+        white-space: nowrap;
+        font-size: 16px;
+    }
+
+    .contato .caixatexto {
+        height: 54px;
+        width: 400px;
+    }
+
+    .contato .caixatexto1 {
+        height: 350px;
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contato {
+        display: list-item;
+    }
+
+    .contato h1 {
+        padding: 10px;
+    }
+
+    .contato h2 {
+        white-space: normal;
+    }
+
+    .contato .texto {
+        font-size: 20px;
+    }
+
+    .contato .text {
+        top: 94%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .contato {
+        display: list-item;
+    }
+
+    .contato h1 {
+        padding: 10px;
+    }
+
+    .contato .dados {
+        display: block;
+    }
+
+    .contato h2 {
+        white-space: normal;
+    }
+
+    .contato .text {
+        white-space: nowrap;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {}
+
+@media screen and (max-width: 320px) {
+    .contato {
+        display: list-item;
+    }
+
+    .contato h1 {
+        padding: 10px;
+    }
+
+    .contato .dados {
+        display: block;
+    }
+
+    .contato h2 {
+        white-space: normal;
+    }
+
+    .contato.texto {
+        font-size: 20px;
+    }
+
+    .contato .text {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
 }
