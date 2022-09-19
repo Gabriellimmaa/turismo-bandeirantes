@@ -21,6 +21,8 @@ import { StarRating } from '../../components/StarRating'
 import apiLocal from '../../services/apiLocal'
 import { CommentsAdd } from '../../components/Comments/CommentsAdd'
 
+import { useTranslation } from 'react-i18next'
+
 interface HoteisProps {
   [key: string]: string | number | undefined
   id: number
@@ -46,6 +48,8 @@ interface HoteisProps {
 export function Hotel() {
   const { id } = useParams()
   const [data, setData] = useState<HoteisProps>()
+  const { t } = useTranslation()
+
   const contatosOption = [
     'whats',
     'insta',
@@ -113,7 +117,7 @@ export function Hotel() {
               avaliações
             </div>
             <div className="ml-5">
-              {dataLocal.comentarios.length} comentários
+              {dataLocal.comentarios.length} {t('paginas.detail.comentarios')}
             </div>
             <StarRating
               id={id}
@@ -137,14 +141,14 @@ export function Hotel() {
                   rel="noreferrer"
                 >
                   <FaMapMarkerAlt className="mr-2" size={16} />
-                  <span>Abrir no Google Maps</span>
+                  <span>{t('paginas.detail.googleMaps')}</span>
                 </a>
               </div>
             )}
           </div>
           {data?.preco ? (
             <div className="mb-10">
-              <h3>Preço:</h3>
+              <h3>{t('paginas.detail.preco')}</h3>
               <p className="flex items-center">
                 <BiMoney className="mx-2" size={32} /> R$ {data?.preco}
               </p>
@@ -157,7 +161,7 @@ export function Hotel() {
               className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
             >
               <div className="mb-10">
-                <h3>Endereço:</h3>
+                <h3>{t('paginas.detail.endereco')}</h3>
                 {data?.endereco && (
                   <p className="flex items-center">
                     <BiMap size={32} className="mx-2" /> {data?.endereco}
@@ -171,7 +175,7 @@ export function Hotel() {
                 ></iframe>
               </div>
               <div className="contatos">
-                <h3>Contatos:</h3>
+                <h3>{t('paginas.detail.contatos')}</h3>
                 <div
                   className={`my-3 grid ${
                     qtdContato.length / 2 === 0
@@ -202,7 +206,7 @@ export function Hotel() {
                     <p className="flex items-center">
                       <RiFacebookCircleLine size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.face} rel="noreferrer">
-                        Visitar facebook
+                        {t('paginas.detail.visitar')} facebook
                       </a>
                     </p>
                   )}
@@ -210,7 +214,7 @@ export function Hotel() {
                     <p className="flex items-center">
                       <FaInstagram size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.insta} rel="noreferrer">
-                        Visitar instagram
+                        {t('paginas.detail.visitar')} instagram
                       </a>
                     </p>
                   )}
@@ -218,7 +222,7 @@ export function Hotel() {
                     <p className="flex items-center">
                       <BiPlanet size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.site} rel="noreferrer">
-                        Visitar nosso site
+                      {t('paginas.detail.site')}
                       </a>
                     </p>
                   )}
@@ -234,7 +238,7 @@ export function Hotel() {
                         href={data?.site}
                         rel="noreferrer"
                       >
-                        Entrar em contato por email
+                        {t('paginas.detail.email')}
                       </a>
                     </div>
                   </div>

@@ -23,6 +23,8 @@ import { CommentsAdd } from '../../components/Comments/CommentsAdd'
 import apiLocal from '../../services/apiLocal'
 import { StarRating } from '../../components/StarRating'
 
+import { useTranslation } from 'react-i18next'
+
 interface RestauranteDetailProps {
   [key: string]: string | number | undefined
   id: number
@@ -54,7 +56,7 @@ export function RestauranteDetail() {
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-
+  const { t } = useTranslation()
   const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
   const [hover, setHover] = useState(0)
 
@@ -102,12 +104,12 @@ export function RestauranteDetail() {
               dataLocal.estrelas[1] +
               dataLocal.estrelas[2] +
               dataLocal.estrelas[3] +
-              dataLocal.estrelas[4]} avaliações</div>
-            <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
+              dataLocal.estrelas[4]} {t('paginas.detail.avaliacoes')} </div>
+            <div className="ml-5">{dataLocal.comentarios.length} {t('paginas.detail.comentarios')}</div>
             <StarRating id={id} type="restaurante" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
           </div>
           <div className="mb-10">
-            <h3>Descrição:</h3>
+            <h3>{t('paginas.detail.descricao')}</h3>
             <p className="my-3">{data?.descricao}</p>
 
             {data?.latitude && data?.longitude && (
@@ -119,7 +121,7 @@ export function RestauranteDetail() {
                   rel="noreferrer"
                 >
                   <FaMapMarkerAlt className="mr-2" size={16} />
-                  <span>Abrir no Google Maps</span>
+                  <span>{t('paginas.detail.googleMaps')}</span>
                 </a>
               </div>
             )}
@@ -128,7 +130,7 @@ export function RestauranteDetail() {
           <div className="mb-10 grid grid-flow-col">
             {data?.preco && (
               <div>
-                <h3>Preço:</h3>
+                <h3>{t('paginas.detail.preco')}</h3>
                 <p className="flex items-center">
                   <BiMoney className="mx-2" size={32} /> R$ {data?.preco}
                 </p>
@@ -136,7 +138,7 @@ export function RestauranteDetail() {
             )}
             {data?.cozinhas && (
               <div className="block">
-                <h3>Cozinhas:</h3>
+                <h3>{t('paginas.detail.cozinha')}</h3>
                 <p className="flex items-center">
                   <TbToolsKitchen className="mx-2" size={32} />
                   {data?.cozinhas}
@@ -145,7 +147,7 @@ export function RestauranteDetail() {
             )}
             {data?.cardapio && (
               <div className="block">
-                <h3>Cardápio:</h3>
+                <h3>{t('paginas.detail.cardarpio')}</h3>
                 <p className="flex items-center">
                   <MdMenuBook className="mx-2" size={32} />
                   {data?.cardapio}
@@ -160,7 +162,7 @@ export function RestauranteDetail() {
               className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
             >
               <div className="mb-10">
-                <h3>Endereço:</h3>
+                <h3>{t('paginas.detail.endereco')}</h3>
                 {data?.endereco && (
                   <p className="flex items-center">
                     <BiMap size={32} className="mx-2" /> {data?.endereco}
@@ -174,7 +176,7 @@ export function RestauranteDetail() {
                 ></iframe>
               </div>
               <div className="contatos">
-                <h3>Contatos:</h3>
+                <h3>{t('paginas.detail.contatos')}</h3>
                 <div
                   className={`my-3 grid ${qtdContato.length / 2 === 0
                     ? 'md:grid-cols-2'
@@ -204,7 +206,7 @@ export function RestauranteDetail() {
                     <p className="flex items-center">
                       <RiFacebookCircleLine size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.face} rel="noreferrer">
-                        Visitar facebook
+                      {t('paginas.detail.visitar')} facebook
                       </a>
                     </p>
                   )}
@@ -212,7 +214,7 @@ export function RestauranteDetail() {
                     <p className="flex items-center">
                       <FaInstagram size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.insta} rel="noreferrer">
-                        Visitar instagram
+                      {t('paginas.detail.visitar')} instagram
                       </a>
                     </p>
                   )}
@@ -220,7 +222,7 @@ export function RestauranteDetail() {
                     <p className="flex items-center">
                       <BiPlanet size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.site} rel="noreferrer">
-                        Visitar nosso site
+                      {t('paginas.detail.site')}
                       </a>
                     </p>
                   )}
@@ -236,7 +238,7 @@ export function RestauranteDetail() {
                         href={data?.site}
                         rel="noreferrer"
                       >
-                        Entrar em contato por email
+                        {t('paginas.detail.email')}
                       </a>
                     </div>
                   </div>

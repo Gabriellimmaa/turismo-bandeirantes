@@ -1,3 +1,170 @@
 {
-    "teste": "aaaaaaaaaa"
+  "teste": "teste",
+  "navbar": {
+    "inicio": "comienzo",
+    "historia": "Historia",
+    "agenda": "agenda",
+    "hoteis": "Hoteles",
+    "turismo": "turismo",
+    "lazer&esporte": "Ocio y deporte",
+    "restaurantes": "restaurantes",
+    "album": "álbum",
+    "contato": "Contacto",
+    "traducao": "Traducción"
+  },
+  "footer": {
+    "paginas": {
+      "titulo": "páginas",
+      "sobre": "sobre",
+      "onde-dormir": "Dónde dormir",
+      "oque-fazer": "Que hacer",
+      "mapa": "mapa"
+    },
+    "contato": "Contatos",
+    "copy": "© 2022 - Ayuntamiento de Bandeirantes - Todos los derechos reservados",
+    "creditos": "Website desarrollado Para el equipo FrontCode"
+  },
+  "paginas": {
+    "blacklist": {
+      "header": "Intentó iniciar sesión en nuestro sistema con otra cuenta, está en nuestra lista negra y el sistema está bloqueado para usted..",
+      "content": "Si crees que fue una charla malentendida con nuestros administradores.",
+      "link": "Regresar"
+    },
+    "inicio": {
+      "header": "ACCESO rápido",
+      "acesso-rapido": {
+        "lazer-esporte": {
+          "titulo": "lazer & Deporte",
+          "descricao": "Nuestro Ciudad Está O su destino Perfecto cultura, deporte, Lazer, mucho Arkansas Puro mi hermoso momentos naturaleza"
+        },
+        "hoteis": {
+          "titulo": "Hoteles",
+          "descricao": "Contra Hoteles, Hostales mi Granja por con anfitrión"
+        },
+        "turismo": {
+          "titulo": "Turismo",
+          "descricao": "Saber nuestro principal lugares turisticos"
+        },
+        "restaurantes": {
+          "titulo": "restaurantes",
+          "descricao": "¡Cuando el hambre supera, nuestra comida te sorprenderá!Platos y sabores inolvidables"
+        },
+        "album": {
+          "titulo": "álbum",
+          "descricao": "Ainda tem dúvidas se dever conhecer a cidade? Então acesse nossas fotos e se encante com a beleza da cidade"
+        },
+        "agenda": {
+          "titulo": "agenda",
+          "descricao": "Conozca nuestro calendario de eventos para no perder ninguna atracción."
+        }
+      }
+    },
+    "historia": {
+      "header": "História",
+      "topico1": {
+        "titulo": "Cómo empezó",
+        "paragrafo1": "Hasta el año 1920, la región era un gran travesía, habitado solo por los indios de la tribu cainggues.El primero en explorar este territorio fue el ingeniero Carlos Borromei, donde su campamento se eleva en un claro abierto en el bosque a orillas de Ribeirão Das Antas.El 24 de diciembre de 1926, D. Josefina Alves de Lima, propietario de una gran tierra de tierra en la granja de Laranjinha, al dividir esta propiedad, vendida a João Manoel dos Santos diez bushels de tierra, destinadas a la fundación de una aldea, que debería ser llamado invierno ",
+        "paragrafo2": "El 12 de abril de 1929, se creó el Distrito de Invierno, como parte integral del municipio de Jacarezinho, que se instaló el 8 de diciembre del mismo año. En julio de 1930, la compañía ferroviaria de São Paulo - Paraná, inauguró un ferrocarril de la estación, A 3 kilómetros del patrimonio invernal, que pasó a llamarse Bandeirantes, y un pueblo cerca de la estación, en los terrenos de Mesquita juvenil. El 27 de septiembre de 1931, un poder de hombres de buena voluntad, comenzó un trabajo de coalición a favor del progreso del progreso del progreso del progreso del progreso La estación y, en consecuencia, llegaron a caer en el invierno, donde la oficina del registro, la colección estatal, las casas, los hoteles, el comercio, las farmacias, el post, etc. ",
+        "paragrafo3": "Em 1932, o então Interventor Federal no Paraná, visitou Bandeirantes, notando que o povo desejava a criação do município. Houve a unificação dos dois povoados: Bandeirantes e Invernada. Dando inicio a história de Bandeirantes"
+      },
+      "topico2": {
+        "titulo": "Bandeirantes: Un lugar de fe, naturaleza y tradiciones",
+        "paragrafo1": "Ubicado en el pionero al norte de Paraná, Bandeirantes se distingue por la tierra fértil y la gente de varias partes de Brasil y el mundo. El municipio tiene una fuerte influencia de Paulistas, mineros, italianos, japoneses y portugueses, el origen primordial de la economía económica y vocaciones turísticas del municipio ",
+        "paragrafo2": "A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local."
+      },
+      "topico3": {
+        "titulo": "Bandeirantes en números",
+        "inauguracao": {
+          "titulo": "Apertura",
+          "descricao": "14 de noviembre de 1934"
+        },
+        "gentilico": {
+          "titulo": "Gentil",
+          "descricao": "bandeirantense"
+        },
+        "populacao": {
+          "titulo": "Población",
+          "descricao": "32,184 (Censo de IBGE [2010])"
+        },
+        "territorio": {
+          "titulo": "Área de la Unidad Territorial [2022]",
+          "descricao": "445,192Km²"
+        },
+        "densidade": {
+          "titulo": "Densidad demográfica",
+          "descricao": "72,29 hab/km²"
+        },
+        "bioma": {
+          "titulo": "bioma",
+          "descricao": "Mata Atlântica"
+        },
+        "altitude": {
+          "titulo": "Altitud",
+          "descricao": "420 m"
+        },
+        "clima": {
+          "titulo": "Climatizado",
+          "descricao": "Tropical. El verano es largo, caluroso, amortiguado y casi cubierto de cielo; el invierno es corto, agradable y casi sin nubes."
+        },
+        "temperatura": {
+          "titulo": "Temperatura média",
+          "descricao": "15°C a 31°C"
+        },
+        "renda": {
+          "titulo": "Ingresos per cápita (promedio mensual)",
+          "descricao": "Conozca nuestro calendario de eventos para no perder ninguna atracción."
+        },
+        "idh": {
+          "titulo": "Índice de desarrollo humano (HDI)",
+          "descricao": "0,727 (IBGE 2010)"
+        },
+        "pib": {
+          "titulo": "PIB For Happeny [2019]",
+          "descricao": "25.807,42 R$"
+        }
+      }
+    },
+    "turismo": {
+      "titulo": "turismo",
+      "subtitulo": "Lugar de fe, naturaleza y tradiciones"
+    },
+    "restaurantes": {
+      "titulo": "restaurantes",
+      "subtitulo": "¡Conoce a nuestros restaurantes! "
+    },
+    "hoteis": {
+      "titulo": "Hoteles",
+      "subtitulo": "¡Encuentra hoteles, posadas y muchos otros lugares para quedarse!"
+    },
+    "agenda": {
+      "titulo": "agenda",
+      "subtitulo": "¡Conoce a nuestra agenda de eventos!"
+    },
+    "contato": {
+      "titulo": "Contacto",
+      "menssagem": "Mandanos un mensaje",
+      "nome": "Nombre",
+      "contato": "Contacto",
+      "sugestao": "Sugerencia"
+    },
+    "album": {
+      "titulo": "álbum",
+      "subtitulo": "¡Conoce nuestro álbum de fotos!"
+    },
+    "detail": {
+      "descricao": "Descripción:",
+      "endereco": "Dirección",
+      "contatos": "Contactos:",
+      "comentarios": "Comentario",
+      "avaliacoes": "Evaluaciones",
+      "googleMaps": "abrirNoGoogleMaps",
+      "email": "Contáctenos por correo electrónico",
+      "site": "visita la página web",
+      "visitar": "visitar",
+      "cardapio": "Menú:",
+      "cozinha": "Cocinas:",
+      "preco": "Precio:",
+      "telefone": "Teléfono:"
+    }
+  }
 }

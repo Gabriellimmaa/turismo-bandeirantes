@@ -1,13 +1,15 @@
 import Card from '../../components/Card'
 import Toolbar from '../../components/Toolbar'
 import './styles.css'
+import { useTranslation } from 'react-i18next'
 
 export function Album() {
+  const { t } = useTranslation()
     return (
         <section id="album">
             <div className="title-style-1">
-                <h1>Álbum</h1>
-                <h2>Veja as maravilhas da nossa cidade!</h2>
+                <h1>{t('paginas.album.titulo')}</h1>
+                <h2>{t('paginas.album.subtitulo')}</h2>
                 <div className='album-display'>
                     <div className='album-content'>
                         <img src="src\assets\img\album\album01.jpeg" alt="" />

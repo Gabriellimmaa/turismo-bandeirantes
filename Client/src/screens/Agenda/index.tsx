@@ -3,12 +3,15 @@ import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from './optionData'
 import './styles.css'
 
+import { useTranslation } from 'react-i18next'
+
 export function Agenda() {
+  const { t } = useTranslation()
   return (
     <section id="agenda">
       <div className="title-style-1">
-        <h1>Agenda</h1>
-        <h2>Aqui pode ver todas as datas que vou comer sua mãe</h2>
+        <h1>{t('paginas.agenda.titulo')}</h1>
+        <h2>{t('paginas.agenda.subtitulo')}</h2>
       </div>
       <Toolbar objectList={optionAgenda} />
       <div className="grid grid-cols-3 gap-5 justify-items-center mt-6">

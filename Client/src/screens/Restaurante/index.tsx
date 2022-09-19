@@ -7,6 +7,7 @@ import api from '../../services/api'
 import { Loading } from '../../components/Loading'
 import ContentLoader, { Facebook } from 'react-content-loader'
 import { MdSettingsBackupRestore } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
 const MyLoader = () => (
   <ContentLoader viewBox="0 0 380 70">
     {/* Only SVG shapes */}
@@ -36,6 +37,8 @@ export default function Restaurantes() {
   const [bares, setBares] = useState<turismoProps[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<string>('')
+  const { t } = useTranslation()
+
 
   useEffect(() => {
     api.get('/restaurantes').then((response) => {
@@ -58,8 +61,8 @@ export default function Restaurantes() {
   return (
     <section id="restaurante">
       <div className="title-style-1">
-        <h1>RESTAURANTES</h1>
-        <h2>Onde comer?</h2>
+        <h1>{t('paginas.restaurantes.titulo')}</h1>
+        <h2>{t('paginas.restaurantes.subtitulo')}</h2>
       </div>
       <Toolbar objectList={optionRestaurante} filtro={filtro} />
       {loading ? <Loading /> : null}

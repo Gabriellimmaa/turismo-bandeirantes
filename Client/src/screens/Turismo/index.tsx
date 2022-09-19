@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Loading } from '../../components/Loading'
 
+import { useTranslation } from 'react-i18next'
+
 interface turismoProps {
   id: number
   nome: string
@@ -20,8 +22,8 @@ interface turismoProps {
 export function Turismo() {
   const [filter, setFilter] = useState<string>('')
   const [turismo, setTurismo] = useState<turismoProps[]>([])
-
   const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
 
   useEffect(() => {
     api.get('/atracoes').then((response) => {
@@ -37,8 +39,8 @@ export function Turismo() {
   return (
     <section className="turismo">
       <div className="title-style-1">
-        <h1>O que fazer?</h1>
-        <h2>Um lugar de fé, natureza e tradições</h2>
+        <h1>{t('paginas.turismo.titulo')}</h1>
+        <h2>{t('paginas.turismo.subtitulo')}</h2>
       </div>
       <Toolbar objectList={optionTurismo} filtro={filtro} />
       {loading ? <Loading /> : null}

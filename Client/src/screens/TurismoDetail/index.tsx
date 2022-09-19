@@ -4,6 +4,7 @@ import api from '../../services/api'
 import './styles.css'
 
 import { Loading } from '../../components/Loading'
+import { useTranslation } from 'react-i18next'
 
 import { FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
 import {
@@ -50,6 +51,7 @@ export function TurismoDetail() {
   const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
 
   const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
   const [hover, setHover] = useState(0)
@@ -98,12 +100,12 @@ export function TurismoDetail() {
               dataLocal.estrelas[1] +
               dataLocal.estrelas[2] +
               dataLocal.estrelas[3] +
-              dataLocal.estrelas[4]} avaliações</div>
-            <div className="ml-5">{dataLocal.comentarios.length} comentários</div>
+              dataLocal.estrelas[4]} {t('paginas.detail.avaliacoes')}</div>
+            <div className="ml-5">{dataLocal.comentarios.length} {t('paginas.detail.comentarios')} </div>
             <StarRating id={id} type="turismo" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
           </div>
           <div className="mb-10">
-            <h3>Descrição:</h3>
+            <h3>{t('paginas.detail.descricao')}</h3>
             <p className="my-3">{data?.descricao}</p>
 
             {data?.latitude && data?.longitude && (
@@ -115,7 +117,7 @@ export function TurismoDetail() {
                   rel="noreferrer"
                 >
                   <FaMapMarkerAlt className="mr-2" size={16} />
-                  <span>Abrir no Google Maps</span>
+                  <span>{t('paginas.detail.googleMaps')}</span>
                 </a>
               </div>
             )}
@@ -149,7 +151,7 @@ export function TurismoDetail() {
                 ></iframe>
               </div>
               <div className="contatos">
-                <h3>Contatos:</h3>
+                <h3>{t('paginas.detail.contatos')}</h3>
                 <div
                   className={`my-3 grid ${qtdContato.length / 2 === 0
                     ? 'md:grid-cols-2'
@@ -179,7 +181,7 @@ export function TurismoDetail() {
                     <p className="flex items-center">
                       <RiFacebookCircleLine size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.face} rel="noreferrer">
-                        Visitar facebook
+                      {t('paginas.detail.visitar')} facebook
                       </a>
                     </p>
                   )}
@@ -187,7 +189,7 @@ export function TurismoDetail() {
                     <p className="flex items-center">
                       <FaInstagram size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.insta} rel="noreferrer">
-                        Visitar instagram
+                      {t('paginas.detail.visitar')} instagram
                       </a>
                     </p>
                   )}
@@ -195,7 +197,7 @@ export function TurismoDetail() {
                     <p className="flex items-center">
                       <BiPlanet size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.site} rel="noreferrer">
-                        Visitar nosso site
+                      {t('paginas.detail.site')}
                       </a>
                     </p>
                   )}
@@ -211,7 +213,7 @@ export function TurismoDetail() {
                         href={data?.site}
                         rel="noreferrer"
                       >
-                        Entrar em contato por email
+                        {t('paginas.detail.email')}
                       </a>
                     </div>
                   </div>

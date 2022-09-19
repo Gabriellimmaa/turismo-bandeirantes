@@ -3,6 +3,7 @@ import Card from '../../components/Card'
 import { Loading } from '../../components/Loading'
 import api from '../../services/api'
 import './styles.css'
+import { useTranslation } from 'react-i18next'
 
 interface HoteisProps {
   id: number
@@ -19,6 +20,7 @@ interface HoteisProps {
 export function Hoteis() {
   const [hoteis, setHoteis] = useState<HoteisProps[]>()
   const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
 
   useEffect(() => {
     api.get('/hoteis').then((response) => {
@@ -30,9 +32,9 @@ export function Hoteis() {
   return (
     <section id="hotel">
       <div className="title-style-1">
-        <h1>Onde ficar?</h1>
+        <h1>{t('paginas.hoteis.titulo')}</h1>
         <h2>
-          Encontre hotéis, pousadas e muito outros lugares para se hospedar!
+        {t('paginas.hoteis.subtitulo')}
         </h2>
       </div>
       {loading ? <Loading /> : null}
