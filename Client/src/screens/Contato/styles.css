@@ -120,10 +120,6 @@
     color: black;
 }
 
-.contato button:hover,a:hover {
-    opacity: 0.7;
-}
-
 .contato input[type=text],select,textarea {
     width: 100%;
     padding: 12px;
@@ -136,7 +132,7 @@
 }
 
 .contato input[type=enviar] {
-    background-color: #04AA6D;
+    background-color: #45a049;
     margin-top: 10px;
     color: white;
     padding: 12px 20px;
@@ -145,10 +141,12 @@
     cursor: pointer;
     width: 100px;
     text-align: center;
+    transition: 500ms ease;
 }
 
 .contato input[type=enviar]:hover {
-    background-color: #45a049;
+    transition: 500ms ease;
+    filter: brightness(.8);
 }
 
 .contato .container {
