@@ -1,4 +1,4 @@
-import { Box, Center, Image, View, VStack } from 'native-base'
+import { Image, VStack } from 'native-base'
 import logo from '../assets/logoTurismo.png'
 
 export function Loading() {

@@ -1,30 +1,13 @@
 import { ScrollView, VStack } from "native-base";
 import { useEffect, useState } from "react";
-import { CardResaurante } from "../components/Card/Restaurante";
+import { CardPrincipal } from "../components/Card/Principal";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import api from "../services/api";
-
-export interface RestaurantesProps {
-  id: number
-  nome: string
-  descricao: string
-  preco: number
-  cardapio?: string
-  logo: string
-  email: string
-  site: string
-  telefone: string
-  endereco: string
-  latitude: string
-  longitude: string
-  face: string
-  insta: string
-  whats: string
-}
+import { PropsGeral } from "../utils/tipagens";
 
 export function Restaurantes() {
-  const [restaurantes, setRestaurantes] = useState<RestaurantesProps[]>()
+  const [restaurantes, setRestaurantes] = useState<PropsGeral[]>()
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -43,7 +26,7 @@ export function Restaurantes() {
       <Header />
       <ScrollView pt={4} >
         { restaurantes!.map((item) => (
-          <CardResaurante
+          <CardPrincipal
             key={item.id}
             id={item.id}
             descricao={item.descricao}
@@ -59,6 +42,7 @@ export function Restaurantes() {
             site={item.site}
             telefone={item.telefone}
             whats={item.whats}
+            tipo="Restaurante"
           />
         )) }
       </ScrollView>

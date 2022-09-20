@@ -1,25 +1,14 @@
 import { ScrollView, VStack } from "native-base";
 import { useEffect, useState } from "react";
-import { CardTurismo } from "../components/Card/Turismo";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import api from "../services/api";
-
-export interface turismoProps {
-  id: number
-  nome: string
-  descricao: string
-  logo: string
-  telefone: string
-  latitude: string
-  longitude: string
-  categoria: string
-  endereco: string
-}
+import { CardPrincipal } from "../components/Card/Principal";
+import { PropsGeral } from "../utils/tipagens";
 
 export function Turismo() {
-  const [turismo, setTurismo] = useState<turismoProps[]>([])
-  const [loading, setLoading] = useState(true)
+  const [turismo, setTurismo] = useState<PropsGeral[]>([])
+  const [loading, setLoading] = useState(false)
   const [religioso, setReligioso] = useState(true)
   const [cultural, setCultural] = useState(true)
   const [ecologico, setEcologico] = useState(true)
@@ -27,14 +16,14 @@ export function Turismo() {
   useEffect(() => {
     api.get('/atracoes').then((response) => {
       setTurismo(response.data.atracoes)
-      setLoading(false)
+      setLoading(true)
       setReligioso(false)
       setCultural(false)
       setEcologico(false)
     })
   }, [])
 
-  if (loading) {
+  if (!loading) {
     return <Loading />
   }
 
@@ -43,17 +32,24 @@ export function Turismo() {
       <Header />
       <ScrollView pt={4} >
         { turismo.map((item) => (
-          <CardTurismo
+          <CardPrincipal
             key={item.id}
             id={item.id}
-            nome={item.nome}
             descricao={item.descricao}
-            logo={item.logo}
-            telefone={item.telefone}
-            latitude={item.latitude}
-            longitude={item.longitude}
-            categoria={item.categoria}
+            email={item.email}
             endereco={item.endereco}
+            face={item.face}
+            insta={item.insta}
+            latitude={item.latitude}
+            logo={item.logo}
+            longitude={item.longitude}
+            nome={item.nome}
+            preco={item.preco}
+            site={item.site}
+            telefone={item.telefone}
+            whats={item.whats}
+            categoria={item.categoria}
+            tipo="Turismo"
           />
         )) }
       </ScrollView>

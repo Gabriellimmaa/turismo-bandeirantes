@@ -1,34 +1,36 @@
-import { AspectRatio, Box, Button, Center, Heading, HStack, Image, Link, Text, useTheme, View, VStack } from "native-base";
-import { turismoProps } from "../../screens/Turismo";
-import { apenasNumeros, limitDescription } from "../../utils";
+import { AspectRatio, Box, Button, Heading, HStack, Image, Link, Text, useTheme, VStack } from "native-base";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { HoteisProps } from "../../screens/Hotel";
-import { RestaurantesProps } from "../../screens/Restaurantes";
+import { useNavigation, CommonActions  } from '@react-navigation/native'
 
-import instagramIMG from '../../assets/social/instagram.png'
-import facebookIMG from '../../assets/social/facebook.png'
-import whatsappIMG from '../../assets/social/whatsapp.png'
+// import { apenasNumeros } from "../../utils";
+import { PropsGeral } from "../../utils/tipagens";
 
-export function CardResaurante({
+export function CardPrincipal({
   id,
-  descricao,
-  email,
-  endereco,
-  face,
-  insta,
-  latitude,
-  logo,
-  longitude,
   nome,
+  descricao,
   preco,
+  cardapio,
+  logo,
+  email,
   site,
   telefone,
-  whats
-}: RestaurantesProps) {
+  endereco,
+  latitude,
+  longitude,
+  face,
+  insta,
+  whats,
+  tipo,
+  categoria
+}: PropsGeral) {
   const { colors } = useTheme();
+  const navigation = useNavigation();
+
   return (
     <Box alignItems="center" px={5} pb="12">
       <Box
+        shadow={1}
         rounded="lg"
         overflow="hidden"
         borderColor={colors.gray[100]}
@@ -46,25 +48,41 @@ export function CardResaurante({
         }}
       >
         <Box rounded="lg">
-          <AspectRatio w="100%" ratio={16 / 13}>
-            <Image
-              source={{
-                uri: logo,
-              }}
-              alt="image"
-            />
-          </AspectRatio>
+          <Button variant="ghost" padding="0" onPress={() => navigation.dispatch(
+            CommonActions.navigate({
+              name: 'Detalhe',
+              params: {
+                id,
+                "rota": tipo
+              },
+            })
+          )}>
+            <AspectRatio w="100%" ratio={16 / 13}>
+              <Image
+                source={{
+                  uri: logo,
+                }}
+                alt="image"
+              />
+            </AspectRatio>
+          </Button>
         </Box>
       </Box>
-      <VStack px={2} space={2} w="full" pt={3}>
+      <VStack px={2} space={4} w="full" pt={3}>
         <HStack justifyContent="space-between">
           <Heading fontWeight="bold" size="sm" >{nome} </Heading>
           <HStack space={2}>
-            <MaterialCommunityIcons name="cash" color={colors.green['700']} size={20} />
-            <Text color="green.700">R$ { preco}</Text>
+            { preco && (
+              <><MaterialCommunityIcons name="cash" color={colors.green['700']} size={20} /><Text color="green.700">R$ {preco}</Text></>
+            )}
           </HStack>
         </HStack>
-        <Text >{email}</Text>
+        <HStack space={2} justifyContent="space-between">
+          <Text >{email}</Text>
+          { categoria && (
+              <Text >Categoria: {categoria}</Text>
+          )}
+        </HStack>
         <HStack space={2}>
           <MaterialCommunityIcons name="link" color={colors.green['700']} size={20} />
           <Link href={site}>
@@ -97,17 +115,6 @@ export function CardResaurante({
               </Link>
             </Button>
           </HStack>
-        </HStack>
-        <HStack   space={2} pt={2}>
-          <Link h="10" w="16" href={insta} >
-            <Image resizeMode="contain" size="42"  source={instagramIMG} alt="instagram" />
-          </Link>
-          <Link  h="10" w="16" href={face} >
-            <Image resizeMode="contain" size="42"  source={facebookIMG} alt="instagram" />
-          </Link>
-          <Link h="10" w="16" href={`https://api.whatsapp.com/send?phone=55${apenasNumeros(whats)}`} >
-            <Image resizeMode="contain" size="42"  source={whatsappIMG} alt="instagram" />
-          </Link>
         </HStack>
       </VStack>
     </Box>

@@ -1,6 +1,6 @@
 import { ScrollView, VStack } from "native-base";
 import { useEffect, useState } from "react";
-import { CardHotel } from "../components/Card/Hotel";
+import { CardPrincipal } from "../components/Card/Principal";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import api from "../services/api";
@@ -8,18 +8,26 @@ import api from "../services/api";
 export interface HoteisProps {
   id: number
   nome: string
-  preco: number
+  descricao: string
+  preco?: number
+  cardapio?: string
   logo: string
   email: string
   site: string
   telefone: string
+  endereco: string
   latitude: string
   longitude: string
+  face: string
+  insta: string
+  whats: string
+  categoria?: string
 }
 
 export function Hotel() {
   const [hoteis, setHoteis] = useState<HoteisProps[]>()
   const [loading, setLoading] = useState(false)
+
 
   useEffect(() => {
     api.get('/hoteis').then((response) => {
@@ -37,10 +45,14 @@ export function Hotel() {
       <Header />
       <ScrollView pt={4} >
         { hoteis!.map((item) => (
-          <CardHotel
+          <CardPrincipal
             key={item.id}
             id={item.id}
+            descricao={item.descricao}
             email={item.email}
+            endereco={item.endereco}
+            face={item.face}
+            insta={item.insta}
             latitude={item.latitude}
             logo={item.logo}
             longitude={item.longitude}
@@ -48,6 +60,8 @@ export function Hotel() {
             preco={item.preco}
             site={item.site}
             telefone={item.telefone}
+            whats={item.whats}
+            tipo="Hotel"
           />
         )) }
       </ScrollView>

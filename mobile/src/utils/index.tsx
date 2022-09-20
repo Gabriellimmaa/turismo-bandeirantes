@@ -5,11 +5,15 @@ export function convertFirstToUpperCase(text: string) {
 }
 
 export function limitDescription(description: string) {
-  return description.substring(0, 100)
+  if (window.innerWidth >= 2000) {
+    return description.substring(0, 400) + '...'
+  } else if (window.innerWidth <= 1024) {
+    return description.substring(0, 50) + '...'
+  } else {
+    return description.substring(0, 160) + '...'
+  }
 }
 
-export function apenasNumeros(string: string) 
-{
-    var numsStr = string.replace(/[^0-9]/g,'');
-    return parseInt(numsStr);
+export function apenasNumeros(string: string){
+  return parseInt(string.replace(/\D/g, ''));
 }
