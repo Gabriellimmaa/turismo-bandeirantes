@@ -1,4 +1,10 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import api from '../../../services/api'
+import './styles.css'
+
+import { Loading } from '../../../components/Loading'
+import { useTranslation } from 'react-i18next'
 
 import { FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
 import {
@@ -10,20 +16,13 @@ import {
 } from 'react-icons/bi'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { RiFacebookCircleLine } from 'react-icons/ri'
+import { toast } from 'react-toastify'
+import { CommentsList } from '../../../components/Comments/CommentsList'
+import apiLocal from '../../../services/apiLocal'
+import { StarRating } from '../../../components/StarRating'
+import { CommentsAdd } from '../../../components/Comments/CommentsAdd'
 
-import { useParams } from 'react-router-dom'
-import { Loading } from '../../components/Loading'
-import api from '../../services/api'
-
-import './styles.css'
-import { CommentsList } from '../../components/Comments/CommentsList'
-import { StarRating } from '../../components/StarRating'
-import apiLocal from '../../services/apiLocal'
-import { CommentsAdd } from '../../components/Comments/CommentsAdd'
-
-import { useTranslation } from 'react-i18next'
-
-interface HoteisProps {
+interface TurismoDetailProps {
   [key: string]: string | number | undefined
   id: number
   nome: string
@@ -45,39 +44,28 @@ interface HoteisProps {
   telefone?: string
 }
 
-export function Hotel() {
+export function TurismoDetail() {
   const { id } = useParams()
-  const [data, setData] = useState<HoteisProps>()
-  const { t } = useTranslation()
 
-  const contatosOption = [
-    'whats',
-    'insta',
-    'face',
-    'site',
-    'telefone',
-    'email',
-    'endereco',
-  ]
+  const [data, setData] = useState<TurismoDetailProps>()
+  const contatosOption = ['whats', 'insta', 'face', 'site', 'telefone', 'email']
   const [qtdContato, setQtdContatos] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
 
-  const [dataLocal, setDataLocal] = useState<{
-    estrelas: number[]
-    comentarios: object[]
-  }>({ estrelas: [], comentarios: [] })
+  const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
   const [hover, setHover] = useState(0)
 
   useEffect(() => {
     setQtdContatos([])
-    api.get(`/hoteis/${id}`).then((response) => {
-      setData(response.data.hoteis[0])
+    api.get(`/atracoes/${id}`).then((response) => {
+      setData(response.data.atracoes[0])
       setLoading(false)
     })
 
-    apiLocal.get(`hotel/${id}`).then((response) => {
-      const maiorValor = Math.max.apply(null, response.data.estrelas)
-      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
+    apiLocal.get(`turismo/${id}`).then((response) => {
+      const maiorValor = Math.max.apply(null, response.data.estrelas);
+      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
     })
@@ -94,7 +82,7 @@ export function Hotel() {
   }
 
   return (
-    <div className="hotel-detail">
+    <div className="turismo-detail">
       <div className="background-img">
         <img src={data?.logo} alt="" />
       </div>
@@ -108,28 +96,16 @@ export function Hotel() {
         </div>
         <section className="info">
           <div className="flex items-center">
-            <div>
-              {dataLocal.estrelas[0] +
-                dataLocal.estrelas[1] +
-                dataLocal.estrelas[2] +
-                dataLocal.estrelas[3] +
-                dataLocal.estrelas[4]}{' '}
-              avaliações
-            </div>
-            <div className="ml-5">
-              {dataLocal.comentarios.length} {t('paginas.detail.comentarios')}
-            </div>
-            <StarRating
-              id={id}
-              type="hotel"
-              dataLocal={dataLocal}
-              hover={hover}
-              setHover={setHover}
-              setDataLocal={setDataLocal}
-            />
+            <div>{dataLocal.estrelas[0] +
+              dataLocal.estrelas[1] +
+              dataLocal.estrelas[2] +
+              dataLocal.estrelas[3] +
+              dataLocal.estrelas[4]} {t('paginas.detail.avaliacoes')}</div>
+            <div className="ml-5">{dataLocal.comentarios.length} {t('paginas.detail.comentarios')} </div>
+            <StarRating id={id} type="turismo" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
           </div>
           <div className="mb-10">
-            <h3>Descrição:</h3>
+            <h3>{t('paginas.detail.descricao')}</h3>
             <p className="my-3">{data?.descricao}</p>
 
             {data?.latitude && data?.longitude && (
@@ -148,7 +124,7 @@ export function Hotel() {
           </div>
           {data?.preco ? (
             <div className="mb-10">
-              <h3>{t('paginas.detail.preco')}</h3>
+              <h3>Preço:</h3>
               <p className="flex items-center">
                 <BiMoney className="mx-2" size={32} /> R$ {data?.preco}
               </p>
@@ -161,7 +137,7 @@ export function Hotel() {
               className="grid grid-cols-2 lg:gap-x-20 md:gap-10 sm:gap-5"
             >
               <div className="mb-10">
-                <h3>{t('paginas.detail.endereco')}</h3>
+                <h3>Endereço:</h3>
                 {data?.endereco && (
                   <p className="flex items-center">
                     <BiMap size={32} className="mx-2" /> {data?.endereco}
@@ -177,11 +153,10 @@ export function Hotel() {
               <div className="contatos">
                 <h3>{t('paginas.detail.contatos')}</h3>
                 <div
-                  className={`my-3 grid ${
-                    qtdContato.length / 2 === 0
-                      ? 'md:grid-cols-2'
-                      : 'md:grid-cols-3'
-                  } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${qtdContato.length / 2 === 0
+                    ? 'md:grid-cols-2'
+                    : 'md:grid-cols-3'
+                    } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
@@ -206,7 +181,7 @@ export function Hotel() {
                     <p className="flex items-center">
                       <RiFacebookCircleLine size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.face} rel="noreferrer">
-                        {t('paginas.detail.visitar')} facebook
+                      {t('paginas.detail.visitar')} facebook
                       </a>
                     </p>
                   )}
@@ -214,7 +189,7 @@ export function Hotel() {
                     <p className="flex items-center">
                       <FaInstagram size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.insta} rel="noreferrer">
-                        {t('paginas.detail.visitar')} instagram
+                      {t('paginas.detail.visitar')} instagram
                       </a>
                     </p>
                   )}
@@ -246,7 +221,7 @@ export function Hotel() {
               </div>
             </div>
             <CommentsList comments={dataLocal.comentarios} />
-            <CommentsAdd type="hotel" id={data?.id} setInfo={setDataLocal} />
+            <CommentsAdd type='turismo' id={data?.id} setInfo={setDataLocal} />
           </div>
         </section>
       </div>
