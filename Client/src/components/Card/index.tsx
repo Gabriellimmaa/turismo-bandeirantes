@@ -17,7 +17,7 @@ import apiLocal from '../../services/apiLocal'
 
 interface CardProps {
   title: string
-  type: 'hotel' | 'restaurante' | 'turismo' | 'lazer&esporte' | 'agenda' | 'album'
+  type: 'hotel' | 'restaurante' | 'turismo' | 'lazer&esporte' | 'agenda' | 'album' | 'bar'
   img: string
   id: number
   description?: string

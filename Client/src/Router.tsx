@@ -1,16 +1,17 @@
 import { Routes, Route } from 'react-router-dom'
 import Historia from './screens/Historia'
 import { Hoteis } from './screens/Hotel'
-import { Hotel } from './screens/HotelDetail'
+import { Hotel } from './screens/Details/HotelDetail'
 import Inicio from './screens/Inicio'
 import Restaurantes from './screens/Restaurante'
 import Contato from './screens/Contato'
 import { Agenda } from './screens/Agenda'
 import { Turismo } from './screens/Turismo'
-import { TurismoDetail } from './screens/TurismoDetail'
+import { TurismoDetail } from './screens/Details/TurismoDetail'
 import Map from './screens/Map'
-import { RestauranteDetail } from './screens/RestauranteDetail'
+import { RestauranteDetail } from './screens/Details/RestauranteDetail'
 import { Album } from './screens/Album'
+import { BarDetail } from './screens/Details/BarDetail'
 
 export function Router() {
   return (
@@ -26,6 +27,8 @@ export function Router() {
 
       <Route path="/restaurantes" element={<Restaurantes />} />
       <Route path="/restaurante/detalhe/:id" element={<RestauranteDetail />} />
+      
+      <Route path="/bar/detalhe/:id" element={<BarDetail />} />
 
       <Route path="/hoteis" element={<Hoteis />} />
       <Route path="/hotel/detalhe/:id" element={<Hotel />} />
