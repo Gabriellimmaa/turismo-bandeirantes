@@ -8,9 +8,10 @@
 }
 
 .contato .pagina {
-    display: inline-flex;
-    line-height: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 20px;
 }
 
 .contato .left {
@@ -18,9 +19,6 @@
     align-self: baseline;
 }
 
-.contato .rigth {
-    margin-left: 3cm;
-}
 
 .contato h1 {
     text-transform: uppercase;
@@ -31,24 +29,6 @@
     position: center;
     padding: 1rem;
 
-}
-
-.contato h2 {
-    margin-top: 50px;
-    display: flex;
-    white-space: nowrap;
-}
-
-.contato h1::after {
-    content: '';
-    display: block;
-    position: center;
-    top: 100%;
-    left: 0;
-    height: 6px;
-    transform: translate(8%, 50%);
-    background-color: #283729;
-    width: 45%;
 }
 
 .contato .caixatexto {
@@ -77,10 +57,9 @@
 }
 
 .contato .mapa {
-    margin: 1cm 1cm 1cm 1cm;
-    width: 500px;
     border-radius: 4px;
     height: 300px;
+    width: 100%;
 }
 
 .contato label {
@@ -88,9 +67,6 @@
 }
 
 .contato .cartao {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    margin: auto;
     text-align: center;
     border-radius: 4px;
 }
@@ -120,31 +96,42 @@
     color: black;
 }
 
-.contato input[type=text],select,textarea {
+.contato input[type=text], .contato select, .contato textarea {
     width: 100%;
-    padding: 12px;
+    padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical
+    resize: vertical;
+    transition: .3s;
 }
 
-.contato input[type=enviar] {
+.contato textarea {
+    margin-bottom: 0 !important;
+}
+
+.contato input[type=text]:focus,
+.contato textarea:focus,
+.contato select:focus {
+  outline: none;
+  border: 1px solid #2666d4;
+}
+
+.contato .enviar {
     background-color: #45a049;
-    margin-top: 10px;
     color: white;
-    padding: 12px 20px;
-    border: none;
+    padding: 12px 0;
     border-radius: 4px;
-    cursor: pointer;
-    width: 100px;
-    text-align: center;
-    transition: 500ms ease;
+    transition: .3s;
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
 }
 
-.contato input[type=enviar]:hover {
+.contato .enviar:hover {
     transition: 500ms ease;
     filter: brightness(.8);
 }
@@ -176,6 +163,10 @@
 @media screen and (max-width: 768px) {
     .contato {
         display: list-item;
+    }
+
+    .contato .pagina {
+        grid-template-columns: 1fr;
     }
 
     .contato h1 {
