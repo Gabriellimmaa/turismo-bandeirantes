@@ -100,6 +100,7 @@ export default function Historia() {
         spaceBetween={30}
         centeredSlides={true}
         freeMode={true}
+        initialSlide={1}
         pagination={{
           clickable: true,
         }}
