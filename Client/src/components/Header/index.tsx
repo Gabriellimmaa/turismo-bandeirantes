@@ -173,6 +173,9 @@ export default function Header() {
             <Link to="/historia">{t('navbar.historia')}</Link>
           </li>
           <li>
+            <Link to="/map">Mapa</Link>
+          </li>
+          <li>
             <Link to="/agenda">{t('navbar.agenda')}</Link>
           </li>
           <li>

@@ -1,6 +1,6 @@
 .leaflet-popup-content-wrapper {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
     box-shadow: none;
 }
 
@@ -12,9 +12,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 250px;
+}
+
+.mapPopup .leaflet-popup-content img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .mapPopup .leaflet-popup-content a {
+    background: #458E42;
+    margin: 0 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: normal;
+    transition: .3s;
+}
+
+/* .mapPopup .leaflet-popup-content a {
     width: 40px;
     min-width: 40px;
     height: 40px;
@@ -25,7 +41,7 @@
     align-items: center;
     transition: 400ms ease;
     margin-left: 10px;
-}
+} */
 
 .restaurante .leaflet-popup-content {
     color: #529499;
@@ -36,11 +52,11 @@
 }
 
 .turismo .leaflet-popup-content {
-    color: red;
+    color: rgb(187, 0, 0);
 }
 
 .turismo .leaflet-popup-content a{
-    background: red;
+    background: rgb(187, 0, 0);
 }
 
 .mapPopup .leaflet-popup-content a:hover {
