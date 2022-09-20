@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import api from '../../services/api'
+import api from '../../../services/api'
 import './styles.css'
 
-import { Loading } from '../../components/Loading'
+import { Loading } from '../../../components/Loading'
 
 import { FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
 import { TbToolsKitchen } from 'react-icons/tb'
@@ -18,10 +18,10 @@ import {
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { RiFacebookCircleLine } from 'react-icons/ri'
 import { toast } from 'react-toastify'
-import { CommentsList } from '../../components/Comments/CommentsList'
-import { CommentsAdd } from '../../components/Comments/CommentsAdd'
-import apiLocal from '../../services/apiLocal'
-import { StarRating } from '../../components/StarRating'
+import { CommentsList } from '../../../components/Comments/CommentsList'
+import { CommentsAdd } from '../../../components/Comments/CommentsAdd'
+import apiLocal from '../../../services/apiLocal'
+import { StarRating } from '../../../components/StarRating'
 
 import { useTranslation } from 'react-i18next'
 

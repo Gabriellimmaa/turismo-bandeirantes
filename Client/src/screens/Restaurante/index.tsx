@@ -119,7 +119,7 @@ export default function Restaurantes() {
                 longitude={data.longitude}
                 img={data.logo}
                 id={data.id}
-                type="restaurante"
+                type="bar"
               />
             )
           } else if (filter === 'bar') {
@@ -135,7 +135,7 @@ export default function Restaurantes() {
                 longitude={data.longitude}
                 img={data.logo}
                 id={data.id}
-                type="restaurante"
+                type="bar"
               />
             )
           }
