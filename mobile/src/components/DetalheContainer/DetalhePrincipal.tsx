@@ -26,7 +26,7 @@ export function DetalhePrincipal({
 }: PropsGeral){
   const { colors } = useTheme();
   const navigation = useNavigation();
-
+  console.log(tipo)
   const linkSite = site.indexOf('http') === -1 ? `http://${site}` : site;
   return (
     <VStack >
