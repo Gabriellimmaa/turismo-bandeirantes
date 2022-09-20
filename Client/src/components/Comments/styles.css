@@ -15,15 +15,14 @@
   font-weight: bold;
 }
 
-.add-comment-form input,
-textarea {
+.add-comment-form input, .add-comment-form textarea {
   display: block;
   width: 100%;
   padding: 8px !important;
   border-radius: 4px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-size: 18px !important;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   margin-bottom: 16px;
   font-weight: normal !important;
   transition: 0.3s;
@@ -50,7 +49,7 @@ textarea {
 
 
 .add-comment-form input:focus,
-textarea:focus {
+.add-comment-form textarea:focus {
   outline: none;
   border: 1px solid #2666d4;
 }

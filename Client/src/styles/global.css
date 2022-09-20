@@ -121,6 +121,10 @@ section {
   @apply text-center
 }
 
+input, textarea {
+  outline: none;
+}
+
 @media screen and (max-width: 1440px) {
   section {
     padding: 1rem 6rem;
