@@ -28,6 +28,7 @@ export const withDB = async (operations, res) => {
 require('./routes/restaurante')(app);
 require('./routes/turismo')(app);
 require('./routes/hotel')(app);
+require('./routes/bar')(app);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/build/index.html'))
