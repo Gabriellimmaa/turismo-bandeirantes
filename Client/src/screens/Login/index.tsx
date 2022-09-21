@@ -1,9 +1,19 @@
+import { useState } from 'react'
+import api from '../../services/api'
 import './styles.css'
 
 export default function Login() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  async function handleLogin(e: any) {
+    e.preventDefault()
+    const r = await api.post('/login', { email, password })
+    console.log(r)
+  }
+
   return (
     <>
-      {/* Login template */}
       <section className="sectionLogin">
         <div className="title-style-1">
           <h1>Login</h1>
@@ -16,6 +26,7 @@ export default function Login() {
             id="email"
             name="email"
             placeholder="Digite o nome da email"
+            onChange={(e) => setEmail(e.target.value)}
           />{' '}
           <label htmlFor="senha">Senha:</label>
           <input
@@ -23,8 +34,11 @@ export default function Login() {
             id="senha"
             name="senha"
             placeholder="Digite seu senha"
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="enviar">Logar</button>
+          <button className="enviar" onClick={(e) => handleLogin(e)}>
+            Logar
+          </button>
         </form>
       </section>
     </>
