@@ -30,7 +30,7 @@ export default function Login() {
           />{' '}
           <label htmlFor="senha">Senha:</label>
           <input
-            type="text"
+            type="password"
             id="senha"
             name="senha"
             placeholder="Digite seu senha"

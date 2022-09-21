@@ -59,7 +59,8 @@
     color: black;
 }
 
-.login input[type=text], .login select, .login textarea {
+.login input[type=text], .login select, .login textarea, 
+.login input[type=password], .login select, .login textarea {
     width: 100%;
     padding: 5px 10px;
     border: 1px solid #ccc;
