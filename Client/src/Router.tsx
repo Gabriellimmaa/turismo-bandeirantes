@@ -12,6 +12,7 @@ import Map from './screens/Map'
 import { RestauranteDetail } from './screens/Details/RestauranteDetail'
 import { Album } from './screens/Album'
 import { BarDetail } from './screens/Details/BarDetail'
+import Login from './screens/Login'
 
 export function Router() {
   return (
@@ -27,7 +28,7 @@ export function Router() {
 
       <Route path="/restaurantes" element={<Restaurantes />} />
       <Route path="/restaurante/detalhe/:id" element={<RestauranteDetail />} />
-      
+
       <Route path="/bar/detalhe/:id" element={<BarDetail />} />
 
       <Route path="/hoteis" element={<Hoteis />} />
@@ -36,6 +37,8 @@ export function Router() {
       {/* <Route path="/lazer-esporte" element={<LazerEsporte />} /> */}
 
       <Route path="/map" element={<Map />} />
+
+      <Route path="/login" element={<Login />} />
     </Routes>
   )
 }

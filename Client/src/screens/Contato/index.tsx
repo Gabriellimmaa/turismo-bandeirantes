@@ -13,29 +13,40 @@ export default function Contato() {
   const [address, setAddress] = useState('')
 
   function handleSubmit() {
-    if (company === '' || name === '' || cellphone === '' || email === '' || category === '' || address === '') {
+    if (
+      company === '' ||
+      name === '' ||
+      cellphone === '' ||
+      email === '' ||
+      category === '' ||
+      address === ''
+    ) {
       toast.error('Preencha todos os campos')
       return
     }
     const newDate = new Date()
-    const date = newDate.getDate() + '/' + (newDate.getMonth()) + '/' + newDate.getFullYear()
-    axios.post("https://discord.com/api/webhooks/1021689784973926480/ZM-3vpkLj_AdQ1oh8uenlo-WZw--J3-B8HwatEz3WcWJu_353TRYYW-rWHnmFBxWejGf", {
-      content: "",
-      embeds: [
-        {
-          title: "Cadastrar nova empresa",
-          description: `**Empresa:** ${company}\n**Nome:** ${name}\n**Celular:** ${cellphone}\n**Email:** ${email}\n**Categoria:** ${category}\n**Endereço:** ${address}`,
-          footer: {
-            text: date,
-          }
-        }
-      ],
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
+    const date =
+      newDate.getDate() + '/' + newDate.getMonth() + '/' + newDate.getFullYear()
+    axios.post(
+      'https://discord.com/api/webhooks/1021689784973926480/ZM-3vpkLj_AdQ1oh8uenlo-WZw--J3-B8HwatEz3WcWJu_353TRYYW-rWHnmFBxWejGf',
+      {
+        content: '',
+        embeds: [
+          {
+            title: 'Cadastrar nova empresa',
+            description: `**Empresa:** ${company}\n**Nome:** ${name}\n**Celular:** ${cellphone}\n**Email:** ${email}\n**Categoria:** ${category}\n**Endereço:** ${address}`,
+            footer: {
+              text: date,
+            },
+          },
+        ],
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    )
 
-    toast.success("Obrigado por entrar em contato conosco!")
+    toast.success('Obrigado por entrar em contato conosco!')
   }
 
   return (
@@ -52,9 +63,8 @@ export default function Contato() {
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=-23°06'22.9, -50°22'18.7"
           ></iframe>
           <h3>Telefone</h3>
-          <p className='mb-2'>Prefeitura Municipal de Bandeirantes</p>
+          <p className="mb-2">Prefeitura Municipal de Bandeirantes</p>
           <p>(43)3542-4525</p>
-
         </div>
         <div className="rigth">
           <div className="entreemcontato">
@@ -68,7 +78,7 @@ export default function Contato() {
                 placeholder="Digite o nome da empresa"
                 onChange={(event) => setCompany(event.target.value)}
               />
-              <div className='grid grid-cols-2 gap-4'>
+              <div className="grid grid-cols-2 gap-4">
                 <span>
                   <label htmlFor="nome">Nome para contato:</label>
                   <input
@@ -99,9 +109,12 @@ export default function Contato() {
                 onChange={(event) => setEmail(event.target.value)}
               />
 
-
               <label htmlFor="tsugest">Categoria da empresa:</label>
-              <select id="tsugest" name="tsugest" onChange={(event) => setCategory(event.target.value)}>
+              <select
+                id="tsugest"
+                name="tsugest"
+                onChange={(event) => setCategory(event.target.value)}
+              >
                 <option value="turismo">Turismo</option>
                 <option value="restaurante">Restaurante</option>
                 <option value="bar">Bar</option>
@@ -118,7 +131,7 @@ export default function Contato() {
                 onChange={(event) => setAddress(event.target.value)}
               />
               <button className="enviar" onClick={handleSubmit}>
-                <IoIosSend className='mr-2' size={20} /> Enviar
+                <IoIosSend className="mr-2" size={20} /> Enviar
               </button>
             </form>
           </div>
