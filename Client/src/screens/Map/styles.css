@@ -51,6 +51,13 @@
     background: #529499;
 }
 
+.bar .leaflet-popup-content {
+    color: #d68b23;
+}
+
+.bar .leaflet-popup-content a{
+    background: #d68b23;
+}
 .turismo .leaflet-popup-content {
     color: rgb(187, 0, 0);
 }

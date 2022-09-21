@@ -19,6 +19,7 @@ import './styles.css'
 import marcadorHotel from '../../assets/marcadores/verde.png'
 import marcadorTurismo from '../../assets/marcadores/vermelho.png'
 import marcadorRestaurantes from '../../assets/marcadores/azul ciano.png'
+import marcadorBares from '../../assets/marcadores/laranja.png'
 
 interface Props {
   id: number
@@ -33,29 +34,45 @@ interface Props {
 export default function Map() {
   const [turismo, setTurismo] = useState<Props[]>([])
   const [restaurantes, setRestaurantes] = useState<Props[]>([])
+  const [bares, setBares] = useState<Props[]>([])
   const [hoteis, setHoteis] = useState<Props[]>()
   const [loading, setLoading] = useState(false)
 
   const hotelIcon = Leaflet.icon({
     iconUrl: marcadorHotel,
-    iconSize: [38, 38],
+    iconSize: [80, 80],
+    iconAnchor: [40, 65],
+    popupAnchor: [0, -55],
   })
 
   const turismoIcon = Leaflet.icon({
     iconUrl: marcadorTurismo,
-    iconSize: [38, 38],
+    iconSize: [80, 80],
+    iconAnchor: [40, 65],
+    popupAnchor: [0, -55],
   })
 
   const restauranteIcon = Leaflet.icon({
     iconUrl: marcadorRestaurantes,
-    iconSize: [38, 38],
+    iconSize: [80, 80],
+    iconAnchor: [40, 65],
+    popupAnchor: [0, -55],
   })
+
+  const barIcon = Leaflet.icon({
+    iconUrl: marcadorBares,
+    iconSize: [80, 80],
+    iconAnchor: [40, 65],
+    popupAnchor: [0, -55],
+  })
+
 
   useEffect(() => {
     api.get('/atracoes').then((response) => {
       setTurismo(response.data.atracoes)
       loadRestaurantes()
       loadHotel()
+      loadBares()
       setLoading(true)
     })
   }, [])
@@ -67,6 +84,12 @@ export default function Map() {
   async function loadRestaurantes() {
     api.get('/restaurantes').then((response) => {
       setRestaurantes(response.data.restaurantes)
+    })
+  }
+
+  async function loadBares() {
+    api.get('/bares').then((response) => {
+      setBares(response.data.bares)
     })
   }
 
@@ -170,6 +193,48 @@ export default function Map() {
                       <BiSearchAlt2 /> Ver mais
                     </Link>
                     <a href={`https://www.google.com/maps/dir/?api=1&destination=${restaurante?.latitude},${restaurante?.longitude}`} className='flex text-sm items-center justify-center'>
+                      <BiMap /> Abrir rota
+                    </a>
+                  </div>
+                </div>
+              </Popup>
+            </Marker>
+          )
+        })}
+        {bares?.map((bar) => {
+          return (
+            <Marker
+              position={[bar.latitude, bar.longitude]}
+              key={bar.id}
+              icon={barIcon}
+            >
+              <Popup
+                closeButton={false}
+                minWidth={240}
+                maxHeight={240}
+                className="mapPopup bar"
+              >
+                <div className='grid grid-cols-1 content-center w-full'>
+                  <span>{bar.nome}</span>
+                  <div className='grid grid-cols-2 gap-4 my-2'>
+                    <div className='flex items-center text-sm gap-1 justify-center'>
+                      <BiPhoneCall size={20} />
+                      <span className='whitespace-nowrap'>
+                        {bar.telefone}
+                      </span>
+                    </div>
+                    <div className='flex items-center text-sm gap-1 justify-center'>
+                      <TbToolsKitchen size={20} />
+                      <span className='whitespace-nowrap'>
+                        {bar.cozinhas}
+                      </span>
+                    </div>
+                  </div>
+                  <div className='grid grid-cols-2'>
+                    <Link to={`/bar/detalhe/${bar.id}`} className='flex text-sm items-center justify-center'>
+                      <BiSearchAlt2 /> Ver mais
+                    </Link>
+                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${bar?.latitude},${bar?.longitude}`} className='flex text-sm items-center justify-center'>
                       <BiMap /> Abrir rota
                     </a>
                   </div>
