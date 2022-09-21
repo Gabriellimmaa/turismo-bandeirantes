@@ -44,7 +44,7 @@ export function CardsAtracoes() {
   return (
     <div className="turismoHome w-full">
       <Swiper
-        style={{ padding: '20px 0' }}
+        style={{ padding: '50px 20px' }}
         slidesPerView={3}
         navigation={true}
         virtual

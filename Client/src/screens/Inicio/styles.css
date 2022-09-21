@@ -1,6 +1,74 @@
+.parallax {
+  height: 150px;
+  background-image: url("../../assets/img/inicio/parallax.jpg");
+
+  
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.parallax div {
+  width: 100%;
+  height: 100%;
+  background: rgb(15, 130, 57, .8);
+}
+
+.parallax input[type=text],
+.parallax textarea,
+.parallax select {
+  border: 1px solid transparent;
+  transition: .3s;
+}
+
+.parallax input[type=text]::placeholder,
+.parallax textarea::placeholder,
+.parallax select::placeholder {
+  color: gray;
+}
+
+.parallax input[type=text]:focus,
+.parallax textarea:focus,
+.parallax select:focus {
+  outline: none;
+  border: 1px solid black;
+  background-color: #ececec;
+}
+
+.parallax button {
+  background-color: rgb(170, 170, 170);
+  color: black;
+  height: 2.5rem;
+  border-radius: 4px;
+  transition: .3s;
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.parallax button:hover {
+  transition: 500ms ease;
+  filter: brightness(.8);
+}
+
+.inicio h1 {
+  text-transform: uppercase;
+  font-size: 64px;
+  color: #283729;
+
+  line-height: 3rem;
+  @apply text-center
+}
+
 .fade-anim img {
   animation: fadeAnim 0.5s ease-out;
 }
+
 @keyframes fadeAnim {
   from {
     opacity: 0;
@@ -10,8 +78,3 @@
   }
 }
 
-.parallax {
- height: 500px;
-
- filter: brightness(0.8);
-}

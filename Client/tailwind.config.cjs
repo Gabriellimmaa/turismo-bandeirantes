@@ -15,6 +15,7 @@ module.exports = {
           500: '#00875F',
           700: '#015F43',
           brasao: '#3e8e41',
+          brasao2: '#0f8239',
         },
         blue: {
           500: '#81D8F7',

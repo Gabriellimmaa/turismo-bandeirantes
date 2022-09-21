@@ -1,0 +1,27 @@
+.card-home:hover>.icon {
+    transform: scale(2);
+}
+
+.card-home:hover>.icon {
+    animation: bounce 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.8);
+    }
+
+    30% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}

@@ -1,3 +1,8 @@
+import { IoIosSend } from 'react-icons/io'
+import { IoAirplaneSharp } from 'react-icons/io5';
+import { BsFillCalendarDateFill } from 'react-icons/bs';
+import { IoMdPhotos } from 'react-icons/io';
+import { FaMapMarked } from 'react-icons/fa';
 import { Carousel } from '../../components/Carousel'
 import { GiCommercialAirplane, GiSoccerBall } from 'react-icons/gi'
 import { FaHotel } from 'react-icons/fa'
@@ -21,23 +26,23 @@ export default function Inicio() {
         <Carousel />
       </div>
       <section>
-        <div className="acessoRapido">
-          <div className="w-full px-10">
-            <div className="w-full mt-10 ">
+        <div className="acessoRapido inicio">
+          <div className="w-full">
+            <div className="w-full mt-10 mb-14">
               <h1 className="flex justify-center items-center text-center my-16 text-4xl font-extrabold uppercase">
                 {t('paginas.inicio.header')}
               </h1>
 
-              <div className="flex flex-wrap sm:justify-center md:justify-center xl:justify-center 2xl:justify-start gap-10 max-w-7xl mx-auto my-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 content-center">
                 <CardHome
-                  key="lazer-esporte"
-                  link="/lazer-esporte"
-                  icon={<GiSoccerBall size={28} />}
+                  key="mapa"
+                  link="/map"
+                  icon={<FaMapMarked size={28} />}
                   titulo={t(
-                    'paginas.inicio.acesso-rapido.lazer-esporte.titulo',
+                    'paginas.inicio.acesso-rapido.mapa.titulo',
                   )}
                   corpo={t(
-                    'paginas.inicio.acesso-rapido.lazer-esporte.descricao',
+                    'paginas.inicio.acesso-rapido.mapa.descricao',
                   )}
                 />
                 <CardHome
@@ -50,7 +55,7 @@ export default function Inicio() {
                 <CardHome
                   key="turismo"
                   link="/turismo"
-                  icon={<GiCommercialAirplane size={28} />}
+                  icon={<IoAirplaneSharp size={28} />}
                   titulo={t('paginas.inicio.acesso-rapido.turismo.titulo')}
                   corpo={t('paginas.inicio.acesso-rapido.turismo.descricao')}
                 />
@@ -66,14 +71,14 @@ export default function Inicio() {
                 <CardHome
                   key="album"
                   link="/album"
-                  icon={<BiPhotoAlbum size={28} />}
+                  icon={<IoMdPhotos size={28} />}
                   titulo={t('paginas.inicio.acesso-rapido.album.titulo')}
                   corpo={t('paginas.inicio.acesso-rapido.album.descricao')}
                 />
                 <CardHome
                   key="agenda"
                   link="/agenda"
-                  icon={<GrSchedule size={28} />}
+                  icon={<BsFillCalendarDateFill size={28} />}
                   titulo={t('paginas.inicio.acesso-rapido.agenda.titulo')}
                   corpo={t('paginas.inicio.acesso-rapido.agenda.descricao')}
                 />
@@ -82,36 +87,40 @@ export default function Inicio() {
           </div>
         </div>
       </section>
-      <section className='turismoWrapper'>
+      <div className="parallax">
+        <div className='py-2 px-4 grid items-center'>
+          <span>
+            <h1 className="text-3xl my-0 font-extrabold uppercase text-white whitespace-nowrap">
+              Envie sua sugestão
+            </h1>
+          </span>
+          <span className='flex gap-2 md:gap-4'>
+            <input type="text" className="w-1/5 md:w-1/2 h-10 rounded-lg pl-2" placeholder="Seu nome" />
+            <input type="text" className="w-1/2 md:w-full h-10 rounded-lg pl-2" placeholder="Deixe sua sugestão" />
+            <button className='w-full'><IoIosSend /> Enviar</button>
+          </span>
+        </div>
+      </div>
+      <section className='inicio'>
         <div className="turismo w-full">
           <div className="w-full px-10">
             <div className="w-full mt-10 flex justify-center">
-              <div className='flex flex-wrap sm:flex-nowrap sm:flex-col  md:flex-col lg:flex-row w-11/12 items-center justify-center'>
-                <h1 className="flex text-center md:pl-0 lg:pl-40 flex-1 justify-center mb-16 text-4xl font-extrabold uppercase">
+              <div className='flex flex-nowrap flex-col lg:flex-row w-11/12 items-center justify-center'>
+                <h1 className="flex whitespace-nowrap text-center md:pl-0 lg:pl-40 flex-1 justify-center text-4xl font-extrabold uppercase">
                   O QUE FAZER?
                 </h1>
                 <Link
                   to="/turismo"
-                  className="text-lg rounded-3xl border-2 md:mt-4 md:mb-16 lg:mb-16  border-grayHover  hover:text-gray-800 py-2 px-9 font-extrabold hover:bg-grayHover transition-all duration-500"
+                  className="text-lg rounded-3xl border-2 border-grayHover  hover:text-gray-800 py-2 px-9 font-extrabold hover:bg-grayHover transition-all duration-500"
                 >
                   Ver Todas
                 </Link>
               </div>
-                
             </div>
           </div>
           <CardsAtracoes />
         </div>
       </section>
-        <div className="agenda">
-          <div className="w-full mt-20 px-10">
-            <h1 className="flex justify-center text-center my-16 text-4xl font-extrabold uppercase">
-              Calendário de eventos
-            </h1>
-            <Toolbar objectList={optionAgenda} />
-          </div>
-        </div>
-        <div className="parallax flex items-center justify-center bg-fixed w-full bg-[url('https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/265276800_2981423038775488_615807068815183275_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=973b4a&_nc_ohc=l-OqmBDR9A4AX-QRmsw&_nc_ht=scontent-gru1-2.xx&oh=00_AT_K50tepTcMyW7RroWn2tgZ-41ohCRz-dAOQwTzU1TO5Q&oe=6311BF81')] bg-cover bg-no-repeat bg-center"></div>
     </>
   )
 }

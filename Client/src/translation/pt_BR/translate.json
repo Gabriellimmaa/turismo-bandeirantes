@@ -33,9 +33,9 @@
         "inicio": {
             "header": "ACESSO RÁPIDO",
             "acesso-rapido": {
-                "lazer-esporte": {
-                    "titulo": "Lazer & Esporte",
-                    "descricao": "Nossa cidade é o seu destino perfeito Cultura, esporte, lazer, muito ar puro e belos momentos natureza"
+                "mapa": {
+                    "titulo": "Mapa Interativo",
+                    "descricao": "Visualize o mapa interativo de Bandeirantes. Nossa cidade é o seu destino perfeito"
                 },
                 "hoteis": {
                     "titulo": "Hotéis",
