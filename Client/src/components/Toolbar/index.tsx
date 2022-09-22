@@ -22,25 +22,28 @@ export default function Toolbar({ objectList, filtro }: ToolbarProps) {
   }
 
   return (
-    <div className="Toolbar">
-      <select onChange={(event) => changeOption(event.target.value, event.target.selectedOptions[0].getAttribute("data-category"))}>
-        {objectList.map((data: ObjectItem) =>
-          data.categoria ? (
-            <option key={data.id}
-              selected={selected === data.categoria}
-              value={data.id}
-              data-category={data.categoria}
-              className={selected === data.id ? 'selected' : ''}
-            >
-              {data.nome}
-            </option>
-          ) : (
-            <option key={data.id}>
-              <button>{data.nome}</button>
-            </option>
-          ),
-        )}
-      </select>
+    <div className="toolbar">
+      <div className='select'>
+        Ordenar por:
+        <select onChange={(event) => changeOption(event.target.value, event.target.selectedOptions[0].getAttribute("data-category"))}>
+          {objectList.map((data: ObjectItem) =>
+            data.categoria ? (
+              <option key={data.id}
+                selected={selected === data.categoria}
+                value={data.id}
+                data-category={data.categoria}
+                className={selected === data.id ? 'selected' : ''}
+              >
+                {data.nome}
+              </option>
+            ) : (
+              <option key={data.id}>
+                <button>{data.nome}</button>
+              </option>
+            ),
+          )}
+        </select>
+      </div>
       <ul>
         {objectList.map((data: ObjectItem) =>
           data.categoria ? (

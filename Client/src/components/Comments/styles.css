@@ -21,7 +21,6 @@
   padding: 8px !important;
   border-radius: 4px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-size: 18px !important;
   border: 1px solid #ccc;
   margin-bottom: 16px;
   font-weight: normal !important;
@@ -30,7 +29,6 @@
 
 .add-comment-form button {
   background-color: #2666d4;
-  width: 15%;
   margin: 10px 0;
   border-radius: 4px;
   padding: 8px;

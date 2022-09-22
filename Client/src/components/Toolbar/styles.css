@@ -1,4 +1,4 @@
-.Toolbar {
+.toolbar {
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   margin: 0 auto;
 }
 
-.Toolbar ul {
+.toolbar ul {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
@@ -24,31 +24,35 @@
   );
 }
 
-.Toolbar ul li {
+.toolbar ul li {
   display: inline-block;
 }
 
-.Toolbar ul li button {
+.toolbar ul li button {
   padding: 10px;
   font-size: 15px;
 }
 
-.Toolbar ul li button:hover {
+.toolbar ul li button:hover {
   background-color: #3e8e41;
   color: #fff;
   border-radius: 3px;
   transition: 0.5s;
 }
 
-.Toolbar ul li button.selected {
+.toolbar ul li button .selected {
   background-color: #3e8e41;
   color: #fff;
   border-radius: 3px;
   transition: 0.5s;
 }
 
-.Toolbar select {
+.toolbar .select {
   display: none;
+  align-items: center;
+}
+
+.toolbar .select select {
   padding: 10px;
   font-size: 15px;
   border: none;
@@ -58,7 +62,7 @@
 }
 
 @media screen and (max-width: 350px) {
-  .Toolbar {
+  .toolbar {
     mask: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0) 0%,
@@ -68,24 +72,25 @@
     );
   }
 
-  .Toolbar ul li {
+  .toolbar ul li {
     display: block;
     font-size: 10px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .Toolbar ul li {
+  .toolbar ul li {
     display: block;
     font-size: 10px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .Toolbar ul {
+  .toolbar ul {
     display: none;
   }
-  .Toolbar select {
+  .toolbar .select {
     display: block;
+    padding: 5px 0;
   }
 }
