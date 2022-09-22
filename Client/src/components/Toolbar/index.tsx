@@ -16,8 +16,31 @@ interface ToolbarProps {
 export default function Toolbar({ objectList, filtro }: ToolbarProps) {
   const [selected, setSelected] = useState('')
 
+  function changeOption(id: any, category: any) {
+    filtro(category)
+    setSelected(id)
+  }
+
   return (
     <div className="Toolbar">
+      <select onChange={(event) => changeOption(event.target.value, event.target.selectedOptions[0].getAttribute("data-category"))}>
+        {objectList.map((data: ObjectItem) =>
+          data.categoria ? (
+            <option key={data.id}
+              selected={selected === data.categoria}
+              value={data.id}
+              data-category={data.categoria}
+              className={selected === data.id ? 'selected' : ''}
+            >
+              {data.nome}
+            </option>
+          ) : (
+            <option key={data.id}>
+              <button>{data.nome}</button>
+            </option>
+          ),
+        )}
+      </select>
       <ul>
         {objectList.map((data: ObjectItem) =>
           data.categoria ? (

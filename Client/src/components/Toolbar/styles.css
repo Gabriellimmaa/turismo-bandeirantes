@@ -47,6 +47,16 @@
   transition: 0.5s;
 }
 
+.Toolbar select {
+  display: none;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  margin-left: 10px;
+}
+
 @media screen and (max-width: 350px) {
   .Toolbar {
     mask: linear-gradient(
@@ -64,11 +74,7 @@
   }
 }
 
-@media screen and (max-width: 440px) {
-  .Toolbar ul {
-    display: inline-block;
-  }
-
+@media screen and (max-width: 425px) {
   .Toolbar ul li {
     display: block;
     font-size: 10px;
@@ -76,13 +82,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  
   .Toolbar ul {
-    display: inline-block;
+    display: none;
   }
-
-  .Toolbar ul li {
+  .Toolbar select {
     display: block;
-    font-size: 10px;
   }
 }
