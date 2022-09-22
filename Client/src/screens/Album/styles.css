@@ -17,3 +17,16 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+    .album-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .album-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  
