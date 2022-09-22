@@ -25,12 +25,16 @@
 .navigation .language-dropdown-content {
   display: none;
   position: absolute;
-  top: 35%;
+  top: 60%;
   left: 20px;
   background-color: #f9f9f9;
   min-width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 3;
+}
+
+.navigation .language-dropdown-content-hidden {
+  display: none;
 }
 
 .navigation .language-dropdown-content a {

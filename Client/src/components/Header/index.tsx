@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
+  const [isLangExpanded, setIsLangExpanded] = useState(false)
 
   const { t, i18n } = useTranslation()
 
@@ -76,36 +77,41 @@ export default function Header() {
             </button>
           </div>
           <div id="optionLanguageMobile">
+            <button onClick={() => { setIsLangExpanded(!isLangExpanded) }}>
             <div className="items-center">
               <IoLanguage size={18} />
               <span> Tradução </span>
               <IoIosArrowDown className="m-auto" />
             </div>
-            <span></span>
-            <div className="language-dropdown-content">
+            </button>
+            <div
+              className={
+                isLangExpanded ? 'language-dropdown-content-hidden' : 'language-dropdown-content'
+              }>
               <ul>
                 <li>
-                  <button onClick={() => handleChangeLng('br')}>
+                  <button onClick={() => { handleChangeLng('br'); setIsLangExpanded(!isLangExpanded) }}>
                     <img className="w-auto h-10 m-1 ml-10" src={brasil} />
                   </button>
                 </li>
                 <li>
-                  <button>
+                  <button onClick={() => { handleChangeLng('fr'); setIsLangExpanded(!isLangExpanded) }}>
                     <img className="w-auto h-10 m-1 ml-10" src={france} />
                   </button>
                 </li>
                 <li>
-                  <button>
+                  <button onClick={() => { handleChangeLng('es'); setIsLangExpanded(!isLangExpanded) }}>
                     <img className="w-auto h-10 m-1 ml-10" src={spain} />
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleChangeLng('en')}>
+                  <button onClick={() => { handleChangeLng('en'); setIsLangExpanded(!isLangExpanded) }}>
                     <img className="w-auto h-10 m-1 ml-10" src={english} />
                   </button>
                 </li>
               </ul>
             </div>
+            <span></span>
           </div>
         </div>
         <div className="flex justify-center">
@@ -152,20 +158,18 @@ export default function Header() {
           </div>
         </div>
         <button
-        className="hamburger"
-        onClick={() => {
-          setIsNavExpanded(!isNavExpanded)
-        }}
-      >
-        <FaBars />
-      </button>
+          className="hamburger"
+          onClick={() => { setIsNavExpanded(!isNavExpanded) }}
+        >
+          <FaBars />
+        </button>
       </div>
       <div
         className={
           isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
         }
       >
-        <ul className="navigation-menu-ul">
+        <ul className="navigation-menu-ul" onClick={() => { setIsNavExpanded(!isNavExpanded) }}>
           <li>
             <Link to="/">{t('navbar.inicio')}</Link>
           </li>
