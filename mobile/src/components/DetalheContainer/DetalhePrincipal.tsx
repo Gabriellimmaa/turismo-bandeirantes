@@ -26,17 +26,14 @@ export function DetalhePrincipal({
 }: PropsGeral){
   const { colors } = useTheme();
   const navigation = useNavigation();
-  console.log(tipo)
+
   const linkSite = site.indexOf('http') === -1 ? `http://${site}` : site;
   return (
     <VStack >
       <Box>
         <Box ml="5" zIndex={99} shadow={9}>
-          <Button  position="absolute" top={16} w={10} h={10} left={0} bg="gray.100" borderRadius={99}  _pressed={{bg: "gray.200"}}  onPress={() => navigation.dispatch(
-            CommonActions.navigate({
-              name: `${tipo}`
-            })
-          ) } >
+          <Button  position="absolute" top={16} w={10} h={10} left={0} bg="gray.100" borderRadius={99}  _pressed={{bg: "gray.200"}}  
+          onPress={() => navigation.goBack()} >
             <Text position="absolute" top={-6}  left={-14}><MaterialCommunityIcons name="chevron-left" color={colors.green['700']} size={28} /></Text>
           </Button>
         </Box>

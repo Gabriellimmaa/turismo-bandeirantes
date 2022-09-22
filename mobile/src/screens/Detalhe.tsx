@@ -14,22 +14,28 @@ export function Detalhe({ route }: any) {
     async function verificaRota(){
       switch (route.params.rota) {
         case "Turismo":
-          await api.get(`/atracoes/${route.params.id}`).then((response) => {
+          await api.get(`/atracoes/${route.params.id}`)
+          .then((response) => {
             setDetalhe(response.data.atracoes);
             setLoading(true)
-          });
+          })
+          .catch(error => console.log(error));
           break;
         case "Restaurante":
-          await api.get(`/restaurantes/${route.params.id}`).then((response) => {
+          await api.get(`/restaurantes/${route.params.id}`)
+          .then((response) => {
             setDetalhe(response.data.restaurantes)
             setLoading(true)
           })
+          .catch(error => console.log(error));
           break;
         case "Hotel": 
-          await api.get(`/hoteis/${route.params.id}`).then((response) => {
+          await api.get(`/hoteis/${route.params.id}`)
+          .then((response) => {
             setDetalhe(response.data.hoteis)
             setLoading(true)
           })
+          .catch(error => console.log(error));
           break;
         default:
           break
