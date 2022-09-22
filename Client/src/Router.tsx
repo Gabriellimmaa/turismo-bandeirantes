@@ -12,7 +12,8 @@ import Map from './screens/Map'
 import { RestauranteDetail } from './screens/Details/RestauranteDetail'
 import { Album } from './screens/Album'
 import { BarDetail } from './screens/Details/BarDetail'
-import Login from './screens/Login'
+import Login from './screens/Dashboard/Login'
+import CadastrarTurismo from './screens/Dashboard/CadastrarTurismo'
 
 export function Router() {
   return (
@@ -38,7 +39,9 @@ export function Router() {
 
       <Route path="/map" element={<Map />} />
 
+      {/* DASHBOARD */}
       <Route path="/login" element={<Login />} />
+      <Route path="/admin/cadastrar-turismo" element={<CadastrarTurismo />} />
     </Routes>
   )
 }

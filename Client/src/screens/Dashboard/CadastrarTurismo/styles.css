@@ -1,0 +1,69 @@
+.cadastrar-turismo form {
+  @apply grid gap-2;
+}
+
+.cadastrar-turismo form div {
+  @apply grid gap-5;
+}
+
+.cadastrar-turismo label {
+  font-size: 20px;
+  font-weight: bold;
+  @apply flex items-center gap-2;
+}
+
+.cadastrar-turismo label input[type="file"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cadastrar-turismo label span {
+    font-size: 12px;
+    @apply text-red-600
+}
+
+.cadastrar-turismo input[type="text"],
+.cadastrar-turismo select,
+.cadastrar-turismo textarea,
+.cadastrar-turismo input[type="password"],
+.cadastrar-turismo select,
+.cadastrar-turismo textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  transition: 0.3s;
+}
+
+.cadastrar-turismo textarea {
+  margin-bottom: 0 !important;
+}
+
+.cadastrar-turismo input[type="text"]:focus,
+.cadastrar-turismo textarea:focus,
+.cadastrar-turismo select:focus {
+  outline: none;
+  border: 1px solid #2666d4;
+}
+
+.cadastrar-turismo button {
+  font-weight: bold;
+  background-color: #45a049;
+  color: white;
+  padding: 25px 0;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  height: 22%;
+}
+
+.cadastrar-turismo button:hover {
+  transition: 500ms ease;
+  filter: brightness(0.8);
+}
