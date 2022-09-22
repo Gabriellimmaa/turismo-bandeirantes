@@ -40,7 +40,7 @@
   transition: 0.5s;
 }
 
-.toolbar ul li button .selected {
+.toolbar ul li button.selected {
   background-color: #3e8e41;
   color: #fff;
   border-radius: 3px;

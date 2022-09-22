@@ -1,85 +1,59 @@
-import Card from '../../components/Card'
+
 import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from './optionData'
+import { listAgenda } from './listAgenda'
 import './styles.css'
-
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { CardAgenda } from '../../components/CardAgenda'
+
+interface AgendaProps {
+  id: number | string
+  titulo: string
+  descricao: string
+  data: string
+  endereco: string
+  website: string
+  telefone: string
+  email: string
+  imagem: string
+
+}
 
 export function Agenda() {
   const { t } = useTranslation()
+  const [filter, setFilter] = useState<string>('')
+  const [agenda, setAgenda] = useState<AgendaProps[]>([])
+  const filtro = (childdata: string) => {
+    setFilter(childdata)
+  }
+
+  useEffect(() => {
+    setAgenda(listAgenda)
+  }, [])
+
   return (
     <section id="agenda">
       <div className="title-style-1">
         <h1>{t('paginas.agenda.titulo')}</h1>
         <h2>{t('paginas.agenda.subtitulo')}</h2>
       </div>
-      <Toolbar objectList={optionAgenda} />
-      <div className="grid grid-cols-3 gap-5 justify-items-center mt-6">
-        <Card
-          id={1}
-          type="agenda"
-          description="Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza"
-          title="Lazer e esporte"
-          date="30/01/2022"
-          locale="Av. Azárias Viêira de Rezende, 301 - Bandeirantes"
-          img="https://www.bandeirantes.pr.gov.br/public/admin/globalarq/uploads/images/turismo/__thumbs/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado.jpg/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado__512x342.jpg"
-        />
-        <Card
-          id={1}
-          type="agenda"
-          description="Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza"
-          title="Lazer e esporte"
-          date="30/01/2022"
-          locale="Av. Azárias Viêira de Rezende, 301 - Bandeirantes"
-          img="https://www.bandeirantes.pr.gov.br/public/admin/globalarq/uploads/images/turismo/__thumbs/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado.jpg/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado__512x342.jpg"
-        />
-        <Card
-          id={1}
-          type="agenda"
-          description="Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza"
-          title="Lazer e esporte"
-          date="30/01/2022"
-          locale="Av. Azárias Viêira de Rezende, 301 - Bandeirantes"
-          img="https://www.bandeirantes.pr.gov.br/public/admin/globalarq/uploads/images/turismo/__thumbs/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado.jpg/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado__512x342.jpg"
-        />
-        <Card
-          id={1}
-          type="agenda"
-          description="Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza"
-          title="Lazer e esporte"
-          date="30/01/2022"
-          locale="Av. Azárias Viêira de Rezende, 301 - Bandeirantes"
-          img="https://www.bandeirantes.pr.gov.br/public/admin/globalarq/uploads/images/turismo/__thumbs/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado.jpg/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado__512x342.jpg"
-        />
-        <Card
-          id={1}
-          type="agenda"
-          description="Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza Nossa cidade é o seu destino perfeito Cultura, esporte, lazer,
-          muito ar puro e belos momentos natureza"
-          title="Lazer e esporte"
-          date="30/01/2022"
-          locale="Av. Azárias Viêira de Rezende, 301 - Bandeirantes"
-          img="https://www.bandeirantes.pr.gov.br/public/admin/globalarq/uploads/images/turismo/__thumbs/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado.jpg/Santuário%20São%20Miguel%20Arcanjo%20EstatuaResultado__512x342.jpg"
-        />
+      <Toolbar objectList={optionAgenda} filtro={filtro} />
+
+      <div className="grid grid-cols-1 gap-5 justify-items-center mt-6">
+        {
+          listAgenda.map((item) => {
+            return (
+              <CardAgenda
+                key={item.id}
+                titulo={item.titulo}
+                descricao={item.descricao}
+                data={item.data}
+                imagem={item.imagem}
+              />
+            )
+          })
+        }
       </div>
     </section>
   )
