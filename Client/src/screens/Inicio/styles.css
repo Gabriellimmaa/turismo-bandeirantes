@@ -56,6 +56,10 @@
   filter: brightness(.8);
 }
 
+.inicio-section {
+  padding: 0 1rem !important;
+}
+
 .inicio h1 {
   text-transform: uppercase;
   font-size: 64px;
@@ -78,3 +82,9 @@
   }
 }
 
+
+@media screen and (max-width: 425px) {
+  .inicio h1 {
+    font-size: 45px;
+  }
+}

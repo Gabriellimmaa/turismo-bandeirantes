@@ -1,186 +1,196 @@
+
 .navigation {
-    width: 100%;
-    align-items: center;
-    position: relative;
-    background-color: #fff;
-    color: black;
-    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  width: 100%;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  z-index: 999;
 }
 
 .brand-name {
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    margin-left: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
 }
 
 .navigation #optionLanguageMobile {
-    position: relative;
-    display: inline-block;
-    z-index: 100;
+  position: relative;
+  display: inline-block;
+  z-index: 100;
 }
 
 .navigation .language-dropdown-content {
-    display: none;
-    position: absolute;
-    top: 35%;
-    left: 20px;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 20px;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 .navigation .language-dropdown-content a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navigation #optionLanguageMobile div:first-child {
-    display: inline-flex;
-    margin-left: 20px;
+  display: inline-flex;
+  margin-left: 20px;
 }
 
 .navigation #optionLanguageMobile div:first-child span {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .navigation #optionLanguageMobile li:hover {
-    background-color: rgb(195, 195, 195);
-    transition: 0.3s;
+  background-color: rgb(195, 195, 195);
+  transition: 0.3s;
 }
 
 .navigation #optionLanguageMobile:hover .language-dropdown-content {
-    display: block;    
+  display: block;
 }
 
 .navigation .navigation-menu {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .navigation .navigation-menu ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  border-radius: 5px;
 }
 
 .navigation .navigation-menu li {
-    list-style-type: none;
-    margin: 0 0rem;
-    transition: .3s;
+  list-style-type: none;
+  margin: 0 0rem;
+  transition: 0.3s;
 }
 
 .navigation .navigation-menu li a {
-    justify-content: center;
-    text-decoration: none;
-    display: inline-flex;
-    width: 100%;
-    padding: 10px;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-flex;
+  width: 100%;
+  padding: 10px;
 }
 
 .navigation .navigation-menu li a:hover {
-    /* width: 110%; */
-    color: white;
-    background-color: rgb(62, 142, 65, 1);
-    transition: 0.4s;
-    border-radius: 3px;
-    /* box-shadow: 0 0 1em #283729; */
+  /* width: 110%; */
+  color: white;
+  background-color: rgb(62, 142, 65, 1);
+  transition: 0.4s;
+  border-radius: 3px;
+  /* box-shadow: 0 0 1em #283729; */
 }
 
 .navigation .navigation-menu-ul {
-    /* box-shadow: 0 0 0.5em #283729; */
-    z-index: 1;
+  /* box-shadow: 0 0 0.5em #283729; */
+  z-index: 1;
 }
 
 .navigation .navigation-menu-ul li {
-    width: 100%;
-    white-space: nowrap;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .navigation .hamburger {
-    border: 0;
-    height: 40px;
-    width: 40px;
-    padding: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    position: absolute;
-    top: 25%;
-    right: 50px;
-    transform: translateY(-50%);
-    display: none;
-    justify-content: center;
-    align-items: center;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  margin-left: auto;
+  right: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
-.navigation .hamburger:hover {
-    background-color: #3e8e41;
-}
 
 .navigation #optionLanguageMobile {
-    display: none;
+  display: none;
 }
 
 .navigation #optionLanguageDesktop {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navigation #optionLanguageDesktop a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+  }
+  section {
+    padding-top: 95px !important;
+  }
 
-@media screen and (max-width: 1024px) {
-    .navigation #optionLanguageMobile {
-        display: contents;
-    }
-    .navigation #optionLanguageDesktop {
-        display: none;
-    }
+  .navigation #optionLanguageMobile {
+    display: contents;
+  }
+  .navigation #optionLanguageDesktop {
+    display: none;
+  }
 
-    .navigation .hamburger {
-        display: flex;
-    }
+  .navigation .hamburger {
+    display: flex;
+  }
 
-    .navigation .navigation-menu ul {
-        display: none;
-        position: absolute;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 77px);
-        background-color: white;
-        border-top: 1px solid black;
-        border-radius: 0;
-        z-index: 2;
-    }
+  .navigation .navigation-menu ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+    border-radius: 0;
+    z-index: 2;
+  }
 
-    .navigation .navigation-menu li {
-        text-align: center;
-        margin: 0;
-    }
+  .navigation .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
 
-    .navigation .navigation-menu li a {
-        color: black;
-        width: 100%;
-        padding: 1.2rem 0;
-    }
+  .navigation .navigation-menu li a {
+    color: black;
+    width: 100%;
+    padding: 1.2rem 0;
+  }
 
-    .navigation .navigation-menu li:hover {
-        background-color: #eee;
-    }
+  .navigation .navigation-menu li:hover {
+    background-color: #eee;
+  }
 
-    .navigation .navigation-menu.expanded ul {
-        display: block;
-    }
+  .navigation .navigation-menu.expanded ul {
+    display: block;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .navigation .access {
+    display: none;
+  }
+  .navigation #optionLanguageMobile div:first-child span {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 390px) {
-    .navigation #optionLanguageMobile div:first-child span {
-        display: none;
-    }
+
 }

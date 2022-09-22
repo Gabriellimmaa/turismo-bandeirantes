@@ -22,10 +22,10 @@ export default function Inicio() {
   const { t } = useTranslation()
   return (
     <>
-      <div className="w-full h-[65%]">
+      <div className="w-full h-[65%] pt-20 md:pt-0">
         <Carousel />
       </div>
-      <section>
+      <section className='inicio-section'>
         <div className="acessoRapido inicio">
           <div className="w-full">
             <div className="w-full mt-10 mb-14">
@@ -101,7 +101,7 @@ export default function Inicio() {
           </span>
         </div>
       </div>
-      <section className='inicio'>
+      <section className='inicio inicio-section'>
         <div className="turismo w-full">
           <div className="w-full px-10">
             <div className="w-full mt-10 flex justify-center">

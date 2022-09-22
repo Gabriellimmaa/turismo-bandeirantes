@@ -135,19 +135,12 @@ input, textarea {
   section {
     padding: 1rem 3rem;
   }
-  .grid-cols-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
 }
 
 @media screen and (max-width: 768px) {
   section {
     padding: 1rem 3rem;
   }
-  .grid-cols-3 {
-    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-  }
-
   .gap-5 {
     gap: 0 !important;
   }
@@ -157,6 +150,15 @@ input, textarea {
   section {
     padding: 1rem 1.5rem;
   }
+
+  .title-style-1 h1 {
+    font-size: 50px;
+  }
+
+  .title-style-1 h2 {
+    @apply text-base 
+  }
+
 }
 
 @media screen and (max-width: 390px) {

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { IoLanguage } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
@@ -58,9 +58,9 @@ export default function Header() {
   }
 
   return (
-    <nav className="navigation">
-      <div className="grid grid-cols-3 justify-center border-b-2 py-2">
-        <div className="flex justify-start ml-10">
+    <nav id="navigation" className="navigation">
+      <div className="grid grid-cols-3 justify-center border-b-2 py-2 items-center h-20 md:h-auto">
+        <div className="flex justify-start ml-0 md:ml-10">
           <div id="optionLanguageDesktop">
             <button onClick={() => handleChangeLng('br')}>
               <img className="w-auto h-10 m-1" src={brasil} />
@@ -113,7 +113,7 @@ export default function Header() {
             <img className="w-80 h-auto" src={logo} />
           </Link>
         </div>
-        <div className="flex items-center justify-end mr-10">
+        <div className="access flex items-center justify-end mr-10">
           <button
             className="font-zoom-mais"
             onClick={() => changefontsize('reset')}
@@ -151,8 +151,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </div>
-      <button
+        <button
         className="hamburger"
         onClick={() => {
           setIsNavExpanded(!isNavExpanded)
@@ -160,6 +159,7 @@ export default function Header() {
       >
         <FaBars />
       </button>
+      </div>
       <div
         className={
           isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'

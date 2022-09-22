@@ -49,13 +49,9 @@ export function Carousel() {
     }
   }
 
-  function teste(value: number) {
-    console.log(value)
-  }
-
   return (
     <>
-      <div className='absolute left-0 mt-10 z-50 bg-green-brasao2 p-2 pr-5 shadow-md '>
+      <div className='absolute left-0 mt-10 z-50 bg-green-brasao2 p-2 pr-5 shadow-md w-3/4 md:w-auto'>
         <h4 id='carousel-title' className='m-0 ml-16 text-white'>Santuario São Miguel Arcanjo</h4>
       </div>
       <Swiper

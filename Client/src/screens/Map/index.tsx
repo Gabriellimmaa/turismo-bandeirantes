@@ -107,7 +107,7 @@ export default function Map() {
         center={[-23.1115914, -50.3749315]}
         scrollWheelZoom={false}
         className="map"
-        style={{ height: '90vh', width: '100%', zIndex: 0 }}
+        style={{ height: '80vh', width: '100%', zIndex: 0 }}
       >
         <TileLayer
           url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN
