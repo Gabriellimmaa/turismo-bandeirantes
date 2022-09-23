@@ -23,7 +23,7 @@ export function Routes() {
         drawerStyle: {
           backgroundColor: colors.gray[100],
         },
-        drawerActiveBackgroundColor: colors.green[400],
+        drawerActiveBackgroundColor: colors.green[600],
         drawerActiveTintColor: colors.gray[100],
       }}
     >
