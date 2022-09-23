@@ -28,7 +28,7 @@ export function Routes() {
       }}
     >
       <Drawer.Screen
-        name="Home"
+        name="Início"
         component={Home}
         options={{
           drawerIcon: ({ focused, size, color }) => (
@@ -42,15 +42,6 @@ export function Routes() {
         options={{
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons name="hail" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Mapa Interativo"
-        component={Home}
-        options={{
-          drawerIcon: ({ focused, size, color }) => (
-            <MaterialCommunityIcons name="map-legend" size={size} color={color} />
           ),
         }}
       />
