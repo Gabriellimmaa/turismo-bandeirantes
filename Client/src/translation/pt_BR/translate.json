@@ -225,142 +225,142 @@
         "mapa": "Selecione o ponto no mapa:",
         "cadastro": "Cadastrar imagem"
       }
-    }
-  },
-  "inicio": {
-    "header": "ACESSO RÁPIDO",
-    "acesso-rapido": {
-      "mapa": {
-        "titulo": "Mapa Interativo",
-        "descricao": "Visualize o mapa interativo de Bandeirantes. Nossa cidade é o seu destino perfeito"
-      },
-      "hoteis": {
-        "titulo": "Hotéis",
-        "descricao": "Encontre Hotéis, Pousadas e Fazendas para se hospedar"
-      },
-      "turismo": {
-        "titulo": "Turismo",
-        "descricao": "Conheça nossos principais pontos turisticos"
-      },
-      "restaurantes": {
-        "titulo": "Restaurantes",
-        "descricao": "Quando a fome bater, nossa comida vai te surpreender! Pratos e sabores inesquecíveis"
-      },
-      "album": {
-        "titulo": "Álbum",
-        "descricao": "Ainda tem dúvidas se dever conhecer a cidade? Então acesse nossas fotos e se encante com a beleza da cidade"
-      },
-      "agenda": {
-        "titulo": "Agenda",
-        "descricao": "Conheça nosso calendário de eventos para não perder nenhuma atração."
-      }
-    }
-  },
-  "historia": {
-    "header": "História",
-    "topico1": {
-      "titulo": "Como começou",
-      "paragrafo1": "Até o Ano de 1920, a região era um sertão bruto, habitado apenas pelos índios da tribo Caingangues. O primeiro a explorar este território foi o Engenheiro Carlos Borromei, onde ergue seu acampamento em uma clareira aberta no meio das matas à margens do Ribeirão das Antas. Em 24 de dezembro de 1926, D. Josefina Alves de Lima, proprietária de grande gleba de terras na Fazenda Laranjinha, ao proceder a divisão desse imóvel, vendeu a João Manoel dos Santos dez alqueires de terra, destinados a fundação de um povoado, que deveria ser denominado Invernada.",
-      "paragrafo2": "Em 12 de abril de 1929, foi criado o Distrito de Invernada, como parte integrante do Município de Jacarezinho, sendo instalado no dia 8 de dezembro do mesmo ano. Em julho de 1930, a Empresa Ferroviária São Paulo - Paraná, inaugurou uma estação ferroviária, a 3 quilômetros do patrimônio de Invernada, que passou a denominar-se Bandeirantes, surgindo, então, um povoado nas proximidades da estação, em terreno de propriedade de Juvenal Mesquita. Em 27 de setembro de 1931, um pugilo de homens de boa vontade, iniciou um trabalho de coligação em favor do progresso da estação e, consequentemente, sobreveio a queda de Invernada, onde se achavam o cartório, a Coletoria Estadual, casas, hotéis, casas de comércio, farmácias, correios, etc.",
-      "paragrafo3": "Em 1932, o então Interventor Federal no Paraná, visitou Bandeirantes, notando que o povo desejava a criação do município. Houve a unificação dos dois povoados: Bandeirantes e Invernada. Dando inicio a história de Bandeirantes"
     },
-    "topico2": {
-      "titulo": "Bandeirantes: “Um lugar de fé, natureza e tradições”",
-      "paragrafo1": "Localizada no Norte Pioneiro do Paraná, Bandeirantes se distingue pela terra fértil e pelo povo oriundo de diversas partes do Brasil e do mundo. O município tem forte influência dos paulistas, mineiros, italianos, japoneses e portugueses, origem primordial das vocações econômicas e turísticas do município.",
-      "paragrafo2": "A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local."
-    },
-    "topico3": {
-      "titulo": "Bandeirantes em números",
-      "inauguracao": {
-        "titulo": "Inauguração",
-        "descricao": "14 de novembro de 1934"
-      },
-      "gentilico": {
-        "titulo": "Gentílico",
-        "descricao": "Bandeirantense"
-      },
-      "populacao": {
-        "titulo": "População",
-        "descricao": " 32.184 (Censo IBGE [2010])"
-      },
-      "territorio": {
-        "titulo": "Área da unidade territorial [2022]",
-        "descricao": "445,192 km²"
-      },
-      "densidade": {
-        "titulo": "Densidade demográfica",
-        "descricao": "72,29 hab/km²"
-      },
-      "bioma": {
-        "titulo": "Bioma",
-        "descricao": "Mata Atlântica"
-      },
-      "altitude": {
-        "titulo": "Altitude",
-        "descricao": "420 m"
-      },
-      "clima": {
-        "titulo": "Clima",
-        "descricao": "Tropical. Verão é longo, quente, abafado e de céu quase encoberto; o inverno é curto, agradável e de céu quase sem nuvens"
-      },
-      "temperatura": {
-        "titulo": "Temperatura média",
-        "descricao": "15°C a 31°C"
-      },
-      "renda": {
-        "titulo": "Renda per capita (média mensal)",
-        "descricao": "Conheça nosso calendário de eventos para não perder nenhuma atração."
-      },
-      "idh": {
-        "titulo": "Índice de Desenvolvimento Humano (IDH)",
-        "descricao": "0,727 (IBGE 2010)"
-      },
-      "pib": {
-        "titulo": "PIB per capita [2019]",
-        "descricao": "25.807,42 R$"
+    "inicio": {
+      "header": "ACESSO RÁPIDO",
+      "acesso-rapido": {
+        "mapa": {
+          "titulo": "Mapa Interativo",
+          "descricao": "Visualize o mapa interativo de Bandeirantes. Nossa cidade é o seu destino perfeito"
+        },
+        "hoteis": {
+          "titulo": "Hotéis",
+          "descricao": "Encontre Hotéis, Pousadas e Fazendas para se hospedar"
+        },
+        "turismo": {
+          "titulo": "Turismo",
+          "descricao": "Conheça nossos principais pontos turisticos"
+        },
+        "restaurantes": {
+          "titulo": "Restaurantes",
+          "descricao": "Quando a fome bater, nossa comida vai te surpreender! Pratos e sabores inesquecíveis"
+        },
+        "album": {
+          "titulo": "Álbum",
+          "descricao": "Ainda tem dúvidas se dever conhecer a cidade? Então acesse nossas fotos e se encante com a beleza da cidade"
+        },
+        "agenda": {
+          "titulo": "Agenda",
+          "descricao": "Conheça nosso calendário de eventos para não perder nenhuma atração."
+        }
       }
+    },
+    "historia": {
+      "header": "História",
+      "topico1": {
+        "titulo": "Como começou",
+        "paragrafo1": "Até o Ano de 1920, a região era um sertão bruto, habitado apenas pelos índios da tribo Caingangues. O primeiro a explorar este território foi o Engenheiro Carlos Borromei, onde ergue seu acampamento em uma clareira aberta no meio das matas à margens do Ribeirão das Antas. Em 24 de dezembro de 1926, D. Josefina Alves de Lima, proprietária de grande gleba de terras na Fazenda Laranjinha, ao proceder a divisão desse imóvel, vendeu a João Manoel dos Santos dez alqueires de terra, destinados a fundação de um povoado, que deveria ser denominado Invernada.",
+        "paragrafo2": "Em 12 de abril de 1929, foi criado o Distrito de Invernada, como parte integrante do Município de Jacarezinho, sendo instalado no dia 8 de dezembro do mesmo ano. Em julho de 1930, a Empresa Ferroviária São Paulo - Paraná, inaugurou uma estação ferroviária, a 3 quilômetros do patrimônio de Invernada, que passou a denominar-se Bandeirantes, surgindo, então, um povoado nas proximidades da estação, em terreno de propriedade de Juvenal Mesquita. Em 27 de setembro de 1931, um pugilo de homens de boa vontade, iniciou um trabalho de coligação em favor do progresso da estação e, consequentemente, sobreveio a queda de Invernada, onde se achavam o cartório, a Coletoria Estadual, casas, hotéis, casas de comércio, farmácias, correios, etc.",
+        "paragrafo3": "Em 1932, o então Interventor Federal no Paraná, visitou Bandeirantes, notando que o povo desejava a criação do município. Houve a unificação dos dois povoados: Bandeirantes e Invernada. Dando inicio a história de Bandeirantes"
+      },
+      "topico2": {
+        "titulo": "Bandeirantes: “Um lugar de fé, natureza e tradições”",
+        "paragrafo1": "Localizada no Norte Pioneiro do Paraná, Bandeirantes se distingue pela terra fértil e pelo povo oriundo de diversas partes do Brasil e do mundo. O município tem forte influência dos paulistas, mineiros, italianos, japoneses e portugueses, origem primordial das vocações econômicas e turísticas do município.",
+        "paragrafo2": "A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local."
+      },
+      "topico3": {
+        "titulo": "Bandeirantes em números",
+        "inauguracao": {
+          "titulo": "Inauguração",
+          "descricao": "14 de novembro de 1934"
+        },
+        "gentilico": {
+          "titulo": "Gentílico",
+          "descricao": "Bandeirantense"
+        },
+        "populacao": {
+          "titulo": "População",
+          "descricao": " 32.184 (Censo IBGE [2010])"
+        },
+        "territorio": {
+          "titulo": "Área da unidade territorial [2022]",
+          "descricao": "445,192 km²"
+        },
+        "densidade": {
+          "titulo": "Densidade demográfica",
+          "descricao": "72,29 hab/km²"
+        },
+        "bioma": {
+          "titulo": "Bioma",
+          "descricao": "Mata Atlântica"
+        },
+        "altitude": {
+          "titulo": "Altitude",
+          "descricao": "420 m"
+        },
+        "clima": {
+          "titulo": "Clima",
+          "descricao": "Tropical. Verão é longo, quente, abafado e de céu quase encoberto; o inverno é curto, agradável e de céu quase sem nuvens"
+        },
+        "temperatura": {
+          "titulo": "Temperatura média",
+          "descricao": "15°C a 31°C"
+        },
+        "renda": {
+          "titulo": "Renda per capita (média mensal)",
+          "descricao": "Conheça nosso calendário de eventos para não perder nenhuma atração."
+        },
+        "idh": {
+          "titulo": "Índice de Desenvolvimento Humano (IDH)",
+          "descricao": "0,727 (IBGE 2010)"
+        },
+        "pib": {
+          "titulo": "PIB per capita [2019]",
+          "descricao": "25.807,42 R$"
+        }
+      }
+    },
+    "turismo": {
+      "titulo": "Turismo",
+      "subtitulo": "Lugar de fé, natureza e tradições"
+    },
+    "restaurantes": {
+      "titulo": "Restaurantes",
+      "subtitulo": "Conheça nossos restaurantes!"
+    },
+    "hoteis": {
+      "titulo": "Hotéis",
+      "subtitulo": "ENCONTRE HOTÉIS, POUSADAS E MUITO OUTROS LUGARES PARA SE HOSPEDAR!"
+    },
+    "agenda": {
+      "titulo": "Agenda",
+      "subtitulo": "Conheça nossa agenda de eventos!"
+    },
+    "contato": {
+      "titulo": "Contato",
+      "menssagem": "Envie-nos uma Mensagem",
+      "nome": "Nome",
+      "contato": "Contato",
+      "sugestao": "Sugestão"
+    },
+    "album": {
+      "titulo": "Álbum",
+      "subtitulo": "Conheça nosso álbum de fotos!"
+    },
+    "detail": {
+      "descricao": "Descriçao:",
+      "endereco": "Endereço",
+      "contatos": "Contatos:",
+      "comentarios": "Comentários",
+      "avaliacoes": "Avaliações",
+      "googleMaps": "Abrir no Google Maps",
+      "email": "Entre em contato pelo email",
+      "site": "visite o site",
+      "visitar": "visite",
+      "cardapio": "Cardápio:",
+      "cozinha": "Cozinhas:",
+      "preco": "Preço:",
+      "telefone": "Telefone:"
     }
-  },
-  "turismo": {
-    "titulo": "Turismo",
-    "subtitulo": "Lugar de fé, natureza e tradições"
-  },
-  "restaurantes": {
-    "titulo": "Restaurantes",
-    "subtitulo": "Conheça nossos restaurantes!"
-  },
-  "hoteis": {
-    "titulo": "Hotéis",
-    "subtitulo": "ENCONTRE HOTÉIS, POUSADAS E MUITO OUTROS LUGARES PARA SE HOSPEDAR!"
-  },
-  "agenda": {
-    "titulo": "Agenda",
-    "subtitulo": "Conheça nossa agenda de eventos!"
-  },
-  "contato": {
-    "titulo": "Contato",
-    "menssagem": "Envie-nos uma Mensagem",
-    "nome": "Nome",
-    "contato": "Contato",
-    "sugestao": "Sugestão"
-  },
-  "album": {
-    "titulo": "Álbum",
-    "subtitulo": "Conheça nosso álbum de fotos!"
-  },
-  "detail": {
-    "descricao": "Descriçao:",
-    "endereco": "Endereço",
-    "contatos": "Contatos:",
-    "comentarios": "Comentários",
-    "avaliacoes": "Avaliações",
-    "googleMaps": "Abrir no Google Maps",
-    "email": "Entre em contato pelo email",
-    "site": "visite o site",
-    "visitar": "visite",
-    "cardapio": "Cardápio:",
-    "cozinha": "Cozinhas:",
-    "preco": "Preço:",
-    "telefone": "Telefone:"
   }
 }
