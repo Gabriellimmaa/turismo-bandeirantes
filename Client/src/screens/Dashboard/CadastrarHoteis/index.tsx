@@ -61,17 +61,15 @@ export default function CadastrarBares() {
           <h2></h2>
         </div>
         <form>
-          <div className='grid-cols-1 md:grid-cols-2'>
-            <span>
-              <label htmlFor="nome"><MdTitle /> Nome: <span>*Obrigatório</span> </label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Insira o nome do local"
-              />
-            </span>
-          </div>
+          <span>
+            <label htmlFor="nome"><MdTitle /> Nome: <span>*Obrigatório</span> </label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Insira o nome do local"
+            />
+          </span>
 
           <span>
             <label htmlFor="descricao"><BsTextIndentLeft /> Descrição: <span>*Obrigatório</span></label>
