@@ -18,6 +18,7 @@ import CadastrarBares from './screens/Dashboard/CadastrarBares'
 import CadastrarHoteis from './screens/Dashboard/CadastrarHoteis'
 import CadastrarAlbum from './screens/Dashboard/CadastrarAlbum'
 import CadastrarAgenda from './screens/Dashboard/CadastrarAgenda'
+import CadastrarRestaurantes from './screens/Dashboard/CadastrarRestaurantes'
 
 export function Router() {
   return (
@@ -46,10 +47,14 @@ export function Router() {
       {/* DASHBOARD */}
       <Route path="/login" element={<Login />} />
       <Route path="/admin/cadastrar-turismo" element={<CadastrarTurismo />} />
-      <Route path="/admin/cadastrar-bares" element={<CadastrarBares />} />
-      <Route path="/admin/cadastrar-hoteis" element={<CadastrarHoteis />} />
+      <Route path="/admin/cadastrar-bar" element={<CadastrarBares />} />
+      <Route path="/admin/cadastrar-hotel" element={<CadastrarHoteis />} />
       <Route path="/admin/cadastrar-album" element={<CadastrarAlbum />} />
       <Route path="/admin/cadastrar-agenda" element={<CadastrarAgenda />} />
+      <Route
+        path="/admin/cadastrar-restaurantes"
+        element={<CadastrarRestaurantes />}
+      />
     </Routes>
   )
 }

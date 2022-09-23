@@ -1,6 +1,5 @@
 import { MdTitle } from 'react-icons/md';
 import { BiCategoryAlt } from 'react-icons/bi';
-import { HiOutlinePhotograph } from 'react-icons/hi';
 import { BsTextIndentLeft } from 'react-icons/bs';
 import { BiMapPin } from 'react-icons/bi';
 import { FaWhatsapp } from 'react-icons/fa'
@@ -11,30 +10,24 @@ import { useTranslation } from 'react-i18next'
 
 import {
   BiRestaurant,
-  BiCalendar,
-  BiMap,
   BiMoney,
   BiPhoneCall,
   BiPlanet,
-  BiTime,
   BiMailSend,
 } from 'react-icons/bi'
-import { TbToolsKitchen } from 'react-icons/tb'
-import { MdMenuBook } from 'react-icons/md'
 
-import { MapContainer, Marker, TileLayer, useMapEvents } from 'react-leaflet';
-import L, { LeafletMouseEvent } from 'leaflet';
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
+import L from 'leaflet';
 import { useState, useTransition } from 'react'
 import './styles.css'
-
-import marcadorTurismo from '../../../assets/marcadores/vermelho.png'
+import marcadorBar from '../../../assets/marcadores/laranja.png'
 
 export default function CadastrarBares() {
   const { t } = useTranslation()
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
-    iconUrl: marcadorTurismo,
+    iconUrl: marcadorBar,
     iconSize: [80, 80],
     iconAnchor: [40, 65],
     popupAnchor: [0, -55],

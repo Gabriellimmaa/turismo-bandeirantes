@@ -1,57 +1,17 @@
 import { MdTitle } from 'react-icons/md';
 import { BiCategoryAlt } from 'react-icons/bi';
-import { HiOutlinePhotograph } from 'react-icons/hi';
 import { BsTextIndentLeft } from 'react-icons/bs';
 import { BiMapPin } from 'react-icons/bi';
-import { FaWhatsapp } from 'react-icons/fa'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import { FiFacebook } from 'react-icons/fi'
 import {
-    BiCalendar,
-    BiMap,
-    BiMoney,
-    BiPhoneCall,
     BiPlanet,
-    BiImageAdd,
-    BiTime,
+    BiPhoneCall,
     BiMailSend,
 } from 'react-icons/bi'
-import { TbToolsKitchen } from 'react-icons/tb'
-import { MdMenuBook } from 'react-icons/md'
-
-import { MapContainer, Marker, TileLayer, useMapEvents } from 'react-leaflet';
-import L, { LeafletMouseEvent } from 'leaflet';
-import { useState } from 'react'
 import './styles.css'
 
 import marcadorTurismo from '../../../assets/marcadores/vermelho.png'
 
 export default function CadastrarAgenda() {
-    const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
-
-    const icon = L.icon({
-        iconUrl: marcadorTurismo,
-        iconSize: [80, 80],
-        iconAnchor: [40, 65],
-        popupAnchor: [0, -55],
-    })
-
-    function ComponentClick() {
-        const map = useMapEvents({
-            click: (e) => {
-                map.eachLayer((layer) => {
-                    if (layer instanceof L.Marker) {
-                        map.removeLayer(layer);
-                    }
-                });
-                const { lat, lng } = e.latlng;
-                L.marker([lat, lng], { icon }).addTo(map);
-            }
-        });
-        return null;
-    }
-
-
     return (
         <>
             <section className="cadastrar-turismo">

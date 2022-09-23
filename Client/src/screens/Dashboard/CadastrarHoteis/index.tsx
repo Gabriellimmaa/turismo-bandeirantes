@@ -1,6 +1,4 @@
 import { MdTitle } from 'react-icons/md';
-import { BiCategoryAlt } from 'react-icons/bi';
-import { HiOutlinePhotograph } from 'react-icons/hi';
 import { BsTextIndentLeft } from 'react-icons/bs';
 import { BiMapPin } from 'react-icons/bi';
 import { FaWhatsapp } from 'react-icons/fa'
@@ -11,30 +9,24 @@ import { useTranslation } from 'react-i18next'
 
 import {
   BiRestaurant,
-  BiCalendar,
-  BiMap,
   BiMoney,
   BiPhoneCall,
   BiPlanet,
-  BiTime,
   BiMailSend,
 } from 'react-icons/bi'
-import { TbToolsKitchen } from 'react-icons/tb'
-import { MdMenuBook } from 'react-icons/md'
 
-import { MapContainer, Marker, TileLayer, useMapEvents } from 'react-leaflet';
-import L, { LeafletMouseEvent } from 'leaflet';
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
+import L from 'leaflet';
 import { useState } from 'react'
 import './styles.css'
-
-import marcadorTurismo from '../../../assets/marcadores/vermelho.png'
+import marcadorHotel from '../../../assets/marcadores/verde.png'
 
 export default function Cadastrarhoteis() {
   const { t } = useTranslation()
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
-    iconUrl: marcadorTurismo,
+    iconUrl: marcadorHotel,
     iconSize: [80, 80],
     iconAnchor: [40, 65],
     popupAnchor: [0, -55],
@@ -64,17 +56,15 @@ export default function Cadastrarhoteis() {
           <h2></h2>
         </div>
         <form>
-          <div className='grid-cols-1 md:grid-cols-2'>
-            <span>
-              <label htmlFor="nome"><MdTitle /> {t('paginas.dashboard.hoteis.nome')}: <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span> </label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder={t('paginas.dashboard.hoteis.placeHolderNome')}
-              />
-            </span>
-          </div>
+          <span>
+            <label htmlFor="nome"><MdTitle /> {t('paginas.dashboard.hoteis.nome')}: <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span> </label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder={t('paginas.dashboard.hoteis.placeHolderNome')}
+            />
+          </span>
 
           <span>
             <label htmlFor="descricao"><BsTextIndentLeft /> {t('paginas.dashboard.hoteis.descricao')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
@@ -100,18 +90,18 @@ export default function Cadastrarhoteis() {
               type="text"
               id="endereco"
               name="endereco"
-              placeholder= {t('paginas.dashboard.hoteis.placeHolderEndereco')}
+              placeholder={t('paginas.dashboard.hoteis.placeHolderEndereco')}
             />
           </span>
           <span>
-              <label htmlFor="preco"><BiMoney /> {t('paginas.dashboard.hoteis.preco')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
-              <input
-                type="text"
-                id="preco"
-                name="preco"
-                placeholder= {t('paginas.dashboard.hoteis.placeHolderPreco')}
-              />
-            </span>
+            <label htmlFor="preco"><BiMoney /> {t('paginas.dashboard.hoteis.preco')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <input
+              type="text"
+              id="preco"
+              name="preco"
+              placeholder={t('paginas.dashboard.hoteis.placeHolderPreco')}
+            />
+          </span>
 
           <div className='grid-cols-1 md:grid-cols-3'>
             <span>
@@ -138,7 +128,7 @@ export default function Cadastrarhoteis() {
                 type="text"
                 id="telefone"
                 name="telefone"
-                placeholder= {t('paginas.dashboard.hoteis.placeHolderTelefone')}
+                placeholder={t('paginas.dashboard.hoteis.placeHolderTelefone')}
               />
             </span>
           </div>
@@ -150,7 +140,7 @@ export default function Cadastrarhoteis() {
                 type="text"
                 id="whatsapp"
                 name="whatsapp"
-                placeholder= {t('paginas.dashboard.hoteis.placeHolderWhatsapp')}
+                placeholder={t('paginas.dashboard.hoteis.placeHolderWhatsapp')}
               />
             </span>
             <span>
@@ -159,7 +149,7 @@ export default function Cadastrarhoteis() {
                 type="text"
                 id="instagram"
                 name="instagram"
-                placeholder= {t('paginas.dashboard.hoteis.placeHolderInstagram')}
+                placeholder={t('paginas.dashboard.hoteis.placeHolderInstagram')}
               />
             </span>
             <span>
@@ -168,13 +158,13 @@ export default function Cadastrarhoteis() {
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder= {t('paginas.dashboard.hoteis.placeHolderFacebook')}
+                placeholder={t('paginas.dashboard.hoteis.placeHolderFacebook')}
               />
             </span>
           </div>
 
           <label htmlFor='file' style={{ display: 'block' }}>
-          {t('paginas.dashboard.hoteis.logo')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            {t('paginas.dashboard.hoteis.logo')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
             <input type="file" id='file' name='file' className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer" />
           </label>
 
