@@ -1,13 +1,13 @@
 {
-  "teste": "teste",
+  "teste": "Prueba",
   "navbar": {
     "inicio": "Comienzo",
-    "historia": "Historia",
+    "historia": "historia",
     "mapa": "Mapa",
     "agenda": "Agenda",
     "hoteis": "Hoteles",
     "turismo": "Turismo",
-    "lazer&esporte": "Ocio y deporte",
+    "lazer&esporte": "Ocio y Deporte",
     "restaurantes": "Restaurantes",
     "album": "Álbum",
     "contato": "Contacto",
@@ -15,27 +15,225 @@
   },
   "footer": {
     "paginas": {
-      "titulo": "páginas",
-      "sobre": "sobre",
-      "onde-dormir": "Dónde dormir",
+      "titulo": "Páginas",
+      "sobre": "Sobre",
+      "onde-dormir": "Donde Dormir",
       "oque-fazer": "Que hacer",
       "mapa": "Mapa"
     },
-    "contato": "Contatos",
+    "contato": "Contactos",
     "copy": "© 2022 - Ayuntamiento de Bandeirantes - Todos los derechos reservados",
-    "creditos": "Website desarrollado Para el equipo FrontCode"
+    "creditos": "Sitio web desarrollado por el equipo de Front Code"
   },
   "paginas": {
     "blacklist": {
-      "header": "Intentó iniciar sesión en nuestro sistema con otra cuenta, está en nuestra lista negra y el sistema está bloqueado para usted..",
+      "header": "Ha intentado iniciar sesión en nuestro sistema con otra cuenta, está en nuestra lista negra y el sistema está bloqueado para usted.",
       "content": "Si crees que fue una charla malentendida con nuestros administradores.",
       "link": "Regresar"
     },
+    "dashboard": {
+      "bares": {
+        "titulo": "Barras de registro",
+        "nome": "Nombre",
+        "descricao": "Descripción",
+        "endereco": "Dirección",
+        "categoria": "Categoría de cocinas",
+        "cardapio": "Menú",
+        "brasileira": "Brasileño",
+        "italiana": "Italiano",
+        "fabiao": "Japonesa",
+        "arabe": "Arábica",
+        "preco": "Precio",
+        "email": "Correo electrónico",
+        "site": "Sitio",
+        "telefone": "Teléfono",
+        "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
+        "placeHolderInsta": "Ingrese Instagram si tiene",
+        "placeHolderDesc": "Ingrese la descripción del lugar",
+        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderEndereco": "Ingrese la dirección de ubicación",
+        "placeHolderEmail": "Ingrese el correo electrónico si tiene",
+        "placeHolderFace": "Ingrese a Facebook si tiene",
+        "placeHolderPreco": "Ingrese el precio promedio del lugar",
+        "placeHolderSite": "Ingrese el sitio si tiene",
+        "placeHolderTelefone": "Inserte el teléfono de contacto",
+        "placeHolderCategoria": "Seleccione una categoría",
+        "placeHolderCardapio": "Ingrese el menú local",
+        "obrigatorio": "*Obligatorio",
+        "logo": "Elija un logotipo:",
+        "mapa": "Seleccione el punto en el mapa:",
+        "cadastro": "Ubicación de registro"
+      },
+      "hoteis": {
+        "titulo": "Registro del hotel",
+        "nome": "Nombre",
+        "descricao": "Descripción",
+        "endereco": "Endereço",
+        "categoria": "Categoría de cocinas",
+        "cardapio": "Menú",
+        "brasileira": "Brasileño",
+        "italiana": "Italiano",
+        "fabiao": "Japonesa",
+        "arabe": "Arábica",
+        "preco": "Precio",
+        "email": "Correo electrónico",
+        "site": "Sitio",
+        "telefone": "Teléfono",
+        "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
+        "placeHolderInsta": "Ingrese Instagram si tiene",
+        "placeHolderDesc": "Ingrese la descripción del lugar",
+        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderEndereco": "Ingrese la dirección de ubicación",
+        "placeHolderEmail": "Ingrese el correo electrónico si tiene",
+        "placeHolderFace": "Ingrese a Facebook si tiene",
+        "placeHolderPreco": "Ingrese el precio promedio del lugar",
+        "placeHolderSite": "Ingrese el sitio si tiene",
+        "placeHolderTelefone": "Inserte el teléfono de contacto",
+        "placeHolderCategoria": "Seleccione una categoría",
+        "placeHolderCardapio": "Ingrese el menú local",
+        "obrigatorio": "*Obligatorio",
+        "logo": "Elija un logotipo:",
+        "mapa": "Seleccione el punto en el mapa:",
+        "cadastro": "Ubicación de registro"
+      },
+      "turismo": {
+        "titulo": "Registro turístico",
+        "nome": "Nombre",
+        "descricao": "Descripción",
+        "endereco": "Dirección",
+        "categoria": "Categoría",
+        "cardapio": "Menú",
+        "religioso": "Religioso",
+        "rural": "Rural",
+        "cultural": "Cultural",
+        "esportivo": "Deportivo",
+        "ecologico": "Ecológico",
+        "preco": "Precio",
+        "email": "Correo electrónico",
+        "site": "Sitio",
+        "telefone": "Teléfono",
+        "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
+        "placeHolderInsta": "Ingrese Instagram si tiene",
+        "placeHolderDesc": "Ingrese la descripción del lugar",
+        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderEndereco": "Ingrese la dirección de ubicación",
+        "placeHolderEmail": "Ingrese el correo electrónico si tiene",
+        "placeHolderFace": "Ingrese a Facebook si tiene",
+        "placeHolderPreco": "Ingrese el precio promedio del lugar",
+        "placeHolderSite": "Ingrese el sitio si tiene",
+        "placeHolderTelefone": "Inserte el teléfono de contacto",
+        "placeHolderCategoria": "Seleccione una categoría",
+        "placeHolderCardapio": "Ingrese el menú local",
+        "obrigatorio": "*Obligatorio",
+        "logo": "Elija un logotipo:",
+        "mapa": "Seleccione el punto en el mapa:",
+        "cadastro": "Ubicación de registro"
+      },
+      "restaurantes": {
+        "titulo": "Restaurantes de inscripción",
+        "nome": "Nombre",
+        "descricao": "Descripción",
+        "endereco": "Dirección",
+        "categoria": "Categoría de Cocinas",
+        "cardapio": "Menú",
+        "brasileira": "Brasileño",
+        "italiana": "Italiano",
+        "fabiao": "Japonesa",
+        "arabe": "Arábica",
+        "preco": "Precio",
+        "email": "Correo electrónico",
+        "site": "Sitio",
+        "telefone": "Teléfono",
+        "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
+        "placeHolderInsta": "Ingrese Instagram si tiene",
+        "placeHolderDesc": "Ingrese la descripción del lugar",
+        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderEndereco": "Ingrese la dirección de ubicación",
+        "placeHolderEmail": "Ingrese el correo electrónico si tiene",
+        "placeHolderFace": "Ingrese a Facebook si tiene",
+        "placeHolderPreco": "Ingrese el precio promedio del lugar",
+        "placeHolderSite": "Ingrese el sitio si tiene",
+        "placeHolderTelefone": "Inserte el teléfono de contacto",
+        "placeHolderCategoria": "Seleccione una categoría",
+        "placeHolderCardapio": "Ingrese el menú local",
+        "obrigatorio": "*Obligatorio",
+        "logo": "Elija un logotipo:",
+        "mapa": "Seleccione el punto en el mapa:",
+        "cadastro": "Ubicación de registro"
+      },
+      "agenda": {
+        "data": "Datos",
+        "tituloTela": "Título",
+        "titulo": "Agenda de registro",
+        "nome": "Nombre",
+        "descricao": "Descripción",
+        "endereco": "Dirección",
+        "categoria": "Categoría de cocinas",
+        "cardapio": "Menú",
+        "brasileira": "Brasileño",
+        "italiana": "Italiano",
+        "fabiao": "Japonesa",
+        "arabe": "Arábica",
+        "preco": "Precio",
+        "email": "Correo electrónico",
+        "site": "Sitio",
+        "telefone": "Teléfono",
+        "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
+        "placeHolderInsta": "Ingrese Instagram si tiene",
+        "placeHolderDesc": "Ingrese la descripción del lugar",
+        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderEndereco": "Ingrese la dirección de ubicación",
+        "placeHolderEmail": "Ingrese el correo electrónico si tiene",
+        "placeHolderFace": "Ingrese a Facebook si tiene",
+        "placeHolderPreco": "Ingrese el precio promedio del lugar",
+        "placeHolderSite": "Ingrese el sitio si tiene",
+        "placeHolderTelefone": "Inserte el teléfono de contacto",
+        "placeHolderCategoria": "Seleccione una categoría",
+        "placeHolderCardapio": "Ingrese el menú local",
+        "placeHolderData": "Ingrese la fecha del evento",
+        "obrigatorio": "*Obligatorio",
+        "logo": "Elija un logotipo:",
+        "mapa": "Seleccione el punto en el mapa:",
+        "cadastro": "Registrar"
+      },
+      "album": {
+        "titulo": "Álbum de registro",
+        "nome": "Nombre",
+        "descricao": "Descripción",
+        "endereco": "Dirección",
+        "categoria": "Categoría de cocinas",
+        "cardapio": "Menú",
+        "brasileira": "Brasileño",
+        "italiana": "Italiano",
+        "fabiao": "Japonesa",
+        "arabe": "Arábica",
+        "preco": "Precio",
+        "email": "Correo electrónico",
+        "site": "Sitio",
+        "telefone": "Teléfono",
+        "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
+        "placeHolderInsta": "Ingrese Instagram si tiene",
+        "placeHolderDesc": "Ingrese la descripción del lugar",
+        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderEndereco": "Ingrese la dirección de ubicación",
+        "placeHolderEmail": "Ingrese el correo electrónico si tiene",
+        "placeHolderFace": "Ingrese a Facebook si tiene",
+        "placeHolderPreco": "Ingrese el precio promedio del lugar",
+        "placeHolderSite": "Ingrese el sitio si tiene",
+        "placeHolderTelefone": "Inserte el teléfono de contacto",
+        "placeHolderCategoria": "Seleccione una categoría",
+        "placeHolderCardapio": "Ingrese el menú local",
+        "obrigatorio": "*Obligatorio",
+        "imagem": "Elija una imagen:",
+        "mapa": "Seleccione el punto en el mapa:",
+        "cadastro": "Registrar imagen"
+      }
+    },
     "inicio": {
-      "header": "ACCESO rápido",
+      "header": "ACCESO RAPIDO",
       "cards": "¿Que hacer?",
-      "botao": "verTodas",
-      "saibaMais": "sepa mas",
+      "botao": "Ver Todas",
+      "saibaMais": "Sepa mas",
       "parallax": {
         "titulo": "Envía tu sugerencia",
         "placeholderNome": "Su nombre",
@@ -45,72 +243,68 @@
       "acesso-rapido": {
         "mapa": {
           "titulo": "Mapa interactivo",
-          "descricao": "Visualice el mapa interactivo de Bandeirantes. Nuestra ciudad es su destino perfecto"
-        },
-        "lazer-esporte": {
-          "titulo": "lazer & Deporte",
-          "descricao": "Nuestro Ciudad Está O su destino Perfecto cultura, deporte, Lazer, mucho Arkansas Puro mi hermoso momentos naturaleza"
+          "descricao": "Visualice el mapa interactivo de Bandeirantes.Nuestra ciudad es tu destino perfecto"
         },
         "hoteis": {
           "titulo": "Hoteles",
-          "descricao": "Contra Hoteles, Hostales mi Granja por con anfitrión"
+          "descricao": "Encuentra hoteles, posadas y granjas para quedarse"
         },
         "turismo": {
           "titulo": "Turismo",
-          "descricao": "Saber nuestro principal lugares turisticos"
+          "descricao": "Conozca nuestros principales puntos turísticos"
         },
         "restaurantes": {
-          "titulo": "restaurantes",
-          "descricao": "¡Cuando el hambre supera, nuestra comida te sorprenderá!Platos y sabores inolvidables"
+          "titulo": "Restaurantes",
+          "descricao": "¡Cuando el hambre supera, nuestra comida te sorprenderá!Platos y sabores inolvidables!"
         },
         "album": {
-          "titulo": "álbum",
-          "descricao": "Ainda tem dúvidas se dever conhecer a cidade? Então acesse nossas fotos e se encante com a beleza da cidade"
+          "titulo": "Álbum",
+          "descricao": "¿Todavía tiene preguntas si debe conocer la ciudad?Así que ve a nuestras fotos y sé encantado por la belleza de la ciudad"
         },
         "agenda": {
-          "titulo": "agenda",
+          "titulo": "Agenda",
           "descricao": "Conozca nuestro calendario de eventos para no perder ninguna atracción."
         }
       }
     },
     "historia": {
-      "header": "História",
+      "header": "Historia",
       "topico1": {
         "titulo": "Cómo empezó",
-        "paragrafo1": "Hasta el año 1920, la región era un gran travesía, habitado solo por los indios de la tribu cainggues.El primero en explorar este territorio fue el ingeniero Carlos Borromei, donde su campamento se eleva en un claro abierto en el bosque a orillas de Ribeirão Das Antas.El 24 de diciembre de 1926, D. Josefina Alves de Lima, propietario de una gran tierra de tierra en la granja de Laranjinha, al dividir esta propiedad, vendida a João Manoel dos Santos diez bushels de tierra, destinadas a la fundación de una aldea, que debería ser llamado invierno ",
-        "paragrafo2": "El 12 de abril de 1929, se creó el Distrito de Invierno, como parte integral del municipio de Jacarezinho, que se instaló el 8 de diciembre del mismo año. En julio de 1930, la compañía ferroviaria de São Paulo - Paraná, inauguró un ferrocarril de la estación, A 3 kilómetros del patrimonio invernal, que pasó a llamarse Bandeirantes, y un pueblo cerca de la estación, en los terrenos de Mesquita juvenil. El 27 de septiembre de 1931, un poder de hombres de buena voluntad, comenzó un trabajo de coalición a favor del progreso del progreso del progreso del progreso del progreso La estación y, en consecuencia, llegaron a caer en el invierno, donde la oficina del registro, la colección estatal, las casas, los hoteles, el comercio, las farmacias, el post, etc. ",
-        "paragrafo3": "Em 1932, o então Interventor Federal no Paraná, visitou Bandeirantes, notando que o povo desejava a criação do município. Houve a unificação dos dois povoados: Bandeirantes e Invernada. Dando inicio a história de Bandeirantes"
+        "paragrafo1": "Hasta el año 1920, la región era un gran travesía, habitado solo por los indios de la tribu cainggues.El primero en explorar este territorio fue el ingeniero Carlos Borromei, donde su campamento se eleva en un claro abierto en el bosque a orillas de Ribeirão Das Antas.El 24 de diciembre de 1926, D. Josefina Alves de Lima, propietario de una gran tierra de tierra en la granja de Laranjinha, al dividir esta propiedad, vendida a João Manoel dos Santos diez bushels de tierra, destinadas a la fundación de una aldea, que debería ser llamado invierno.",
+        "paragrafo2": "El 12 de abril de 1929, se creó el Distrito de Invierno, como parte integral del municipio de Jacarezinho, que se instaló el 8 de diciembre del mismo año.En julio de 1930, la Compañía de Ferrocarriles São Paulo - Paraná inauguró una estación de ferrocarril, a 3 kilómetros del patrimonio de invierno, que se llamaba Bandeirantes, y un pueblo cerca de la estación, en la mezquita juvenil terrestre.El 27 de septiembre de 1931, un poder de hombres de buena voluntad, comenzó un trabajo de coalición a favor del progreso de la temporada y, en consecuencia, llegó la caída de invierno, donde el notario, el coleccionista estatal, las casas, los hoteles, fueron casas de comercio. , farmacias, oficina de correos, etc.",
+        "paragrafo3": "En 1932, el entonces interviniente federal en Paraná visitó a Bandeirantes, señalando que la gente quería la creación del municipio.Hubo la unificación de las dos aldeas: Bandeirantes e invierno.Comience la historia de Bandeirantes"
       },
       "topico2": {
-        "titulo": "Bandeirantes: Un lugar de fe, naturaleza y tradiciones",
-        "paragrafo1": "Ubicado en el pionero al norte de Paraná, Bandeirantes se distingue por la tierra fértil y la gente de varias partes de Brasil y el mundo. El municipio tiene una fuerte influencia de Paulistas, mineros, italianos, japoneses y portugueses, el origen primordial de la economía económica y vocaciones turísticas del municipio ",
-        "paragrafo2": "A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local."
+        "titulo": "Bandeirantes: “Un lugar de fe, naturaleza y tradiciones”",
+        "paragrafo1": "Ubicado en el pionero al norte de Paraná, Bandeirantes se distingue por la tierra fértil y la gente de varias partes de Brasil y el mundo.El municipio tiene una fuerte influencia de las Paulistas, Miners, Italianos, Japoneses y Portugueses, el origen principal de las vocaciones económicas y turísticas del municipio.",
+        "paragrafo2": "La base de la economía en el municipio es el cultivo de uvas delgadas de mesa, pimientos, pepino, caña de azúcar y especialmente soja y maíz.Anualmente, la fiesta de maíz verde mueve la economía local."
       },
       "topico3": {
-        "titulo": "Bandeirantes en números",
+        "titulo": "Bandeirantes En Números",
         "inauguracao": {
           "titulo": "Apertura",
           "descricao": "14 de noviembre de 1934"
         },
         "gentilico": {
           "titulo": "Gentil",
-          "descricao": "bandeirantense"
+          "descricao": "Banderantense"
         },
         "populacao": {
           "titulo": "Población",
-          "descricao": "32,184 (Censo de IBGE [2010])"
+          "descricao": " 32.184 (Censo IBGE [2010])"
         },
         "territorio": {
-          "titulo": "Área de la Unidad Territorial [2022]",
-          "descricao": "445,192Km²"
+          "titulo": "Área de la unidad territorial [2022]",
+          "descricao": "445,192 km²"
         },
         "densidade": {
           "titulo": "Densidad demográfica",
           "descricao": "72,29 hab/km²"
         },
         "bioma": {
-          "titulo": "bioma",
-          "descricao": "Mata Atlântica"
+          "titulo": "Bioma",
+          "descricao": "Bosque Atlántico"
         },
         "altitude": {
           "titulo": "Altitud",
@@ -118,10 +312,10 @@
         },
         "clima": {
           "titulo": "Climatizado",
-          "descricao": "Tropical. El verano es largo, caluroso, amortiguado y casi cubierto de cielo; el invierno es corto, agradable y casi sin nubes."
+          "descricao": "Tropical.El verano es largo, caluroso, cargado y casi cubierto de cielo;El invierno es un cielo corto, agradable y casi sin nubes"
         },
         "temperatura": {
-          "titulo": "Temperatura média",
+          "titulo": "Temperatura media",
           "descricao": "15°C a 31°C"
         },
         "renda": {
@@ -129,40 +323,40 @@
           "descricao": "Conozca nuestro calendario de eventos para no perder ninguna atracción."
         },
         "idh": {
-          "titulo": "Índice de desarrollo humano (HDI)",
+          "titulo": "Indice de Desarrollo Humano (IDH)",
           "descricao": "0,727 (IBGE 2010)"
         },
         "pib": {
-          "titulo": "PIB For Happeny [2019]",
+          "titulo": "PIB suceder [2019]",
           "descricao": "25.807,42 R$"
         }
       }
     },
     "turismo": {
-      "titulo": "turismo",
+      "titulo": "Turismo",
       "subtitulo": "Lugar de fe, naturaleza y tradiciones"
     },
     "restaurantes": {
-      "titulo": "restaurantes",
-      "subtitulo": "¡Conoce a nuestros restaurantes! "
+      "titulo": "Restaurantes",
+      "subtitulo": "¡Conoce a nuestros restaurantes!"
     },
     "hoteis": {
       "titulo": "Hoteles",
       "subtitulo": "¡Encuentra hoteles, posadas y muchos otros lugares para quedarse!"
     },
     "agenda": {
-      "titulo": "agenda",
+      "titulo": "Agenda",
       "subtitulo": "¡Conoce a nuestra agenda de eventos!"
     },
     "contato": {
       "titulo": "Contacto",
       "menssagem": "Mandanos un mensaje",
       "nome": "Nombre",
-      "contato": "Contacto",
-      "sugestao": "Sugerencia"
+      "contato": "Contato",
+      "sugestao": "Sugestão"
     },
     "album": {
-      "titulo": "álbum",
+      "titulo": "Álbum",
       "subtitulo": "¡Conoce nuestro álbum de fotos!"
     },
     "detail": {
@@ -171,10 +365,10 @@
       "contatos": "Contactos:",
       "comentarios": "Comentario",
       "avaliacoes": "Evaluaciones",
-      "googleMaps": "abrirNoGoogleMaps",
+      "googleMaps": "Abrir No Google Maps",
       "email": "Contáctenos por correo electrónico",
-      "site": "visita la página web",
-      "visitar": "visitar",
+      "site": "Visita la página web",
+      "visitar": "Visitar",
       "cardapio": "Menú:",
       "cozinha": "Cocinas:",
       "preco": "Precio:",
