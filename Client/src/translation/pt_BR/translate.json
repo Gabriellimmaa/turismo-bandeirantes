@@ -162,6 +162,8 @@
         "cadastro": "Cadastrar local"
       },
       "agenda": {
+        "data": "Data",
+        "tituloTela": "Título",
         "titulo": "Cadastro agenda",
         "nome": "Nome",
         "descricao": "Descriçao",
@@ -188,10 +190,11 @@
         "placeHolderTelefone": "Insira o telefone para contato",
         "placeHolderCategoria": "Selecione uma categoria",
         "placeHolderCardapio": "Insira o menu do local",
+        "placeHolderData": "Insira a data do evento",
         "obrigatorio": "*Obrigatório",
         "logo": "Escolha uma logo:",
         "mapa": "Selecione o ponto no mapa:",
-        "cadastro": "Cadastrar local"
+        "cadastro": "Cadastrar"
       },
       "album": {
         "titulo": "Cadastro album",
