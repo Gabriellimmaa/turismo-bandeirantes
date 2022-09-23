@@ -15,5 +15,5 @@ export interface PropsGeral {
   insta: string
   whats: string
   categoria?: string
-  tipo?: "Turismo" | "Restaurante" | "Hotel"
+  tipo?: "Turismo" | "Restaurante" | "Hotel" | "Bar"
 }
