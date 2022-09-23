@@ -9,6 +9,7 @@ import { Header } from "../components/Header";
 import { StackRoutes, StackRoutesHotel, StackRoutesRestaurante } from "./StackRoutes";
 import { Home } from "../screens/Home";
 import { Contato } from "../screens/Contato";
+import { Historia } from "../screens/Historia";
 
 const Drawer = createDrawerNavigator();
 
@@ -37,7 +38,7 @@ export function Routes() {
       />
       <Drawer.Screen
         name="Conheça Bandeirantes"
-        component={Home}
+        component={Historia}
         options={{
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons name="hail" size={size} color={color} />
