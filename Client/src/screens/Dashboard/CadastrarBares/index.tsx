@@ -205,7 +205,7 @@ export default function CadastrarBares() {
           </span>
 
           <button>
-            Cadastrar Local
+            {t("paginas.dashboard.bares.cadastro")}
           </button>
         </form>
       </section>
