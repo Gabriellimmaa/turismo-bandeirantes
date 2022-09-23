@@ -47,7 +47,7 @@ export function Router() {
       <Route path="/admin/cadastrar-turismo" element={<CadastrarTurismo />} />
       <Route path="/admin/cadastrar-bares" element={<CadastrarBares />} />
       <Route path="/admin/cadastrar-hoteis" element={<CadastrarHoteis />} />
-      <Route path="/admin/cadastrar-imagem" element={<CadastrarImagem />} />
+      <Route path="/admin/cadastrar-album" element={<CadastrarImagem />} />
     </Routes>
   )
 }

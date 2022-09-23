@@ -6,6 +6,9 @@ import { BiMapPin } from 'react-icons/bi';
 import { FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { FiFacebook } from 'react-icons/fi'
+
+import { useTranslation } from 'react-i18next'
+
 import {
   BiCalendar,
   BiMap,
@@ -26,6 +29,7 @@ import './styles.css'
 import marcadorTurismo from '../../../assets/marcadores/vermelho.png'
 
 export default function CadastrarTurismo() {
+  const { t } = useTranslation();
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
@@ -55,13 +59,13 @@ export default function CadastrarTurismo() {
     <>
       <section className="cadastrar-turismo">
         <div className="title-style-1">
-          <h1>Cadastrar Turismo</h1>
+          <h1>{t("paginas.dashboard.turismo.titulo")}</h1>
           <h2></h2>
         </div>
         <form>
           <div className='grid-cols-1 md:grid-cols-2'>
             <span>
-              <label htmlFor="nome"><MdTitle /> Nome: <span>*Obrigatório</span> </label>
+              <label htmlFor="nome"><MdTitle /> {t("paginas.dashboard.turismo.nome")}<span>{t("paginas.dashboard.turismo.obrigatorio")}</span> </label>
               <input
                 type="text"
                 id="nome"
@@ -70,63 +74,63 @@ export default function CadastrarTurismo() {
               />
             </span>
             <span>
-              <label htmlFor="categoria"><BiCategoryAlt /> Categoria: <span>*Obrigatório</span></label>
+              <label htmlFor="categoria"><BiCategoryAlt /> {t("paginas.dashboard.turismo.categoria")} <span>{t("paginas.dashboard.turismo.obrigatorio")}</span></label>
               <select id="categoria" name="categoria">
-                <option value="0">Selecione uma categoria</option>
-                <option value="religioso">Religioso</option>
-                <option value="cultural">Cultural</option>
-                <option value="rural">Rural</option>
-                <option value="esportivo">Esportivo</option>
-                <option value="ecologico">Ecológico</option>
+                <option value="0">{t("paginas.dashboard.turismo.placeHolderCategoria")}</option>
+                <option value="religioso">{t("paginas.dashboard.turismo.religioso")}</option>
+                <option value="cultural">{t("paginas.dashboard.turismo.cultural")}</option>
+                <option value="rural">{t("paginas.dashboard.turismo.rural")}</option>
+                <option value="esportivo">{t("paginas.dashboard.turismo.esportivo")}</option>
+                <option value="ecologico">{t("paginas.dashboard.turismo.ecologico")}</option>
               </select>
             </span>
           </div>
 
           <span>
-            <label htmlFor="descricao"><BsTextIndentLeft /> Descrição: <span>*Obrigatório</span></label>
+            <label htmlFor="descricao"><BsTextIndentLeft /> {t("paginas.dashboard.turismo.descricao")} <span>{t("paginas.dashboard.turismo.obrigatorio")}</span></label>
             <textarea
               id="descricao"
               name="descricao"
-              placeholder="Insira uma descrição do local"
+              placeholder={t("paginas.dashboard.turismo.placeHolderDescricao")}
             />
           </span>
 
           <span>
-            <label htmlFor="endereco"><BiMapPin /> Endereço: <span>*Obrigatório</span></label>
+            <label htmlFor="endereco"><BiMapPin /> {t("paginas.dashboard.turismo.endereco")} <span>{t("paginas.dashboard.turismo.obrigatorio")}</span></label>
             <input
               type="text"
               id="endereco"
               name="endereco"
-              placeholder="Insira o endereço do local"
+              placeholder= {t("paginas.dashboard.turismo.placeHolderEndereco")}
             />
           </span>
 
           <div className='grid-cols-1 md:grid-cols-3'>
             <span>
-              <label htmlFor="email"><BiMailSend /> Email:</label>
+              <label htmlFor="email"><BiMailSend /> {t("paginas.dashboard.turismo.email")}</label>
               <input
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Insira o email do local caso tenha"
+                placeholder= {t("paginas.dashboard.turismo.placeHolderEmail")}
               />
             </span>
             <span>
-              <label htmlFor="site"><BiPlanet /> Site:</label>
+              <label htmlFor="site"><BiPlanet /> {t("paginas.dashboard.turismo.site")}</label>
               <input
                 type="text"
                 id="site"
                 name="site"
-                placeholder="Insira o site do local caso tenha"
+                placeholder= {t("paginas.dashboard.turismo.placeHolderSite")}
               />
             </span>
             <span>
-              <label htmlFor="telefone"><BiPhoneCall /> Telefone:</label>
+              <label htmlFor="telefone"><BiPhoneCall /> {t("paginas.dashboard.turismo.telefone")}</label>
               <input
                 type="text"
                 id="telefone"
                 name="telefone"
-                placeholder="Insira um telefone para contato"
+                placeholder= {t("paginas.dashboard.turismo.placeHolderTelefone")}
               />
             </span>
           </div>
@@ -138,7 +142,7 @@ export default function CadastrarTurismo() {
                 type="text"
                 id="whatsapp"
                 name="whatsapp"
-                placeholder="Insira o whatsapp do local caso tenha"
+                placeholder= {t("paginas.dashboard.turismo.placeHolderWhatsapp")}
               />
             </span>
             <span>
@@ -147,7 +151,7 @@ export default function CadastrarTurismo() {
                 type="text"
                 id="instagram"
                 name="instagram"
-                placeholder="Insira o instagram do local caso tenha"
+                placeholder= {t("paginas.dashboard.turismo.placeHolderInstagram")}
               />
             </span>
             <span>
@@ -156,18 +160,18 @@ export default function CadastrarTurismo() {
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder="Insira o facebook do local caso tenha"
+                placeholder= {t("paginas.dashboard.turismo.placeHolderFacebook")}
               />
             </span>
           </div>
 
           <label htmlFor='file' style={{ display: 'block' }}>
-            Escolha uma logo: <span>*Obrigatório</span>
+          {t("paginas.dashboard.turismo.logo")} <span>{t("paginas.dashboard.turismo.obrigatorio")}</span>
             <input type="file" id='file' name='file' className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer" />
           </label>
 
           <span>
-            <label>Selecione o ponto no mapa: <span>*Obrigatório</span></label>
+            <label> {t("paginas.dashboard.turismo.mapa")} <span>{t("paginas.dashboard.turismo.obrigatorio")}</span></label>
             <MapContainer
               center={[-23.1115914, -50.3749315]}
               style={{ width: '100%', height: 280 }}
@@ -183,7 +187,7 @@ export default function CadastrarTurismo() {
           </span>
 
           <button>
-            Cadastrar Local
+          {t("paginas.dashboard.turismo.cadastro")}
           </button>
         </form>
       </section>

@@ -7,6 +7,8 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { FiFacebook } from 'react-icons/fi'
 
+import { useTranslation } from 'react-i18next'
+
 import {
   BiRestaurant,
   BiCalendar,
@@ -27,7 +29,8 @@ import './styles.css'
 
 import marcadorTurismo from '../../../assets/marcadores/vermelho.png'
 
-export default function CadastrarBares() {
+export default function Cadastrarhoteis() {
+  const { t } = useTranslation()
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
@@ -57,115 +60,126 @@ export default function CadastrarBares() {
     <>
       <section className="cadastrar-turismo">
         <div className="title-style-1">
-          <h1>Cadastrar Hoteis</h1>
+          <h1>{t('paginas.dashboard.hoteis.titulo')}</h1>
           <h2></h2>
         </div>
         <form>
-          <span>
-            <label htmlFor="nome"><MdTitle /> Nome: <span>*Obrigatório</span> </label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              placeholder="Insira o nome do local"
-            />
-          </span>
+          <div className='grid-cols-1 md:grid-cols-2'>
+            <span>
+              <label htmlFor="nome"><MdTitle /> {t('paginas.dashboard.hoteis.nome')}: <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span> </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder={t('paginas.dashboard.hoteis.placeHolderNome')}
+              />
+            </span>
+          </div>
 
           <span>
-            <label htmlFor="descricao"><BsTextIndentLeft /> Descrição: <span>*Obrigatório</span></label>
+            <label htmlFor="descricao"><BsTextIndentLeft /> {t('paginas.dashboard.hoteis.descricao')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
             <textarea
               id="descricao"
               name="descricao"
-              placeholder="Insira uma descrição do local"
+              placeholder={t('paginas.dashboard.hoteis.placeHolderDesc')}
             />
           </span>
 
           <span>
-            <label htmlFor="endereco"><BiMapPin /> Endereço: <span>*Obrigatório</span></label>
+            <label htmlFor="cardapio"><BiRestaurant /> {t('paginas.dashboard.hoteis.cardapio')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <textarea
+              id="cardapio"
+              name="cardapio"
+              placeholder={t('paginas.dashboard.hoteis.placeHolderCardapio')}
+            />
+          </span>
+
+          <span>
+            <label htmlFor="endereco"><BiMapPin /> {t('paginas.dashboard.hoteis.endereco')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
             <input
               type="text"
               id="endereco"
               name="endereco"
-              placeholder="Insira o endereço do local"
+              placeholder= {t('paginas.dashboard.hoteis.placeHolderEndereco')}
             />
           </span>
           <span>
-              <label htmlFor="preco"><BiMoney /> Preço Médio: <span>*Obrigatório</span></label>
+              <label htmlFor="preco"><BiMoney /> {t('paginas.dashboard.hoteis.preco')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
               <input
                 type="text"
                 id="preco"
                 name="preco"
-                placeholder="Insira o preço médio do local"
+                placeholder= {t('paginas.dashboard.hoteis.placeHolderPreco')}
               />
             </span>
 
           <div className='grid-cols-1 md:grid-cols-3'>
             <span>
-              <label htmlFor="email"><BiMailSend /> Email:</label>
+              <label htmlFor="email"><BiMailSend /> {t('paginas.dashboard.hoteis.email')} </label>
               <input
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Insira o email do local caso tenha"
+                placeholder={t('paginas.dashboard.hoteis.placeHolderEmail')}
               />
             </span>
             <span>
-              <label htmlFor="site"><BiPlanet /> Site:</label>
+              <label htmlFor="site"><BiPlanet /> {t('paginas.dashboard.hoteis.site')}</label>
               <input
                 type="text"
                 id="site"
                 name="site"
-                placeholder="Insira o site do local caso tenha"
+                placeholder={t('paginas.dashboard.hoteis.placeHolderSite')}
               />
             </span>
             <span>
-              <label htmlFor="telefone"><BiPhoneCall /> Telefone:</label>
+              <label htmlFor="telefone"><BiPhoneCall /> {t('paginas.dashboard.hoteis.telefone')} </label>
               <input
                 type="text"
                 id="telefone"
                 name="telefone"
-                placeholder="Insira um telefone para contato"
+                placeholder= {t('paginas.dashboard.hoteis.placeHolderTelefone')}
               />
             </span>
           </div>
 
           <div className='grid-cols-1 md:grid-cols-3'>
             <span>
-              <label htmlFor="whatsapp"><FaWhatsapp /> Whatsapp:</label>
+              <label htmlFor="whatsapp"><FaWhatsapp />Whatsapp</label>
               <input
                 type="text"
                 id="whatsapp"
                 name="whatsapp"
-                placeholder="Insira o whatsapp do local caso tenha"
+                placeholder= {t('paginas.dashboard.hoteis.placeHolderWhatsapp')}
               />
             </span>
             <span>
-              <label htmlFor="instagram"><AiOutlineInstagram /> Instagram:</label>
+              <label htmlFor="instagram"><AiOutlineInstagram />Instagram</label>
               <input
                 type="text"
                 id="instagram"
                 name="instagram"
-                placeholder="Insira o instagram do local caso tenha"
+                placeholder= {t('paginas.dashboard.hoteis.placeHolderInstagram')}
               />
             </span>
             <span>
-              <label htmlFor="facebook"><FiFacebook /> Facebook:</label>
+              <label htmlFor="facebook"><FiFacebook /> Facebook</label>
               <input
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder="Insira o facebook do local caso tenha"
+                placeholder= {t('paginas.dashboard.hoteis.placeHolderFacebook')}
               />
             </span>
           </div>
 
           <label htmlFor='file' style={{ display: 'block' }}>
-            Escolha uma logo: <span>*Obrigatório</span>
+          {t('paginas.dashboard.hoteis.logo')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
             <input type="file" id='file' name='file' className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer" />
           </label>
 
           <span>
-            <label>Selecione o ponto no mapa: <span>*Obrigatório</span></label>
+            <label>{t('paginas.dashboard.hoteis.mapa')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
             <MapContainer
               center={[-23.1115914, -50.3749315]}
               style={{ width: '100%', height: 280 }}
@@ -181,7 +195,7 @@ export default function CadastrarBares() {
           </span>
 
           <button>
-            Cadastrar Local
+            {t("paginas.dashboard.hoteis.cadastro")}
           </button>
         </form>
       </section>

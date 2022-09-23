@@ -33,6 +33,7 @@
     },
     "dashboard": {
       "bares": {
+        "titulo": "Cadastro Bares",
         "nome": "Nome",
         "descricao": "Descriçao",
         "endereco": "Endereço",
@@ -64,6 +65,7 @@
         "cadastro": "Cadastrar local"
       },
       "hoteis": {
+        "titulo": "Cadastro Hoteis",
         "nome": "Nome",
         "descricao": "Descriçao",
         "endereco": "Endereço",
@@ -95,15 +97,17 @@
         "cadastro": "Cadastrar local"
       },
       "turismo": {
+        "titulo": "Cadastro Turismo",
         "nome": "Nome",
         "descricao": "Descriçao",
         "endereco": "Endereço",
-        "categoria": "Categoria das Cozinhas",
+        "categoria": "Categorias",
         "cardapio": "Cardápio",
-        "brasileira": "Brasileira",
-        "italiana": "Italiana",
-        "fabiao": "Japonesa",
-        "arabe": "Árabe",
+        "religioso": "Religioso",
+        "rural": "Rural",
+        "cultural": "Cultural",
+        "esportivo": "Esportivo",
+        "ecologico": "Ecológico",
         "preco": "Preço",
         "email": "Email",
         "site": "Site",
@@ -126,6 +130,7 @@
         "cadastro": "Cadastrar local"
       },
       "restaurantes": {
+        "titulo": "Cadastro restaurantes",
         "nome": "Nome",
         "descricao": "Descriçao",
         "endereco": "Endereço",
@@ -157,6 +162,7 @@
         "cadastro": "Cadastrar local"
       },
       "agenda": {
+        "titulo": "Cadastro agenda",
         "nome": "Nome",
         "descricao": "Descriçao",
         "endereco": "Endereço",
@@ -186,6 +192,38 @@
         "logo": "Escolha uma logo:",
         "mapa": "Selecione o ponto no mapa:",
         "cadastro": "Cadastrar local"
+      },
+      "album": {
+        "titulo": "Cadastro album",
+        "nome": "Nome",
+        "descricao": "Descriçao",
+        "endereco": "Endereço",
+        "categoria": "Categoria das Cozinhas",
+        "cardapio": "Cardápio",
+        "brasileira": "Brasileira",
+        "italiana": "Italiana",
+        "fabiao": "Japonesa",
+        "arabe": "Árabe",
+        "preco": "Preço",
+        "email": "Email",
+        "site": "Site",
+        "telefone": "Telefone",
+        "placeHolderWhatsapp": "Insira o whatsapp caso tenha",
+        "placeHolderInsta": "Insira o Instagram caso tenha",
+        "placeHolderDesc": "Insira a descrição do local",
+        "placeHolderNome": "Insira o nome do local",
+        "placeHolderEndereco": "Insira o endereço do local",
+        "placeHolderEmail": "Insira o Email caso tenha",
+        "placeHolderFace": "Insira o Facebook caso tenha",
+        "placeHolderPreco": "Insira o preço médio do local",
+        "placeHolderSite": "Insira o site caso tenha",
+        "placeHolderTelefone": "Insira o telefone para contato",
+        "placeHolderCategoria": "Selecione uma categoria",
+        "placeHolderCardapio": "Insira o menu do local",
+        "obrigatorio": "*Obrigatório",
+        "imagem": "Escolha uma imagem:",
+        "mapa": "Selecione o ponto no mapa:",
+        "cadastro": "Cadastrar imagem"
       }
     }
   },
@@ -325,5 +363,4 @@
     "preco": "Preço:",
     "telefone": "Telefone:"
   }
-}
 }

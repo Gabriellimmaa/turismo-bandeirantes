@@ -60,7 +60,7 @@ export default function CadastrarBares() {
     <>
       <section className="cadastrar-turismo">
         <div className="title-style-1">
-          <h1>Cadastrar Bares</h1>
+          <h1>{t('paginas.dashboard.bares.titulo')}</h1>
           <h2></h2>
         </div>
         <form>
