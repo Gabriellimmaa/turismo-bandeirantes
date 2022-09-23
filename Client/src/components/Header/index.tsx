@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 import { BsZoomIn, BsZoomOut } from 'react-icons/bs'
 import { GrPowerReset } from 'react-icons/gr'
+import { BiUser } from 'react-icons/bi'
 
 import logo from '../../assets/logo-banner.png'
 import brasil from '../../assets/languages/brazil.png'
@@ -144,6 +145,7 @@ export default function Header() {
             <span className="text-4xl">A</span>
             <BsZoomOut style={{ marginTop: -14, marginLeft: 42 }} size={14} />
           </button>
+          <BiUser style={{ marginTop: 10, marginLeft: 42 }} size={44}></BiUser>
           <div className="mx-3">
             {/* @ts-ignore */}
             <div vw="true" className="enabled">
