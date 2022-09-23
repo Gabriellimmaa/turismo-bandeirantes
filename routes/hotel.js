@@ -1,5 +1,16 @@
-const { withDB } = require("../server");
+const withDB = async (operations, res) => {
+    try {
+        const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true })
+        const db = client.db('front-code');
 
+        await operations(db);
+
+        client.close()
+    }
+    catch (error) {
+        res.status(500).json({ message: 'Error connecting to db', error })
+    }
+}
 module.exports = function (app) {
     app.get('/api/hotel/:id', async (req, res) => {
         withDB(async (db) => {
