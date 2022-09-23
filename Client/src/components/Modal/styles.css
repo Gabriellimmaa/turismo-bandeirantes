@@ -1,0 +1,21 @@
+.mobileModal {
+    inset: 50% auto auto 50%;
+    border: none;
+    border-radius: 8px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 736px;
+    box-shadow: none;
+    position: absolute;
+    overflow: auto;
+    outline: none;
+    padding: 20px;
+    transition: .3s;
+    @apply bg-gray-100;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobileModal {
+        width: 90% !important;
+    }
+}

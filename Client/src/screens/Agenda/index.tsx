@@ -1,3 +1,12 @@
+import { GrFormClose } from 'react-icons/gr';
+import { BiCalendar } from 'react-icons/bi';
+import { BsTextIndentLeft } from 'react-icons/bs';
+import { BiMapPin } from 'react-icons/bi';
+import {
+  BiPhoneCall,
+  BiPlanet,
+  BiMailSend,
+} from 'react-icons/bi'
 
 import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from './optionData'
@@ -6,6 +15,8 @@ import './styles.css'
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardAgenda } from '../../components/CardAgenda'
+import { Loading } from '../../components/Loading'
+import Modal from '../../components/Modal'
 
 interface AgendaProps {
   id: number | string
@@ -23,14 +34,22 @@ interface AgendaProps {
 export function Agenda() {
   const { t } = useTranslation()
   const [filter, setFilter] = useState<string>('')
-  const [agenda, setAgenda] = useState<AgendaProps[]>([])
-  const filtro = (childdata: string) => {
-    setFilter(childdata)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [contentenData, setContentenData] = useState<AgendaProps>()
+
+  const handleToggleOpenModal = () => {
+    setModalIsOpen(!modalIsOpen)
   }
 
-  useEffect(() => {
-    setAgenda(listAgenda)
-  }, [])
+  const addDataToModal = (data: any) => {
+    setContentenData(data)
+    handleToggleOpenModal()
+  }
+
+  const filtro = (childdata: string) => {
+    setFilter(childdata)
+    console.log(filter)
+  }
 
   return (
     <section id="agenda">
@@ -50,11 +69,63 @@ export function Agenda() {
                 descricao={item.descricao}
                 data={item.data}
                 imagem={item.imagem}
+                onClick={() => addDataToModal(item)}
               />
             )
           })
         }
       </div>
-    </section>
+
+      <Modal isOpen={modalIsOpen} setIsOpen={handleToggleOpenModal}>
+        <h3 className='mb-2'>
+          {contentenData?.titulo}
+        </h3>
+        <button type="button" onClick={handleToggleOpenModal} className="absolute right-5 top-5">
+          <GrFormClose size={20} />
+        </button>
+        <div className='py-3 grid items-center border-b-2'>
+          <label className='flex gap-2 items-center font-bold'><BiCalendar />  Data:</label>
+          <span>
+            {contentenData?.data}
+          </span>
+        </div>
+        <div className='py-3 grid items-center border-b-2'>
+          <label className='flex gap-2 items-center font-bold'><BsTextIndentLeft />  Descrição:</label>
+          <span>
+            {contentenData?.descricao}
+          </span>
+        </div>
+        {
+          contentenData?.endereco && (
+            <div className='py-3 grid items-center border-b-2'>
+              <label className='flex gap-2 items-center font-bold'><BiMapPin />  Endereço:</label>
+              <span>
+                {contentenData?.endereco}
+              </span>
+            </div>
+          )
+        }
+
+        {contentenData?.email && (
+          <div className='py-3 flex items-center gap-2 border-b-2'>
+            <BiMailSend /> {contentenData?.email}
+          </div>
+        )}
+        {contentenData?.telefone && (
+          <div className='py-3 grid items-center border-b-2'>
+            <label className='flex gap-2 items-center font-bold'><BiPhoneCall />  Telefone:</label>
+            <span>
+              {contentenData?.telefone}
+            </span>
+          </div>
+        )}
+        {contentenData?.website && (
+          <div className='py-3 flex items-center gap-2 border-b-2'>
+            <BiPlanet /> {contentenData?.website}
+          </div>
+        )}
+
+      </Modal>
+    </section >
   )
 }

@@ -32,9 +32,6 @@
     max-height: none;
     @apply grid gap-0 mt-2 justify-center;
   }
-  .card-agenda .card-agenda-container p:last-child {
-    display: none;
-  }
   .card-agenda .card-agenda-container img {
     @apply h-auto w-full;
   }
