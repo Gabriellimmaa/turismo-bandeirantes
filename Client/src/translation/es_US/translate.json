@@ -33,7 +33,20 @@
     },
     "inicio": {
       "header": "QUICK ACCESS",
+      "cards": "What to do?",
+      "botao": "See all",
+      "saibaMais": "know more",
+      "parallax": {
+        "titulo": "Send your suggestion",
+        "placeholderNome": "Your name",
+        "placeholderSugestao": "Your suggestion",
+        "botao": "Submit"
+      },
       "acesso-rapido": {
+        "mapa": {
+          "titulo": "Interactive Map",
+          "descricao": "Access the interactive map of the city and find out where everything is."
+        },
         "lazer-esporte": {
           "titulo": "Lazer & Sport",
           "descricao": "Our city is its perfect destination culture, sport, leisure, very fresh air and beautiful moments"

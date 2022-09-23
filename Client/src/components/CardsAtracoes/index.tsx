@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Loading } from '../Loading'
-
+import { useTranslation } from 'react-i18next'
 // install Virtual module
 SwiperCore.use([Virtual, Navigation, Pagination])
 
@@ -26,6 +26,7 @@ interface TurismoHomeProps {
 }
 
 export function CardsAtracoes() {
+  const { t } = useTranslation()
   const [turismo, setTurismo] = useState<TurismoHomeProps[]>([])
 
   const [loading, setLoading] = useState(true)
@@ -76,7 +77,7 @@ export function CardsAtracoes() {
                   to={`/turismo/detalhe/${atracao.id}`}
                   className="bg-transparent rounded-2xl border px-5 py-1 text-white border-white hover:bg-green-brasao hover:text-white hover:border-transparent animate-ease-in-out transition duration-200"
                 >
-                  Saiba Mais
+                  {t('paginas.inicio.saibaMais')}
                 </Link>
               </div>
               <img className="rounded-xl bg-cover bg-center" src={atracao.logo} alt={atracao.nome} />

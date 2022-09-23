@@ -228,6 +228,15 @@
     },
     "inicio": {
       "header": "ACESSO RÁPIDO",
+      "cards": "O que fazer?",
+      "botao": "Ver Todas",
+      "saibaMais": "Saiba mais",
+      "parallax": {
+        "titulo": "Envie sua sugestão",
+        "placeholderNome": "Seu nome",
+        "placeholderSugestao": "Sua sugestão",
+        "botao": "Enviar"
+      },
       "acesso-rapido": {
         "mapa": {
           "titulo": "Mapa Interativo",
@@ -348,7 +357,7 @@
       "subtitulo": "Conheça nosso álbum de fotos!"
     },
     "detail": {
-      "descricao": "Descriçao:",
+      "descricao": "Descrição:",
       "endereco": "Endereço",
       "contatos": "Contatos:",
       "comentarios": "Comentários",

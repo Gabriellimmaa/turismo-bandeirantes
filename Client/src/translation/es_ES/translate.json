@@ -1,15 +1,15 @@
 {
   "teste": "teste",
   "navbar": {
-    "inicio": "comienzo",
+    "inicio": "Comienzo",
     "historia": "Historia",
-    "mapa": "mapa",
-    "agenda": "agenda",
+    "mapa": "Mapa",
+    "agenda": "Agenda",
     "hoteis": "Hoteles",
-    "turismo": "turismo",
+    "turismo": "Turismo",
     "lazer&esporte": "Ocio y deporte",
-    "restaurantes": "restaurantes",
-    "album": "álbum",
+    "restaurantes": "Restaurantes",
+    "album": "Álbum",
     "contato": "Contacto",
     "traducao": "Traducción"
   },
@@ -19,7 +19,7 @@
       "sobre": "sobre",
       "onde-dormir": "Dónde dormir",
       "oque-fazer": "Que hacer",
-      "mapa": "mapa"
+      "mapa": "Mapa"
     },
     "contato": "Contatos",
     "copy": "© 2022 - Ayuntamiento de Bandeirantes - Todos los derechos reservados",
@@ -33,7 +33,20 @@
     },
     "inicio": {
       "header": "ACCESO rápido",
+      "cards": "¿Que hacer?",
+      "botao": "verTodas",
+      "saibaMais": "sepa mas",
+      "parallax": {
+        "titulo": "Envía tu sugerencia",
+        "placeholderNome": "Su nombre",
+        "placeholderSugestao": "Tu sugerencia",
+        "botao": "Enviar"
+      },
       "acesso-rapido": {
+        "mapa": {
+          "titulo": "Mapa interactivo",
+          "descricao": "Visualice el mapa interactivo de Bandeirantes. Nuestra ciudad es su destino perfecto"
+        },
         "lazer-esporte": {
           "titulo": "lazer & Deporte",
           "descricao": "Nuestro Ciudad Está O su destino Perfecto cultura, deporte, Lazer, mucho Arkansas Puro mi hermoso momentos naturaleza"

@@ -91,13 +91,13 @@ export default function Inicio() {
         <div className='py-2 px-4 grid items-center'>
           <span>
             <h1 className="text-3xl my-0 font-extrabold uppercase text-white whitespace-nowrap">
-              Envie sua sugestão
+             {t('paginas.inicio.parallax.titulo')}
             </h1>
           </span>
           <span className='flex gap-2 md:gap-4'>
-            <input type="text" className="w-1/5 md:w-1/2 h-10 rounded-lg pl-2" placeholder="Seu nome" />
-            <input type="text" className="w-1/2 md:w-full h-10 rounded-lg pl-2" placeholder="Deixe sua sugestão" />
-            <button className='w-full'><IoIosSend /> Enviar</button>
+            <input type="text" className="w-1/5 md:w-1/2 h-10 rounded-lg pl-2" placeholder= {t('paginas.inicio.parallax.placeholderNome')}/>
+            <input type="text" className="w-1/2 md:w-full h-10 rounded-lg pl-2" placeholder={t('paginas.inicio.parallax.placeholderSugestao')} />
+            <button className='w-full'><IoIosSend /> {t('paginas.inicio.parallax.botao')} </button>
           </span>
         </div>
       </div>
@@ -107,13 +107,13 @@ export default function Inicio() {
             <div className="w-full mt-10 flex justify-center">
               <div className='flex flex-nowrap flex-col lg:flex-row w-11/12 items-center justify-center'>
                 <h1 className="flex whitespace-nowrap text-center md:pl-0 lg:pl-40 flex-1 justify-center text-4xl font-extrabold uppercase">
-                  O QUE FAZER?
+                {t('paginas.inicio.cards')}
                 </h1>
                 <Link
                   to="/turismo"
                   className="text-lg rounded-3xl border-2 border-grayHover  hover:text-gray-800 py-2 px-9 font-extrabold hover:bg-grayHover transition-all duration-500"
                 >
-                  Ver Todas
+                  {t('paginas.inicio.botao')}
                 </Link>
               </div>
             </div>
