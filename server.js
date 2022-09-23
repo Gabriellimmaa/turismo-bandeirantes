@@ -34,4 +34,5 @@ app.get('/', (req, res) => {
 
 })
 
-app.listen(3000, () => console.log("Listening on port 8000"));
+var listener  = app.listen(process.env.PORT)
+console.log(listener.address())
