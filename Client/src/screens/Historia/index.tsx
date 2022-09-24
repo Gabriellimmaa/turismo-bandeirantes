@@ -13,6 +13,15 @@ import './styles.css'
 import { Autoplay, FreeMode, Pagination } from 'swiper'
 import { useTranslation } from 'react-i18next'
 
+import img1 from '../../assets/img/historia/Band1.jpg'
+import img2 from '../../assets/img/historia/Band2.jpg'
+import img3 from '../../assets/img/historia/Band3.jpg'
+import img4 from '../../assets/img/historia/Band4.jpg'
+import img5 from '../../assets/img/historia/Band5.jpg'
+import img6 from '../../assets/img/historia/Band6.jpg'
+import bandeira from '../../assets/img/historia/Bandeirantes.png'
+import brasao from '../../assets/img/historia/brasao.png'
+
 export default function Historia() {
   const { t } = useTranslation()
 
@@ -76,7 +85,7 @@ export default function Historia() {
             <div className="container">
               <img
                 className="bandeira"
-                src="\src\assets\img\historia\Bandeirantes.png"
+                src={bandeira}
               />
               <div className="overlay1">
                 <div className="text">Bandeira do Município</div>
@@ -85,7 +94,7 @@ export default function Historia() {
             <div className="container">
               <img
                 className="brasao"
-                src="\src\assets\img\historia\brasao.png"
+                src={brasao}
               />
               <div className="overlay2">
                 <div className="text">Brasão do Município</div>
@@ -112,22 +121,22 @@ export default function Historia() {
         }}
       >
         <SwiperSlide>
-          <img src="src\assets\img\historia\Band1.jpg" />
+          <img src={img1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\historia\Band2.jpg" />
+          <img src={img2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\historia\Band3.jpg" />
+          <img src={img3} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\historia\Band4.jpg" />
+          <img src={img4} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\historia\Band5.jpg" />
+          <img src={img5} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="src\assets\img\historia\Band6.jpg" />
+          <img src={img6} />
         </SwiperSlide>
       </Swiper>
     </section>
