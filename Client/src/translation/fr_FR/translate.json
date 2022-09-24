@@ -367,7 +367,7 @@
       "placeholderMensagem": "Entrez l'adresse complète de l'entreprise", 
       "placeholderContato": "Entrez le nom de contact",
       "botao": "Soumettre",
-      "mapa":"Sélectionnez le point sur la carte:"
+      "localizacao":"Sélectionnez le point sur la carte:"
     },
     "album": {
       "titulo": "Albumum",

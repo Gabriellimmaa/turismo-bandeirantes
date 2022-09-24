@@ -366,7 +366,7 @@
       "placeholderMensagem": "Ingrese la dirección comercial completa", 
       "placeholderContato": "Ingrese el nombre de contacto",
       "botao": "Enviar",
-      "mapa": "Seleccione el punto en el mapa:"
+      "localizacao": "Seleccione el punto en el mapa:"
     },
     "album": {
       "titulo": "Álbum",
