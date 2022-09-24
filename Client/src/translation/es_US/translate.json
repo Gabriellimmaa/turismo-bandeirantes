@@ -159,7 +159,22 @@
       "menssagem": "Send us a message",
       "nome": "Name",
       "contato": "Contact",
-      "sugestao": "Suggestion"
+      "localizacao": "Location",
+      "descricao": "Register your company too",
+      "subtitulo": "Register your company here",
+      "telefone": "Phone:",
+      "empresa": "Company Name:",
+      "email": "E-mail:",
+      "categoria": "Company category:",
+      "endereco": "Address:",
+      "enderecoCompleto": "Full address:",
+      "placeholderEndereco": "Enter full address:",
+      "placeholderEmpresa": "Enter the company name:",
+      "placeholderEmail": "Type your e-mail:",
+      "placeholderTelefone": "Enter your phone:",
+      "placeholderMensagem": "Enter the company's full address:", 
+      "placeholderContato": "Enter the contact name:",
+      "botao": "Send"
     },
     "album": {
       "titulo": "Album",

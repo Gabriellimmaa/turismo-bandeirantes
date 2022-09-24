@@ -16,7 +16,6 @@ import {
 } from 'react-icons/bi'
 import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { RiFacebookCircleLine } from 'react-icons/ri'
-import { toast } from 'react-toastify'
 import { CommentsList } from '../../../components/Comments/CommentsList'
 import apiLocal from '../../../services/apiLocal'
 import { StarRating } from '../../../components/StarRating'
@@ -53,7 +52,10 @@ export function TurismoDetail() {
   const [loading, setLoading] = useState(true)
   const { t } = useTranslation()
 
-  const [dataLocal, setDataLocal] = useState<{ estrelas: number[], comentarios: object[] }>({ estrelas: [], comentarios: [] });
+  const [dataLocal, setDataLocal] = useState<{
+    estrelas: number[]
+    comentarios: object[]
+  }>({ estrelas: [], comentarios: [] })
   const [hover, setHover] = useState(0)
 
   useEffect(() => {
@@ -63,8 +65,8 @@ export function TurismoDetail() {
     })
 
     apiLocal.get(`turismo/${id}`).then((response) => {
-      const maiorValor = Math.max.apply(null, response.data.estrelas);
-      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
+      const maiorValor = Math.max.apply(null, response.data.estrelas)
+      const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
       setLoading(false)
@@ -96,13 +98,25 @@ export function TurismoDetail() {
         </div>
         <section className="info">
           <div className="flex items-center">
-            <div>{dataLocal.estrelas[0] +
-              dataLocal.estrelas[1] +
-              dataLocal.estrelas[2] +
-              dataLocal.estrelas[3] +
-              dataLocal.estrelas[4]} {t('paginas.detail.avaliacoes')}</div>
-            <div className="ml-5">{dataLocal.comentarios.length} {t('paginas.detail.comentarios')} </div>
-            <StarRating id={id} type="turismo" dataLocal={dataLocal} hover={hover} setHover={setHover} setDataLocal={setDataLocal} />
+            <div>
+              {dataLocal.estrelas[0] +
+                dataLocal.estrelas[1] +
+                dataLocal.estrelas[2] +
+                dataLocal.estrelas[3] +
+                dataLocal.estrelas[4]}{' '}
+              {t('paginas.detail.avaliacoes')}
+            </div>
+            <div className="ml-5">
+              {dataLocal.comentarios.length} {t('paginas.detail.comentarios')}{' '}
+            </div>
+            <StarRating
+              id={id}
+              type="turismo"
+              dataLocal={dataLocal}
+              hover={hover}
+              setHover={setHover}
+              setDataLocal={setDataLocal}
+            />
           </div>
           <div className="mb-10">
             <h3>{t('paginas.detail.descricao')}</h3>
@@ -153,10 +167,11 @@ export function TurismoDetail() {
               <div className="contatos">
                 <h3>{t('paginas.detail.contatos')}</h3>
                 <div
-                  className={`my-3 grid ${qtdContato.length / 2 === 0
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-                    } sm:grid-cols-1 gap-3 justify-items-center`}
+                  className={`my-3 grid ${
+                    qtdContato.length / 2 === 0
+                      ? 'md:grid-cols-2'
+                      : 'md:grid-cols-3'
+                  } sm:grid-cols-1 gap-3 justify-items-center`}
                 >
                   {data?.telefone && (
                     <p className="flex items-center">
@@ -181,7 +196,7 @@ export function TurismoDetail() {
                     <p className="flex items-center">
                       <RiFacebookCircleLine size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.face} rel="noreferrer">
-                      {t('paginas.detail.visitar')} facebook
+                        {t('paginas.detail.visitar')} facebook
                       </a>
                     </p>
                   )}
@@ -189,7 +204,7 @@ export function TurismoDetail() {
                     <p className="flex items-center">
                       <FaInstagram size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.insta} rel="noreferrer">
-                      {t('paginas.detail.visitar')} instagram
+                        {t('paginas.detail.visitar')} instagram
                       </a>
                     </p>
                   )}
@@ -197,7 +212,7 @@ export function TurismoDetail() {
                     <p className="flex items-center">
                       <BiPlanet size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.site} rel="noreferrer">
-                      {t('paginas.detail.site')}
+                        {t('paginas.detail.site')}
                       </a>
                     </p>
                   )}
@@ -221,7 +236,7 @@ export function TurismoDetail() {
               </div>
             </div>
             <CommentsList comments={dataLocal.comentarios} />
-            <CommentsAdd type='turismo' id={data?.id} setInfo={setDataLocal} />
+            <CommentsAdd type="turismo" id={data?.id} setInfo={setDataLocal} />
           </div>
         </section>
       </div>

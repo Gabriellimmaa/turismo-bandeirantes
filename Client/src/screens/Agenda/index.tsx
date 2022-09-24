@@ -1,21 +1,20 @@
-import { GrFormClose } from 'react-icons/gr';
-import { BiCalendar } from 'react-icons/bi';
-import { BsTextIndentLeft } from 'react-icons/bs';
-import { BiMapPin } from 'react-icons/bi';
+import { GrFormClose } from 'react-icons/gr'
 import {
+  BiCalendar,
+  BiMapPin,
   BiPhoneCall,
   BiPlanet,
   BiMailSend,
 } from 'react-icons/bi'
+import { BsTextIndentLeft } from 'react-icons/bs'
 
 import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from './optionData'
 import { listAgenda } from './listAgenda'
 import './styles.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardAgenda } from '../../components/CardAgenda'
-import { Loading } from '../../components/Loading'
 import Modal from '../../components/Modal'
 
 interface AgendaProps {
@@ -28,7 +27,6 @@ interface AgendaProps {
   telefone: string
   email: string
   imagem: string
-
 }
 
 export function Agenda() {
@@ -60,72 +58,69 @@ export function Agenda() {
       <Toolbar objectList={optionAgenda} filtro={filtro} />
 
       <div className="grid grid-cols-1 gap-5 justify-items-center mt-6">
-        {
-          listAgenda.map((item) => {
-            return (
-              <CardAgenda
-                key={item.id}
-                titulo={item.titulo}
-                descricao={item.descricao}
-                data={item.data}
-                imagem={item.imagem}
-                onClick={() => addDataToModal(item)}
-              />
-            )
-          })
-        }
+        {listAgenda.map((item) => {
+          return (
+            <CardAgenda
+              key={item.id}
+              titulo={item.titulo}
+              descricao={item.descricao}
+              data={item.data}
+              imagem={item.imagem}
+              onClick={() => addDataToModal(item)}
+            />
+          )
+        })}
       </div>
 
       <Modal isOpen={modalIsOpen} setIsOpen={handleToggleOpenModal}>
-        <h3 className='mb-2'>
-          {contentenData?.titulo}
-        </h3>
-        <button type="button" onClick={handleToggleOpenModal} className="absolute right-5 top-5">
+        <h3 className="mb-2">{contentenData?.titulo}</h3>
+        <button
+          type="button"
+          onClick={handleToggleOpenModal}
+          className="absolute right-5 top-5"
+        >
           <GrFormClose size={20} />
         </button>
-        <div className='py-3 grid items-center border-b-2'>
-          <label className='flex gap-2 items-center font-bold'><BiCalendar />  Data:</label>
-          <span>
-            {contentenData?.data}
-          </span>
+        <div className="py-3 grid items-center border-b-2">
+          <label className="flex gap-2 items-center font-bold">
+            <BiCalendar /> Data:
+          </label>
+          <span>{contentenData?.data}</span>
         </div>
-        <div className='py-3 grid items-center border-b-2'>
-          <label className='flex gap-2 items-center font-bold'><BsTextIndentLeft />  Descrição:</label>
-          <span>
-            {contentenData?.descricao}
-          </span>
+        <div className="py-3 grid items-center border-b-2">
+          <label className="flex gap-2 items-center font-bold">
+            <BsTextIndentLeft /> Descrição:
+          </label>
+          <span>{contentenData?.descricao}</span>
         </div>
-        {
-          contentenData?.endereco && (
-            <div className='py-3 grid items-center border-b-2'>
-              <label className='flex gap-2 items-center font-bold'><BiMapPin />  Endereço:</label>
-              <span>
-                {contentenData?.endereco}
-              </span>
-            </div>
-          )
-        }
+        {contentenData?.endereco && (
+          <div className="py-3 grid items-center border-b-2">
+            <label className="flex gap-2 items-center font-bold">
+              <BiMapPin /> Endereço:
+            </label>
+            <span>{contentenData?.endereco}</span>
+          </div>
+        )}
 
         {contentenData?.email && (
-          <div className='py-3 flex items-center gap-2 border-b-2'>
+          <div className="py-3 flex items-center gap-2 border-b-2">
             <BiMailSend /> {contentenData?.email}
           </div>
         )}
         {contentenData?.telefone && (
-          <div className='py-3 grid items-center border-b-2'>
-            <label className='flex gap-2 items-center font-bold'><BiPhoneCall />  Telefone:</label>
-            <span>
-              {contentenData?.telefone}
-            </span>
+          <div className="py-3 grid items-center border-b-2">
+            <label className="flex gap-2 items-center font-bold">
+              <BiPhoneCall /> Telefone:
+            </label>
+            <span>{contentenData?.telefone}</span>
           </div>
         )}
         {contentenData?.website && (
-          <div className='py-3 flex items-center gap-2 border-b-2'>
+          <div className="py-3 flex items-center gap-2 border-b-2">
             <BiPlanet /> {contentenData?.website}
           </div>
         )}
-
       </Modal>
-    </section >
+    </section>
   )
 }

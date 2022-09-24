@@ -342,6 +342,7 @@
     },
     "contato": {
       "titulo": "Contato",
+      "localizacao": "Localização",
       "descricao": "Cadastre sua empresa também",
       "subtitulo": "Cadastre aqui sua empresa",
       "telefone": "Telefone:",
@@ -357,7 +358,8 @@
       "placeholderTelefone": "Digite seu telefone",
       "placeholderMensagem": "Digite o endereço completo da empresa", 
       "placeholderContato": "Digite o nome para contato",
-      "botao": "Enviar"
+      "botao": "Enviar",
+      "mapa":"Selecione o ponto no mapa:"
     },
     "hoteis": {
       "titulo": "Hotéis",

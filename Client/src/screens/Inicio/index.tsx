@@ -1,17 +1,10 @@
-import { IoIosSend } from 'react-icons/io'
-import { IoAirplaneSharp } from 'react-icons/io5';
-import { BsFillCalendarDateFill } from 'react-icons/bs';
-import { IoMdPhotos } from 'react-icons/io';
-import { FaMapMarked } from 'react-icons/fa';
+import { IoIosSend, IoMdPhotos } from 'react-icons/io'
+import { IoAirplaneSharp } from 'react-icons/io5'
+import { BsFillCalendarDateFill } from 'react-icons/bs'
+import { FaMapMarked, FaHotel } from 'react-icons/fa'
 import { Carousel } from '../../components/Carousel'
-import { GiCommercialAirplane, GiSoccerBall } from 'react-icons/gi'
-import { FaHotel } from 'react-icons/fa'
 import { MdFastfood } from 'react-icons/md'
-import { BiPhotoAlbum } from 'react-icons/bi'
-import { GrSchedule } from 'react-icons/gr'
 import { CardHome } from '../../components/CardHome'
-import Toolbar from '../../components/Toolbar'
-import { optionAgenda } from '../Agenda/optionData'
 import { CardsAtracoes } from '../../components/CardsAtracoes'
 
 import './styles.css'
@@ -25,7 +18,7 @@ export default function Inicio() {
       <div className="w-full h-[65%] pt-20 md:pt-0">
         <Carousel />
       </div>
-      <section className='inicio-section'>
+      <section className="inicio-section">
         <div className="acessoRapido inicio">
           <div className="w-full">
             <div className="w-full mt-10 mb-14">
@@ -38,12 +31,8 @@ export default function Inicio() {
                   key="mapa"
                   link="/map"
                   icon={<FaMapMarked size={28} />}
-                  titulo={t(
-                    'paginas.inicio.acesso-rapido.mapa.titulo',
-                  )}
-                  corpo={t(
-                    'paginas.inicio.acesso-rapido.mapa.descricao',
-                  )}
+                  titulo={t('paginas.inicio.acesso-rapido.mapa.titulo')}
+                  corpo={t('paginas.inicio.acesso-rapido.mapa.descricao')}
                 />
                 <CardHome
                   key="hoteis"
@@ -88,26 +77,36 @@ export default function Inicio() {
         </div>
       </section>
       <div className="parallax">
-        <div className='py-2 px-4 grid items-center'>
+        <div className="py-2 px-4 grid items-center">
           <span>
             <h1 className="text-3xl my-0 font-extrabold uppercase text-white whitespace-nowrap">
-             {t('paginas.inicio.parallax.titulo')}
+              {t('paginas.inicio.parallax.titulo')}
             </h1>
           </span>
-          <span className='flex gap-2 md:gap-4'>
-            <input type="text" className="w-1/5 md:w-1/2 h-10 rounded-lg pl-2" placeholder= {t('paginas.inicio.parallax.placeholderNome')}/>
-            <input type="text" className="w-1/2 md:w-full h-10 rounded-lg pl-2" placeholder={t('paginas.inicio.parallax.placeholderSugestao')} />
-            <button className='w-full'><IoIosSend /> {t('paginas.inicio.parallax.botao')} </button>
+          <span className="flex gap-2 md:gap-4">
+            <input
+              type="text"
+              className="w-1/5 md:w-1/2 h-10 rounded-lg pl-2"
+              placeholder={t('paginas.inicio.parallax.placeholderNome')}
+            />
+            <input
+              type="text"
+              className="w-1/2 md:w-full h-10 rounded-lg pl-2"
+              placeholder={t('paginas.inicio.parallax.placeholderSugestao')}
+            />
+            <button className="w-full">
+              <IoIosSend /> {t('paginas.inicio.parallax.botao')}{' '}
+            </button>
           </span>
         </div>
       </div>
-      <section className='inicio inicio-section'>
+      <section className="inicio inicio-section">
         <div className="turismo w-full">
           <div className="w-full px-10">
             <div className="w-full mt-10 flex justify-center">
-              <div className='flex flex-nowrap flex-col lg:flex-row w-11/12 items-center justify-center'>
+              <div className="flex flex-nowrap flex-col lg:flex-row w-11/12 items-center justify-center">
                 <h1 className="flex whitespace-nowrap text-center md:pl-0 lg:pl-40 flex-1 justify-center text-4xl font-extrabold uppercase">
-                {t('paginas.inicio.cards')}
+                  {t('paginas.inicio.cards')}
                 </h1>
                 <Link
                   to="/turismo"

@@ -222,7 +222,7 @@ export function Hotel() {
                     <p className="flex items-center">
                       <BiPlanet size={32} className="mx-2" />{' '}
                       <a target="_blank" href={data?.site} rel="noreferrer">
-                      {t('paginas.detail.site')}
+                        {t('paginas.detail.site')}
                       </a>
                     </p>
                   )}

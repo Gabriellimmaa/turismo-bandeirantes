@@ -1,9 +1,4 @@
-import {
-  BiSearchAlt2,
-  BiMap,
-  BiMoney,
-  BiPhoneCall,
-} from 'react-icons/bi'
+import { BiSearchAlt2, BiMap, BiMoney, BiPhoneCall } from 'react-icons/bi'
 import { TbToolsKitchen } from 'react-icons/tb'
 
 import { useEffect, useState } from 'react'
@@ -66,7 +61,6 @@ export default function Map() {
     popupAnchor: [0, -55],
   })
 
-
   useEffect(() => {
     api.get('/atracoes').then((response) => {
       setTurismo(response.data.atracoes)
@@ -110,8 +104,9 @@ export default function Map() {
         style={{ height: '80vh', width: '100%', zIndex: 0 }}
       >
         <TileLayer
-          url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN
-            }`}
+          url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${
+            import.meta.env.VITE_MAPBOX_TOKEN
+          }`}
         />
         {hoteis?.map((hotel) => {
           return (
@@ -126,27 +121,31 @@ export default function Map() {
                 maxHeight={240}
                 className="mapPopup"
               >
-                <div className='grid grid-cols-1 content-center w-full'>
+                <div className="grid grid-cols-1 content-center w-full">
                   <span>Hotel {hotel.nome}</span>
-                  <div className='grid grid-cols-2 gap-4 my-2'>
-                    <div className='flex items-center text-sm gap-1 justify-center'>
+                  <div className="grid grid-cols-2 gap-4 my-2">
+                    <div className="flex items-center text-sm gap-1 justify-center">
                       <BiPhoneCall size={20} />
-                      <span className='whitespace-nowrap'>
+                      <span className="whitespace-nowrap">
                         {hotel.telefone}
                       </span>
                     </div>
-                    <div className='flex items-center text-sm gap-1 justify-center'>
+                    <div className="flex items-center text-sm gap-1 justify-center">
                       <BiMoney size={20} />
-                      <span className='whitespace-nowrap'>
-                        {hotel.preco}
-                      </span>
+                      <span className="whitespace-nowrap">{hotel.preco}</span>
                     </div>
                   </div>
-                  <div className='grid grid-cols-2'>
-                    <Link to={`/hotel/detalhe/${hotel.id}`} className='flex text-sm items-center justify-center'>
+                  <div className="grid grid-cols-2">
+                    <Link
+                      to={`/hotel/detalhe/${hotel.id}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiSearchAlt2 /> Ver mais
                     </Link>
-                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${hotel?.latitude},${hotel?.longitude}`} className='flex text-sm items-center justify-center'>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${hotel?.latitude},${hotel?.longitude}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiMap /> Abrir rota
                     </a>
                   </div>
@@ -172,27 +171,33 @@ export default function Map() {
                 maxHeight={240}
                 className="mapPopup restaurante"
               >
-                <div className='grid grid-cols-1 content-center w-full'>
+                <div className="grid grid-cols-1 content-center w-full">
                   <span>{restaurante.nome}</span>
-                  <div className='grid grid-cols-2 gap-4 my-2'>
-                    <div className='flex items-center text-sm gap-1 justify-center'>
+                  <div className="grid grid-cols-2 gap-4 my-2">
+                    <div className="flex items-center text-sm gap-1 justify-center">
                       <BiPhoneCall size={20} />
-                      <span className='whitespace-nowrap'>
+                      <span className="whitespace-nowrap">
                         {restaurante.telefone}
                       </span>
                     </div>
-                    <div className='flex items-center text-sm gap-1 justify-center'>
+                    <div className="flex items-center text-sm gap-1 justify-center">
                       <TbToolsKitchen size={20} />
-                      <span className='whitespace-nowrap'>
+                      <span className="whitespace-nowrap">
                         {restaurante.cozinhas}
                       </span>
                     </div>
                   </div>
-                  <div className='grid grid-cols-2'>
-                    <Link to={`/restaurante/detalhe/${restaurante.id}`} className='flex text-sm items-center justify-center'>
+                  <div className="grid grid-cols-2">
+                    <Link
+                      to={`/restaurante/detalhe/${restaurante.id}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiSearchAlt2 /> Ver mais
                     </Link>
-                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${restaurante?.latitude},${restaurante?.longitude}`} className='flex text-sm items-center justify-center'>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${restaurante?.latitude},${restaurante?.longitude}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiMap /> Abrir rota
                     </a>
                   </div>
@@ -214,27 +219,29 @@ export default function Map() {
                 maxHeight={240}
                 className="mapPopup bar"
               >
-                <div className='grid grid-cols-1 content-center w-full'>
+                <div className="grid grid-cols-1 content-center w-full">
                   <span>{bar.nome}</span>
-                  <div className='grid grid-cols-2 gap-4 my-2'>
-                    <div className='flex items-center text-sm gap-1 justify-center'>
+                  <div className="grid grid-cols-2 gap-4 my-2">
+                    <div className="flex items-center text-sm gap-1 justify-center">
                       <BiPhoneCall size={20} />
-                      <span className='whitespace-nowrap'>
-                        {bar.telefone}
-                      </span>
+                      <span className="whitespace-nowrap">{bar.telefone}</span>
                     </div>
-                    <div className='flex items-center text-sm gap-1 justify-center'>
+                    <div className="flex items-center text-sm gap-1 justify-center">
                       <TbToolsKitchen size={20} />
-                      <span className='whitespace-nowrap'>
-                        {bar.cozinhas}
-                      </span>
+                      <span className="whitespace-nowrap">{bar.cozinhas}</span>
                     </div>
                   </div>
-                  <div className='grid grid-cols-2'>
-                    <Link to={`/bar/detalhe/${bar.id}`} className='flex text-sm items-center justify-center'>
+                  <div className="grid grid-cols-2">
+                    <Link
+                      to={`/bar/detalhe/${bar.id}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiSearchAlt2 /> Ver mais
                     </Link>
-                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${bar?.latitude},${bar?.longitude}`} className='flex text-sm items-center justify-center'>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${bar?.latitude},${bar?.longitude}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiMap /> Abrir rota
                     </a>
                   </div>
@@ -256,13 +263,19 @@ export default function Map() {
                 maxHeight={240}
                 className="mapPopup turismo"
               >
-                <div className='grid grid-cols-1 content-center w-full'>
-                  <span className='mb-2'>{atracao.nome}</span>
-                  <div className='grid grid-cols-2'>
-                    <Link to={`/turismo/detalhe/${atracao.id}`} className='flex text-sm items-center justify-center'>
+                <div className="grid grid-cols-1 content-center w-full">
+                  <span className="mb-2">{atracao.nome}</span>
+                  <div className="grid grid-cols-2">
+                    <Link
+                      to={`/turismo/detalhe/${atracao.id}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiSearchAlt2 /> Ver mais
                     </Link>
-                    <a href={`https://www.google.com/maps/dir/?api=1&destination=${atracao?.latitude},${atracao?.longitude}`} className='flex text-sm items-center justify-center'>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${atracao?.latitude},${atracao?.longitude}`}
+                      className="flex text-sm items-center justify-center"
+                    >
                       <BiMap /> Abrir rota
                     </a>
                   </div>

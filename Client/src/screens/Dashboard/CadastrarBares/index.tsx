@@ -1,30 +1,27 @@
-import { MdTitle } from 'react-icons/md';
-import { BiCategoryAlt } from 'react-icons/bi';
-import { BsTextIndentLeft } from 'react-icons/bs';
-import { BiMapPin } from 'react-icons/bi';
-import { FaWhatsapp } from 'react-icons/fa'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import { FiFacebook } from 'react-icons/fi'
-
-import { useTranslation } from 'react-i18next'
-
+import { MdTitle } from 'react-icons/md'
 import {
+  BiCategoryAlt,
+  BiMapPin,
   BiRestaurant,
   BiMoney,
   BiPhoneCall,
   BiPlanet,
   BiMailSend,
 } from 'react-icons/bi'
+import { BsTextIndentLeft } from 'react-icons/bs'
+import { FaWhatsapp } from 'react-icons/fa'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import { FiFacebook } from 'react-icons/fi'
 
-import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
-import L from 'leaflet';
-import { useState, useTransition } from 'react'
+import { useTranslation } from 'react-i18next'
+
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
+import L from 'leaflet'
 import './styles.css'
 import marcadorBar from '../../../assets/marcadores/laranja.png'
 
 export default function CadastrarBares() {
   const { t } = useTranslation()
-  const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
     iconUrl: marcadorBar,
@@ -38,16 +35,15 @@ export default function CadastrarBares() {
       click: (e) => {
         map.eachLayer((layer) => {
           if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
+            map.removeLayer(layer)
           }
-        });
-        const { lat, lng } = e.latlng;
-        L.marker([lat, lng], { icon }).addTo(map);
-      }
-    });
-    return null;
+        })
+        const { lat, lng } = e.latlng
+        L.marker([lat, lng], { icon }).addTo(map)
+      },
+    })
+    return null
   }
-
 
   return (
     <>
@@ -57,9 +53,12 @@ export default function CadastrarBares() {
           <h2></h2>
         </div>
         <form>
-          <div className='grid-cols-1 md:grid-cols-2'>
+          <div className="grid-cols-1 md:grid-cols-2">
             <span>
-              <label htmlFor="nome"><MdTitle /> {t('paginas.dashboard.bares.nome')}: <span>{t('paginas.dashboard.bares.obrigatorio')}</span> </label>
+              <label htmlFor="nome">
+                <MdTitle /> {t('paginas.dashboard.bares.nome')}:{' '}
+                <span>{t('paginas.dashboard.bares.obrigatorio')}</span>{' '}
+              </label>
               <input
                 type="text"
                 id="nome"
@@ -68,19 +67,35 @@ export default function CadastrarBares() {
               />
             </span>
             <span>
-              <label htmlFor="categoria"><BiCategoryAlt /> {t('paginas.dashboard.bares.categoria')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span></label>
+              <label htmlFor="categoria">
+                <BiCategoryAlt /> {t('paginas.dashboard.bares.categoria')}{' '}
+                <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+              </label>
               <select id="categoria" name="categoria">
-                <option value="0">{t('paginas.dashboard.bares.placeHolderCategoria')}</option>
-                <option value="italiana">{t('paginas.dashboard.bares.italiana')}</option>
-                <option value="brasileira">{t('paginas.dashboard.bares.brasileira')}</option>
-                <option value="japonesa">{t('paginas.dashboard.bares.fabiao')}</option>
-                <option value="Árabe">{t('paginas.dashboard.bares.arabe')}</option>
+                <option value="0">
+                  {t('paginas.dashboard.bares.placeHolderCategoria')}
+                </option>
+                <option value="italiana">
+                  {t('paginas.dashboard.bares.italiana')}
+                </option>
+                <option value="brasileira">
+                  {t('paginas.dashboard.bares.brasileira')}
+                </option>
+                <option value="japonesa">
+                  {t('paginas.dashboard.bares.fabiao')}
+                </option>
+                <option value="Árabe">
+                  {t('paginas.dashboard.bares.arabe')}
+                </option>
               </select>
             </span>
           </div>
 
           <span>
-            <label htmlFor="descricao"><BsTextIndentLeft /> {t('paginas.dashboard.bares.descricao')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span></label>
+            <label htmlFor="descricao">
+              <BsTextIndentLeft /> {t('paginas.dashboard.bares.descricao')}{' '}
+              <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+            </label>
             <textarea
               id="descricao"
               name="descricao"
@@ -89,7 +104,10 @@ export default function CadastrarBares() {
           </span>
 
           <span>
-            <label htmlFor="cardapio"><BiRestaurant /> {t('paginas.dashboard.bares.cardapio')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span></label>
+            <label htmlFor="cardapio">
+              <BiRestaurant /> {t('paginas.dashboard.bares.cardapio')}{' '}
+              <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+            </label>
             <textarea
               id="cardapio"
               name="cardapio"
@@ -98,27 +116,35 @@ export default function CadastrarBares() {
           </span>
 
           <span>
-            <label htmlFor="endereco"><BiMapPin /> {t('paginas.dashboard.bares.endereco')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span></label>
+            <label htmlFor="endereco">
+              <BiMapPin /> {t('paginas.dashboard.bares.endereco')}{' '}
+              <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+            </label>
             <input
               type="text"
               id="endereco"
               name="endereco"
-              placeholder= {t('paginas.dashboard.bares.placeHolderEndereco')}
+              placeholder={t('paginas.dashboard.bares.placeHolderEndereco')}
             />
           </span>
           <span>
-              <label htmlFor="preco"><BiMoney /> {t('paginas.dashboard.bares.preco')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span></label>
-              <input
-                type="text"
-                id="preco"
-                name="preco"
-                placeholder= {t('paginas.dashboard.bares.placeHolderPreco')}
-              />
-            </span>
+            <label htmlFor="preco">
+              <BiMoney /> {t('paginas.dashboard.bares.preco')}{' '}
+              <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+            </label>
+            <input
+              type="text"
+              id="preco"
+              name="preco"
+              placeholder={t('paginas.dashboard.bares.placeHolderPreco')}
+            />
+          </span>
 
-          <div className='grid-cols-1 md:grid-cols-3'>
+          <div className="grid-cols-1 md:grid-cols-3">
             <span>
-              <label htmlFor="email"><BiMailSend /> {t('paginas.dashboard.bares.email')} </label>
+              <label htmlFor="email">
+                <BiMailSend /> {t('paginas.dashboard.bares.email')}{' '}
+              </label>
               <input
                 type="text"
                 id="email"
@@ -127,7 +153,9 @@ export default function CadastrarBares() {
               />
             </span>
             <span>
-              <label htmlFor="site"><BiPlanet /> {t('paginas.dashboard.bares.site')}</label>
+              <label htmlFor="site">
+                <BiPlanet /> {t('paginas.dashboard.bares.site')}
+              </label>
               <input
                 type="text"
                 id="site"
@@ -136,70 +164,87 @@ export default function CadastrarBares() {
               />
             </span>
             <span>
-              <label htmlFor="telefone"><BiPhoneCall /> {t('paginas.dashboard.bares.telefone')} </label>
+              <label htmlFor="telefone">
+                <BiPhoneCall /> {t('paginas.dashboard.bares.telefone')}{' '}
+              </label>
               <input
                 type="text"
                 id="telefone"
                 name="telefone"
-                placeholder= {t('paginas.dashboard.bares.placeHolderTelefone')}
+                placeholder={t('paginas.dashboard.bares.placeHolderTelefone')}
               />
             </span>
           </div>
 
-          <div className='grid-cols-1 md:grid-cols-3'>
+          <div className="grid-cols-1 md:grid-cols-3">
             <span>
-              <label htmlFor="whatsapp"><FaWhatsapp />Whatsapp</label>
+              <label htmlFor="whatsapp">
+                <FaWhatsapp />
+                Whatsapp
+              </label>
               <input
                 type="text"
                 id="whatsapp"
                 name="whatsapp"
-                placeholder= {t('paginas.dashboard.bares.placeHolderWhatsapp')}
+                placeholder={t('paginas.dashboard.bares.placeHolderWhatsapp')}
               />
             </span>
             <span>
-              <label htmlFor="instagram"><AiOutlineInstagram />Instagram</label>
+              <label htmlFor="instagram">
+                <AiOutlineInstagram />
+                Instagram
+              </label>
               <input
                 type="text"
                 id="instagram"
                 name="instagram"
-                placeholder= {t('paginas.dashboard.bares.placeHolderInstagram')}
+                placeholder={t('paginas.dashboard.bares.placeHolderInstagram')}
               />
             </span>
             <span>
-              <label htmlFor="facebook"><FiFacebook /> Facebook</label>
+              <label htmlFor="facebook">
+                <FiFacebook /> Facebook
+              </label>
               <input
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder= {t('paginas.dashboard.bares.placeHolderFacebook')}
+                placeholder={t('paginas.dashboard.bares.placeHolderFacebook')}
               />
             </span>
           </div>
 
-          <label htmlFor='file' style={{ display: 'block' }}>
-          {t('paginas.dashboard.bares.logo')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
-            <input type="file" id='file' name='file' className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer" />
+          <label htmlFor="file" style={{ display: 'block' }}>
+            {t('paginas.dashboard.bares.logo')}{' '}
+            <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer"
+            />
           </label>
 
           <span>
-            <label>{t('paginas.dashboard.bares.mapa')} <span>{t('paginas.dashboard.bares.obrigatorio')}</span></label>
+            <label>
+              {t('paginas.dashboard.bares.mapa')}{' '}
+              <span>{t('paginas.dashboard.bares.obrigatorio')}</span>
+            </label>
             <MapContainer
               center={[-23.1115914, -50.3749315]}
               style={{ width: '100%', height: 280 }}
               zoom={15}
             >
               <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN
-                  }`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${
+                  import.meta.env.VITE_MAPBOX_TOKEN
+                }`}
               />
               <ComponentClick />
-
             </MapContainer>
           </span>
 
-          <button>
-            {t("paginas.dashboard.bares.cadastro")}
-          </button>
+          <button>{t('paginas.dashboard.bares.cadastro')}</button>
         </form>
       </section>
     </>

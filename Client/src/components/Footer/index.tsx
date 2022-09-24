@@ -1,10 +1,24 @@
 import { FaEnvelope, FaFacebook, FaPhone, FaYoutube } from 'react-icons/fa'
 import './styles.css'
 
+import { listAgenda } from '../../screens/Agenda/listAgenda'
+
 import logo from '../../assets/logoTurismo.png'
 import logoBanner from '../../assets/logo-banner.png'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+
+interface AgendaProps {
+  id: number | string
+  titulo: string
+  descricao: string
+  data: string
+  endereco: string
+  website: string
+  telefone: string
+  email: string
+  imagem: string
+}
 
 export function Footer() {
   const { t } = useTranslation()
@@ -40,41 +54,27 @@ export function Footer() {
               </div>
             </div>
             <div className="column titleHidden">
-              <h3>Notícias</h3>
+              <h3>Agenda</h3>
               <div className="notices">
-                <a href="">
-                  <div className="notice">
-                    <img className="w-auto h-20" src={logoBanner} alt="Logo" />
-                    <div className="notice-text">
-                      Brasão
-                      <p>20/15/2022</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="">
-                  <div className="notice">
-                    <img
-                      className="w-auto h-20"
-                      src="src\assets\logo-banner.png"
-                    />
-                    <div className="notice-text">
-                      Brasão
-                      <p>20/15/2022</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="">
-                  <div className="notice">
-                    <img
-                      className="w-auto h-20"
-                      src="src\assets\logo-banner.png"
-                    />
-                    <div className="notice-text">
-                      Brasão
-                      <p>20/15/2022</p>
-                    </div>
-                  </div>
-                </a>
+                {listAgenda
+                  .slice(listAgenda.length - 3)
+                  .map((item: AgendaProps) => {
+                    return (
+                      <a href="" key={item.id}>
+                        <div className="notice">
+                          <img
+                            className="w-auto h-20"
+                            src={item.imagem}
+                            alt={item.titulo}
+                          />
+                          <div className="notice-text">
+                            {item.titulo}
+                            <p>{item.data}</p>
+                          </div>
+                        </div>
+                      </a>
+                    )
+                  })}
               </div>
             </div>
             <div className="column">
