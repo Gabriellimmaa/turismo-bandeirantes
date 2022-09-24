@@ -33,30 +33,28 @@ export function Hoteis() {
     <section id="hotel">
       <div className="title-style-1">
         <h1>{t('paginas.hoteis.titulo')}</h1>
-        <h2>
-          {t('paginas.hoteis.subtitulo')}
-        </h2>
+        <h2>{t('paginas.hoteis.subtitulo')}</h2>
       </div>
       {loading ? <Loading /> : null}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
         {Array.isArray(hoteis)
           ? hoteis?.map((hotel) => {
-            return (
-              <Card
-                key={hotel.id}
-                id={hotel.id}
-                img={hotel.logo}
-                title={hotel.nome}
-                price={hotel.preco}
-                type="hotel"
-                cell={hotel.telefone}
-                email={hotel.email}
-                website={hotel.site}
-                latitude={hotel.latitude}
-                longitude={hotel.longitude}
-              />
-            )
-          })
+              return (
+                <Card
+                  key={hotel.id}
+                  id={hotel.id}
+                  img={hotel.logo}
+                  title={hotel.nome}
+                  price={hotel.preco}
+                  type="hotel"
+                  cell={hotel.telefone}
+                  email={hotel.email}
+                  website={hotel.site}
+                  latitude={hotel.latitude}
+                  longitude={hotel.longitude}
+                />
+              )
+            })
           : null}
       </div>
     </section>
