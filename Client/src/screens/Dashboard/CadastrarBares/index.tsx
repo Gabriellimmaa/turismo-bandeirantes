@@ -17,13 +17,11 @@ import { useTranslation } from 'react-i18next'
 
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 import L from 'leaflet'
-import { useState, useTransition } from 'react'
 import './styles.css'
 import marcadorBar from '../../../assets/marcadores/laranja.png'
 
 export default function CadastrarBares() {
   const { t } = useTranslation()
-  const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
     iconUrl: marcadorBar,

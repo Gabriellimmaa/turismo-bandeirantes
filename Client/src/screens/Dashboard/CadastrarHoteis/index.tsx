@@ -1,29 +1,26 @@
-import { MdTitle } from 'react-icons/md';
-import { BsTextIndentLeft } from 'react-icons/bs';
-import { BiMapPin } from 'react-icons/bi';
-import { FaWhatsapp } from 'react-icons/fa'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import { FiFacebook } from 'react-icons/fi'
-
-import { useTranslation } from 'react-i18next'
-
+import { MdTitle } from 'react-icons/md'
+import { BsTextIndentLeft } from 'react-icons/bs'
 import {
+  BiMapPin,
   BiRestaurant,
   BiMoney,
   BiPhoneCall,
   BiPlanet,
   BiMailSend,
 } from 'react-icons/bi'
+import { FaWhatsapp } from 'react-icons/fa'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import { FiFacebook } from 'react-icons/fi'
 
-import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
-import L from 'leaflet';
-import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
+import L from 'leaflet'
 import './styles.css'
 import marcadorHotel from '../../../assets/marcadores/verde.png'
 
 export default function Cadastrarhoteis() {
   const { t } = useTranslation()
-  const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const icon = L.icon({
     iconUrl: marcadorHotel,
@@ -37,16 +34,15 @@ export default function Cadastrarhoteis() {
       click: (e) => {
         map.eachLayer((layer) => {
           if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
+            map.removeLayer(layer)
           }
-        });
-        const { lat, lng } = e.latlng;
-        L.marker([lat, lng], { icon }).addTo(map);
-      }
-    });
-    return null;
+        })
+        const { lat, lng } = e.latlng
+        L.marker([lat, lng], { icon }).addTo(map)
+      },
+    })
+    return null
   }
-
 
   return (
     <>
@@ -57,7 +53,10 @@ export default function Cadastrarhoteis() {
         </div>
         <form>
           <span>
-            <label htmlFor="nome"><MdTitle /> {t('paginas.dashboard.hoteis.nome')}: <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span> </label>
+            <label htmlFor="nome">
+              <MdTitle /> {t('paginas.dashboard.hoteis.nome')}:{' '}
+              <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>{' '}
+            </label>
             <input
               type="text"
               id="nome"
@@ -67,7 +66,10 @@ export default function Cadastrarhoteis() {
           </span>
 
           <span>
-            <label htmlFor="descricao"><BsTextIndentLeft /> {t('paginas.dashboard.hoteis.descricao')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <label htmlFor="descricao">
+              <BsTextIndentLeft /> {t('paginas.dashboard.hoteis.descricao')}{' '}
+              <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            </label>
             <textarea
               id="descricao"
               name="descricao"
@@ -76,7 +78,10 @@ export default function Cadastrarhoteis() {
           </span>
 
           <span>
-            <label htmlFor="cardapio"><BiRestaurant /> {t('paginas.dashboard.hoteis.cardapio')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <label htmlFor="cardapio">
+              <BiRestaurant /> {t('paginas.dashboard.hoteis.cardapio')}{' '}
+              <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            </label>
             <textarea
               id="cardapio"
               name="cardapio"
@@ -85,7 +90,10 @@ export default function Cadastrarhoteis() {
           </span>
 
           <span>
-            <label htmlFor="endereco"><BiMapPin /> {t('paginas.dashboard.hoteis.endereco')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <label htmlFor="endereco">
+              <BiMapPin /> {t('paginas.dashboard.hoteis.endereco')}{' '}
+              <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            </label>
             <input
               type="text"
               id="endereco"
@@ -94,7 +102,10 @@ export default function Cadastrarhoteis() {
             />
           </span>
           <span>
-            <label htmlFor="preco"><BiMoney /> {t('paginas.dashboard.hoteis.preco')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <label htmlFor="preco">
+              <BiMoney /> {t('paginas.dashboard.hoteis.preco')}{' '}
+              <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            </label>
             <input
               type="text"
               id="preco"
@@ -103,9 +114,11 @@ export default function Cadastrarhoteis() {
             />
           </span>
 
-          <div className='grid-cols-1 md:grid-cols-3'>
+          <div className="grid-cols-1 md:grid-cols-3">
             <span>
-              <label htmlFor="email"><BiMailSend /> {t('paginas.dashboard.hoteis.email')} </label>
+              <label htmlFor="email">
+                <BiMailSend /> {t('paginas.dashboard.hoteis.email')}{' '}
+              </label>
               <input
                 type="text"
                 id="email"
@@ -114,7 +127,9 @@ export default function Cadastrarhoteis() {
               />
             </span>
             <span>
-              <label htmlFor="site"><BiPlanet /> {t('paginas.dashboard.hoteis.site')}</label>
+              <label htmlFor="site">
+                <BiPlanet /> {t('paginas.dashboard.hoteis.site')}
+              </label>
               <input
                 type="text"
                 id="site"
@@ -123,7 +138,9 @@ export default function Cadastrarhoteis() {
               />
             </span>
             <span>
-              <label htmlFor="telefone"><BiPhoneCall /> {t('paginas.dashboard.hoteis.telefone')} </label>
+              <label htmlFor="telefone">
+                <BiPhoneCall /> {t('paginas.dashboard.hoteis.telefone')}{' '}
+              </label>
               <input
                 type="text"
                 id="telefone"
@@ -133,9 +150,12 @@ export default function Cadastrarhoteis() {
             </span>
           </div>
 
-          <div className='grid-cols-1 md:grid-cols-3'>
+          <div className="grid-cols-1 md:grid-cols-3">
             <span>
-              <label htmlFor="whatsapp"><FaWhatsapp />Whatsapp</label>
+              <label htmlFor="whatsapp">
+                <FaWhatsapp />
+                Whatsapp
+              </label>
               <input
                 type="text"
                 id="whatsapp"
@@ -144,7 +164,10 @@ export default function Cadastrarhoteis() {
               />
             </span>
             <span>
-              <label htmlFor="instagram"><AiOutlineInstagram />Instagram</label>
+              <label htmlFor="instagram">
+                <AiOutlineInstagram />
+                Instagram
+              </label>
               <input
                 type="text"
                 id="instagram"
@@ -153,7 +176,9 @@ export default function Cadastrarhoteis() {
               />
             </span>
             <span>
-              <label htmlFor="facebook"><FiFacebook /> Facebook</label>
+              <label htmlFor="facebook">
+                <FiFacebook /> Facebook
+              </label>
               <input
                 type="text"
                 id="facebook"
@@ -163,30 +188,37 @@ export default function Cadastrarhoteis() {
             </span>
           </div>
 
-          <label htmlFor='file' style={{ display: 'block' }}>
-            {t('paginas.dashboard.hoteis.logo')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
-            <input type="file" id='file' name='file' className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer" />
+          <label htmlFor="file" style={{ display: 'block' }}>
+            {t('paginas.dashboard.hoteis.logo')}{' '}
+            <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              className="w-full text-sm text-gray-500 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-gray-200 hover:file:bg-gray-400 file:cursor-pointer"
+            />
           </label>
 
           <span>
-            <label>{t('paginas.dashboard.hoteis.mapa')} <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span></label>
+            <label>
+              {t('paginas.dashboard.hoteis.mapa')}{' '}
+              <span>{t('paginas.dashboard.hoteis.obrigatorio')}</span>
+            </label>
             <MapContainer
               center={[-23.1115914, -50.3749315]}
               style={{ width: '100%', height: 280 }}
               zoom={15}
             >
               <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN
-                  }`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${
+                  import.meta.env.VITE_MAPBOX_TOKEN
+                }`}
               />
               <ComponentClick />
-
             </MapContainer>
           </span>
 
-          <button>
-            {t("paginas.dashboard.hoteis.cadastro")}
-          </button>
+          <button>{t('paginas.dashboard.hoteis.cadastro')}</button>
         </form>
       </section>
     </>
