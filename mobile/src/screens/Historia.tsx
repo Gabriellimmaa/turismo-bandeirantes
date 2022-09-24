@@ -32,6 +32,7 @@ export function Historia() {
                             flex={1}
                             alignItems="center"
                             justifyContent="center"
+                            alt="Castelo"
                         />
                         <Image
                             source={require('../assets/album/album02.jpg')}
@@ -41,6 +42,7 @@ export function Historia() {
                             flex={1}
                             alignItems="center"
                             justifyContent="center"
+                            alt="Foto aerea"
                         />
                         <Image
                             source={require('../assets/album/album03.jpg')}
@@ -50,6 +52,7 @@ export function Historia() {
                             flex={1}
                             alignItems="center"
                             justifyContent="center"
+                            alt="Praça"
                         />
                         <Image
                             source={require('../assets/album/album04.jpg')}
@@ -59,6 +62,7 @@ export function Historia() {
                             flex={1}
                             alignItems="center"
                             justifyContent="center"
+                            alt="Estação"
                         />
                     </Swiper>
                 </View>
@@ -83,9 +87,6 @@ export function Historia() {
                     A base da economia no município é o cultivo de uva fina de mesa, pimentão, pepino, cana-de-açúcar e, principalmente, soja e milho. Anualmente, a festa do Milho Verde movimenta a economia local.
                     </Text>
                 </VStack>
-                <Image 
-                
-                />
             </ScrollView>
         </VStack>
     )

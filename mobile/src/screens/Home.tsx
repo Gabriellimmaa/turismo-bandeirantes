@@ -40,19 +40,19 @@ export function Home() {
       </HStack>
       <HStack space={2} alignItems="center" mt={2} justifyContent="space-evenly" px={6}  >
         <VStack alignItems="center" mt={6} justifyContent="center" space={1} >
-          <Button onPress={() => navigation.navigate('Restaurante')} borderRadius={999} w={16} h={16} variant="outline" borderWidth={2} borderColor="green.600" _pressed={{ bg: "green.200" }}>
+          <Button onPress={() => navigation.navigate('Historia')} borderRadius={999} w={16} h={16} variant="outline" borderWidth={2} borderColor="green.600" _pressed={{ bg: "green.200" }}>
             <MaterialCommunityIcons name="hail" size={28} color={colors.green['600']} />
           </Button>
           <Text>História</Text>
         </VStack>
         <VStack alignItems="center" mt={6} justifyContent="center" space={1}  >
-          <Button onPress={() => navigation.navigate('Hotel')} borderRadius={999} w={16} h={16} variant="outline" borderWidth={2} borderColor="green.600" _pressed={{ bg: "green.200" }}>
+          <Button onPress={() => navigation.navigate('Promocoes')} borderRadius={999} w={16} h={16} variant="outline" borderWidth={2} borderColor="green.600" _pressed={{ bg: "green.200" }}>
             <MaterialCommunityIcons name="ticket-percent" size={28} color={colors.green['600']} />
           </Button>
           <Text>Promoções</Text>
         </VStack>
         <VStack alignItems="center" mt={6} justifyContent="center" space={1} >
-          <Button onPress={() => navigation.navigate('Hotel')} borderRadius={999} w={16} h={16} variant="outline" borderWidth={2} borderColor="green.600" _pressed={{ bg: "green.200" }}>
+          <Button onPress={() => navigation.navigate('Comunicados')} borderRadius={999} w={16} h={16} variant="outline" borderWidth={2} borderColor="green.600" _pressed={{ bg: "green.200" }}>
             <MaterialCommunityIcons name="bullhorn" size={28} color={colors.green['600']} />
           </Button>
           <Text>Comunicados</Text>

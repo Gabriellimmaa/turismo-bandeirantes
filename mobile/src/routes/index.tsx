@@ -28,7 +28,7 @@ export function Routes() {
       }}
     >
       <Drawer.Screen
-        name="Início"
+        name="Inicio"
         component={Home}
         options={{
           drawerIcon: ({ focused, size, color }) => (
@@ -37,7 +37,7 @@ export function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Conheça Bandeirantes"
+        name="Historia"
         component={Historia}
         options={{
           drawerIcon: ({ focused, size, color }) => (
@@ -55,7 +55,7 @@ export function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Hoteis"
+        name="Hotel"
         component={StackRoutesHotel}
         options={{
           drawerIcon: ({ focused, size, color }) => (
@@ -64,7 +64,7 @@ export function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Restaurantes"
+        name="Restaurante"
         component={StackRoutesRestaurante}
         options={{
           drawerIcon: ({ focused, size, color }) => (
@@ -73,7 +73,7 @@ export function Routes() {
         }}
       />
       <Drawer.Screen
-        name="Promoções"
+        name="Promocoes"
         component={Home}
         options={{
           drawerIcon: ({ focused, size, color }) => (

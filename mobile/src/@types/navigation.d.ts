@@ -5,6 +5,11 @@ export declare global {
       Detalhe: undefined;
       Restaurante: undefined;
       Hotel: undefined;
+      Inicio: undefined;
+      Promocoes: undefined;
+      Comunicados: undefined;
+      Contato: undefined;
+      Historia: undefined;
     }
   }
 }
