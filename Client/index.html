@@ -14,13 +14,23 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Saira:wght@100;200;400;900&display=swap"
     rel="stylesheet" />
 
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "95861f90-eebf-4e95-9afd-ca12ea5ace35",
+      });
+    });
+  </script>
+
   <title>FrontCode - Hackathon</title>
 </head>
 
 <body>
   <div style="height: 100vh;" id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
-  <script src="./src/vlibras.js"></script>
+  <script src="./vlibras.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
