@@ -11,10 +11,9 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import { usePosition } from './hooks/usePosition'
 import ScrollToTop from './hooks/scrollToTop'
-import { useState } from 'react'
 
 function App() {
- usePosition()
+  usePosition()
 
   return (
     <BrowserRouter>
