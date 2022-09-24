@@ -64,7 +64,6 @@ export function RestauranteDetail() {
     setQtdContatos([])
     api.get(`/restaurantes/${id}`).then((response) => {
       setData(response.data.restaurantes[0])
-      setLoading(false)
     })
 
     apiLocal.get(`restaurante/${id}`).then((response) => {
@@ -72,6 +71,7 @@ export function RestauranteDetail() {
       const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
+      setLoading(false)
     })
 
     for (const x in data) {

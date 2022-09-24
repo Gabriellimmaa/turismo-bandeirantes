@@ -64,7 +64,6 @@ export function BarDetail() {
     setQtdContatos([])
     api.get(`/bares/${id}`).then((response) => {
       setData(response.data.bares[0])
-      setLoading(false)
     })
 
     apiLocal.get(`bar/${id}`).then((response) => {
@@ -72,6 +71,7 @@ export function BarDetail() {
       const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
+      setLoading(false)
     })
 
     for (const x in data) {

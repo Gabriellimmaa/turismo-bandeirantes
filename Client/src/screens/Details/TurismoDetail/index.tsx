@@ -60,7 +60,6 @@ export function TurismoDetail() {
     setQtdContatos([])
     api.get(`/atracoes/${id}`).then((response) => {
       setData(response.data.atracoes[0])
-      setLoading(false)
     })
 
     apiLocal.get(`turismo/${id}`).then((response) => {
@@ -68,6 +67,7 @@ export function TurismoDetail() {
       const indexMaiorValor = response.data.estrelas.indexOf(maiorValor);
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
+      setLoading(false)
     })
 
     for (const x in data) {

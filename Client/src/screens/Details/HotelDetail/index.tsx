@@ -72,7 +72,6 @@ export function Hotel() {
     setQtdContatos([])
     api.get(`/hoteis/${id}`).then((response) => {
       setData(response.data.hoteis[0])
-      setLoading(false)
     })
 
     apiLocal.get(`hotel/${id}`).then((response) => {
@@ -80,6 +79,7 @@ export function Hotel() {
       const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
       setHover(indexMaiorValor + 1)
       setDataLocal(response.data)
+      setLoading(false)
     })
 
     for (const x in data) {
