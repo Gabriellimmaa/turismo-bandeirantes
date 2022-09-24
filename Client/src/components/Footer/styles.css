@@ -102,6 +102,7 @@ h3::after {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .notice img {
