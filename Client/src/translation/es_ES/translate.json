@@ -349,11 +349,24 @@
       "subtitulo": "¡Conoce a nuestra agenda de eventos!"
     },
     "contato": {
-      "titulo": "Contacto",
-      "menssagem": "Mandanos un mensaje",
-      "nome": "Nombre",
-      "contato": "Contato",
-      "sugestao": "Sugestão"
+      "titulo": "contacto",
+      "descricao": "También registre su negocio",
+      "subtitulo": "Registre su negocio aquí",
+      "telefone": "Teléfono:",
+      "empresa": "Nombre de empresa:",
+      "contato": "Nombre de contacto:",
+      "email": "Email:",
+      "categoria": "Categoría de negocios:",
+      "endereco": "Dirección:",
+      "enderecoCompleto": "Dirección completa:",
+      "placeholderEndereco":"Ingrese la dirección completa",
+      "placeholderEmpresa": "Ingrese el nombre de la empresa",
+      "placeholderEmail": "Escriba su correo electrónico",
+      "placeholderTelefone": "Ingrese su teléfono ",
+      "placeholderMensagem": "Ingrese la dirección comercial completa", 
+      "placeholderContato": "Ingrese el nombre de contacto",
+      "botao": "Enviar",
+      "mapa": "Seleccione el punto en el mapa:"
     },
     "album": {
       "titulo": "Álbum",

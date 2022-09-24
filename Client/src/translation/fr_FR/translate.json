@@ -351,10 +351,23 @@
     },
     "contato": {
       "titulo": "Contact",
-      "menssagem": "Envoie-nous un message",
-      "nome": "Nom",
-      "contato": "Contact",
-      "sugestao": "Suggestion"
+      "descricao": "Enregistrez également votre entreprise",
+      "subtitulo": "Inscrivez-vous ici votre entreprise",
+      "telefone": "Téléphone:",
+      "empresa": "Nom de l'entreprise:",
+      "contato": "Nom du contact:",
+      "email": "eMail:",
+      "categoria": "Catégorie d'entreprise:",
+      "endereco": "Adresse:",
+      "enderecoCompleto": "Adresse complète:",
+      "placeholderEndereco": "Entrez l'adresse complète",
+      "placeholderEmpresa": "Entrez le nom de l'entreprise",
+      "placeholderEmail": "Tapez votre e-mail",
+      "placeholderTelefone": "Entrez votre téléphone",
+      "placeholderMensagem": "Entrez l'adresse complète de l'entreprise", 
+      "placeholderContato": "Entrez le nom de contact",
+      "botao": "Soumettre",
+      "mapa":"Sélectionnez le point sur la carte:"
     },
     "album": {
       "titulo": "Albumum",
