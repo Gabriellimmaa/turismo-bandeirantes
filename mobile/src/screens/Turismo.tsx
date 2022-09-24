@@ -28,7 +28,6 @@ export function Turismo() {
   if (!loading) {
     return <Loading />
   }
-
   return (
     <VStack flex={1} mb={10} bg="gray.100" >
       <Header />

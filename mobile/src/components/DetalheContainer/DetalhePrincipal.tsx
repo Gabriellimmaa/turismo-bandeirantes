@@ -27,7 +27,6 @@ export function DetalhePrincipal({
   const { colors } = useTheme();
   const navigation = useNavigation();
 
-  const linkSite = site.indexOf('http') === -1 ? `http://${site}` : site;
   return (
     <VStack >
       <Box>
@@ -51,28 +50,38 @@ export function DetalhePrincipal({
         <Text fontSize="md">Endereço: {endereco}</Text>
         <HStack mt={2} space={2} alignItems="center" justifyContent="space-between">
           <Text fontSize="md" >Categoria: {categoria}</Text>
-          <HStack alignItems="center" space={1}>
-              <MaterialCommunityIcons name="phone" color={colors.gray['400']} size={20} />
-              <Text>{telefone}</Text>
-          </HStack>
+          { telefone && (
+            <HStack alignItems="center" space={1}>
+                <MaterialCommunityIcons name="phone" color={colors.gray['400']} size={20} />
+                <Text>{telefone}</Text>
+            </HStack>
+          )}
         </HStack>
         <HStack mt={2} space={2} alignItems="center" pt={2} w="full" justifyContent="space-between">
-          <Link alignItems="center" h="10" href={linkSite} >
-            <HStack textAlign="center" space={1}>
-                <MaterialCommunityIcons name="link" color={colors.green['600']} size={28} />
-                <Text alignItems="center" color="green.600" fontSize="md">visite o site</Text>
-            </HStack>
-          </Link>
+          { site && (
+            <Link alignItems="center" h="10" href={site.indexOf('http') === -1 ? `http://${site}` : site} >
+              <HStack textAlign="center" space={1}>
+                  <MaterialCommunityIcons name="link" color={colors.green['600']} size={28} />
+                  <Text alignItems="center" color="green.600" fontSize="md">visite o site</Text>
+              </HStack>
+            </Link>
+          )}
           <HStack>
-            <Link justifyContent="flex-end" h="10" w="16" href={insta} >
-              <Image resizeMode="contain" size={38}  source={instagramIMG} alt="instagram" />
-            </Link>
-            <Link justifyContent="flex-end" h="10" w="16" href={face} >
-              <Image resizeMode="contain" size={38}  source={facebookIMG} alt="instagram" />
-            </Link>
-            <Link justifyContent="flex-end" h="10" w="16" href={`https://api.whatsapp.com/send?phone=55${apenasNumeros(whats)}`} >
-              <Image resizeMode="contain" size={38}  source={whatsappIMG} alt="instagram" />
-            </Link>
+            { insta && (
+              <Link justifyContent="flex-end" h="10" w="16" href={insta} >
+                <Image resizeMode="contain" size={38}  source={instagramIMG} alt="instagram" />
+              </Link>
+            )}
+            { face && (
+              <Link justifyContent="flex-end" h="10" w="16" href={face} >
+                <Image resizeMode="contain" size={38}  source={facebookIMG} alt="instagram" />
+              </Link>
+            )}
+            { whats && (
+              <Link justifyContent="flex-end" h="10" w="16" href={`https://api.whatsapp.com/send?phone=55${apenasNumeros(whats)}`} >
+                <Image resizeMode="contain" size={38}  source={whatsappIMG} alt="instagram" />
+              </Link>
+            )}
           </HStack>
         </HStack>
         <View borderBottomWidth={1} borderBottomColor="gray.400" py={2} />

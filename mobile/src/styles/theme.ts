@@ -30,8 +30,8 @@ export const THEME = extendTheme({
     grayHover: '#CCCCCC',
   },
   fonts: {
-    heading: 'Roboto_700Bold',
-    body: 'Roboto_400Regular',
+    // heading: 'Roboto_700Bold',
+    // body: 'Roboto_400Regular',
   },
   fontSizes: {
     xs: 12,

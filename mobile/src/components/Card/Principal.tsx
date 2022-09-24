@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Button, Heading, HStack, Image, Link, Text, useTheme, VStack } from "native-base";
+import { AspectRatio, Box, Button, Heading, HStack, Image, Link, Text, useTheme, View, VStack } from "native-base";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useNavigation, CommonActions  } from '@react-navigation/native'
 
@@ -77,28 +77,34 @@ export function CardPrincipal({
             )}
           </HStack>
         </HStack>
-        <HStack space={2} justifyContent="space-between">
+        { email && (
           <Text >{email}</Text>
+        )}
+        <HStack justifyContent="space-between">
           { categoria && (
               <Text >Categoria: {categoria}</Text>
           )}
-        </HStack>
-        <HStack space={2}>
-          <MaterialCommunityIcons name="link" color={colors.green['700']} size={20} />
-          <Link href={site}>
-            <Text color="green.700">
-              Visite nosso site
-            </Text>
-          </Link>
+          <HStack space={2}>
+            <MaterialCommunityIcons name="link" color={colors.green['700']} size={20} />
+            <Link href={site}>
+              <Text color="green.700">
+                Visite nosso site
+              </Text>
+            </Link>
+          </HStack>
         </HStack>
         <HStack  space={2}  justifyContent="space-between">
-          <HStack 
-            pt={3}
-            space={1}
-          >
-            <MaterialCommunityIcons name="phone" color={colors.gray['400']} size={20} />
-            <Text>{telefone}</Text>
-          </HStack>
+          { telefone ? (
+            <HStack 
+              pt={3}
+              space={1}
+            >
+              <MaterialCommunityIcons name="phone" color={colors.gray['400']} size={20} />
+              <Text>{telefone}</Text>
+            </HStack>
+          ) : (
+            <View></View>
+          )}
           <HStack space={2}>
             <Button
               bg="green.700"

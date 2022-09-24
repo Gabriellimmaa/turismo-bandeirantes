@@ -9,7 +9,7 @@ import { SafeAreaView } from "react-navigation";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
-  const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+  // const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
   return (
     <NavigationContainer >
