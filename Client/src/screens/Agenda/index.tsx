@@ -12,10 +12,9 @@ import Toolbar from '../../components/Toolbar'
 import { optionAgenda } from './optionData'
 import { listAgenda } from './listAgenda'
 import './styles.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CardAgenda } from '../../components/CardAgenda'
-import { Loading } from '../../components/Loading'
 import Modal from '../../components/Modal'
 
 interface AgendaProps {
