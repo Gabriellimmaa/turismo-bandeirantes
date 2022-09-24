@@ -105,7 +105,15 @@ export default function Historia() {
       </div>
 
       <Swiper
-        slidesPerView={3}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        slidesPerView={1}
         spaceBetween={30}
         centeredSlides={true}
         freeMode={true}
