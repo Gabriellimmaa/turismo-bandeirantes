@@ -44,7 +44,10 @@ export function Turismo() {
       </div>
       <Toolbar objectList={optionTurismo} filtro={filtro} />
       {loading ? <Loading /> : null}
-      <div id="grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+      <div
+        id="grid"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center"
+      >
         {turismo.map((atracao) => {
           if (filter === 'all' || filter === '') {
             return (
