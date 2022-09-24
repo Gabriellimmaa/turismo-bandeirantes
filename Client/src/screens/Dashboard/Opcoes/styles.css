@@ -38,7 +38,7 @@
   font-size: 33px;
   margin-bottom: 10px;
   color: #283729;
-  
+
 }
 
 .dashboard-title p {
@@ -117,5 +117,18 @@
 
   .dashboard-body .dashboard-content {
     grid-template-columns: repeat(1, 350px);
-  } 
+  }
+
+  @media (max-width: 320px) {
+    .dashboard-body {
+      padding-top: 40px;
+      height: fit-content;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .dashboard-body .dashboard-content {
+      grid-template-columns: repeat(1, 280px);
+    }
+  }
 }
