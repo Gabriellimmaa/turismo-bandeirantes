@@ -342,6 +342,7 @@
     },
     "contato": {
       "titulo": "Contato",
+      "localizacao": "Localização",
       "descricao": "Cadastre sua empresa também",
       "subtitulo": "Cadastre aqui sua empresa",
       "telefone": "Telefone:",

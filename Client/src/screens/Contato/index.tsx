@@ -60,12 +60,12 @@ export default function Contato() {
       </div>
       <div className="pagina">
         <div className="cartao">
-          <h3>{t('paginas.contato.')}</h3>
+          <h3>{t('paginas.contato.localizacao')}</h3>
           <iframe
             className="mapa"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=-23°06'22.9, -50°22'18.7"
           ></iframe>
-          <h3>Telefone</h3>
+          <h3>{t('paginas.contato.telefone')}</h3>
           <p className="mb-2">Prefeitura Municipal de Bandeirantes</p>
           <p>(43)3542-4525</p>
         </div>
@@ -110,7 +110,7 @@ export default function Contato() {
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Digite seu email"
+                placeholder={t('paginas.contato.placeholderEmail')}
                 onChange={(event) => setEmail(event.target.value)}
               />
 
