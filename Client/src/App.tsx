@@ -11,10 +11,17 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import { usePosition } from './hooks/usePosition'
 import ScrollToTop from './hooks/scrollToTop'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import OneSignal from 'react-onesignal'
 
 function App() {
- usePosition()
+  usePosition()
+
+  useEffect(() => {
+    OneSignal.init({
+      appId: "95861f90-eebf-4e95-9afd-ca12ea5ace35"
+    });
+  }, []);
 
   return (
     <BrowserRouter>
