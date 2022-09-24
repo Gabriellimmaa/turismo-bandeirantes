@@ -1,9 +1,9 @@
+import 'react-native-gesture-handler';
 import React from "react";
 import { NativeBaseProvider, Box, StatusBar, VStack } from "native-base";
 import { THEME } from "./src/styles/theme";
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { Routes } from "./src/routes";
-import 'react-native-gesture-handler';
 import { Header } from "./src/components/Header";
 import { SafeAreaView } from "react-navigation";
 import { NavigationContainer } from "@react-navigation/native";
