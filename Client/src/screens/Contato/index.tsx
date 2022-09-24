@@ -28,7 +28,6 @@ export default function Contato() {
       return
     }
     const newDate = new Date()
-    const { t } = useTranslation()
     const date =
       newDate.getDate() + '/' + newDate.getMonth() + '/' + newDate.getFullYear()
     axios.post(
@@ -56,12 +55,12 @@ export default function Contato() {
   return (
     <section className="contato">
       <div className="title-style-1">
-        <h1> {t("paginas.contato.titulo")} </h1>
-        <h2> {t("paginas.contato.descricao")} </h2>
+        <h1> {t('paginas.contato.titulo')} </h1>
+        <h2> {t('paginas.contato.descricao')} </h2>
       </div>
       <div className="pagina">
         <div className="cartao">
-          <h3>{t("paginas.contato.")}</h3>
+          <h3>{t('paginas.contato.')}</h3>
           <iframe
             className="mapa"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAEM-BKN-O6irIoDU8C-G9OFtPUvgb6bjg&q=-23°06'22.9, -50°22'18.7"
@@ -72,34 +71,36 @@ export default function Contato() {
         </div>
         <div className="rigth">
           <div className="entreemcontato">
-            <h3>{t("paginas.contato.subtitulo")}</h3>
+            <h3>{t('paginas.contato.subtitulo')}</h3>
             <form>
-              <label htmlFor="nome">{t("paginas.contato.empresa")}</label>
+              <label htmlFor="nome">{t('paginas.contato.empresa')}</label>
               <input
                 type="text"
                 id="empresa"
                 name="empresa"
-                placeholder= {t("paginas.contato.placeholderEmpresa")}
+                placeholder={t('paginas.contato.placeholderEmpresa')}
                 onChange={(event) => setCompany(event.target.value)}
               />
               <div className="grid grid-cols-2 gap-4">
                 <span>
-                  <label htmlFor="nome">{t("paginas.contato.contato")}</label>
+                  <label htmlFor="nome">{t('paginas.contato.contato')}</label>
                   <input
                     type="text"
                     id="nome"
                     name="nome"
-                    placeholder= {t("paginas.contato.placeholderContato")}
+                    placeholder={t('paginas.contato.placeholderContato')}
                     onChange={(event) => setName(event.target.value)}
                   />
                 </span>
                 <span>
-                  <label htmlFor="telefone">{t("paginas.contato.telefone")}</label>
+                  <label htmlFor="telefone">
+                    {t('paginas.contato.telefone')}
+                  </label>
                   <input
                     type="text"
                     id="telefone"
                     name="telefone"
-                    placeholder= {t("paginas.contato.placeholderTelefone")}
+                    placeholder={t('paginas.contato.placeholderTelefone')}
                     onChange={(event) => setCellphone(event.target.value)}
                   />
                 </span>
@@ -113,7 +114,7 @@ export default function Contato() {
                 onChange={(event) => setEmail(event.target.value)}
               />
 
-              <label htmlFor="tsugest">{t("paginas.contato.categoria")}</label>
+              <label htmlFor="tsugest">{t('paginas.contato.categoria')}</label>
               <select
                 id="tsugest"
                 name="tsugest"
@@ -125,17 +126,20 @@ export default function Contato() {
                 <option value="hotel">Hotel</option>
                 <option value="outros">Outros...</option>
               </select>
-              <label htmlFor="sugestão">{t("paginas.contato.enderecoCompleto")}</label>
+              <label htmlFor="sugestão">
+                {t('paginas.contato.enderecoCompleto')}
+              </label>
               <textarea
                 id="endereco"
                 name="endereco"
-                placeholder= {t("paginas.contato.placeholderEndereco")}
+                placeholder={t('paginas.contato.placeholderEndereco')}
                 style={{ height: '100px' }}
                 defaultValue={''}
                 onChange={(event) => setAddress(event.target.value)}
               />
               <button className="enviar" onClick={handleSubmit}>
-                <IoIosSend className="mr-2" size={20} /> {t("paginas.contato.botao")}
+                <IoIosSend className="mr-2" size={20} />{' '}
+                {t('paginas.contato.botao')}
               </button>
             </form>
           </div>
