@@ -90,6 +90,7 @@ h3::after {
 .pages a, .notices a {
     width: max-content;
     border-bottom: 1px solid transparent;
+    margin-bottom: 20px;
 }
 
 .pages a:hover, .notices a:hover {
@@ -102,7 +103,6 @@ h3::after {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-bottom: 20px;
 }
 
 .notice img {
