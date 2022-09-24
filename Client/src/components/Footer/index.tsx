@@ -56,23 +56,25 @@ export function Footer() {
             <div className="column titleHidden">
               <h3>Agenda</h3>
               <div className="notices">
-                {listAgenda.map((item: AgendaProps) => {
-                  return (
-                    <a href="" key={item.id}>
-                      <div className="notice">
-                        <img
-                          className="w-auto h-20"
-                          src={item.imagem}
-                          alt={item.titulo}
-                        />
-                        <div className="notice-text">
-                          {item.titulo}
-                          <p>{item.data}</p>
+                {listAgenda
+                  .slice(listAgenda.length - 3)
+                  .map((item: AgendaProps) => {
+                    return (
+                      <a href="" key={item.id}>
+                        <div className="notice">
+                          <img
+                            className="w-auto h-20"
+                            src={item.imagem}
+                            alt={item.titulo}
+                          />
+                          <div className="notice-text">
+                            {item.titulo}
+                            <p>{item.data}</p>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  )
-                })}
+                      </a>
+                    )
+                  })}
               </div>
             </div>
             <div className="column">
