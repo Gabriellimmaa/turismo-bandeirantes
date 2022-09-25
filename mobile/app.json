@@ -3,60 +3,8 @@
     "name": "mobile",
     "slug": "mobile",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./src/assets/logo.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./src/assets/logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "bundleIdentifier": "com.mobile",
-      "supportsTablet": true
-    },
-    "android": {
-      "package": "com.mobile",
-      "adaptiveIcon": {
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {},
-    "plugins": [
-      [
-        "onesignal-expo-plugin",
-        {
-          "mode": "development"
-        }
-      ]
-    ],
-    "extra": {
-      "eas": {
-        "build": {
-          "experimental": {
-            "ios": {
-              "appExtensions": [
-                {
-                  "targetName": "OneSignalNotificationServiceExtension",
-                  "bundleIdentifier": "com.mobile.OneSignalNotificationServiceExtension",
-                  "entitlements": {
-                    "com.apple.security.application-groups": [
-                      "group.com.mobile.onesignal"
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "projectId": "fb401cf4-10d8-4352-a2b5-fb12f21a1390"
-      }
-    }
+    ]
   }
 }

@@ -1,11 +1,6 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { NavigationContainer } from "@react-navigation/native";
-import { Box, useTheme, VStack } from "native-base";
-import { Hotel } from "../screens/Hotel";
-import { Restaurantes } from "../screens/Restaurantes";
-import { Turismo } from "../screens/Turismo";
+import { useTheme } from "native-base";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { Header } from "../components/Header";
 import { StackRoutes, StackRoutesHotel, StackRoutesRestaurante } from "./StackRoutes";
 import { Home } from "../screens/Home";
 import { Contato } from "../screens/Contato";
