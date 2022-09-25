@@ -57,7 +57,8 @@
 }
 
 .inicio-section {
-  padding: 0 1rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .inicio h1 {
