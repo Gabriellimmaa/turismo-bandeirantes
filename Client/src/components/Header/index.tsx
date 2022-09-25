@@ -63,6 +63,14 @@ export default function Header() {
     <nav id="navigation" className="navigation">
       <div className="grid grid-cols-3 justify-center border-b-2 py-2 items-center h-20 md:h-auto">
         <div className="flex justify-start ml-0 md:ml-10">
+
+          <div className='user-button'>
+            <button>
+              <Link to="/login">
+                <BiUser style={{ marginTop: 0, marginLeft: 0 }} size={44}></BiUser>
+              </Link>
+            </button>
+          </div>
           <div id="optionLanguageDesktop">
             <button onClick={() => handleChangeLng('br')}>
               <img className="w-auto h-10 m-1" src={brasil} />
@@ -79,11 +87,11 @@ export default function Header() {
           </div>
           <div id="optionLanguageMobile">
             <button onClick={() => { setIsLangExpanded(!isLangExpanded) }}>
-            <div className="items-center">
-              <IoLanguage size={18} />
-              <span> Tradução </span>
-              <IoIosArrowDown className="m-auto" />
-            </div>
+              <div className="items-center">
+                <IoLanguage size={18} />
+                <span> Tradução </span>
+                <IoIosArrowDown className="m-auto" />
+              </div>
             </button>
             <div
               className={
@@ -145,7 +153,6 @@ export default function Header() {
             <span className="text-4xl">A</span>
             <BsZoomOut style={{ marginTop: -14, marginLeft: 42 }} size={14} />
           </button>
-          <BiUser style={{ marginTop: 10, marginLeft: 42 }} size={44}></BiUser>
           <div className="mx-3">
             {/* @ts-ignore */}
             <div vw="true" className="enabled">

@@ -1,15 +1,15 @@
 {
-  "teste": "test",
+  "teste": "Test",
   "navbar": {
-    "inicio": "Home",
+    "inicio": "Beginning",
     "historia": "History",
     "mapa": "Map",
     "agenda": "Schedule",
     "hoteis": "Hotels",
-    "turismo": "Turism",
-    "lazer&esporte": "Lazer & Sport",
+    "turismo": "Tourism",
+    "lazer&esporte": "Leisure and Sport",
     "restaurantes": "Restaurants",
-    "album": "Álbum",
+    "album": "Album",
     "contato": "Contact",
     "traducao": "Translation"
   },
@@ -21,15 +21,213 @@
       "oque-fazer": "What to do",
       "mapa": "Map"
     },
-    "contato": "Contact",
-    "copy": "© 2022 - City Hall of Bandeirantes - All rights reserved",
-    "creditos": "Website developed by the team FrontCode"
+    "contato": "Contacts",
+    "copy": "© 2022 - City Hall of Bandeirantes - All Rights Reserved",
+    "creditos": "Website developed by the Frontcode team"
   },
   "paginas": {
     "blacklist": {
       "header": "You have tried to log in to our system with another account, you are on our blacklist and the system is locked for you.",
       "content": "If you think it was some misunderstanding talk to our administrators.",
       "link": "Come back"
+    },
+    "dashboard": {
+      "bares": {
+        "titulo": "Registration bars",
+        "nome": "Name",
+        "descricao": "Description",
+        "endereco": "Address",
+        "categoria": "Category of kitchens",
+        "cardapio": "Menu",
+        "brasileira": "Brazilian",
+        "italiana": "Italian",
+        "fabiao": "Japanese",
+        "arabe": "Arabic",
+        "preco": "Price",
+        "email": "Email",
+        "site": "Website",
+        "telefone": "Telephone",
+        "placeHolderWhatsapp": "Insert whatsapp if you have",
+        "placeHolderInsta": "Enter Instagram if you have",
+        "placeHolderDesc": "Enter the description of the place",
+        "placeHolderNome": "Enter the name of the place",
+        "placeHolderEndereco": "Enter the location address",
+        "placeHolderEmail": "Enter the email if you have",
+        "placeHolderFace": "Enter Facebook if you have",
+        "placeHolderPreco": "Enter the average price of the place",
+        "placeHolderSite": "Enter the site if you have",
+        "placeHolderTelefone": "Insert the contact phone",
+        "placeHolderCategoria": "Select a category",
+        "placeHolderCardapio": "Enter the local menu",
+        "obrigatorio": "*Mandatory",
+        "logo": "Choose a logo:",
+        "mapa": "Select the point on the map:",
+        "cadastro": "Register location"
+      },
+      "hoteis": {
+        "titulo": "Hotel registration",
+        "nome": "Name",
+        "descricao": "Description",
+        "endereco": "Address",
+        "categoria": "Category of kitchens",
+        "cardapio": "Menu",
+        "brasileira": "Brazilian",
+        "italiana": "Italian",
+        "fabiao": "Japanese",
+        "arabe": "Arabic",
+        "preco": "Price",
+        "email": "Email",
+        "site": "Website",
+        "telefone": "Telephone",
+        "placeHolderWhatsapp": "Insert whatsapp if you have",
+        "placeHolderInsta": "Enter Instagram if you have",
+        "placeHolderDesc": "Enter the description of the place",
+        "placeHolderNome": "Enter the name of the place",
+        "placeHolderEndereco": "Enter the location address",
+        "placeHolderEmail": "Enter the email if you have",
+        "placeHolderFace": "Enter Facebook if you have",
+        "placeHolderPreco": "Enter the average price of the place",
+        "placeHolderSite": "Enter the site if you have",
+        "placeHolderTelefone": "Insert the contact phone",
+        "placeHolderCategoria": "Select a category",
+        "placeHolderCardapio": "Enter the local menu",
+        "obrigatorio": "*Mandatory",
+        "logo": "Choose a logo:",
+        "mapa": "Select the point on the map:",
+        "cadastro": "Register location"
+      },
+      "turismo": {
+        "titulo": "Tourism Registration",
+        "nome": "Name",
+        "descricao": "Description",
+        "endereco": "Address",
+        "categoria": "Categories",
+        "cardapio": "Menu",
+        "religioso": "Religious",
+        "rural": "Rural",
+        "cultural": "Cultural",
+        "esportivo": "Sporty",
+        "ecologico": "Ecological",
+        "preco": "Price",
+        "email": "Email",
+        "site": "WebSite",
+        "telefone": "Telephone",
+        "placeHolderWhatsapp": "Insert whatsapp if you have",
+        "placeHolderInsta": "Enter Instagram if you have",
+        "placeHolderDesc": "Enter the description of the place",
+        "placeHolderNome": "Enter the name of the place",
+        "placeHolderEndereco": "Enter the location address",
+        "placeHolderEmail": "Enter the email if you have",
+        "placeHolderFace": "Enter Facebook if you have",
+        "placeHolderPreco": "Enter the average price of the place",
+        "placeHolderSite": "Enter the site if you have",
+        "placeHolderTelefone": "Insert the contact phone",
+        "placeHolderCategoria": "Select a category",
+        "placeHolderCardapio": "Enter the local menu",
+        "obrigatorio": "*Mandatory",
+        "logo": "Choose a logo:",
+        "mapa": "Select the point on the map:",
+        "cadastro": "Register location"
+      },
+      "restaurantes": {
+        "titulo": "Registration Restaurants",
+        "nome": "Name",
+        "descricao": "Description",
+        "endereco": "Address",
+        "categoria": "Category of kitchens",
+        "cardapio": "Menu",
+        "brasileira": "Brazilian",
+        "italiana": "Italian",
+        "fabiao": "Japanese",
+        "arabe": "Arabic",
+        "preco": "Price",
+        "email": "Email",
+        "site": "WebSite",
+        "telefone": "Telephone",
+        "placeHolderWhatsapp": "Insert whatsapp if you have",
+        "placeHolderInsta": "Enter Instagram if you have",
+        "placeHolderDesc": "Enter the description of the place",
+        "placeHolderNome": "Enter the name of the place",
+        "placeHolderEndereco": "Enter the location address",
+        "placeHolderEmail": "Enter the email if you have",
+        "placeHolderFace": "Enter Facebook if you have",
+        "placeHolderPreco": "Enter the average price of the place",
+        "placeHolderSite": "Enter the site if you have",
+        "placeHolderTelefone": "Insert the contact phone",
+        "placeHolderCategoria": "Select a category",
+        "placeHolderCardapio": "Enter the local menu",
+        "obrigatorio": "*Mandatory",
+        "logo": "Choose one logo:",
+        "mapa": "Select the point on the map:",
+        "cadastro": "Register location"
+      },
+      "agenda": {
+        "data": "Data",
+        "tituloTela": "Title",
+        "titulo": "Registration Agenda",
+        "nome": "Name",
+        "descricao": "Description",
+        "endereco": "Address",
+        "categoria": "Category of kitchens",
+        "cardapio": "Menu",
+        "brasileira": "Brazilian",
+        "italiana": "Italian",
+        "fabiao": "Japanese",
+        "arabe": "Arabic",
+        "preco": "Price",
+        "email": "Email",
+        "site": "WebSite",
+        "telefone": "Telephone",
+        "placeHolderWhatsapp": "Insert whatsapp if you have",
+        "placeHolderInsta": "Enter Instagram if you have",
+        "placeHolderDesc": "Enter the description of the place",
+        "placeHolderNome": "Enter the name of the place",
+        "placeHolderEndereco": "Enter the location address",
+        "placeHolderEmail": "Enter the email if you have",
+        "placeHolderFace": "Enter Facebook if you have",
+        "placeHolderPreco": "Enter the average price of the place",
+        "placeHolderSite": "Enter the site if you have",
+        "placeHolderTelefone": "Insert the contact phone",
+        "placeHolderCategoria": "Select a category",
+        "placeHolderCardapio": "Enter the local menu",
+        "placeHolderData": "Insira a data do evento",
+        "obrigatorio": "*Mandatory",
+        "logo": "Choose a logo:",
+        "mapa": "Select the point on the map:",
+        "cadastro": "Register"
+      },
+      "album": {
+        "titulo": "Registration album",
+        "nome": "Name",
+        "descricao": "Description",
+        "endereco": "Address",
+        "categoria": "Category of kitchens",
+        "cardapio": "Menu",
+        "brasileira": "Brazilian",
+        "italiana": "Italian",
+        "fabiao": "Japanese",
+        "arabe": "Arabic",
+        "preco": "Price",
+        "email": "Email",
+        "site": "WebSite",
+        "telefone": "Telephone",
+        "placeHolderWhatsapp": "Insert whatsapp if you have",
+        "placeHolderInsta": "Enter Instagram if you have",
+        "placeHolderDesc": "Enter the description of the place",
+        "placeHolderNome": "Enter the name of the place",
+        "placeHolderEndereco": "Enter the location address",
+        "placeHolderEmail": "Enter the email if you have",
+        "placeHolderFace": "Enter Facebook if you have",
+        "placeHolderPreco": "Enter the average price of the place",
+        "placeHolderSite": "Enter the site if you have",
+        "placeHolderTelefone": "Insert the contact phone",
+        "placeHolderCategoria": "Select a category",
+        "placeHolderCardapio": "Enter the local menu",
+        "obrigatorio": "*Mandatory",
+        "imagem": "Choose an image:",
+        "mapa": "Select the point on the map:",
+        "cadastro": "Register Image"
+      }
     },
     "inicio": {
       "header": "QUICK ACCESS",
@@ -44,19 +242,15 @@
       },
       "acesso-rapido": {
         "mapa": {
-          "titulo": "Interactive Map",
-          "descricao": "Access the interactive map of the city and find out where everything is."
-        },
-        "lazer-esporte": {
-          "titulo": "Lazer & Sport",
-          "descricao": "Our city is its perfect destination culture, sport, leisure, very fresh air and beautiful moments"
+          "titulo": "Interactive map",
+          "descricao": "Visualize the Interactive Map of Bandeirantes.Our city is your perfect destination"
         },
         "hoteis": {
           "titulo": "Hotels",
           "descricao": "Find hotels, inns and farms to stay"
         },
         "turismo": {
-          "titulo": "turismo",
+          "titulo": "Tourism",
           "descricao": "Get to know our main tourist points"
         },
         "restaurantes": {
@@ -68,7 +262,7 @@
           "descricao": "Do you still have questions if you should know the city?So go to our photos and be enchanted by the beauty of the city"
         },
         "agenda": {
-          "titulo": "Schedule",
+          "titulo": "Agenda",
           "descricao": "Get to know our calendar of events to not lose any attraction."
         }
       }
@@ -79,7 +273,7 @@
         "titulo": "How it started",
         "paragrafo1": "Until the year 1920, the region was a gross backcountry, inhabited only by the Caingangues tribe Indians.The first to explore this territory was the engineer Carlos Borromei, where his camp raises in an open clearing in the woods on the banks of Ribeirão das Antas.On December 24, 1926, D. Josefina Alves de Lima, owner of a large land of land on Laranjinha farm, when dividing this property, sold to João Manoel dos Santos ten bushels of land, intended for the founding of a village, whoshould be called wintering.",
         "paragrafo2": "On April 12, 1929, the Winter District was created, as an integral part of the municipality of Jacarezinho, being installed on December 8 of the same year.In July 1930, the São Paulo - Paraná Railway company, inaugurated a railway station, 3 kilometers from the winter heritage, which was called Bandeirantes, and a village near the station, on the groundJuvenal Mesquita.On September 27, 1931, a power of men of goodwill, began a coalition work in favor of the progress of the season and, consequently, came the winter fall, where the notary, the state collector, houses, hotels, were foundCommerce houses, pharmacies, post office, etc.",
-        "paragrafo3": "In 1932, the then federal intervener in Paraná visited Bandeirantes, noting that the people wanted the creation of the municipality.There was the unification of the two villages: Bandeirantes and Winter.Start the history of Bandeirantes"
+        "paragrafo3": "In 1932, the then federal intervener in Paraná visited Bandeirantes, noting that the people wanted the creation of the municipality.There was the unification of the two villages: Bandeirantes and Winter.Start the history of Bandeirantes."
       },
       "topico2": {
         "titulo": "Bandeirantes: “A place of faith, nature and traditions”",
@@ -98,7 +292,7 @@
         },
         "populacao": {
           "titulo": "Population",
-          "descricao": " 32.184 (IBGE Census [2010])"
+          "descricao": " 32.184 (Census IBGE [2010])"
         },
         "territorio": {
           "titulo": "Area of territorial unit [2022]",
@@ -118,7 +312,7 @@
         },
         "clima": {
           "titulo": "Climate",
-          "descricao": "Tropical.Summer is long, hot, stuffy and almost covered in sky;Winter is short, pleasant and almost cloudless sky"
+          "descricao": "Tropical.Summer is long, hot, stuffy and almost covered in sky;Winter is short, pleasant and almost cloudless sky."
         },
         "temperatura": {
           "titulo": "Average temperature",
@@ -126,55 +320,54 @@
         },
         "renda": {
           "titulo": "Per capita income (monthly average)",
-          "descricao": "Get to know our calendar of events to not lose any attraction"
+          "descricao": "Get to know our calendar of events to not lose any attraction."
         },
         "idh": {
           "titulo": "Human development Index (IDH)",
           "descricao": "0,727 (IBGE 2010)"
         },
         "pib": {
-          "titulo": "Pib to happen [2019]",
+          "titulo": "PIB per capita [2019]",
           "descricao": "25.807,42 R$"
         }
       }
     },
     "turismo": {
-      "titulo": "turism",
+      "titulo": "Tourism",
       "subtitulo": "Place of faith, nature and traditions"
     },
     "restaurantes": {
       "titulo": "Restaurants",
       "subtitulo": "Meet our restaurants!"
     },
+    "contato": {
+      "titulo": "Contact",
+      "localizacao": "Location",
+      "descricao": "Register your company also",
+      "subtitulo": "Register here your company",
+      "telefone": "Telephone:",
+      "empresa": "Company Name:",
+      "contato": "Name for contact:",
+      "email": "E-mail:",
+      "categoria": "Company category:",
+      "endereco": "Address:",
+      "enderecoCompleto": "Full address:",
+      "placeholderEndereco": "Enter the full address",
+      "placeholderEmpresa": "Enter the company name",
+      "placeholderEmail": "Type your e-mail",
+      "placeholderTelefone": "Enter your phone",
+      "placeholderMensagem": "Enter the company's full address", 
+      "placeholderContato": "Enter the name for contact",
+      "botao": "Submit",
+      "mapa":"Select the point on the map:"
+    },
     "hoteis": {
       "titulo": "Hotels",
       "subtitulo": "Find hotels, inns and many other places to stay!"
     },
     "agenda": {
-      "titulo": "agenda",
+      "titulo": "Agenda",
       "subtitulo": "Meet our event agenda!"
-    },
-    "contato": {
-      "titulo": "Contact",
-      "menssagem": "Send us a message",
-      "nome": "Name",
-      "contato": "Contact",
-      "localizacao": "Location",
-      "descricao": "Register your company too",
-      "subtitulo": "Register your company here",
-      "telefone": "Phone:",
-      "empresa": "Company Name:",
-      "email": "E-mail:",
-      "categoria": "Company category:",
-      "endereco": "Address:",
-      "enderecoCompleto": "Full address:",
-      "placeholderEndereco": "Enter full address:",
-      "placeholderEmpresa": "Enter the company name:",
-      "placeholderEmail": "Type your e-mail:",
-      "placeholderTelefone": "Enter your phone:",
-      "placeholderMensagem": "Enter the company's full address:", 
-      "placeholderContato": "Enter the contact name:",
-      "botao": "Send"
     },
     "album": {
       "titulo": "Album",
@@ -188,9 +381,9 @@
       "avaliacoes": "Assessments",
       "googleMaps": "Open No Google Maps",
       "email": "Contact us by email",
-      "site": "visit website",
-      "visitar": "visit",
-      "cardapio": "Cardápio:",
+      "site": "Visit website",
+      "visitar": "Visit",
+      "cardapio": "Menu:",
       "cozinha": "Kitchens:",
       "preco": "Price:",
       "telefone": "Telephone:"

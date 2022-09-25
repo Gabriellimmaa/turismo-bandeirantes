@@ -7,6 +7,9 @@ import { MdFastfood } from 'react-icons/md'
 import { CardHome } from '../../components/CardHome'
 import { CardsAtracoes } from '../../components/CardsAtracoes'
 
+import imgMobile from '../../assets/img/inicio/mobile.png'
+import downloadMobile from '../../assets/img/inicio/download-mobile.png'
+
 import './styles.css'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -76,6 +79,17 @@ export default function Inicio() {
           </div>
         </div>
       </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 content-center items-center">
+        <div className='h-2/3'>
+          <img src={imgMobile} className="mx-auto h-full w-auto" />
+        </div>
+        <div className='text-center'>
+          <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
+            Baixe nosso aplicativo</h1>
+          <h4>Para receber promoções e comunicados exclusivos</h4>
+          <img src={downloadMobile} className="h-56 w-auto mx-auto" />
+        </div>
+      </div>
       <div className="parallax">
         <div className="py-2 px-4 grid items-center">
           <span>

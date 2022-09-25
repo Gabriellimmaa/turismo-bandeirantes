@@ -1,0 +1,134 @@
+#quadrado-01 {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  z-index: -1;
+}
+
+#quadrado-02 {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  z-index: -1;
+}
+
+.dashboard-body {
+  display: grid;
+  position: relative;
+  height: fit-content;
+  top: 30px;
+  padding-bottom: 50px;
+}
+
+.dashboard-content {
+  gap: 15px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 250px);
+  height: fit-content;
+}
+
+.dashboard-title {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  height: fit-content;
+}
+
+.dashboard-title h1 {
+  font-size: 33px;
+  margin-bottom: 10px;
+  color: #283729;
+
+}
+
+.dashboard-title p {
+  text-align: left;
+  color: #48a94f;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dashboard-title span {
+  color: #636363;
+}
+
+.dashboard-cards {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-cards a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dashboard-cards-content {
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-cards-content h1 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-cards-content p {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-cards-content img {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-body {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dashboard-body .dashboard-content {
+    grid-template-columns: repeat(3, 250px);
+    width: fit-content;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 799px) {
+  .dashboard-body {
+    padding-top: 40px;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dashboard-body .dashboard-content {
+    grid-template-columns: repeat(1, 350px);
+  }
+
+  @media (max-width: 320px) {
+    .dashboard-body {
+      padding-top: 40px;
+      height: fit-content;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .dashboard-body .dashboard-content {
+      grid-template-columns: repeat(1, 280px);
+    }
+  }
+}
