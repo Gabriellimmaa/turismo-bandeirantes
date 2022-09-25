@@ -63,14 +63,6 @@ export default function Header() {
     <nav id="navigation" className="navigation">
       <div className="grid grid-cols-3 justify-center border-b-2 py-2 items-center h-20 md:h-auto">
         <div className="flex justify-start ml-0 md:ml-10">
-
-          <div className='user-button'>
-            <button>
-              <Link to="/login">
-                <BiUser style={{ marginTop: 0, marginLeft: 0 }} size={44}></BiUser>
-              </Link>
-            </button>
-          </div>
           <div id="optionLanguageDesktop">
             <button onClick={() => handleChangeLng('br')}>
               <img className="w-auto h-10 m-1" src={brasil} />

@@ -1,0 +1,22 @@
+.cadastrar a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  background-color: #45a049;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 24px;
+
+  @apply shadow-md
+}
+
+.cadastrar a:hover {
+  background-color: #3e8e41;
+  margin-left: 3%;
+}
+

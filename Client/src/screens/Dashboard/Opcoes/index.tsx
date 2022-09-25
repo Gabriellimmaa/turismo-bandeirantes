@@ -6,16 +6,16 @@ import dashboard03 from '/src/assets/img/dashboard/img3.svg';
 
 export default function Opcoes() {
   return (
-    <div className="dashboard-body">
+    <section className="dashboard-body">
       <img id="quadrado-01" src="/src/assets/img/dashboard/quadrado0.png" alt=""></img>
       <img id="quadrado-02" src="/src/assets/img/dashboard/quadrado1.png" alt=""></img>
       <div className="dashboard-title">
         <h1>Dashboard</h1>
-        <p> Dashboard<span> &gt;</span> Opcoes </p>
+        <div className='flex gap-2 items-center'> Dashboard </div>
       </div>
       <div className="dashboard-content">
         <div className="dashboard-cards">
-          <Link to='#'>
+          <Link to='/admin/cadastrar'>
             <div className="dashboard-cards-content">
               <img src={dashboard01} alt="" />
               <h1>Cadastro</h1>
@@ -42,7 +42,7 @@ export default function Opcoes() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   )
 
 }

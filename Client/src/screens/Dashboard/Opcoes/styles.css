@@ -16,7 +16,6 @@
   display: grid;
   position: relative;
   height: fit-content;
-  top: 30px;
   padding-bottom: 50px;
 }
 
@@ -41,7 +40,7 @@
 
 }
 
-.dashboard-title p {
+.dashboard-title a {
   text-align: left;
   color: #48a94f;
   margin: 0;

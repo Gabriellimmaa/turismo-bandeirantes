@@ -19,6 +19,7 @@ import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet'
 import L from 'leaflet'
 import './styles.css'
 import marcadorBar from '../../../assets/marcadores/laranja.png'
+import { Link } from 'react-router-dom'
 
 export default function CadastrarBares() {
   const { t } = useTranslation()
@@ -48,6 +49,10 @@ export default function CadastrarBares() {
   return (
     <>
       <section className="cadastrar-turismo">
+        <div className="dashboard-title">
+          <h1>Dashboard</h1>
+          <div className='flex gap-2 items-center'><Link to="/admin/opcoes"> Dashboard</Link> &gt; <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Bares </div>
+        </div>
         <div className="title-style-1">
           <h1>{t('paginas.dashboard.bares.titulo')}</h1>
           <h2></h2>
@@ -236,9 +241,8 @@ export default function CadastrarBares() {
               zoom={15}
             >
               <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${
-                  import.meta.env.VITE_MAPBOX_TOKEN
-                }`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN
+                  }`}
               />
               <ComponentClick />
             </MapContainer>
