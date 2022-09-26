@@ -246,6 +246,8 @@
       }
     },
     "inicio": {
+      "app": "Download our app!",
+      "appDesc": "To receive special promotions and exclusive announcements!",
       "header": "QUICK ACCESS",
       "cards": "What to do?",
       "botao": "See all",

@@ -246,6 +246,8 @@
       }
     },
     "inicio": {
+      "app": "¡Descarga nuestra aplicación!",
+      "appDesc": "¡Recibir promociones especiales y comunicaciones exclusivas!",
       "header": "ACCESO RAPIDO",
       "cards": "¿Que hacer?",
       "botao": "Ver Todas",
