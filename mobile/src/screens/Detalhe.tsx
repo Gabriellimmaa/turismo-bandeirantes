@@ -74,7 +74,7 @@ export function Detalhe({ route }: any) {
         case "Bar":
           await api.get(`/bares/${route.params.id}`)
             .then((response) => {
-              setDetalhe(response.data.hoteis)
+              setDetalhe(response.data.bares)
               setLoading1(true)
             })
             .catch(error => console.log(error));

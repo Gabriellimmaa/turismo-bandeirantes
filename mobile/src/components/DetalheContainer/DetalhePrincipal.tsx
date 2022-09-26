@@ -178,9 +178,9 @@ export function DetalhePrincipal({
           </VStack>
           <FormControl>
             <Text fontWeight="bold" mb={1} mt={3}>Nome:</Text>
-            <Input onChangeText={(value) => setUsername(value)} placeholder="Insira seu nome" />
+            <Input onChangeText={(value) => setUsername(value)} value={username} placeholder="Insira seu nome" />
             <Text fontWeight="bold" mb={1} mt={3}>Comentário:</Text>
-            <TextArea onChangeText={(value) => setCommentText(value)} placeholder="Digite aqui seu comentário ou crítica construtiva" autoCompleteType={undefined} />
+            <TextArea onChangeText={(value) => setCommentText(value)} value={commentText} placeholder="Digite aqui seu comentário ou crítica construtiva" autoCompleteType={undefined} />
             <Button size="sm" colorScheme="blue" my={5} style={{ display: "flex" }} onPress={addComment}>
               <HStack space={2}>
                 <MaterialCommunityIcons name="send" size={20} color="white" />

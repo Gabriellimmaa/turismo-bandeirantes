@@ -240,7 +240,12 @@
         "bares": "Cadastrar Bares"
       },
       "opcoes": {
-        "cadastrar": "Cadastrar"
+        "cadastrar": "Cadastrar",
+        "editar": "Editar",
+        "deletar": "Deletar",
+        "desc1": "Cadastrar conteúdos",
+        "desc2": "Editar conteúdos",
+        "desc3": "Deletar conteúdos"
       }
     },
     "inicio": {
@@ -347,29 +352,29 @@
       }
     },
     "toolbar": {
-      "todos": "todos",
-      "janeiro": "janeiro",
-      "fevereiro": "fevereiro",
-      "marco": "março",
-      "abril": "abril",
-      "maio": "maio",
-      "junho": "junho",
-      "julho": "julho",
-      "agosto": "agosto",
-      "setembro": "setembro",
-      "outubro": "outubro",
-      "novembro": "novembro",
-      "dezembro": "dezembro",
+      "todos": "Todos",
+      "janeiro": "Janeiro",
+      "fevereiro": "Fevereiro",
+      "março": "Março",
+      "abril": "Abril",
+      "maio": "Maio",
+      "junho": "Junho",
+      "julho": "Julho",
+      "agosto": "Agosto",
+      "setembro": "Setembro",
+      "outubro": "Outubro",
+      "novembro": "Novembro",
+      "dezembro": "Dezembro",
       "restaurante": "Restaurante",
       "lanchonete": "Lanchonete",
       "bar": "Bar",
       "pizzaria": "Pizzaria",
       "padaria": "Padaria",
-      "ecologico": "Turismo Ecologico",
-      "religioso": "Turismo Religioso",
-      "cultural": "Turismo Cultural",
-      "rural": "Turimos Rural",
-      "esportivo": "Turismo Esportivo"
+      "turismo-ecologico": "Turismo Ecologico",
+      "turismo-religioso": "Turismo Religioso",
+      "turismo-cultural": "Turismo Cultural",
+      "turismo-rural": "Turimos Rural",
+      "turismo-esportivo": "Turismo Esportivo"
     },
     "eventosAgenda": {
       "titulo1": "Aniversário de Bandeirantes",

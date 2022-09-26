@@ -5,6 +5,7 @@ import { StackRoutes, StackRoutesHotel, StackRoutesPromocoes, StackRoutesRestaur
 import { Home } from "../screens/Home";
 import { Contato } from "../screens/Contato";
 import { Historia } from "../screens/Historia";
+import { Comunicado } from "../screens/Comunicado";
 
 const Drawer = createDrawerNavigator();
 
@@ -78,7 +79,7 @@ export function Routes() {
       />
       <Drawer.Screen
         name="Comunicados"
-        component={Home}
+        component={Comunicado}
         options={{
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons name="bullhorn" size={size} color={color} />

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles.css'
+import { useTranslation } from 'react-i18next'
 
 interface ObjectItem {
   id: string
@@ -15,7 +16,7 @@ interface ToolbarProps {
 
 export default function Toolbar({ objectList, filtro }: ToolbarProps) {
   const [selected, setSelected] = useState('')
-
+  const { t } = useTranslation()
   function changeOption(id: any, category: any) {
     filtro(category)
     setSelected(id)
@@ -38,7 +39,7 @@ export default function Toolbar({ objectList, filtro }: ToolbarProps) {
               </option>
             ) : (
               <option key={data.id}>
-                <button>{data.nome}</button>
+                <button>{t(`paginas.toolbar.${data.nome.toLowerCase()}`)}</button>
               </option>
             ),
           )}
@@ -56,12 +57,12 @@ export default function Toolbar({ objectList, filtro }: ToolbarProps) {
                 }}
                 className={selected === data.id ? 'selected' : ''}
               >
-                {data.nome}
+                {t(`paginas.toolbar.${data.nome.toLowerCase()}`)}
               </button>
             </li>
           ) : (
             <li key={data.id}>
-              <button>{data.nome}</button>
+              <button>{t(`paginas.toolbar.${data.nome.toLowerCase()}`)}</button>
             </li>
           ),
         )}
