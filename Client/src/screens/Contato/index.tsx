@@ -59,7 +59,7 @@ export default function Contato() {
         <h2> {t('paginas.contato.descricao')} </h2>
       </div>
       <div className="pagina">
-        <div className="cartao">
+        <div className="cartaocont">
           <h3>{t('paginas.contato.localizacao')}</h3>
           <iframe
             className="mapa"
