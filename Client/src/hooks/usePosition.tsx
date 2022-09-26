@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 
-interface teste {
-  latitude: number
-  longitude: number
-}
-
 export const usePosition = () => {
-  const [position, setPosition] = useState({latitude: 0, longitude: 0})
+  const [position, setPosition] = useState({ latitude: '0', longitude: '0' })
   const [error, setError] = useState(null)
 
   const onChange = (position: any) => {

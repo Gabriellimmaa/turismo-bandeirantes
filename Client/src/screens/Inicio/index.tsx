@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom'
 
 export default function Inicio() {
   const { t } = useTranslation()
+
   return (
     <>
       <div className="w-full h-[65%] pt-20 md:pt-0">
