@@ -224,9 +224,29 @@
         "imagem": "Choisissez une image:",
         "mapa": "Sélectionnez le point sur la carte:",
         "cadastro": "Enregistrer l'image"
+      },
+      "cadastrar": {
+        "titulo": "S'inscrire",
+        "opcoes": "sélectionner une option",
+        "turismo": "Enregistrer le tourisme",
+        "restaurante": "Regarder le restaurant",
+        "agenda": "Enregistrer l'ordre du jour",
+        "album": "Album de registre",
+        "hotel": "Enregistrer l'hôtel",
+        "bares": "Bars"
+      },
+      "opcoes": {
+        "cadastrar": "S'inscrire",
+        "editar": "Éditer",
+        "deletar": "Effacer",
+        "desc1": "Enregistrer le contenu",
+        "desc2": "Modifier le contenu",
+        "desc3": "Supprimer le contenu"
       }
     },
     "inicio": {
+      "app": "Téléchargez notre application!",
+      "appDesc": "pour recevoir des promotions spéciales et des communications exclusives",
       "header": "ACCÈS RAPIDE",
       "cards": "Que faire?",
       "botao": "Voir tout",
@@ -333,8 +353,45 @@
         }
       }
     },
+    "toolbar": {
+      "todos": "Tout",
+      "janeiro": "Janvier",
+      "fevereiro": "Février",
+      "março": "Mars",
+      "abril": "Avril",
+      "maio": "Peut",
+      "junho": "Juin",
+      "julho": "Juillet",
+      "agosto": "Août",
+      "setembro": "Septembre",
+      "outubro": "Octobre",
+      "novembro": "Novembre",
+      "dezembro": "Décembre",
+      "restaurante": "restaurant",
+      "lanchonete": "Cafétéria",
+      "bar": "bar",
+      "pizzaria": "Pizzeria",
+      "padaria": "La boulangerie",
+      "turismo-ecologico": "Tourisme écologique",
+      "turismo-religioso": "Tourisme religieux",
+      "turismo-cultural": "Tourisme culturel",
+      "turismo-rural": "Turismo riral",
+      "turismo-esportivo": "Tourisme sportif"
+    },
+    "eventosAgenda": {
+      "titulo1": "Anniversaire de bandeirantes",
+      "titulo2": "Noël communautaire", 
+      "titulo3": "NEVENA DE São Miguel Arcanjo",
+      "desc1": "Le 14 novembre, Bandeirantes a 87 ans.À cette occasion, je tiens à féliciter les habitants de Bandeirantes, qui sont de bonnes personnes, qui sont guerrières, qui sont honnêtes et travailleuses.Notre population est la solidarité, une amie, est humaine, se débat et ne fait aucun effort pour marcher ensemble et construire le développement de notre municipalité.",
+      "desc2": "Noël est l'une des dates festives les plus importantes du christianisme, célébrées chaque année le 25 décembre.Examinons une petite fête et distribuons de la joie à tous les publics.",
+      "desc3": "Temps de masse avec la neuvaine: 16h et 19h30 (du lundi au samedi).Dimanche 25: Messe à 6h, 9h, 12h, 16h à 19h30.Il y aura également une bénédiction des voitures à 15h.",
+      "telefone": "Téléphone:",
+      "endereco": "Adresse:",
+      "descricao": "La description:",
+      "data": "Données:"
+    },
     "turismo": {
-      "titulo": "turismo",
+      "titulo": "Turismo",
       "subtitulo": "Lieu de foi, de nature et de traditions"
     },
     "restaurantes": {
@@ -364,10 +421,10 @@
       "placeholderEmpresa": "Entrez le nom de l'entreprise",
       "placeholderEmail": "Tapez votre e-mail",
       "placeholderTelefone": "Entrez votre téléphone",
-      "placeholderMensagem": "Entrez l'adresse complète de l'entreprise", 
+      "placeholderMensagem": "Entrez l'adresse complète de l'entreprise",
       "placeholderContato": "Entrez le nom de contact",
       "botao": "Soumettre",
-      "localizacao":"Sélectionnez le point sur la carte:"
+      "localizacao": "Sélectionnez le point sur la carte:"
     },
     "album": {
       "titulo": "Albumum",

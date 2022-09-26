@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import dashboard01 from "/src/assets/img/dashboard/img1.svg";
 import dashboard02 from '/src/assets/img/dashboard/img2.svg';
 import dashboard03 from '/src/assets/img/dashboard/img3.svg';
-
+import { useTranslation } from 'react-i18next'
 export default function Opcoes() {
+  const { t } = useTranslation()
   return (
     <section className="dashboard-body">
       <img id="quadrado-01" src="/src/assets/img/dashboard/quadrado0.png" alt=""></img>
@@ -18,8 +19,8 @@ export default function Opcoes() {
           <Link to='/admin/cadastrar'>
             <div className="dashboard-cards-content">
               <img src={dashboard01} alt="" />
-              <h1>Cadastro</h1>
-              <p>Cadastrar conteúdos</p>
+              <h1>{t('paginas.dashboard.opcoes.cadastrar')}</h1>
+              <p>{t('paginas.dashboard.opcoes.desc1')}</p>
             </div>
           </Link>
         </div>
@@ -27,8 +28,8 @@ export default function Opcoes() {
           <Link to="#">
             <div className="dashboard-cards-content">
               <img src={dashboard02} alt="" />
-              <h1>Editar</h1>
-              <p>Editar conteúdos</p>
+              <h1>{t('paginas.dashboard.opcoes.editar')}</h1>
+              <p>{t('paginas.dashboard.opcoes.desc2')}</p>
             </div>
           </Link>
         </div>
@@ -36,8 +37,8 @@ export default function Opcoes() {
           <Link to="#">
             <div className="dashboard-cards-content">
               <img src={dashboard03} alt="" />
-              <h1>Deletar</h1>
-              <p>Deletar conteúdos</p>
+              <h1>{t('paginas.dashboard.opcoes.deletar')}</h1>
+              <p>{t('paginas.dashboard.opcoes.desc3')}</p>
             </div>
           </Link>
         </div>

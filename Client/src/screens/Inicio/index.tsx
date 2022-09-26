@@ -90,9 +90,9 @@ export default function Inicio() {
         </div>
         <div className="cartao text-center">
           <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
-            Baixe nosso aplicativo
+            {t('paginas.inicio.app')}
           </h1>
-          <h4>Para receber promoções e comunicados exclusivos</h4>
+          <h4>{t('paginas.inicio.appDesc')}</h4>
           <img
             src={downloadMobile}
             className="h-56 w-auto mx-auto"

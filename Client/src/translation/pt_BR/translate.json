@@ -249,6 +249,8 @@
       }
     },
     "inicio": {
+      "app": "Baixe nosso aplicativo!",
+      "appDesc": "Para receber promoçoes especiais e comunicados exclusivos",
       "header": "ACESSO RÁPIDO",
       "cards": "O que fazer?",
       "botao": "Ver Todas",
@@ -377,12 +379,6 @@
       "turismo-esportivo": "Turismo Esportivo"
     },
     "eventosAgenda": {
-      "titulo1": "Aniversário de Bandeirantes",
-      "titulo2": "Natal comunitário", 
-      "titulo3": "Novena de São Miguel Arcanjo",
-      "desc1": "Neste dia 14 de novembro, Bandeirantes completa 87 anos. Nesta ocasião, quero parabenizar o povo de Bandeirantes, que é gente de bem, que é guerreira, que é honesta e trabalhadora. Nossa população é solidária, é amiga, é humana, é batalhadora e não mede esforços para juntos caminharmos e construirmos o desenvolvimento do nosso Município.",
-      "desc2": "O Natal é uma das mais importantes datas festivas do cristianismo, sendo celebrado anualmente no dia 25 de dezembro. Vamos dar uma pequena festa e distribulir alegria para todos os públicos.",
-      "desc3": "Horário das Missas com a Novena: 16h e 19h30 (de segunda a sábado). Domingo dia 25: Missa às 6h, 9h, 12h, 16h às 19h30. Haverá também bênção dos carros às 15h.",
       "telefone": "Telefone:",
       "endereco": "Endereço:",
       "descricao": "Descriçao:",
