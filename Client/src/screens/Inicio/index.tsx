@@ -81,13 +81,7 @@ export default function Inicio() {
         </div>
       </section>
       <div className="download grid grid-cols-1 md:grid-cols-2 content-center items-center">
-        <div className="h-2/3">
-          <img
-            src={imgMobile}
-            className="mx-auto h-full w-auto"
-            alt="imagem do mobile"
-          />
-        </div>
+
         <div className="cartao text-center">
           <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
             {t('paginas.inicio.app')}
@@ -97,6 +91,13 @@ export default function Inicio() {
             src={downloadMobile}
             className="h-56 w-auto mx-auto"
             alt="Dowload Mobile"
+          />
+        </div>
+        <div className="h-2/3">
+          <img
+            src={imgMobile}
+            className="mx-auto h-full w-auto"
+            alt="imagem do mobile"
           />
         </div>
       </div>
