@@ -1,7 +1,8 @@
+
 export const optionRestaurante = [
   {
     id: '00',
-    nome: 'Tudo',
+    nome: 'Todos',
     categoria: 'all',
   },
   {

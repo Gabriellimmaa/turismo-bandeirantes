@@ -242,7 +242,10 @@
       "opcoes": {
         "cadastrar": "Cadastrar",
         "editar": "Editar",
-        "deletar": "Deletar"
+        "deletar": "Deletar",
+        "desc1": "Cadastrar conteúdos",
+        "desc2": "Editar conteúdos",
+        "desc3": "Deletar conteúdos"
       }
     },
     "inicio": {
@@ -352,7 +355,7 @@
       "todos": "Todos",
       "janeiro": "Janeiro",
       "fevereiro": "Fevereiro",
-      "marco": "Março",
+      "março": "Março",
       "abril": "Abril",
       "maio": "Maio",
       "junho": "Junho",
@@ -367,11 +370,11 @@
       "bar": "Bar",
       "pizzaria": "Pizzaria",
       "padaria": "Padaria",
-      "ecologico": "Turismo Ecologico",
-      "religioso": "Turismo Religioso",
-      "cultural": "Turismo Cultural",
-      "rural": "Turimos Rural",
-      "esportivo": "Turismo Esportivo"
+      "turismo-ecologico": "Turismo Ecologico",
+      "turismo-religioso": "Turismo Religioso",
+      "turismo-cultural": "Turismo Cultural",
+      "turismo-rural": "Turimos Rural",
+      "turismo-esportivo": "Turismo Esportivo"
     },
     "eventosAgenda": {
       "titulo1": "Aniversário de Bandeirantes",
