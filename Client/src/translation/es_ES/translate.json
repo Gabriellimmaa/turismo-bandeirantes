@@ -191,6 +191,7 @@
         "placeHolderCategoria": "Seleccione una categoría",
         "placeHolderCardapio": "Ingrese el menú local",
         "placeHolderData": "Ingrese la fecha del evento",
+        "placeHolderTitulo": "Ingrese el título del evento",
         "obrigatorio": "*Obligatorio",
         "logo": "Elija un logotipo:",
         "mapa": "Seleccione el punto en el mapa:",
@@ -214,7 +215,7 @@
         "placeHolderWhatsapp": "Inserte WhatsApp si tiene",
         "placeHolderInsta": "Ingrese Instagram si tiene",
         "placeHolderDesc": "Ingrese la descripción del lugar",
-        "placeHolderNome": "Ingrese el nombre del lugar",
+        "placeHolderNome": "Ingrese el título de la imagen",
         "placeHolderEndereco": "Ingrese la dirección de ubicación",
         "placeHolderEmail": "Ingrese el correo electrónico si tiene",
         "placeHolderFace": "Ingrese a Facebook si tiene",
@@ -227,6 +228,21 @@
         "imagem": "Elija una imagen:",
         "mapa": "Seleccione el punto en el mapa:",
         "cadastro": "Registrar imagen"
+      },
+      "cadastrar": {
+        "titulo": "Registrar",
+        "opcoes": "Seleccione una opción",
+        "turismo": "Cadastrar Turismo",
+        "restaurante": "Registrarse en el restaurante",
+        "agenda": "Agenda de Registro",
+        "album": "Registrar Álbum",
+        "hotel": "Registrar Hotel",
+        "bares": "Registrar Barras"
+      },
+      "opcoes": {
+        "cadastrar": "Registro",
+        "editar": "Editar",
+        "deletar": "Borrar"
       }
     },
     "inicio": {
@@ -332,6 +348,43 @@
         }
       }
     },
+    "toolbar": {
+      "todos": "Todos",
+      "janeiro": "Enero",
+      "fevereiro": "Febrero",
+      "marco": "Marzo",
+      "abril": "Abril",
+      "maio": "Mayo",
+      "junho": "Junio",
+      "julho": "Julio",
+      "agosto": "Agosto",
+      "setembro": "Septiembre",
+      "outubro": "Octubre",
+      "novembro": "Noviembre",
+      "dezembro": "Diciembre",
+      "restaurante": "Restaurante",
+      "lanchonete": "Cafetería",
+      "bar": "Bar",
+      "pizzaria": "Pizzería",
+      "padaria": "La Pastelería",
+      "ecologico": "Turismo Ecológico",
+      "religioso": "Turismo Religioso",
+      "cultural": "Turismo Cultural",
+      "rural": "Turismo Rural",
+      "esportivo": "Turismo Deportivo"
+    },
+    "eventosAgenda": {
+      "titulo1": "Bandeirantes Cumpleaños",
+      "titulo2": "Navidad comunitaria", 
+      "titulo3": "Novena de São Miguel Arcanjo",
+      "desc1": "El 14 de noviembre, Bandeirantes cumple 87 años.En esta ocasión, quiero felicitar a la gente de Bandeirantes, que son buenas personas, que son guerreras, que son honestas y trabajadoras.Nuestra población es solidaridad, amigo, es humano, está luchando y no hace ningún esfuerzo para caminar juntos y construir el desarrollo de nuestro municipio.",
+      "desc2": "La Navidad es una de las fechas festivas más importantes del cristianismo, que se celebra anualmente el 25 de diciembre.Hagamos una pequeña fiesta y distribuamos alegría a todos los públicos.",
+      "desc3": "Tiempo de misa con la Novena: 16h y 19h30 (de lunes a sábado).Domingo 25: Misa a las 6 a.m., 9 a.m., 12h, 4 pm a 7:30 p.m.También habrá una bendición de los autos a las 15 h.",
+      "telefone": "Teléfono:",
+      "endereco": "Dirección:",
+      "descricao": "Descripción:",
+      "data": "Datos:"
+    },
     "turismo": {
       "titulo": "Turismo",
       "subtitulo": "Lugar de fe, naturaleza y tradiciones"
@@ -340,16 +393,9 @@
       "titulo": "Restaurantes",
       "subtitulo": "¡Conoce a nuestros restaurantes!"
     },
-    "hoteis": {
-      "titulo": "Hoteles",
-      "subtitulo": "¡Encuentra hoteles, posadas y muchos otros lugares para quedarse!"
-    },
-    "agenda": {
-      "titulo": "Agenda",
-      "subtitulo": "¡Conoce a nuestra agenda de eventos!"
-    },
     "contato": {
       "titulo": "contacto",
+      "localizacao":"Localização",
       "descricao": "También registre su negocio",
       "subtitulo": "Registre su negocio aquí",
       "telefone": "Teléfono:",
@@ -359,14 +405,23 @@
       "categoria": "Categoría de negocios:",
       "endereco": "Dirección:",
       "enderecoCompleto": "Dirección completa:",
-      "placeholderEndereco":"Ingrese la dirección completa",
+      "placeholderEndereco": "Ingrese la dirección completa",
       "placeholderEmpresa": "Ingrese el nombre de la empresa",
       "placeholderEmail": "Escriba su correo electrónico",
       "placeholderTelefone": "Ingrese su teléfono ",
-      "placeholderMensagem": "Ingrese la dirección comercial completa", 
+      "placeholderMensagem": "Ingrese la dirección comercial completa",
       "placeholderContato": "Ingrese el nombre de contacto",
       "botao": "Enviar",
-      "localizacao": "Seleccione el punto en el mapa:"
+      "mapa": "Seleccione el punto en el mapa:",
+      "prefeitura": "Ayuntamiento de"
+    },
+    "hoteis": {
+      "titulo": "Hoteles",
+      "subtitulo": "¡Encuentra hoteles, posadas y muchos otros lugares para quedarse!"
+    },
+    "agenda": {
+      "titulo": "Agenda",
+      "subtitulo": "¡Conoce a nuestra agenda de eventos!"
     },
     "album": {
       "titulo": "Álbum",

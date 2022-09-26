@@ -1,7 +1,7 @@
 {
   "teste": "Test",
   "navbar": {
-    "inicio": "Beginning",
+    "inicio": "Home",
     "historia": "History",
     "mapa": "Map",
     "agenda": "Schedule",
@@ -17,8 +17,8 @@
     "paginas": {
       "titulo": "Pages",
       "sobre": "About",
-      "onde-dormir": "Where sleep",
-      "oque-fazer": "What to do",
+      "onde-dormir": "Where sleep?",
+      "oque-fazer": "What to do?",
       "mapa": "Map"
     },
     "contato": "Contacts",
@@ -135,7 +135,7 @@
         "descricao": "Description",
         "endereco": "Address",
         "categoria": "Category of kitchens",
-        "cardapio": "Menu",
+        "cardapio": "Maenu",
         "brasileira": "Brazilian",
         "italiana": "Italian",
         "fabiao": "Japanese",
@@ -164,7 +164,7 @@
       "agenda": {
         "data": "Data",
         "tituloTela": "Title",
-        "titulo": "Registration Agenda",
+        "titulo": "Registration Schedule",
         "nome": "Name",
         "descricao": "Description",
         "endereco": "Address",
@@ -191,6 +191,7 @@
         "placeHolderCategoria": "Select a category",
         "placeHolderCardapio": "Enter the local menu",
         "placeHolderData": "Insira a data do evento",
+        "placeHolderTitulo": "Enter the title of the event",
         "obrigatorio": "*Mandatory",
         "logo": "Choose a logo:",
         "mapa": "Select the point on the map:",
@@ -214,7 +215,7 @@
         "placeHolderWhatsapp": "Insert whatsapp if you have",
         "placeHolderInsta": "Enter Instagram if you have",
         "placeHolderDesc": "Enter the description of the place",
-        "placeHolderNome": "Enter the name of the place",
+        "placeHolderNome": "Enter the title of the image",
         "placeHolderEndereco": "Enter the location address",
         "placeHolderEmail": "Enter the email if you have",
         "placeHolderFace": "Enter Facebook if you have",
@@ -227,13 +228,28 @@
         "imagem": "Choose an image:",
         "mapa": "Select the point on the map:",
         "cadastro": "Register Image"
+      },
+      "cadastrar": {
+        "titulo": "Register",
+        "opcoes": "Select an option",
+        "turismo": "Register tourism",
+        "restaurante": "Register restaurant",
+        "agenda": "Register Agenda",
+        "album": "Register Album",
+        "hotel": "Register hotel",
+        "bares": "Register bars"
+      },
+      "opcoes": {
+        "cadastrar": "Register",
+        "editar": "Edit",
+        "deletar": "Delete"
       }
     },
     "inicio": {
       "header": "QUICK ACCESS",
       "cards": "What to do?",
       "botao": "See all",
-      "saibaMais": "know more",
+      "saibaMais": "Know more",
       "parallax": {
         "titulo": "Send your suggestion",
         "placeholderNome": "Your name",
@@ -262,7 +278,7 @@
           "descricao": "Do you still have questions if you should know the city?So go to our photos and be enchanted by the beauty of the city"
         },
         "agenda": {
-          "titulo": "Agenda",
+          "titulo": "Schedule",
           "descricao": "Get to know our calendar of events to not lose any attraction."
         }
       }
@@ -332,6 +348,43 @@
         }
       }
     },
+    "toolbar": {
+      "todos": "All",
+      "janeiro": "January",
+      "fevereiro": "February",
+      "marco": "March",
+      "abril": "Abril",
+      "maio": "May",
+      "junho": "June",
+      "julho": "July",
+      "agosto": "August",
+      "setembro": "September",
+      "outubro": "October",
+      "novembro": "November",
+      "dezembro": "December",
+      "restaurante": "Restaurant",
+      "lanchonete": "Cafeteria",
+      "bar": "Bar",
+      "pizzaria": "Pizzeria",
+      "padaria": "The bakery",
+      "ecologico": "Ecological tourism",
+      "religioso": "Religious tourism",
+      "cultural": "Cultural tourism",
+      "rural": "Rural tourism",
+      "esportivo": "Sports tourism"
+    },
+    "eventosAgenda": {
+      "titulo1": "Bandeirantes Birthday",
+      "titulo2": "Community Christmas", 
+      "titulo3": "novenaDeSãoMiguelArcanjo",
+      "desc1": "On November 14, Bandeirantes turns 87 years old.On this occasion, I want to congratulate the people of Bandeirantes, who are good people, who are warrior, who are honest and hardworking.Our population is solidarity, friend, is human, is struggling and makes no effort to walk together and build the development of our municipality.",
+      "desc2": "Christmas is one of the most important festive dates of Christianity, being celebrated annually on December 25th.Let's have a small party and distribute joy to all audiences.",
+      "desc3": "Mass time with the novena: 16h and 19h30 (Monday to Saturday).Sunday 25: Mass at 6am, 9am, 12h, 4 pm to 7:30 pm.There will also be a blessing from the cars at 15h. ",
+      "telefone": "Telephone:",
+      "endereco": "Address:",
+      "descricao": "Description:",
+      "data": "data:"
+    },
     "turismo": {
       "titulo": "Tourism",
       "subtitulo": "Place of faith, nature and traditions"
@@ -359,15 +412,16 @@
       "placeholderMensagem": "Enter the company's full address", 
       "placeholderContato": "Enter the name for contact",
       "botao": "Submit",
-      "mapa":"Select the point on the map:"
+      "mapa":"Select the point on the map:",
+      "prefeitura": "City Hall of "
     },
     "hoteis": {
       "titulo": "Hotels",
       "subtitulo": "Find hotels, inns and many other places to stay!"
     },
     "agenda": {
-      "titulo": "Agenda",
-      "subtitulo": "Meet our event agenda!"
+      "titulo": "Schedule",
+      "subtitulo": "Meet our event Schedule!"
     },
     "album": {
       "titulo": "Album",
