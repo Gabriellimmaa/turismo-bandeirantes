@@ -80,7 +80,7 @@ export default function Inicio() {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-1 md:grid-cols-2 content-center items-center">
+      <div className="download grid grid-cols-1 md:grid-cols-2 content-center items-center">
         <div className="h-2/3">
           <img
             src={imgMobile}
@@ -88,7 +88,7 @@ export default function Inicio() {
             alt="imagem do mobile"
           />
         </div>
-        <div className="text-center">
+        <div className="cartao text-center">
           <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
             Baixe nosso aplicativo
           </h1>
