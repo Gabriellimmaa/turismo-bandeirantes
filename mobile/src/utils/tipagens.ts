@@ -15,5 +15,8 @@ export interface PropsGeral {
   insta?: string
   whats?: string
   categoria?: string
+  estrelasResult?: number,
+  estrelas?: any,
+  comentarios?: any,
   tipo?: "Turismo" | "Restaurante" | "Hotel" | "Bar"
 }

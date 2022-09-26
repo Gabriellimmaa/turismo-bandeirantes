@@ -4,11 +4,18 @@ import { useEffect, useState } from "react";
 import { DetalhePrincipal } from "../components/DetalheContainer/DetalhePrincipal";
 import { Loading } from "../components/Loading";
 import api from "../services/api";
+import apiLocal from "../services/apiLocal";
 import { PropsGeral } from "../utils/tipagens";
 
 export function Detalhe({ route }: any) {
   const [detalhe, setDetalhe] = useState<PropsGeral[]>([]);
-  const [loading, setLoading] = useState(false)
+  const [dataLocal, setDataLocal] = useState<{
+    estrelas: number[]
+    comentarios: object[]
+  }>({ estrelas: [], comentarios: [] })
+  const [stars, setStars] = useState(0)
+  const [loading1, setLoading1] = useState(false)
+  const [loading2, setLoading2] = useState(false)
 
   useEffect(() => {
     async function verificaRota(){
@@ -17,15 +24,24 @@ export function Detalhe({ route }: any) {
           await api.get(`/atracoes/${route.params.id}`)
           .then((response) => {
             setDetalhe(response.data.atracoes);
-            setLoading(true)
+            setLoading1(true)
           })
           .catch(error => console.log(error));
+
+          await apiLocal.get(`turismo/${route.params.id}`)
+          .then((response) => {
+            const maiorValor = Math.max.apply(null, response.data.estrelas)
+            const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
+            setStars(indexMaiorValor + 1)
+            setDataLocal(response.data)
+            setLoading2(true)
+          })
           break;
         case "Restaurante":
           await api.get(`/restaurantes/${route.params.id}`)
           .then((response) => {
             setDetalhe(response.data.restaurantes)
-            setLoading(true)
+            setLoading1(true)
           })
           .catch(error => console.log(error));
           break;
@@ -33,7 +49,7 @@ export function Detalhe({ route }: any) {
           await api.get(`/hoteis/${route.params.id}`)
           .then((response) => {
             setDetalhe(response.data.hoteis)
-            setLoading(true)
+            setLoading1(true)
           })
           .catch(error => console.log(error));
           break;
@@ -44,7 +60,7 @@ export function Detalhe({ route }: any) {
     verificaRota();
   }, []);
 
-  if (!loading) {
+  if (!loading1 || !loading2) {
     return <Loading />
   }
 
@@ -72,6 +88,9 @@ export function Detalhe({ route }: any) {
               cardapio={item.cardapio}
               preco={item.preco}
               tipo={route.params.rota}
+              estrelasResult={stars}
+              comentarios={dataLocal.comentarios}
+              estrelas={dataLocal.estrelas}
             />
           ))
         }

@@ -36,7 +36,6 @@ export function DetalhePromotion({ route }: any) {
     }
     verificaRota();
   },[]);
-  console.log(image)
   return (
     <VStack mb={10}>
       <ScrollView >
