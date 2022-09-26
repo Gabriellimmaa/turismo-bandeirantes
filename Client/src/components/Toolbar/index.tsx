@@ -24,12 +24,20 @@ export default function Toolbar({ objectList, filtro }: ToolbarProps) {
 
   return (
     <div className="toolbar">
-      <div className='select'>
+      <div className="select">
         Ordenar por:
-        <select onChange={(event) => changeOption(event.target.value, event.target.selectedOptions[0].getAttribute("data-category"))}>
+        <select
+          onChange={(event) =>
+            changeOption(
+              event.target.value,
+              event.target.selectedOptions[0].getAttribute('data-category'),
+            )
+          }
+        >
           {objectList.map((data: ObjectItem) =>
             data.categoria ? (
-              <option key={data.id}
+              <option
+                key={data.id}
                 selected={selected === data.categoria}
                 value={data.id}
                 data-category={data.categoria}
@@ -39,7 +47,9 @@ export default function Toolbar({ objectList, filtro }: ToolbarProps) {
               </option>
             ) : (
               <option key={data.id}>
-                <button>{t(`paginas.toolbar.${data.nome.toLowerCase()}`)}</button>
+                <button>
+                  {t(`paginas.toolbar.${data.nome.toLowerCase()}`)}
+                </button>
               </option>
             ),
           )}
