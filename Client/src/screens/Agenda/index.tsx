@@ -27,6 +27,7 @@ interface AgendaProps {
   telefone: string
   email: string
   imagem: string
+  categoria?: string
 }
 
 export function Agenda() {
@@ -45,8 +46,8 @@ export function Agenda() {
   }
 
   const filtro = (childdata: string) => {
+    console.log(childdata)
     setFilter(childdata)
-    console.log(filter)
   }
 
   return (
@@ -59,16 +60,30 @@ export function Agenda() {
 
       <div className="grid grid-cols-1 gap-5 justify-items-center mt-6">
         {listAgenda.map((item) => {
-          return (
-            <CardAgenda
-              key={item.id}
-              titulo={item.titulo}
-              descricao={item.descricao}
-              data={item.data}
-              imagem={item.imagem}
-              onClick={() => addDataToModal(item)}
-            />
-          )
+          if (filter === item.categoria) {
+            return (
+              <CardAgenda
+                key={item.id}
+                titulo={item.titulo}
+                descricao={item.descricao}
+                data={item.data}
+                imagem={item.imagem}
+                onClick={() => addDataToModal(item)}
+              />
+            )
+          } else if (filter === 'all' || filter === '') {
+            return (
+              <CardAgenda
+                key={item.id}
+                titulo={item.titulo}
+                descricao={item.descricao}
+                data={item.data}
+                imagem={item.imagem}
+                onClick={() => addDataToModal(item)}
+              />
+            )
+          }
+          return null
         })}
       </div>
 
