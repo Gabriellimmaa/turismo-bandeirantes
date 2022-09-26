@@ -80,14 +80,23 @@ export default function Inicio() {
         </div>
       </section>
       <div className="grid grid-cols-1 md:grid-cols-2 content-center items-center">
-        <div className='h-2/3'>
-          <img src={imgMobile} className="mx-auto h-full w-auto" />
+        <div className="h-2/3">
+          <img
+            src={imgMobile}
+            className="mx-auto h-full w-auto"
+            alt="imagem do mobile"
+          />
         </div>
-        <div className='text-center'>
+        <div className="text-center">
           <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
-            Baixe nosso aplicativo</h1>
+            Baixe nosso aplicativo
+          </h1>
           <h4>Para receber promoções e comunicados exclusivos</h4>
-          <img src={downloadMobile} className="h-56 w-auto mx-auto" />
+          <img
+            src={downloadMobile}
+            className="h-56 w-auto mx-auto"
+            alt="Dowload Mobile"
+          />
         </div>
       </div>
       <div className="parallax">
