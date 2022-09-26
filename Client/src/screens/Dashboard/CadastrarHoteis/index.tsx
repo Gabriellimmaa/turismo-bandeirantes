@@ -177,7 +177,7 @@ export default function Cadastrarhoteis() {
                 type="text"
                 id="instagram"
                 name="instagram"
-                placeholder={t('paginas.dashboard.hoteis.placeHolderInstagram')}
+                placeholder={t('paginas.dashboard.hoteis.placeHolderInsta')}
               />
             </span>
             <span>
@@ -188,7 +188,7 @@ export default function Cadastrarhoteis() {
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder={t('paginas.dashboard.hoteis.placeHolderFacebook')}
+                placeholder={t('paginas.dashboard.hoteis.placeHolderFace')}
               />
             </span>
           </div>

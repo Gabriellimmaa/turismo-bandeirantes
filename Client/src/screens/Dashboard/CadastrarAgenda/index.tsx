@@ -37,7 +37,7 @@ export default function CadastrarAgenda() {
                 type="text"
                 id="titulo"
                 name="titulo"
-                placeholder="Insira o titulo do evento"
+                placeholder={t('paginas.dashboard.agenda.placeHolderTitulo')}
               />
             </span>
             <span>

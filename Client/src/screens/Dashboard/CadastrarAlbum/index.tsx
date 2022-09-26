@@ -41,7 +41,7 @@ export default function CadastrarTurismo() {
                 type="text"
                 id="titulo"
                 name="titulo"
-                placeholder="Insira o título da imagem"
+                placeholder={t('paginas.dashboard.album.placeHolderNome')}
               />
             </span>
           </div>
@@ -54,7 +54,7 @@ export default function CadastrarTurismo() {
             <textarea
               id="descricao"
               name="descricao"
-              placeholder="Insira uma descrição da imagem"
+              placeholder= {t('paginas.dashboard.album.placeHolderDesc')}
             />
           </span>
           <button>{t('paginas.dashboard.album.cadastro')}</button>

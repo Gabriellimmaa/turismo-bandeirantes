@@ -180,7 +180,7 @@ export default function CadastrarTurismo() {
                 id="instagram"
                 name="instagram"
                 placeholder={t(
-                  'paginas.dashboard.turismo.placeHolderInstagram',
+                  'paginas.dashboard.turismo.placeHolderInsta',
                 )}
               />
             </span>
@@ -192,7 +192,7 @@ export default function CadastrarTurismo() {
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder={t('paginas.dashboard.turismo.placeHolderFacebook')}
+                placeholder={t('paginas.dashboard.turismo.placeHolderFace')}
               />
             </span>
           </div>

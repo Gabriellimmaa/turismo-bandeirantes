@@ -203,7 +203,7 @@ export default function CadastrarBares() {
                 type="text"
                 id="instagram"
                 name="instagram"
-                placeholder={t('paginas.dashboard.bares.placeHolderInstagram')}
+                placeholder={t('paginas.dashboard.bares.placeHolderInsta')}
               />
             </span>
             <span>
@@ -214,7 +214,7 @@ export default function CadastrarBares() {
                 type="text"
                 id="facebook"
                 name="facebook"
-                placeholder={t('paginas.dashboard.bares.placeHolderFacebook')}
+                placeholder={t('paginas.dashboard.bares.placeHolderFace')}
               />
             </span>
           </div>
