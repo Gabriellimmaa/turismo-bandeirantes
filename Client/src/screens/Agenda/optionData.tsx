@@ -2,7 +2,7 @@ export const optionAgenda = [
   {
     id: '01',
     nome: 'todos',
-    categoria: 'todos',
+    categoria: 'all',
     type: 'agenda',
   },
   {
