@@ -2,6 +2,7 @@ import { AspectRatio, Box, Button, Heading, HStack, Image, Text, useTheme, VStac
 import { Header } from "../components/Header";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
+import logo from '../assets/album/santuario.jpg'
 
 export function Home() {
 
@@ -13,7 +14,7 @@ export function Home() {
       <Header />
       <AspectRatio w="100%" ratio={16 / 13}>
         <Image
-          source={{ uri: "https://media-cdn.tripadvisor.com/media/photo-s/06/13/8f/69/santuario-sao-miguel.jpg" }}
+          source={logo}
           alt="image"
         />
       </AspectRatio>
