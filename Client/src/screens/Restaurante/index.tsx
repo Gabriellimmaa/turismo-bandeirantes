@@ -13,7 +13,7 @@ interface turismoProps {
   descricao: string
   logo: string
   preco: string
-  cardapio: string | null
+  cardapio?: string
   cozinhas: string
   telefone: string
   latitude: string
