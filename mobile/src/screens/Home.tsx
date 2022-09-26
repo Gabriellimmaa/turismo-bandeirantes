@@ -12,12 +12,12 @@ export function Home() {
   return (
     <VStack flex={1} mb={10} bg="gray.100" >
       <Header />
-      <AspectRatio w="100%" ratio={16 / 13}>
-        <Image
-          source={logo}
-          alt="image"
-        />
-      </AspectRatio>
+      <Image
+        w="full"
+        h={300}
+        source={logo}
+        alt="image"
+      />
       <Heading textAlign="center" mt={6}>Acesso Rápido</Heading>
       <HStack space={2} alignItems="center" mt={2} justifyContent="space-evenly" px={6}  >
         <VStack alignItems="center" mt={6} justifyContent="center" space={1}  >
