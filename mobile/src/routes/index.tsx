@@ -1,7 +1,7 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { useTheme } from "native-base";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { StackRoutes, StackRoutesHotel, StackRoutesRestaurante } from "./StackRoutes";
+import { StackRoutes, StackRoutesHotel, StackRoutesPromocoes, StackRoutesRestaurante } from "./StackRoutes";
 import { Home } from "../screens/Home";
 import { Contato } from "../screens/Contato";
 import { Historia } from "../screens/Historia";
@@ -69,7 +69,7 @@ export function Routes() {
       />
       <Drawer.Screen
         name="Promocoes"
-        component={Home}
+        component={StackRoutesPromocoes}
         options={{
           drawerIcon: ({ focused, size, color }) => (
             <MaterialCommunityIcons name="ticket-percent" size={size} color={color} />

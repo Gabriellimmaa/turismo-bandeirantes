@@ -10,6 +10,8 @@ export declare global {
       Comunicados: undefined;
       Contato: undefined;
       Historia: undefined;
+      DetalhePromocoes: undefined;
+      DetalhePromotion: undefined;
     }
   }
 }
