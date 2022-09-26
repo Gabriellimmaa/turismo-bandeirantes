@@ -3,12 +3,15 @@
     "name": "mobile",
     "slug": "mobile",
     "version": "1.0.0",
-    "icon": "./src/assets/logo.png",
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.rodrigojuniorj.mobile"
+      "package": "com.rodrigojuniorj.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/logo.png",
+        "backgroundColor": "#FFFFFF"
+      }
     }
   }
 }
