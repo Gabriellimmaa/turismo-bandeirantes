@@ -18,40 +18,75 @@ export function Detalhe({ route }: any) {
   const [loading2, setLoading2] = useState(false)
 
   useEffect(() => {
-    async function verificaRota(){
+    async function verificaRota() {
       switch (route.params.rota) {
         case "Turismo":
           await api.get(`/atracoes/${route.params.id}`)
-          .then((response) => {
-            setDetalhe(response.data.atracoes);
-            setLoading1(true)
-          })
-          .catch(error => console.log(error));
+            .then((response) => {
+              setDetalhe(response.data.atracoes);
+              setLoading1(true)
+            })
+            .catch(error => console.log(error));
 
           await apiLocal.get(`turismo/${route.params.id}`)
-          .then((response) => {
-            const maiorValor = Math.max.apply(null, response.data.estrelas)
-            const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
-            setStars(indexMaiorValor + 1)
-            setDataLocal(response.data)
-            setLoading2(true)
-          })
+            .then((response) => {
+              const maiorValor = Math.max.apply(null, response.data.estrelas)
+              const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
+              setStars(indexMaiorValor + 1)
+              setDataLocal(response.data)
+              setLoading2(true)
+            })
           break;
         case "Restaurante":
           await api.get(`/restaurantes/${route.params.id}`)
-          .then((response) => {
-            setDetalhe(response.data.restaurantes)
-            setLoading1(true)
-          })
-          .catch(error => console.log(error));
+            .then((response) => {
+              setDetalhe(response.data.restaurantes)
+              setLoading1(true)
+            })
+            .catch(error => console.log(error));
+
+          await apiLocal.get(`restaurante/${route.params.id}`)
+            .then((response) => {
+              const maiorValor = Math.max.apply(null, response.data.estrelas)
+              const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
+              setStars(indexMaiorValor + 1)
+              setDataLocal(response.data)
+              setLoading2(true)
+            })
           break;
-        case "Hotel": 
+        case "Hotel":
           await api.get(`/hoteis/${route.params.id}`)
-          .then((response) => {
-            setDetalhe(response.data.hoteis)
-            setLoading1(true)
-          })
-          .catch(error => console.log(error));
+            .then((response) => {
+              setDetalhe(response.data.hoteis)
+              setLoading1(true)
+            })
+            .catch(error => console.log(error));
+
+          await apiLocal.get(`hotel/${route.params.id}`)
+            .then((response) => {
+              const maiorValor = Math.max.apply(null, response.data.estrelas)
+              const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
+              setStars(indexMaiorValor + 1)
+              setDataLocal(response.data)
+              setLoading2(true)
+            })
+          break;
+        case "Bar":
+          await api.get(`/bares/${route.params.id}`)
+            .then((response) => {
+              setDetalhe(response.data.hoteis)
+              setLoading1(true)
+            })
+            .catch(error => console.log(error));
+
+          await apiLocal.get(`bar/${route.params.id}`)
+            .then((response) => {
+              const maiorValor = Math.max.apply(null, response.data.estrelas)
+              const indexMaiorValor = response.data.estrelas.indexOf(maiorValor)
+              setStars(indexMaiorValor + 1)
+              setDataLocal(response.data)
+              setLoading2(true)
+            })
           break;
         default:
           break

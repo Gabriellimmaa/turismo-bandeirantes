@@ -10,7 +10,7 @@ import whatsappIMG from '../../assets/social/whatsapp.png'
 import { apenasNumeros } from "../../utils";
 import { PropsGeral } from "../../utils/tipagens";
 import apiLocal from "../../services/apiLocal";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export function DetalhePrincipal({
   id,
@@ -35,6 +35,7 @@ export function DetalhePrincipal({
   const navigation = useNavigation();
   const [comments, setComments] = useState(comentarios);
   const stars = useRef(estrelas)
+  const [estrelasData, setEstrelasData] = useState(stars.current)
 
   const [username, setUsername] = useState('');
   const [commentText, setCommentText] = useState('');
@@ -63,10 +64,8 @@ export function DetalhePrincipal({
     })
     const lista: number[] = [stars.current[0], stars.current[1], stars.current[2], stars.current[3], stars.current[4]]
     lista[ratingValue - 1] += 1
-    console.log(stars)
     stars.current = lista
-    console.log(stars)
-
+    setEstrelasData(stars.current)
   }
 
   return (
@@ -149,11 +148,11 @@ export function DetalhePrincipal({
         </HStack>
         <VStack space={2} mb={10}>
           <View alignItems="center" flexDirection="row">
-            <Text fontSize="md">{stars.current[0] +
-              stars.current[1] +
-              stars.current[2] +
-              stars.current[3] +
-              stars.current[4]} avaliações</Text>
+            <Text fontSize="md">{estrelasData[0] +
+              estrelasData[1] +
+              estrelasData[2] +
+              estrelasData[3] +
+              estrelasData[4]} avaliações</Text>
             <HStack marginLeft="auto">
               <Rating
                 type='custom'

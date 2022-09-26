@@ -4,6 +4,7 @@ export declare global {
       Turismo: undefined;
       Detalhe: undefined;
       Restaurante: undefined;
+      Bar: undefined;
       Hotel: undefined;
       Inicio: undefined;
       Promocoes: undefined;
