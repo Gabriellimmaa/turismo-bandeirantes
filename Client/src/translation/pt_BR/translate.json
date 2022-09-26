@@ -240,7 +240,9 @@
         "bares": "Cadastrar Bares"
       },
       "opcoes": {
-        "cadastrar": "Cadastrar"
+        "cadastrar": "Cadastrar",
+        "editar": "Editar",
+        "deletar": "Deletar"
       }
     },
     "inicio": {
@@ -347,19 +349,19 @@
       }
     },
     "toolbar": {
-      "todos": "todos",
-      "janeiro": "janeiro",
-      "fevereiro": "fevereiro",
-      "marco": "março",
-      "abril": "abril",
-      "maio": "maio",
-      "junho": "junho",
-      "julho": "julho",
-      "agosto": "agosto",
-      "setembro": "setembro",
-      "outubro": "outubro",
-      "novembro": "novembro",
-      "dezembro": "dezembro",
+      "todos": "Todos",
+      "janeiro": "Janeiro",
+      "fevereiro": "Fevereiro",
+      "marco": "Março",
+      "abril": "Abril",
+      "maio": "Maio",
+      "junho": "Junho",
+      "julho": "Julho",
+      "agosto": "Agosto",
+      "setembro": "Setembro",
+      "outubro": "Outubro",
+      "novembro": "Novembro",
+      "dezembro": "Dezembro",
       "restaurante": "Restaurante",
       "lanchonete": "Lanchonete",
       "bar": "Bar",
