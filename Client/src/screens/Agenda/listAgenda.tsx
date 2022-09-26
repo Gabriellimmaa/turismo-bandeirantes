@@ -11,6 +11,7 @@ export const listAgenda = [
     email: '',
     imagem:
       'https://cdn.discordapp.com/attachments/792256194932375563/1022411969367658607/unknown.png',
+    categoria: 'novembro',
   },
   {
     id: '02',
@@ -24,6 +25,7 @@ export const listAgenda = [
     email: '',
     imagem:
       'https://cdn.discordapp.com/attachments/792256194932375563/1022412164448923668/unknown.png',
+    categoria: 'dezembro',
   },
   {
     id: '03',
@@ -37,5 +39,6 @@ export const listAgenda = [
     email: '',
     imagem:
       'https://cdn.discordapp.com/attachments/792256194932375563/1022411934647201792/unknown.png',
+    categoria: 'setembro',
   },
 ]
