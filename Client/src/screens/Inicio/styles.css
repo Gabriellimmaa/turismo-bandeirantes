@@ -64,6 +64,7 @@
   align-items: center;
   height: 90%;
   background-image: url("../../assets/img/inicio/fundoApp.png");
+  background-attachment: fixed;
 }
 
 .cartao {
