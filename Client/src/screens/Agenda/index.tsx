@@ -46,7 +46,6 @@ export function Agenda() {
   }
 
   const filtro = (childdata: string) => {
-    console.log(childdata)
     setFilter(childdata)
   }
 
