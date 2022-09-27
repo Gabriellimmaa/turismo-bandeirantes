@@ -3,12 +3,13 @@ import { IoLanguage } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import './styles.css'
+import { IoAccessibility } from 'react-icons/io5'
 
 import { useTranslation } from 'react-i18next'
 
 import { BsZoomIn, BsZoomOut } from 'react-icons/bs'
 import { GrPowerReset } from 'react-icons/gr'
-import { BiUser } from 'react-icons/bi'
+import { ImFontSize } from 'react-icons/im'
 
 import logo from '../../assets/logo-banner.png'
 import brasil from '../../assets/languages/brazil.png'
@@ -20,7 +21,8 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
   const [isLangExpanded, setIsLangExpanded] = useState(false)
-
+  const [isAccesExpanded, setIsAccesExpanded] = useState(false)
+  const [isFontExpanded, setIsFontExpanded] = useState(false)
   const { t, i18n } = useTranslation()
 
   const handleChangeLng = (lng: string) => {
@@ -77,42 +79,99 @@ export default function Header() {
               <img className="w-auto h-10 m-1" src={france} />
             </button>
           </div>
-          <div id="optionLanguageMobile">
-            <button onClick={() => { setIsLangExpanded(!isLangExpanded) }}>
-              <div className="items-center">
-                <IoLanguage size={18} />
-                <span> Tradução </span>
-                <IoIosArrowDown className="m-auto" />
-              </div>
+
+          <div id="optionAccessibilityMobile">
+            <button id='acces-button' onClick={() => { setIsAccesExpanded(!isAccesExpanded) }}>
+              <IoAccessibility size={28} />
+              <IoIosArrowDown className="m-auto" />
             </button>
-            <div
-              className={
-                isLangExpanded ? 'language-dropdown-content-hidden' : 'language-dropdown-content'
-              }>
-              <ul>
-                <li>
-                  <button onClick={() => { handleChangeLng('br'); setIsLangExpanded(!isLangExpanded) }}>
-                    <img className="w-auto h-10 m-1 ml-10" src={brasil} />
+            <ul className={
+              isAccesExpanded ? 'acces-dropdown-content-hidden' : 'acces-dropdown-content'
+            } >
+              <li>
+                <div id="optionLanguageMobile">
+                  <button onClick={() => { setIsLangExpanded(!isLangExpanded) }}>
+                    <div className="items-center">
+                      <IoLanguage size={18} />
+                      <span> Tradução </span>
+                      <IoIosArrowDown className="m-auto" />
+                    </div>
                   </button>
-                </li>
-                <li>
-                  <button onClick={() => { handleChangeLng('fr'); setIsLangExpanded(!isLangExpanded) }}>
-                    <img className="w-auto h-10 m-1 ml-10" src={france} />
+                  <div
+                    className={
+                      isLangExpanded ? 'language-dropdown-content-hidden' : 'language-dropdown-content'
+                    }>
+                    <ul>
+                      <li>
+                        <button onClick={() => { handleChangeLng('br'); setIsLangExpanded(!isLangExpanded) }}>
+                          <img className="w-auto h-10 m-1 ml-10" src={brasil} />
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => { handleChangeLng('fr'); setIsLangExpanded(!isLangExpanded) }}>
+                          <img className="w-auto h-10 m-1 ml-10" src={france} />
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => { handleChangeLng('es'); setIsLangExpanded(!isLangExpanded) }}>
+                          <img className="w-auto h-10 m-1 ml-10" src={spain} />
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => { handleChangeLng('en'); setIsLangExpanded(!isLangExpanded) }}>
+                          <img className="w-auto h-10 m-1 ml-10" src={english} />
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div id='optionFontMobile'>
+                  <button onClick={() => { setIsFontExpanded(!isFontExpanded) }}>
+                    <ImFontSize size={18} />
+                    <IoIosArrowDown className="m-auto" />
                   </button>
-                </li>
-                <li>
-                  <button onClick={() => { handleChangeLng('es'); setIsLangExpanded(!isLangExpanded) }}>
-                    <img className="w-auto h-10 m-1 ml-10" src={spain} />
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => { handleChangeLng('en'); setIsLangExpanded(!isLangExpanded) }}>
-                    <img className="w-auto h-10 m-1 ml-10" src={english} />
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <span></span>
+                </div>
+                <div className={
+                  isFontExpanded ? 'font-acces-mobile-hidden' : 'font-acces-mobile'
+                }>
+                  <ul>
+                    <li>
+                      <button
+                        className="font-zoom-mais-mobile"
+                        onClick={() => changefontsize('reset')}
+                      >
+                        <span className="text-4xl">A</span>
+                        <GrPowerReset
+                          style={{ marginTop: -14, marginLeft: 42 }}
+                          size={14}
+                        />
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="font-zoom-mais-mobile"
+                        onClick={() => changefontsize('increase')}
+                      >
+                        <span className="text-4xl">A</span>
+                        <BsZoomIn style={{ marginTop: -14, marginLeft: 42 }} size={14} />
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="font-zoom-menos-mobile"
+                        onClick={() => changefontsize('decrease')}
+                      >
+                        <span className="text-4xl">A</span>
+                        <BsZoomOut style={{ marginTop: -14, marginLeft: 42 }} size={14} />
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="flex justify-center">
