@@ -4,18 +4,18 @@ A seguir denominado de LICENCIANTE ambas as pessoas contribuidoras do projeto.
 Segue o documento com a finalidade de constituir este TERMO DE LICENÇA DE USO E GARANTIA, 
 mediante o seguinte acordo:
 
-PRIMEIRO
+1. PRIMEIRO
 A LICENCIANTE concede ao LICENCIADO o direito de uso de cópias do código, turismo bandeirantes, 
 a seguir denominado simplesmente de SOFTWARE, utilizado únicamente para estudos; a comercialização 
 do mesmo ou retirada de créditos ao utiliza-se do SOFTWARE terá uma multa relacionado ao financeiro 
 com a LICENCIANTE.
 
-SEGUNDO
+2. SEGUNDO
 O LICENCIADO poderá utilizar os recursos que o "SOFTWARE" oferece quanto a copiar para a área de 
 transferência, desde que seja para uso pessoal e não comercial. Caso o LICENCIADO venha querer comercializar 
 o SOFTWARE, deverá estabelecer contato com o LICENCIANTE para a requisição de uma nova licença.
 
-TERCEIRO
+3. TERCEIRO
 Todo o conteúdo do "SOFTWARE" é dotado de direitos autorais, sendo de propriedade da LICENCIANTE, ficando 
 claro que qualquer cópia do "SOFTWARE" com finalidade comercial é punível pelas leis de direitos autorais 
 em vigor. O LICENCIADO não pode transmitir o conteúdo do "SOFTWARE" por nenhum meio de telecomunicação existente 
