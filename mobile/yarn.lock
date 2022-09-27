@@ -6181,6 +6181,13 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
+onesignal-expo-plugin@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/onesignal-expo-plugin/-/onesignal-expo-plugin-1.1.1.tgz#f1f4476769a30cbc78356a2ae78fba9e13cae2f1"
+  integrity sha512-2sRn0h42i+IbK9f9nxvUsv+VD3KebYTcslHIoA9+tWF2fIuVSusfXceZWs76UfAkPYcAeIBsrZcsSdflp+/g4A==
+  dependencies:
+    xcode "^3.0.1"
+
 onetime@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"

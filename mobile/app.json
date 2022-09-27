@@ -12,6 +12,17 @@
         "foregroundImage": "./src/assets/icon.png",
         "backgroundColor": "#FFFFFF"
       }
-    }
+    },
+    "ios": {
+      "bundleIdentifier": "com.rodrigojuniorj.FrontCode"
+    },
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "production"
+        }
+      ]
+    ]
   }
 }
