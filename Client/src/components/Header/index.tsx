@@ -81,12 +81,12 @@ export default function Header() {
           </div>
 
           <div id="optionAccessibilityMobile">
-            <button id='acces-button' onClick={() => { setIsAccesExpanded(!isAccesExpanded) }}>
+            {/* <button id='acces-button' onClick={() => { setIsAccesExpanded(!isAccesExpanded) }}>
               <IoAccessibility size={28} />
               <IoIosArrowDown className="m-auto" />
-            </button>
+            </button> */}
             <ul className={
-              isAccesExpanded ? 'acces-dropdown-content' : 'acces-dropdown-content-hidden'
+              isAccesExpanded ? 'acces-dropdown-content' : 'acces-dropdown-content'
             } >
               <li>
                 <div id="optionLanguageMobile">
