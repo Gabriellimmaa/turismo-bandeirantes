@@ -1,7 +1,7 @@
 # 🔗 Turismo Bandeirantes | FrontCode
 
 <p align="center">
-  <img src="public/banner_frontcode.png" />
+  <img src="banner_frontcode.png" />
 </p>
 
 ## Front-end hackathon 2022
