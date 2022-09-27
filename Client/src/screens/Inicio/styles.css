@@ -57,24 +57,32 @@
   filter: brightness(.8);
 }
 
-.download{
+.download {
   width: 100%;
   display: grid;
   grid-column: 1;
   align-items: center;
-  height: 90%;
+  height: auto;
+  /* background: linear-gradient(#f0f0f3, 70%, #bebebe); */
+  /* background-color: rgb(196, 196, 204, 0.4); */
   background-image: url("../../assets/img/inicio/fundoApp.png");
   background-attachment: fixed;
 }
 
-.cartao {
-  background-color: rgba(190, 190, 190, 0.685);
+.download img:nth-child(1){
+  margin-top: 30px;
+  -webkit-animation: float 5s ease-in-out infinite;
+}
+
+.download .cartao {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-  max-width: 600px;
+  width: 60%;
+  height: 60%;
   margin: auto;
+  padding: 10px 20px;
   text-align: center;
-  border-radius: 40px;
-  padding: 10px;
+  border-radius: 10px;
+  @apply bg-gray-100
 }
 
 .inicio-section {
@@ -95,6 +103,18 @@
   animation: fadeAnim 0.5s ease-out;
 }
 
+@keyframes float {
+	0% {
+		-webkit-transform: translatey(0px);
+	}
+	50% {
+		-webkit-transform: translatey(-20px);
+	}
+	100% {
+		-webkit-transform: translatey(0px);
+	}
+}
+
 @keyframes fadeAnim {
   from {
     opacity: 0;
@@ -104,13 +124,9 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .download{
-    height: 1350px;
-  }
-
-  .cartao {
-    margin-top: 3cm;
+@media screen and (max-width: 768px) {
+  .download .cartao {
+    margin-bottom: 3cm;
     max-width: 500px;
     border-radius: 40px;
     padding: 0px;
@@ -120,10 +136,6 @@
 @media screen and (max-width: 425px) {
   .inicio h1 {
     font-size: 45px;
-  }
-
-  .download{
-    height: 1000px;
   }
 
   .cartao {

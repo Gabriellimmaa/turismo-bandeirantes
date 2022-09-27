@@ -80,23 +80,22 @@ export default function Inicio() {
           </div>
         </div>
       </section>
-      <div className="download grid grid-cols-1 md:grid-cols-2 content-center items-center">
-
-        <div className="cartao text-center">
-          <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
+      <div className="download grid grid-cols-1 md:grid-cols-2 items-center h-auto">
+        <div className="cartao grid text-center gap-5">
+          <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900 mb-2">
             {t('paginas.inicio.app')}
           </h1>
-          <h4>{t('paginas.inicio.appDesc')}</h4>
+          <h5 className='mb-5'>{t('paginas.inicio.appDesc')}</h5>
           <img
             src={downloadMobile}
             className="h-56 w-auto mx-auto"
             alt="Dowload Mobile"
           />
         </div>
-        <div className="h-2/3">
+        <div className="block">
           <img
             src={imgMobile}
-            className="mx-auto h-full w-auto"
+            className="mx-auto h-auto w-full max-h-full max-w-screen-sm"
             alt="imagem do mobile"
           />
         </div>
