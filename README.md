@@ -1,5 +1,9 @@
 # 🔗 Turismo Bandeirantes | FrontCode
 
+<p align="center">
+  <img src="public/banner_frontcode.png" />
+</p>
+
 ## Front-end hackathon 2022
 
 Projeto desenvolvido para o Front-end hackathon, em parceria com a prefeitura do município de Bandeirantes e a Universidade Estadual do Norte do Paraná (UENP). O projeto foi desenvolvido voltado ao publico turístico da região, no site e no aplicativo podemos obter algumas informações da cidade como: restaurantes, hoteis, bares, locais de lazer, história, agenda de eventos e pontos turísticos.
