@@ -82,7 +82,7 @@ export default function Inicio() {
       </section>
       <div className="download grid grid-cols-1 md:grid-cols-2 items-center h-auto">
         <div className="cartao grid text-center gap-5">
-          <h1 className="flex justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900 mb-2">
+          <h1 className="flex mx-5 justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900 mb-2">
             {t('paginas.inicio.app')}
           </h1>
           <h5 className='mb-5'>{t('paginas.inicio.appDesc')}</h5>

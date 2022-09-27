@@ -76,8 +76,6 @@
 
 .download .cartao {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-  width: 60%;
-  height: 60%;
   margin: auto;
   padding: 10px 20px;
   text-align: center;
@@ -126,8 +124,7 @@
 
 @media screen and (max-width: 768px) {
   .download .cartao {
-    margin-bottom: 3cm;
-    max-width: 500px;
+    margin-top: 4rem;
     border-radius: 40px;
     padding: 0px;
   }
