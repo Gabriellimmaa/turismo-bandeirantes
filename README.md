@@ -32,4 +32,4 @@ O projeto está finalizado
 
 
 ---
-Obrigado por me ceder seu tempo lendo sobre o nosso trabalho.
+Obrigado por ceder seu tempo lendo sobre o nosso trabalho.
