@@ -14,6 +14,11 @@ export function limitDescription(description: string) {
   }
 }
 
-export async function apenasNumeros(string: string){
+export function limitDescriptionCustom(description: string, value: number) {
+  return description.substring(0, value)
+}
+
+
+export async function apenasNumeros(string: string) {
   return await parseInt(string.replace(/\D/g, ''));
 }

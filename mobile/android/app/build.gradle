@@ -143,7 +143,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId 'com.rodrigojuniorj.mobile'
+        applicationId 'com.rodrigojuniorj.FrontCode'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

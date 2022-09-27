@@ -1,4 +1,4 @@
-package com.rodrigojuniorj.mobile.newarchitecture.modules;
+package com.rodrigojuniorj.FrontCode.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
