@@ -86,7 +86,7 @@ export default function Header() {
               <IoIosArrowDown className="m-auto" />
             </button>
             <ul className={
-              isAccesExpanded ? 'acces-dropdown-content-hidden' : 'acces-dropdown-content'
+              isAccesExpanded ? 'acces-dropdown-content' : 'acces-dropdown-content-hidden'
             } >
               <li>
                 <div id="optionLanguageMobile">
@@ -135,7 +135,7 @@ export default function Header() {
                   </button>
                 </div>
                 <div className={
-                  isFontExpanded ? 'font-acces-mobile-hidden' : 'font-acces-mobile'
+                  isFontExpanded ? 'font-acces-mobile' : 'font-acces-mobile-hidden'
                 }>
                   <ul>
                     <li>
