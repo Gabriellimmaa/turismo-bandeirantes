@@ -82,14 +82,24 @@ export default function Inicio() {
       </section>
       <div className="download grid grid-cols-1 md:grid-cols-2 items-center h-auto">
         <div className="cartao grid text-center gap-5">
-          <h1 className="flex mx-5 justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900 mb-2">
+          <h1 className="flex mx-5 my-3 justify-center items-center text-center text-4xl font-extrabold uppercase text-green-900">
             {t('paginas.inicio.app')}
           </h1>
-          <h5 className='mb-5'>{t('paginas.inicio.appDesc')}</h5>
-          <a className="badges" href="https://expo.dev/artifacts/b30ddaaf-d9db-476c-a826-8b51beb34846">
-            <img className="" src={img1} width="250px" />
-            <img className="" src={img2} width="250px" />
-          </a>
+          <h5 className="mb-5">{t('paginas.inicio.appDesc')}</h5>
+          <div className='grid grid-cols-1'>
+            <a
+              className="badges"
+              href="https://expo.dev/artifacts/b30ddaaf-d9db-476c-a826-8b51beb34846"
+            >
+              <img alt='Download Android' className='md:max-w-xs' src={img1} />
+            </a>
+            <a
+              className="badges mb-3"
+              onClick={() => alert('IOS ainda não disponível pois leva um tempo até ser aprovado na App Store')}
+            >
+              <img alt='Download IOS' className='md:max-w-xs' src={img2} />
+            </a>
+          </div>
         </div>
         <div className="block">
           <img

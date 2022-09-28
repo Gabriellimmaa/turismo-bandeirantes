@@ -136,10 +136,8 @@
 
 @media screen and (max-width: 768px) {
   .download .cartao {
-    margin-top: 4rem;
     border-radius: 40px;
-    padding-bottom: 20px;
-    margin-left: 10px;
+
   }
 }
 
@@ -148,10 +146,9 @@
     font-size: 45px;
   }
 
-  .cartao {
-    max-width: 375px;
-    border-radius: 40px;
-    padding: 0px;
+  .download .cartao {
+    width: 100%;
+    border-radius: 0 0 40px 40px;
   }
 
 }
