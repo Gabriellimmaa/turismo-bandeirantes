@@ -8,7 +8,8 @@ import { CardHome } from '../../components/CardHome'
 import { CardsAtracoes } from '../../components/CardsAtracoes'
 
 import imgMobile from '../../assets/img/inicio/mobile.png'
-import downloadMobile from '../../assets/img/inicio/download-mobile.png'
+import img1 from '../../assets/img/inicio/badgeAndroid.png'
+import img2 from '../../assets/img/inicio/badgeApple.png'
 
 import './styles.css'
 import { useTranslation } from 'react-i18next'
@@ -16,7 +17,6 @@ import { Link } from 'react-router-dom'
 
 export default function Inicio() {
   const { t } = useTranslation()
-
   return (
     <>
       <div className="w-full h-[65%] pt-20 md:pt-0">
@@ -86,11 +86,10 @@ export default function Inicio() {
             {t('paginas.inicio.app')}
           </h1>
           <h5 className='mb-5'>{t('paginas.inicio.appDesc')}</h5>
-          <img
-            src={downloadMobile}
-            className="h-56 w-auto mx-auto"
-            alt="Dowload Mobile"
-          />
+          <a className="badges" href="https://expo.dev/artifacts/b30ddaaf-d9db-476c-a826-8b51beb34846">
+            <img className="" src={img1} width="250px" />
+            <img className="" src={img2} width="250px" />
+          </a>
         </div>
         <div className="block">
           <img
