@@ -36,6 +36,53 @@ O projeto está finalizado
 - [expo](https://expo.dev/) >= 46.0.9
 - [vite](https://vitejs.dev/) >= 3.0.7
 
+## Teste o projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/Gabriellimmaa/turismo-bandeirantes
+```
+
+### 2. Instale as dependências
+
+```bash
+cd Client
+npm install
+cd ..
+cd Server
+npm install
+cd ..
+cd mobile
+expo install
+```
+
+### 3. Edite os arquivos .env existentes nas pastas
+
+* Client
+
+* Server
+
+* mobile
+
+### 4. Para executar o projeto
+
+
+```bash
+# Client
+npm run dev
+```
+
+```bash
+# Server
+npm run start
+```
+
+```bash
+# mobile
+expo start
+```
+
 ## ✒️ Autores
 | [<img src="https://avatars.githubusercontent.com/u/44775141?v=4" width=115><br><sub>Carlos Andrino</sub>](https://github.com/CarlosAAndrino) | [<img src="https://avatars.githubusercontent.com/u/48157305?v=4" width=115><br><sub>Felipe Ferreira</sub>](https://github.com/FelipeFerreiraDev) | [<img src="https://avatars.githubusercontent.com/u/42157830?v=4" width=115><br><sub>Gabriel Lima</sub>](https://github.com/Gabriellimmaa) | [<img src="https://avatars.githubusercontent.com/u/88116603?v=4" width=115><br><sub>João Lorenzo</sub>](https://github.com/lorenzoMalutta) | [<img src="https://avatars.githubusercontent.com/u/71649665?v=4" width=115><br><sub>Rodrigo Junior</sub>](https://github.com/Rodrigojuniorj) |
 | :---: | :---: | :---: | :---: | :---: 
