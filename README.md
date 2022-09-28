@@ -30,6 +30,12 @@ O projeto está finalizado
 
 #### Versão V1.0.0
 
+## Requirements
+
+- [node](https://nodejs.org/en/download/) >= 16.17.0
+- [expo](https://expo.dev/) >= 46.0.9
+- [vite](https://vitejs.dev/) >= 3.0.7
+
 ## ✒️ Autores
 | [<img src="https://avatars.githubusercontent.com/u/44775141?v=4" width=115><br><sub>Carlos Andrino</sub>](https://github.com/CarlosAAndrino) | [<img src="https://avatars.githubusercontent.com/u/48157305?v=4" width=115><br><sub>Felipe Ferreira</sub>](https://github.com/FelipeFerreiraDev) | [<img src="https://avatars.githubusercontent.com/u/42157830?v=4" width=115><br><sub>Gabriel Lima</sub>](https://github.com/Gabriellimmaa) | [<img src="https://avatars.githubusercontent.com/u/88116603?v=4" width=115><br><sub>João Lorenzo</sub>](https://github.com/lorenzoMalutta) | [<img src="https://avatars.githubusercontent.com/u/71649665?v=4" width=115><br><sub>Rodrigo Junior</sub>](https://github.com/Rodrigojuniorj) |
 | :---: | :---: | :---: | :---: | :---: 
