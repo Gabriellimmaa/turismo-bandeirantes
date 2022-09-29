@@ -1,4 +1,4 @@
-# 🔗 Turismo Bandeirantes | FrontCode
+# :trophy: Turismo Bandeirantes | FrontCode
 
 <p align="center">
   <img src="banner_frontcode.png" />
