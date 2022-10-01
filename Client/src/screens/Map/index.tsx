@@ -150,10 +150,6 @@ export default function Map() {
                     </a>
                   </div>
                 </div>
-                {/* <br />
-                <Link to={`/hotel/detalhe/${hotel.id}`}>
-                  <FaArrowRight color="#FFF" />
-                </Link> */}
               </Popup>
             </Marker>
           )

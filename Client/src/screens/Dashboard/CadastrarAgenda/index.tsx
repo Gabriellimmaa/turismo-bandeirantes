@@ -20,7 +20,10 @@ export default function CadastrarAgenda() {
       <section className="cadastrar-turismo">
         <div className="dashboard-title">
           <h1>Dashboard</h1>
-          <div className='flex gap-2 items-center'><Link to="/admin/opcoes"> Dashboard</Link> &gt; <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Agenda </div>
+          <div className="flex gap-2 items-center">
+            <Link to="/admin/opcoes"> Dashboard</Link> &gt;{' '}
+            <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Agenda{' '}
+          </div>
         </div>
         <div className="title-style-1">
           <h1>{t('paginas.dashboard.agenda.titulo')}</h1>

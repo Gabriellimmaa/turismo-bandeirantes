@@ -34,5 +34,5 @@ export const optionTurismo = [
     nome: 'Turismo-Ecologico',
     categoria: 'Ecológico',
     type: 'turismo',
-  }
+  },
 ]

@@ -1,4 +1,4 @@
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 import {
@@ -17,9 +17,7 @@ import './styles.css'
 import { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 import apiLocal from '../../services/apiLocal'
-interface PostProps {
-  loading: boolean
-}
+
 interface CardProps {
   title: string
   type: 'hotel' | 'restaurante' | 'turismo' | 'lazer&esporte' | 'agenda' | 'album' | 'bar'

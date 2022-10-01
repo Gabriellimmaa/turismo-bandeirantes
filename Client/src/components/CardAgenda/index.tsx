@@ -1,14 +1,5 @@
-import { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
 import './styles.css'
-import {
-    BiCalendar,
-    BiMap,
-    BiMoney,
-    BiPhoneCall,
-    BiPlanet,
-    BiTime,
-} from 'react-icons/bi'
+import {BiCalendar} from 'react-icons/bi'
 import Modal from '../Modal'
 
 
