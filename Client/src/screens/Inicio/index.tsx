@@ -86,18 +86,22 @@ export default function Inicio() {
             {t('paginas.inicio.app')}
           </h1>
           <h5 className="mb-5">{t('paginas.inicio.appDesc')}</h5>
-          <div className='grid grid-cols-1'>
+          <div className="grid grid-cols-1">
             <a
               className="badges"
               href="https://expo.dev/artifacts/b30ddaaf-d9db-476c-a826-8b51beb34846"
             >
-              <img alt='Download Android' className='md:max-w-xs' src={img1} />
+              <img alt="Download Android" className="md:max-w-xs" src={img1} />
             </a>
             <a
               className="badges mb-3"
-              onClick={() => alert('IOS ainda não disponível pois leva um tempo até ser aprovado na App Store')}
+              onClick={() =>
+                alert(
+                  'IOS ainda não disponível pois leva um tempo até ser aprovado na App Store',
+                )
+              }
             >
-              <img alt='Download IOS' className='md:max-w-xs' src={img2} />
+              <img alt="Download IOS" className="md:max-w-xs" src={img2} />
             </a>
           </div>
         </div>

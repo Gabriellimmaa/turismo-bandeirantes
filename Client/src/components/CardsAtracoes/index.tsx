@@ -1,7 +1,6 @@
 import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -12,7 +11,7 @@ import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Loading } from '../Loading'
 import { useTranslation } from 'react-i18next'
-// install Virtual module
+
 SwiperCore.use([Virtual, Navigation, Pagination])
 
 interface TurismoHomeProps {
@@ -41,7 +40,6 @@ export function CardsAtracoes() {
   if (loading) {
     return <Loading />
   }
-  // Create array with 500 slides
   return (
     <div className="turismoHome w-full">
       <Swiper
@@ -49,9 +47,6 @@ export function CardsAtracoes() {
         slidesPerView={3}
         navigation={true}
         virtual
-        // pagination={{
-        //   clickable: true,
-        // }}
         breakpoints={{
           '@0.00': {
             slidesPerView: 1,
@@ -72,7 +67,9 @@ export function CardsAtracoes() {
           <SwiperSlide key={atracao.id}>
             <div className="max-w-xs cardTurismoHome rounded-xl">
               <div className="max-w-xs px-4 flex flex-col rounded-xl justify-around items-center absolute w-full h-full titleSobrebor">
-                <p className="text-white text-center text-2xl">{atracao.nome}</p>
+                <p className="text-white text-center text-2xl">
+                  {atracao.nome}
+                </p>
                 <Link
                   to={`/turismo/detalhe/${atracao.id}`}
                   className="bg-transparent rounded-2xl border px-5 py-1 text-white border-white hover:bg-green-brasao hover:text-white hover:border-transparent animate-ease-in-out transition duration-200"
@@ -80,20 +77,14 @@ export function CardsAtracoes() {
                   {t('paginas.inicio.saibaMais')}
                 </Link>
               </div>
-              <img className="rounded-xl bg-cover bg-center" src={atracao.logo} alt={atracao.nome} />
+              <img
+                className="rounded-xl bg-cover bg-center"
+                src={atracao.logo}
+                alt={atracao.nome}
+              />
             </div>
           </SwiperSlide>
-        ))}
-        {/* Esse segundo é só para teste */}
-        {/* {turismo.map((atracao) => (
-          <SwiperSlide key={atracao.id}>
-            <CardTurismoHome
-              title={atracao.nome}
-              path={atracao.logo}
-              id={atracao.id}
-            />
-          </SwiperSlide>
-        ))} */}
+        ))}{' '}
       </Swiper>
     </div>
   )

@@ -1,15 +1,11 @@
-import React from 'react'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
 
 import './styles.css'
 
-// import required modules
 import { Autoplay, FreeMode, Pagination } from 'swiper'
 import { useTranslation } from 'react-i18next'
 
@@ -83,19 +79,13 @@ export default function Historia() {
           </p>
           <div className="imagens">
             <div className="container">
-              <img
-                className="bandeira"
-                src={bandeira}
-              />
+              <img className="bandeira" src={bandeira} alt="bandeira" />
               <div className="overlay1">
                 <div className="text">Bandeira do Município</div>
               </div>
             </div>
             <div className="container">
-              <img
-                className="brasao"
-                src={brasao}
-              />
+              <img className="brasao" src={brasao} alt="brasão" />
               <div className="overlay2">
                 <div className="text">Brasão do Município</div>
               </div>
@@ -129,22 +119,22 @@ export default function Historia() {
         }}
       >
         <SwiperSlide>
-          <img src={img1} />
+          <img src={img1} alt="Imagem slide" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img2} />
+          <img src={img2} alt="Imagem slide" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} />
+          <img src={img3} alt="Imagem slide" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img4} />
+          <img src={img4} alt="Imagem slide" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img5} />
+          <img src={img5} alt="Imagem slide" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img6} />
+          <img src={img6} alt="Imagem slide" />
         </SwiperSlide>
       </Swiper>
     </section>

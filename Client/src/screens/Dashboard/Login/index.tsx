@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import api from '../../../services/api'
 import './styles.css'
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const navigate = useNavigate();
-
+  const navigate = useNavigate()
 
   async function handleLogin(e: any) {
-    navigate("/admin/opcoes");
+    navigate('/admin/opcoes')
     e.preventDefault()
     const r = await api.post('/login', { email, password })
     console.log(r)

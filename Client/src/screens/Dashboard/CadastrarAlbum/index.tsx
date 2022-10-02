@@ -12,7 +12,10 @@ export default function CadastrarTurismo() {
       <section className="cadastrar-imagem">
         <div className="dashboard-title">
           <h1>Dashboard</h1>
-          <div className='flex gap-2 items-center'><Link to="/admin/opcoes"> Dashboard</Link> &gt; <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Álbum </div>
+          <div className="flex gap-2 items-center">
+            <Link to="/admin/opcoes"> Dashboard</Link> &gt;{' '}
+            <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Álbum{' '}
+          </div>
         </div>
         <div className="title-style-1">
           <h1>{t('paginas.dashboard.album.titulo')}</h1>
@@ -54,7 +57,7 @@ export default function CadastrarTurismo() {
             <textarea
               id="descricao"
               name="descricao"
-              placeholder= {t('paginas.dashboard.album.placeHolderDesc')}
+              placeholder={t('paginas.dashboard.album.placeHolderDesc')}
             />
           </span>
           <button>{t('paginas.dashboard.album.cadastro')}</button>

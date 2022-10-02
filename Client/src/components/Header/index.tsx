@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { IoLanguage } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import './styles.css'
-import { IoAccessibility } from 'react-icons/io5'
 
 import { useTranslation } from 'react-i18next'
 
@@ -21,7 +20,7 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
   const [isLangExpanded, setIsLangExpanded] = useState(false)
-  const [isAccesExpanded, setIsAccesExpanded] = useState(false)
+  const isAccesExpanded = false
   const [isFontExpanded, setIsFontExpanded] = useState(false)
   const { t, i18n } = useTranslation()
 
@@ -67,30 +66,50 @@ export default function Header() {
         <div className="flex justify-start ml-0 md:ml-10">
           <div id="optionLanguageDesktop">
             <button onClick={() => handleChangeLng('br')}>
-              <img className="w-auto h-10 m-1" src={brasil} />
+              <img
+                className="w-auto h-10 m-1"
+                src={brasil}
+                alt="Alterar linguagem para portugues br"
+              />
             </button>
             <button onClick={() => handleChangeLng('en')}>
-              <img className="w-auto h-10 m-1" src={english} />
+              <img
+                className="w-auto h-10 m-1"
+                src={english}
+                alt="Alterar linguagem para inglês"
+              />
             </button>
             <button onClick={() => handleChangeLng('es')}>
-              <img className="w-auto h-10 m-1" src={spain} />
+              <img
+                className="w-auto h-10 m-1"
+                src={spain}
+                alt="Alterar linguagem para espanhol"
+              />
             </button>
             <button onClick={() => handleChangeLng('fr')}>
-              <img className="w-auto h-10 m-1" src={france} />
+              <img
+                className="w-auto h-10 m-1"
+                src={france}
+                alt="Alterar linguagem para francês"
+              />
             </button>
           </div>
 
           <div id="optionAccessibilityMobile">
-            {/* <button id='acces-button' onClick={() => { setIsAccesExpanded(!isAccesExpanded) }}>
-              <IoAccessibility size={28} />
-              <IoIosArrowDown className="m-auto" />
-            </button> */}
-            <ul className={
-              isAccesExpanded ? 'acces-dropdown-content' : 'acces-dropdown-content'
-            } >
+            <ul
+              className={
+                isAccesExpanded
+                  ? 'acces-dropdown-content'
+                  : 'acces-dropdown-content'
+              }
+            >
               <li>
                 <div id="optionLanguageMobile">
-                  <button onClick={() => { setIsLangExpanded(!isLangExpanded) }}>
+                  <button
+                    onClick={() => {
+                      setIsLangExpanded(!isLangExpanded)
+                    }}
+                  >
                     <div className="items-center">
                       <IoLanguage size={18} />
                       <span> Tradução </span>
@@ -99,27 +118,66 @@ export default function Header() {
                   </button>
                   <div
                     className={
-                      isLangExpanded ? 'language-dropdown-content-hidden' : 'language-dropdown-content'
-                    }>
+                      isLangExpanded
+                        ? 'language-dropdown-content-hidden'
+                        : 'language-dropdown-content'
+                    }
+                  >
                     <ul>
                       <li>
-                        <button onClick={() => { handleChangeLng('br'); setIsLangExpanded(!isLangExpanded) }}>
-                          <img className="w-auto h-10 m-1 ml-10" src={brasil} />
+                        <button
+                          onClick={() => {
+                            handleChangeLng('br')
+                            setIsLangExpanded(!isLangExpanded)
+                          }}
+                        >
+                          <img
+                            className="w-auto h-10 m-1 ml-10"
+                            src={brasil}
+                            alt="brasil"
+                          />
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => { handleChangeLng('fr'); setIsLangExpanded(!isLangExpanded) }}>
-                          <img className="w-auto h-10 m-1 ml-10" src={france} />
+                        <button
+                          onClick={() => {
+                            handleChangeLng('fr')
+                            setIsLangExpanded(!isLangExpanded)
+                          }}
+                        >
+                          <img
+                            className="w-auto h-10 m-1 ml-10"
+                            src={france}
+                            alt="francês"
+                          />
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => { handleChangeLng('es'); setIsLangExpanded(!isLangExpanded) }}>
-                          <img className="w-auto h-10 m-1 ml-10" src={spain} />
+                        <button
+                          onClick={() => {
+                            handleChangeLng('es')
+                            setIsLangExpanded(!isLangExpanded)
+                          }}
+                        >
+                          <img
+                            className="w-auto h-10 m-1 ml-10"
+                            src={spain}
+                            alt="espanhol"
+                          />
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => { handleChangeLng('en'); setIsLangExpanded(!isLangExpanded) }}>
-                          <img className="w-auto h-10 m-1 ml-10" src={english} />
+                        <button
+                          onClick={() => {
+                            handleChangeLng('en')
+                            setIsLangExpanded(!isLangExpanded)
+                          }}
+                        >
+                          <img
+                            className="w-auto h-10 m-1 ml-10"
+                            src={english}
+                            alt="inglês"
+                          />
                         </button>
                       </li>
                     </ul>
@@ -128,15 +186,23 @@ export default function Header() {
               </li>
 
               <li>
-                <div id='optionFontMobile'>
-                  <button onClick={() => { setIsFontExpanded(!isFontExpanded) }}>
+                <div id="optionFontMobile">
+                  <button
+                    onClick={() => {
+                      setIsFontExpanded(!isFontExpanded)
+                    }}
+                  >
                     <ImFontSize size={18} />
                     <IoIosArrowDown className="m-auto" />
                   </button>
                 </div>
-                <div className={
-                  isFontExpanded ? 'font-acces-mobile' : 'font-acces-mobile-hidden'
-                }>
+                <div
+                  className={
+                    isFontExpanded
+                      ? 'font-acces-mobile'
+                      : 'font-acces-mobile-hidden'
+                  }
+                >
                   <ul>
                     <li>
                       <button
@@ -156,7 +222,10 @@ export default function Header() {
                         onClick={() => changefontsize('increase')}
                       >
                         <span className="text-4xl">A</span>
-                        <BsZoomIn style={{ marginTop: -14, marginLeft: 42 }} size={14} />
+                        <BsZoomIn
+                          style={{ marginTop: -14, marginLeft: 42 }}
+                          size={14}
+                        />
                       </button>
                     </li>
                     <li>
@@ -165,7 +234,10 @@ export default function Header() {
                         onClick={() => changefontsize('decrease')}
                       >
                         <span className="text-4xl">A</span>
-                        <BsZoomOut style={{ marginTop: -14, marginLeft: 42 }} size={14} />
+                        <BsZoomOut
+                          style={{ marginTop: -14, marginLeft: 42 }}
+                          size={14}
+                        />
                       </button>
                     </li>
                   </ul>
@@ -176,7 +248,7 @@ export default function Header() {
         </div>
         <div className="flex justify-center">
           <Link to="/">
-            <img className="w-80 h-auto" src={logo} />
+            <img className="w-80 h-auto" src={logo} alt="Logo" />
           </Link>
         </div>
         <div className="access flex items-center justify-end mr-10">
@@ -219,7 +291,9 @@ export default function Header() {
         </div>
         <button
           className="hamburger"
-          onClick={() => { setIsNavExpanded(!isNavExpanded) }}
+          onClick={() => {
+            setIsNavExpanded(!isNavExpanded)
+          }}
         >
           <FaBars />
         </button>
@@ -229,7 +303,12 @@ export default function Header() {
           isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
         }
       >
-        <ul className="navigation-menu-ul" onClick={() => { setIsNavExpanded(!isNavExpanded) }}>
+        <ul
+          className="navigation-menu-ul"
+          onClick={() => {
+            setIsNavExpanded(!isNavExpanded)
+          }}
+        >
           <li>
             <Link to="/">{t('navbar.inicio')}</Link>
           </li>
@@ -248,9 +327,6 @@ export default function Header() {
           <li>
             <Link to="/turismo">{t('navbar.turismo')}</Link>
           </li>
-          {/* <li>
-            <Link to="/lazer-esporte">{t("navbar.lazer&esporte")}</Link>
-          </li> */}
           <li>
             <Link to="/restaurantes">{t('navbar.restaurantes')}</Link>
           </li>

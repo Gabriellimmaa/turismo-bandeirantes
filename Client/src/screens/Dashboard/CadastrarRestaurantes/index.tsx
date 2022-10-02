@@ -52,7 +52,10 @@ export default function CadastrarRestaurantes() {
       <section className="cadastrar-turismo">
         <div className="dashboard-title">
           <h1>Dashboard</h1>
-          <div className='flex gap-2 items-center'><Link to="/admin/opcoes"> Dashboard</Link> &gt; <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Restaurante </div>
+          <div className="flex gap-2 items-center">
+            <Link to="/admin/opcoes"> Dashboard</Link> &gt;{' '}
+            <Link to="/admin/cadastrar"> Cadastrar</Link> &gt; Restaurante{' '}
+          </div>
         </div>
         <div className="title-style-1">
           <h1>{t('paginas.dashboard.restaurantes.titulo')}</h1>
@@ -245,8 +248,9 @@ export default function CadastrarRestaurantes() {
               zoom={15}
             >
               <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN
-                  }`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${
+                  import.meta.env.VITE_MAPBOX_TOKEN
+                }`}
               />
               <ComponentClick />
             </MapContainer>

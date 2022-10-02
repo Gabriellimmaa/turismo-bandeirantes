@@ -1,5 +1,3 @@
-import Card from '../../components/Card'
-import Toolbar from '../../components/Toolbar'
 import './styles.css'
 import { useTranslation } from 'react-i18next'
 
@@ -13,25 +11,23 @@ import img7 from '../../assets/img/album/album07.jpg'
 
 export function Album() {
   const { t } = useTranslation()
-    return (
-        <section id="album">
-            <div className="title-style-1">
-                <h1>{t('paginas.album.titulo')}</h1>
-                <h2>{t('paginas.album.subtitulo')}</h2>
-                <div className='album-display'>
-                    <div className='album-content'>
-                        <img src={img1} alt="" />
-                        <img src={img2} alt="" />
-                        <img src={img3} alt="" />
-                        <img src={img4} alt="" />
-                        <img src={img5} alt="" />
-                        <img src={img6} alt="" />
-                        <img src={img7} alt="" />
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-    )
+  return (
+    <section id="album">
+      <div className="title-style-1">
+        <h1>{t('paginas.album.titulo')}</h1>
+        <h2>{t('paginas.album.subtitulo')}</h2>
+        <div className="album-display">
+          <div className="album-content">
+            <img src={img1} alt="" />
+            <img src={img2} alt="" />
+            <img src={img3} alt="" />
+            <img src={img4} alt="" />
+            <img src={img5} alt="" />
+            <img src={img6} alt="" />
+            <img src={img7} alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

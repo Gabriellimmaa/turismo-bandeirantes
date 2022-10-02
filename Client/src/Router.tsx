@@ -41,22 +41,22 @@ export function Router() {
       <Route path="/hoteis" element={<Hoteis />} />
       <Route path="/hotel/detalhe/:id" element={<Hotel />} />
 
-      {/* <Route path="/lazer-esporte" element={<LazerEsporte />} /> */}
-
       <Route path="/map" element={<Map />} />
 
       {/* DASHBOARD */}
       <Route path="/login" element={<Login />} />
       <Route path="/admin/opcoes" element={<Opcoes />} />
-      
+
       <Route path="/admin/cadastrar" element={<Cadastrar />} />
       <Route path="/admin/cadastrar-turismo" element={<CadastrarTurismo />} />
       <Route path="/admin/cadastrar-bar" element={<CadastrarBares />} />
       <Route path="/admin/cadastrar-hotel" element={<CadastrarHoteis />} />
       <Route path="/admin/cadastrar-album" element={<CadastrarAlbum />} />
       <Route path="/admin/cadastrar-agenda" element={<CadastrarAgenda />} />
-      <Route path="/admin/cadastrar-restaurante" element={<CadastrarRestaurantes />} />
-
+      <Route
+        path="/admin/cadastrar-restaurante"
+        element={<CadastrarRestaurantes />}
+      />
     </Routes>
   )
 }
