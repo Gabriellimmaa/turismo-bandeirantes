@@ -34,7 +34,6 @@ O projeto está finalizado
 
 - [node](https://nodejs.org/en/download/) >= 16.17.0
 - [expo](https://expo.dev/) >= 46.0.9
-- [vite](https://vitejs.dev/) >= 3.0.7
 
 ## Teste o projeto
 
